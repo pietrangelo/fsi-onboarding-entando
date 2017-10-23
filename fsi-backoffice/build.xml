@@ -1,0 +1,7 @@
+<project name="fsi-backoffice" default="WAR-build" basedir=".">
+	<description>fsi-backoffice - Build file</description>
+
+	<import file="buildProperties.xml"/>
+	<import file="buildTasks.xml"/>
+
+</project>

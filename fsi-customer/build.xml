@@ -1,0 +1,7 @@
+<project name="fsi-customer" default="WAR-build" basedir=".">
+	<description>fsi-customer - Build file</description>
+
+	<import file="buildProperties.xml"/>
+	<import file="buildTasks.xml"/>
+
+</project>
