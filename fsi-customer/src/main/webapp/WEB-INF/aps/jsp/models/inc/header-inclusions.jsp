@@ -5,8 +5,8 @@
 --%>
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <link rel="stylesheet" href="<wp:resourceURL />static/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="<wp:resourceURL />static/css/style.css" rel="stylesheet">
 <!--<link rel="stylesheet" href="<wp:resourceURL />static/css/inspina_overrides.css">-->
+<link rel="stylesheet" href="<wp:resourceURL />static/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/animate.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/awesome-bootstrap-checkbox.css" rel="stylesheet">

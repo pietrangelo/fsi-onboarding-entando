@@ -2,3 +2,5 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applican
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',11,'Loans-3-images ',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',7,'Login-Customer',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',6,'banner-main-left ',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',8,'fsi-club-credit-card',NULL);

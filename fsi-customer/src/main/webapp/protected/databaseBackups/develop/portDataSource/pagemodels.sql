@@ -363,88 +363,87 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
               <!--[if lt IE 9]>
               <script src="<@wp.resourceURL />static/js/entando-misc-html5-essentials/html5shiv.js"></script>
               <![endif]-->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-     
-         <@c.import url="/WEB-INF/aps/jsp/models/inc/content_inline_editing.jsp" />
-         <@c.import url="/WEB-INF/aps/jsp/models/inc/header-inclusions.jsp" />
-      
-        <script>
-            $(document).ready(function () {
-                $(''.i-checks'').iCheck({
-                    checkboxClass: ''icheckbox_square-green'',
-                    radioClass: ''iradio_square-green'',
-                });
-            });
-        </script>
+              <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 
-     
-       
+        <@c.import url="/WEB-INF/aps/jsp/models/inc/content_inline_editing.jsp" />
+        <@c.import url="/WEB-INF/aps/jsp/models/inc/header-inclusions.jsp" />
+
     </head>
-<body>
+    <body>
+        <div id="wrapper">
+            <div class="row header-custom">
+                <div class="fsi-header">
+                    <div class="col-md-2 col-md-offset-2">
+                        <div class="logo-names">
+                            <@wp.show frame=0 />
+                            <img alt="image" class="" src="/fsi-customer/resources/static/img/shield-logo.png">&nbsp;
+                            <b>FORTRESS -</b>
+                            <span>Bank &amp; Loan</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-2">
+                        <@wp.show frame=1 />
+                        <div class="logo-menu-pages">
+                            <b>personal</b>
+                        </div>
+                        <div class="logo-menu-pages">
+                            <@wp.show frame=2 />
+                            <b>enterprise</b>
+                        </div>
+                        <div class="logo-menu-pages">
+                            <@wp.show frame=3 />
+                            <b>small business</b>
+                        </div>
+                        <div class="logo-menu-pages">
+                            <@wp.show frame=4 />
+                            <b>commercial</b>
+                        </div>
+                        <div class="logo-menu-pages">
+                            <@wp.show frame=5 />
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row banner-main">
+                    <div class="col-md-6">
+                        <@wp.show frame=6 />
+                    </div>
+                    <div class="col-md-6">
+                        <@wp.show frame=7 />
+                    </div>
+                </div>
 
-    <div id="wrapper">
-         <div class="row">
-            <div class="col-md-2">
-                <@wp.show frame=0 />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <@wp.show frame=8 />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <@wp.show frame=9 />
+                    </div>
+                    <div class="col-md-6">
+                        <@wp.show frame=10 />
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <@wp.show frame=11 />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <@wp.show frame=12 />
+                    </div>
+                </div>
+
             </div>
-            <div class="col-md-2">
-                <@wp.show frame=1 />
-            </div>
-            <div class="col-md-2">
-                <@wp.show frame=2 />
-            </div>
-            <div class="col-md-2">
-                <@wp.show frame=3 />
-            </div>
-            <div class="col-md-2">
-                <@wp.show frame=4 />
-            </div>
-            <div class="col-md-2">
-                <@wp.show frame=5 />
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <@wp.show frame=6 />
-            </div>
-            <div class="col-md-6">
-                <@wp.show frame=7 />
-            </div>
-        </div>
-        
-         <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <@wp.show frame=8 />
-            </div>
-        </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <@wp.show frame=9 />
-            </div>
-            <div class="col-md-6">
-                <@wp.show frame=10 />
-            </div>
-        </div>
-        
-        <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <@wp.show frame=11 />
-            </div>
-        </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-12">
-                <@wp.show frame=12 />
-            </div>
-        </div>
-         
-    </div> 
-</body>
+    </body>
 </html>');

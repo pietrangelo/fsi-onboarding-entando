@@ -27,5 +27,3 @@
         <c:forEach begin="${0}" end="${previousLevel -1}"></ul></li></c:forEach>
     </c:if>
 </c:if>
-
-<!--</ul>-->

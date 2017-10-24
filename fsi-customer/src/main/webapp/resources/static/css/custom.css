@@ -60,10 +60,10 @@
 
 .loginscreen.middle-box {
     width: 407px;
-    width: 420px;
+    height: 420px;
     padding: 1em;
     background: #f5f5f5;
-    width: 420px;
+    width: 408px;
 }
 .middle-box {
     max-width: 342px;
@@ -84,8 +84,14 @@
     border-radius: 3px;
 }
 .title-login{
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 600;
+    height: 22px;
+    width: 51px;
+    color: #676A6C;
+    font-family: "Open Sans";
+    font-size: 16px;
+    margin-bottom: 33px;
 }
 .login-button{
     background:#35CAED !important;
@@ -93,7 +99,7 @@
     border: 1px solid #36caed;
     margin: 11px 0 0 0;
 }
-.login-labels{
+.login-label{
     color: #676A6C;
     font-family: "Open Sans";
     font-size: 16px;
@@ -108,7 +114,6 @@
 }
 .box-loan {
     background: #F5F5F5;
-    border: 1px solid red;
     margin-right: 15px;
     height: 530px;
     width: 306px;
@@ -228,4 +233,232 @@
 .fsi-footer .contacts .item:hover .labels {
     color: #35CAED;
 }
+article {
+    padding: 1em;
+}
+#menu {
+    width: 100%;
+    background: #beffe5;
+    overflow: hidden;
+}
 
+#menu a {
+    display: block;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-right: solid 1px #397F63;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox]:checked~#menu {
+    display: block;
+}
+
+.hamburger {
+    text-decoration: none;
+    color: #000;
+    background: #beffe5;
+    padding: 4px 0 0 10px;
+    display: none;
+}
+
+#burger {
+    height: 36px;
+    padding-top: 4px;
+}
+
+@media screen and (max-width: 760px) {
+    /* CSS for narrow screens */
+    /* Hide the drop-down menu */
+    #menu {
+        position: absolute;
+        display: none;
+    }
+
+    /* The top bar that shows the hamburger icon */
+    .hamburger {
+        display: block;
+        border-bottom: solid 1px #5F7F72;
+    }
+    /* Each link in the dropdown menu */
+    #menu a {
+        display: block;
+        float: none;
+        padding: 10px 0;
+        text-align: center;
+        background: #beffe5;
+        text-decoration: none;
+        color: black;
+        border-bottom: solid 1px #5F7F72;
+        border-right: none;
+    }
+}
+
+.fsi-header {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    background: #002235;
+    color: #ffffff;
+    min-height: 102px;
+}
+
+.fsi-header .logo-names {
+    margin-top: 26px;
+    width: 400px;
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+}
+
+.fsi-header .fa.fa-shield {
+    font-size: 40px;
+}
+
+.fsi-header.logo-names b {
+    font-weight: 600;
+}
+.fsi-header.logo-names span {
+    font-weight: 300;
+}
+.logo-menu-pages{
+    float:left;
+    height: 22px;
+    margin: 37px 5px 0 40px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+.input-custom{
+    height:50px;
+    font-size: 16px;
+    border-radius: 0;
+    border: none;
+}
+.banner-main {
+    background: url(../img/Foto_Header@2x.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 2em;
+}
+.left-banner p{
+    height: 166px;
+    width: 597px;
+    color: #FFFFFF;
+    font-family: "Open Sans";
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 55px;
+}
+.box-loan {
+    background: #F5F5F5;
+    margin-right: 15px;
+    height: 530px;
+    max-width: 365px;
+    margin-bottom: 50px;
+}
+
+.box-title-loan {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    color: #00659C;
+    font-family: "Open Sans";
+    font-size: 30px;
+    font-style:normal;
+    text-align: center;
+    /* border: 1px solid #1297b4; */
+}
+
+.box-img-loan {
+    padding-top:15px;
+}
+
+.foto-term-loan {
+    height: 251px;
+    width: 370px;
+    padding-top: 23px;
+    padding-right: 15px;
+}
+
+.title-loan {
+    font-family: "Open Sans";
+    color: #00659C;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 33px;
+    margin-top: 20px;
+}
+
+.title-label-loan {
+    font-family: "Open Sans";
+    color: #676A6C;
+    font-size: 18px;
+    margin-bottom:10px ;
+}
+.fsi-club-cc {
+    background-image: url("<@wp.imgURL />Credit_Card_bg.png");
+    background-position: center center;
+    background-size: cover;
+    min-height: 435px;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+}
+
+.fsi-club-cc .club-cc-wrapper {
+    padding-left: 42%;
+    padding-top: 85px;
+    font-size: 48px;
+}
+
+.fsi-club-cc .label-club {
+    font-weight: 300;
+}
+
+.fsi-club-cc .label-credit-card {
+    font-weight: 600;
+}
+
+.fsi-club-cc .fsi-logo-name {
+    margin-top: 60px;
+    width: 400px;
+    margin-left: 42%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+
+.fsi-club-cc .fsi-logo-name b {
+    font-weight: 600;
+}
+.fsi-club-cc .fsi-logo-name span {
+    font-weight: 300;
+}
+
+.fsi-club-cc .fsi-cc-text {
+    margin-top: 80px;
+}
+
+.fsi-club-cc .fsi-cc-button-row {
+    margin-top: 63px;
+}
+
+.fsi-club-cc .fsi-cc-button-row *:not(:first-child) {
+    margin-left: 53px;
+}
+
+.fsi-blue-button {
+    background: #35CAED;
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+}
