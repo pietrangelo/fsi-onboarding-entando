@@ -1,0 +1,110 @@
+/* iCheck plugin Square skin, green
+----------------------------------- */
+.icheckbox_square-green,
+.iradio_square-green {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url(../img/green.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-green {
+    background-position: 0 0;
+}
+.icheckbox_square-green.hover {
+    background-position: -24px 0;
+}
+.icheckbox_square-green.checked {
+    background-position: -48px 0;
+}
+.icheckbox_square-green.disabled {
+    background-position: -72px 0;
+    cursor: default;
+}
+.icheckbox_square-green.checked.disabled {
+    background-position: -96px 0;
+}
+
+.iradio_square-green {
+    background-position: -120px 0;
+}
+.iradio_square-green.hover {
+    background-position: -144px 0;
+}
+.iradio_square-green.checked {
+    background-position: -168px 0;
+}
+.iradio_square-green.disabled {
+    background-position: -192px 0;
+    cursor: default;
+}
+.iradio_square-green.checked.disabled {
+    background-position: -216px 0;
+}
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_square-green,
+    .iradio_square-green {
+        background-image: url(../img/green@2x.png);
+        -webkit-background-size: 240px 24px;
+        background-size: 240px 24px;
+    }
+}
+
+.loginscreen.middle-box {
+    width: 407px;
+    width: 420px;
+    padding: 1em;
+    background: #fff;
+    width: 420px;
+}
+.middle-box {
+    max-width: 342px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+.full-width {
+    width: 100% !important;
+}
+.m-b {
+    margin-bottom: 15px;
+}
+.btn-w-m {
+    min-width: 100px;
+}
+.btn {
+    border-radius: 3px;
+}
+.title-login{
+    font-size: 30px;
+    font-weight: 300;
+}
+.login-button{
+    background:#35CAED !important;
+    border-radius: 0 !important;
+    border: 1px solid #36caed;
+    margin: 11px 0 0 0;
+}
+.login-label{
+    color: #676A6C;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.forget{
+    color: #72767B;
+    font-family: "Open Sans";
+    font-size: 13px;
+    margin: 11px 0 0 0;
+}
+
+
