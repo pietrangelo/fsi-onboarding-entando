@@ -62,7 +62,7 @@
     width: 407px;
     width: 420px;
     padding: 1em;
-    background: #fff;
+    background: #f5f5f5;
     width: 420px;
 }
 .middle-box {
@@ -93,7 +93,7 @@
     border: 1px solid #36caed;
     margin: 11px 0 0 0;
 }
-.login-label{
+.login-labels{
     color: #676A6C;
     font-family: "Open Sans";
     font-size: 16px;
@@ -106,5 +106,126 @@
     font-size: 13px;
     margin: 11px 0 0 0;
 }
+.box-loan {
+    background: #F5F5F5;
+    border: 1px solid red;
+    margin-right: 15px;
+    height: 530px;
+    width: 306px;
+}
 
+.foto-term-loan {
+    height: 251px;
+    width: 370px;
+    padding-top: 23px;
+    padding-right: 15px;
+}
+
+.term-load {
+    height: 38px;
+    width: 320px;
+    color: #00659C;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 33px;
+}
+
+.best-for-long-term-g {
+    height: 85px;
+    width: 343px;
+    color: #676A6C;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 28px;
+}
+.fsi-footer {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    background: #002235;
+    color: #ffffff;
+    min-height: 210px;
+}
+
+
+.fsi-footer .logo-names {
+    margin-top: 100px;
+    width: 400px;
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+}
+
+.fsi-footer .fa.fa-shield {
+    font-size: 40px;
+}
+
+.fsi-footer .logo-names b {
+    font-weight: 600;
+}
+.fsi-footer .logo-names span {
+    font-weight: 300;
+}
+
+
+
+.fsi-footer .side-menu {
+    margin-top: 30px;
+    padding-top: 10px;
+    width: 240px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.fsi-footer .side-menu .side-menu-item {
+    padding: 10px;
+}
+
+.fsi-footer .side-menu .side-menu-item:hover {
+    color: #35CAED;
+    cursor: pointer;
+}
+
+.copyright {
+    font-weight: 600;
+    font-size: 13px;
+    height: 80px;
+    background: #002235;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.fsi-footer .contacts {
+    margin-top: 30px;
+    padding-top: 10px;
+    width: 290px;
+    border-left: 1px solid #ffffff;
+    font-size: 16px;
+    padding-left: 60px;
+}
+
+
+
+.fsi-footer .contacts .item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.fsi-footer .contacts .fa {
+    font-size: 36px;
+    color: #35CAED;
+}
+
+.fsi-footer .contacts .labels {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.fsi-footer .contacts .item:hover .labels {
+    color: #35CAED;
+}
 

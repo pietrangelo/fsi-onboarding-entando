@@ -4,14 +4,8 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE_MODEL','en
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE_MODEL','it','modello pagina');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE_TITLE','en','page title');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE_TITLE','it','titolo pagina');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('RESERVED_AREA','en','Please sign in');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('RESERVED_AREA','it','È necessario autenticarsi');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('USERNAME','en','Username');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('USERNAME','it','Utente');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PASSWORD','en','Password');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PASSWORD','it','Password');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','en','Sign in');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','it','Entra');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('WELCOME','en','Welcome');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('WELCOME','it','Benvenuto');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('USER_DATE_CREATION','en','Creation date');
@@ -284,3 +278,11 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('COPYRIGHT','en'
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('COPYRIGHT','it','Copyright &copy; Mia Azienda AAAA');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PORTAL_TITLE','en','My Portal');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PORTAL_TITLE','it','Il Mio Portale');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('RESERVED_AREA','en','LOGIN');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('RESERVED_AREA','it','LOGIN');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('USERNAME','en','Email/Username');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('USERNAME','it','Email/Nome utente');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTER_PASSWORD','en','Enter Password');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTER_PASSWORD','it','Inserisci password');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','en','LOGIN');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','it','ACCEDI');
