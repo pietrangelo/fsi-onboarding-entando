@@ -30,11 +30,11 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 ','2017-10-24 15:21:48');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('applicant','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">applicant</property><property key="it">applicante</property></properties>
-','fsi-landing-page',1,'<?xml version="1.0" encoding="UTF-8"?>
+','fsi-customer-internal-page',1,'<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>false</useextratitles>
   <charset>utf-8</charset>
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-10-24 11:41:20');
+','2017-10-24 16:01:58');
