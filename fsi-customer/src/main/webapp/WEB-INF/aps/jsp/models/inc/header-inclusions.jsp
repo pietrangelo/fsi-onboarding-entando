@@ -1,11 +1,9 @@
 <%--
     Document   : header-inclusions
     Created on : 8-ago-2017, 7.14.28
-    Author     : kusakkuma
+    Author     : D.minnai
 --%>
-
 <%@ taglib prefix="wp" uri="/aps-core" %>
-
 <link rel="stylesheet" href="<wp:resourceURL />static/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/inspina_overrides.css">
