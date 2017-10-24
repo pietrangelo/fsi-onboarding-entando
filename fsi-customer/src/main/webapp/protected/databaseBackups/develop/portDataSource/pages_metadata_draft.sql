@@ -18,16 +18,6 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 <property key="en">Error page</property>
 <property key="it">Pagina di errore</property>
 </properties>','service',1,NULL,'2017-02-17 21:11:54');
-INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('applicant','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">applicant</property><property key="it">applicante</property></properties>
-','fsi-landing-page',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-10-24 11:41:20');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('homepage','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Home</property><property key="it">Home</property></properties>
 ','fsi-landing-page',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -37,4 +27,14 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-10-24 15:21:48');
+','2017-10-24 16:00:42');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('applicant','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">applicant</property><property key="it">applicante</property></properties>
+','fsi-customer-internal-page',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-10-24 16:01:58');
