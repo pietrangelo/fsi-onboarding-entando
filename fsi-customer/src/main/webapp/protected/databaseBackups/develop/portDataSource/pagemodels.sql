@@ -364,15 +364,26 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
               <script src="<@wp.resourceURL />static/js/entando-misc-html5-essentials/html5shiv.js"></script>
               <![endif]-->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        
+     
+         <@c.import url="/WEB-INF/aps/jsp/models/inc/content_inline_editing.jsp" />
+         <@c.import url="/WEB-INF/aps/jsp/models/inc/header-inclusions.jsp" />
+      
+        <script>
+            $(document).ready(function () {
+                $(''.i-checks'').iCheck({
+                    checkboxClass: ''icheckbox_square-green'',
+                    radioClass: ''iradio_square-green'',
+                });
+            });
+        </script>
+
+     
+       
     </head>
 <body>
 
 
     <div id="wrapper">
-        
          <div class="row">
             <div class="col-md-2">
                 <@wp.show frame=0 />
@@ -403,10 +414,12 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
             </div>
         </div>
         
+         <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <@wp.show frame=8 />
             </div>
+        </div>
         </div>
         
         <div class="row">
@@ -418,10 +431,12 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
             </div>
         </div>
         
+        <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <@wp.show frame=11 />
             </div>
+        </div>
         </div>
         
         <div class="row">
