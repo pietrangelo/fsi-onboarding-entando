@@ -62,50 +62,50 @@
                     }
                 });
                 $('.editContent').editable({
-                        url: '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/en/inline/content',
-                        ajaxOptions: {
-                                dataType: 'json', //assuming json response
-                                type: 'put',
-                                contentType: 'application/json'
-                        },
-                        pk: function () {
-                                return $(this).data("content-id");
-                        },
-                        params: function (params) {
-                                return JSON.stringify({
-                                        "contentAttribute": {
-                                                "contentId": params.pk,
-                                                "attributeName": $(this).data("attr-id"),
-                                                "langCode": "en",
-                                                "value": params.value
-                                        }
-                                });
-                        }
+                    url: '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/en/inline/content',
+                    ajaxOptions: {
+                        dataType: 'json', //assuming json response
+                        type: 'put',
+                        contentType: 'application/json'
+                    },
+                    pk: function () {
+                        return $(this).data("content-id");
+                    },
+                    params: function (params) {
+                        return JSON.stringify({
+                            "contentAttribute": {
+                                "contentId": params.pk,
+                                "attributeName": $(this).data("attr-id"),
+                                "langCode": "en",
+                                "value": params.value
+                            }
+                        });
+                    }
                 });
                 //make status editable
                 $('.editContentText').editable({
-                        type: 'textarea',
-                        rows: 10,
-                        cols: 50,
-                        url: '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/en/inline/content',
-                        ajaxOptions: {
-                                dataType: 'json', //assuming json response
-                                type: 'put',
-                                contentType: 'application/json'
-                        },
-                        pk: function () {
-                                return $(this).data("content-id");
-                        },
-                        params: function (params) {
-                                return JSON.stringify({
-                                        "contentAttribute": {
-                                                "contentId": params.pk,
-                                                "attributeName": $(this).data("attr-id"),
-                                                "langCode": "en",
-                                                "value": params.value
-                                        }
-                                });
-                        }
+                    type: 'textarea',
+                    rows: 10,
+                    cols: 50,
+                    url: '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/en/inline/content',
+                    ajaxOptions: {
+                        dataType: 'json', //assuming json response
+                        type: 'put',
+                        contentType: 'application/json'
+                    },
+                    pk: function () {
+                        return $(this).data("content-id");
+                    },
+                    params: function (params) {
+                        return JSON.stringify({
+                            "contentAttribute": {
+                                "contentId": params.pk,
+                                "attributeName": $(this).data("attr-id"),
+                                "langCode": "en",
+                                "value": params.value
+                            }
+                        });
+                    }
                 });
             }, 500);
         });
@@ -113,3 +113,15 @@
 </wp:ifauthorized>
 
 <!-----------END inclusione x-editable inline------------------------>
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>
+
+
+
+
