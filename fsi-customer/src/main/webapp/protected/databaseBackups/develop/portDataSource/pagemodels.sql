@@ -421,7 +421,7 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row fsi-club-cc">
                     <div class="col-md-6">
                         <@wp.show frame=9 />
                     </div>
