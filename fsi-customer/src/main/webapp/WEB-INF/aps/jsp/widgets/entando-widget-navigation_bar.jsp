@@ -44,7 +44,7 @@
     </#if>
     </#if>
     <p>
-        <script>window.location = "<@wp.url page="lender" />";</script>
+        <script>window.location = "<@wp.url page="applicant" />";</script>
     </p>
     <#else>
     <#if (accountExpired?? && accountExpired == true) >
