@@ -112,12 +112,6 @@
     font-size: 13px;
     margin: 11px 0 0 0;
 }
-.box-loan {
-    background: #F5F5F5;
-    margin-right: 15px;
-    height: 530px;
-    width: 306px;
-}
 
 .foto-term-loan {
     height: 251px;
@@ -374,7 +368,6 @@ input[type=checkbox]:checked~#menu {
     font-size: 30px;
     font-style:normal;
     text-align: center;
-    /* border: 1px solid #1297b4; */
 }
 
 .box-img-loan {
@@ -404,7 +397,7 @@ input[type=checkbox]:checked~#menu {
     margin-bottom:10px ;
 }
 .fsi-club-cc {
-    background-image: url("<@wp.imgURL />Credit_Card_bg.png");
+    background-image: url("../img/Credit_Card_bg.png");
     background-position: center center;
     background-size: cover;
     min-height: 435px;
@@ -435,7 +428,6 @@ input[type=checkbox]:checked~#menu {
     font-size: 24px;
 }
 
-
 .fsi-club-cc .fsi-logo-name b {
     font-weight: 600;
 }
@@ -445,6 +437,7 @@ input[type=checkbox]:checked~#menu {
 
 .fsi-club-cc .fsi-cc-text {
     margin-top: 80px;
+    width: 57%;
 }
 
 .fsi-club-cc .fsi-cc-button-row {
@@ -461,4 +454,26 @@ input[type=checkbox]:checked~#menu {
     width: 130px;
     height: 40px;
     font-size: 14px;
+}
+.title-welcome{
+    width: 349px;color: #00659C;
+    font-family: "Open Sans";
+    font-size: 30px;font-weight: 300;
+    line-height: 41px;
+}
+.content-welcome{
+    color: #72767B;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 28px;
+    margin: 35px 0 0 0;
+}
+.spacers{
+    margin: 97px 0 97px 0;
+}
+.remember-me-label{
+    color: #72767B;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 18px;
 }
