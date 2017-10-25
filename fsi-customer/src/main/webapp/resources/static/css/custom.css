@@ -640,7 +640,16 @@ a.dropdown-fsi-login{
     font-size: 14px;
     line-height: 18px;
 }
+.fsi-progess-bar-title {
+    font-family: "Open Sans";
+    color: #3498DB;
+    font-size: 24px;
+    line-height: 33px;
+}
 
+.fsi-progess-bar-tools-icon {
+    color: #999999;
+}
 .fsi-progess-bar-default {
     background-color: #3498DB;
 }
