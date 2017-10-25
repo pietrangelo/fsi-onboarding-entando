@@ -2369,44 +2369,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="container">
-  <div class="row">
-     <div class="col-md-11">Your Performance</div>
-     <div class="col-md-1">tools</div>
-  </div>
-  <div class="row">
-    <div class="col-md-10"></div>
-    <div class="col-md-1">
-      <div class="dropdown">
-     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">All <span class="caret"></span>
-  </button>
-</div>
-    </div>
-    <div class="col-md-1">
-      <i class="glyphicon glyphicon-calendar"></i>
-    </div>
-    
-  </div>
-  <div class="row">
-    <div class="col-md-3">You added &nbsp;&nbsp;315</div>
-    <div class="col-md-3">Customers, of these &nbsp;&nbsp;215</div>
-    <div class="col-md-3">Complete registration</div>
-    <div class="col-md-3">Your aim is &nbsp;&nbsp;400</div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="progress">
-  <div class="progress-bar" style="width: 60%">
-    <span class="sr-only">60% Complete (success)</span>60%
-  </div>
-  <div class="progress-bar progress-bar-success" style="width: 20%">
-    <span class="sr-only">20% Complete (warning)</span>
-  </div>
-  
-</div>
-    </div>  
-  </div>  
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'
 <div class="application-breadcrumbs-wrapper">
   <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
@@ -2433,3 +2395,43 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'
+  <div class="row">
+     <div class="col-md-11">Your Performance</div>
+     <div class="col-md-1">tools</div>
+  </div>
+  <div class="row">
+    <div class="col-md-10"></div>
+    <div class="col-md-1">
+      <div class="dropdown">
+     <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">All <span class="caret"></span>
+  </button>
+
+
+</div>
+    </div>
+    <div class="col-md-1">
+      <i class="glyphicon glyphicon-calendar"></i>
+    </div>
+    
+  </div>
+  <div class="row fsi-progess-bar-box-label ">
+    <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
+    <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
+    <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;" >Complete registration</div>
+    <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="progress">
+  <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
+    <span class="sr-only">60% Complete (success)</span>60%
+  </div>
+  <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
+    <span class="sr-only">20% Complete (warning)</span>
+  </div>
+  
+</div>
+    </div>  
+  </div>  
+',NULL,0);
