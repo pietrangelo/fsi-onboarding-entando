@@ -1427,71 +1427,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	</div>
 </#if>
 <@jacms.content publishExtraTitle=true />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<li class=" dropdown
-    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
-    <#if (Session.currentUser != "guest")>
-  
-    <a class="btn  text-left dropdown-toggle" href="#" data-toggle="dropdown">
-        ${Session.currentUser}
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li>
-            <@wp.ifauthorized permission="enterBackend">
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
-               <i class="fa fa-cube"></i>      
-                <@wp.i18n key="ESLF_ADMINISTRATION" />
-            </a>
-            </@wp.ifauthorized>
-        </li>
-        <div class="divider"></div>
-        <li> 
-            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
-               <i class="fa fa-sign-out"></i>           
-                <@wp.i18n key="ESLF_SIGNOUT" />
-            </a>
-        </li>
-        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
-        <#if (editProfilePageVar??) >
-        <li>
-            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
-        </li>
-        </#if>
-    </ul>
-    <#else>
- 
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <@wp.i18n key="ESLF_SIGNIN" />
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li>
-            <form class="m-t" style="padding:10px;" method="POST">
-                <#if (accountExpired?? && accountExpired == true)>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert">x</button>
-                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
-                </div>
-                </#if>
-                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert">x</button>
-                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
-                </div>
-                </#if>
-                <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
-                </div>
-                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
-            </form>
-        </li>
-    </ul>
-    </#if>
-</li>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Enumer',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -2088,6 +2023,190 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     <li>Once your account is open, you may access Online Banking and you will receive your checks, debit cards and service activation in approximately 7 to 10 business days.</li>
 </ul>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<ul class="list-unstyled">
+<li class=" dropdown
+    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+    <#if (Session.currentUser != "guest")>
+  
+    <a class="dropdown-fsi-login dropdown-toggle" href="#" data-toggle="dropdown">
+        ${Session.currentUser}
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <@wp.ifauthorized permission="enterBackend">
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+            
+                <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li> 
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+
+                <@wp.i18n key="ESLF_SIGNOUT" />
+            </a>
+        </li>
+        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+        <#if (editProfilePageVar??) >
+        <li>
+            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+        </li>
+        </#if>
+    </ul>
+    <#else>
+ 
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <@wp.i18n key="ESLF_SIGNIN" />
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <form class="m-t" style="padding:10px;" method="POST">
+                <#if (accountExpired?? && accountExpired == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+                </div>
+                </#if>
+                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+                </div>
+                </#if>
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+                </div>
+                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+            </form>
+        </li>
+    </ul>
+    </#if>
+</li>
+</ul>','<#assign wp=JspTaglibs["/aps-core"]>
+<li class=" dropdown
+    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+    <#if (Session.currentUser != "guest")>
+  
+    <a class="btn  text-left dropdown-toggle" href="#" data-toggle="dropdown">
+        ${Session.currentUser}
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <@wp.ifauthorized permission="enterBackend">
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+               <i class="fa fa-cube"></i>      
+                <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li> 
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+               <i class="fa fa-sign-out"></i>           
+                <@wp.i18n key="ESLF_SIGNOUT" />
+            </a>
+        </li>
+        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+        <#if (editProfilePageVar??) >
+        <li>
+            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+        </li>
+        </#if>
+    </ul>
+    <#else>
+ 
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <@wp.i18n key="ESLF_SIGNIN" />
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <form class="m-t" style="padding:10px;" method="POST">
+                <#if (accountExpired?? && accountExpired == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+                </div>
+                </#if>
+                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+                </div>
+                </#if>
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+                </div>
+                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+            </form>
+        </li>
+    </ul>
+    </#if>
+</li>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<div class="middle-box loginscreen animated fadeInDown">
+    <#if (Session.currentUser.username != "guest") >
+    <#if (Session.currentUser.entandoUser) >
+    <#if (!Session.currentUser.credentialsNotExpired) >
+    <div class="alert alert-block">
+        <p>
+            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
+               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
+        </p>
+    </div>
+    </#if>
+    </#if>
+    <p>
+        <script>window.location = "<@wp.url page="customer_internal" />";</script>
+    </p>
+    <#else>
+    <#if (accountExpired?? && accountExpired == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
+    </div>
+    </#if>
+    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
+    </div>
+    </#if>
+    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
+    <form action="<@wp.url/>" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div>
+            <label class="remember-me-label">
+                   <input type="checkbox" class="i-checks"> Remember me </label>
+        </div>
+        <div class="form-actions text-center">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+                   <p class="forget">Forgot your password or Email/Username?</p>
+        </div>
+    </form>
+    </#if>
+</div>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-club-credit-card','fsi-club-credit-card',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="middle-box-cc">
@@ -2152,59 +2271,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     <div class="col-md-6 col-md-offset-1">Copyright Example Company &copy; 2014-2015</div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<div class="middle-box loginscreen animated fadeInDown">
-    <#if (Session.currentUser.username != "guest") >
-    <#if (Session.currentUser.entandoUser) >
-    <#if (!Session.currentUser.credentialsNotExpired) >
-    <div class="alert alert-block">
-        <p>
-            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
-               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
-        </p>
-    </div>
-    </#if>
-    </#if>
-    <p>
-        <script>window.location = "<@wp.url page="applicant" />";</script>
-    </p>
-    <#else>
-    <#if (accountExpired?? && accountExpired == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
-    </div>
-    </#if>
-    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
-    </div>
-    </#if>
-    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
-    <form action="<@wp.url/>" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div>
-            <label class="remember-me-label">
-                   <input type="checkbox" class="i-checks"> Remember me </label>
-        </div>
-        <div class="form-actions text-center">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-                   <p class="forget">Forgot your password or Email/Username?</p>
-        </div>
-    </form>
-    </#if>
-</div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="row spacers">
@@ -2274,4 +2340,70 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
         </div>
     </form>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
+  <div class="label-box">
+    <div class="label-box-title">Application</div>
+    <div class="label-box-descr">Tell us more about the business</div>
+  </div>
+  <div class="bullet-progress-container">
+    <div class="bullet-progress-item active">
+      <div class="bullet">1</div>
+      <div class="bullet-label">Business Details</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">2</div>
+      <div class="bullet-label">Account User</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">3</div>
+      <div class="bullet-label">Banking Services</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">4</div>
+      <div class="bullet-label">Declaration</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">5</div>
+      <div class="bullet-label">Confirm</div>
+    </div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="container">
+  <div class="row">
+     <div class="col-md-11">Your Performance</div>
+     <div class="col-md-1">tools</div>
+  </div>
+  <div class="row">
+    <div class="col-md-10"></div>
+    <div class="col-md-1">
+      <div class="dropdown">
+     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">All <span class="caret"></span>
+  </button>
+</div>
+    </div>
+    <div class="col-md-1">
+      <i class="glyphicon glyphicon-calendar"></i>
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-md-3">You added &nbsp;&nbsp;315</div>
+    <div class="col-md-3">Customers, of these &nbsp;&nbsp;215</div>
+    <div class="col-md-3">Complete registration</div>
+    <div class="col-md-3">Your aim is &nbsp;&nbsp;400</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="progress">
+  <div class="progress-bar" style="width: 60%">
+    <span class="sr-only">60% Complete (success)</span>60%
+  </div>
+  <div class="progress-bar progress-bar-success" style="width: 20%">
+    <span class="sr-only">20% Complete (warning)</span>
+  </div>
+  
+</div>
+    </div>  
+  </div>  
 </div>',NULL,0);
