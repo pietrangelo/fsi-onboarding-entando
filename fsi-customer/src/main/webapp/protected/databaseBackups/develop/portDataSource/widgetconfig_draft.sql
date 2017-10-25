@@ -17,3 +17,6 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('da
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',6,'fsi-apllication-breadcrumb',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',7,'fsi-application-progress',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',10,'fsi-state',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',9,'fsi-customer-rate',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',6,'fsi-progress-bar',NULL);

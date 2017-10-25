@@ -119,5 +119,35 @@
             checkboxClass: 'icheckbox_square-green',
             radioClass: 'iradio_square-green',
         });
+
+
+//        charts data
+        c3.generate({
+            bindto: '#torta',
+            data: {
+                columns: [
+                    ['Signedup-Application in Progress', 30],
+                    ['Signups-Application non completed', 120],
+                    ['Abandoned', 60]
+                ],
+                colors: {
+                    data1: '#3498DB',
+                    data2: '#CCCCCC',
+                    Abandoned: '#ED796D'
+                },
+                type: 'pie'
+            }
+        });
+        Morris.Donut({
+            element: 'morris-donut-chart',
+            data: [{label: "Pending", value: 12},
+                {label: "Complete", value: 30},
+                {label: "Suspended", value: 20}],
+            resize: true,
+            colors: ['#F1C40F', '#2ECC71', '#E74C3C'],
+        });
     });
 </script>
+
+
+
