@@ -1,3 +1,34 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <p class="title-welcome">Customer Overview</p>
+      <div class="ibox-tools"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a><a class="close-link"><i class="fa fa-times"></i></a></div>
+    </div>
+    <div class="ibox-content">
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">120</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">120</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">120</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_profile','userprofile_editCurrentUser_profile',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -1238,6 +1269,25 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	<a class="btn btn-primary" href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />"><span class="icon-arrow-left icon-white"></span>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
 </p>
 </div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
+<br>
+<p class="title-paragraph"> What you''ll need to complete the application</p>
+<ul class="list">
+    <li>Business documentation such as company profile information, business certifications (eg.articles of incorporation), lists of assets</li>
+    <li>Business Tax documentation, from tax ID from tax Declarations</li>
+    <li>Personal information of the people in the company that will be eligible for financial services (eg. names, contact information, SSN ID)</li>
+    <li>List of services you may want to apply for</li>
+</ul>
+<br>
+<br>
+<p class="title-welcome"> What to expect after sign up</p>
+<ul class="list">
+    <li>When your sign up is done, you will have to complete the application form</li>
+    <li>After you send in the business documentation requested for your business type, the bank team will validate it</li>
+    <li>After your account is approved, you can fund your account while applying by using a debit card, transferring money from another account or writing a check.</li>
+    <li>Once your account is open, you may access Online Banking and you will receive your checks, debit cards and service activation in approximately 7 to 10 business days.</li>
+</ul>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('login_form','login_form',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <h1><@wp.i18n key="RESERVED_AREA" /></h1>
 <#if (Session.currentUser.username != "guest") >
@@ -1808,6 +1858,34 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	<p class="text-right"><a class="btn btn-primary" href="<@wp.url page="${pageLinkVar}"/>">${pageLinkDescriptionVar}</a></p>
 </#if>
 <#assign contentInfoList="">',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
+  <div class="label-box">
+    <div class="label-box-title">Application</div>
+    <div class="label-box-descr">Tell us more about the business</div>
+  </div>
+  <div class="bullet-progress-container">
+    <div class="bullet-progress-item active">
+      <div class="bullet">1</div>
+      <div class="bullet-label">Business Details</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">2</div>
+      <div class="bullet-label">Account User</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">3</div>
+      <div class="bullet-label">Banking Services</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">4</div>
+      <div class="bullet-label">Declaration</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">5</div>
+      <div class="bullet-label">Confirm</div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-language_choose_inspinia','entando-widget-language_choose_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <@wp.info key="langs" var="langsVar" />
 <@wp.info key="currentLang" var="currentLangVar" />
@@ -2004,25 +2082,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     <p class="title-label-loan" >Ad interim support to "bridge the gap" before permanent financing </p>
                 </div>
             </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
-<br>
-<p class="title-paragraph"> What you''ll need to complete the application</p>
-<ul class="list">
-    <li>Business documentation such as company profile information, business certifications (eg.articles of incorporation), lists of assets</li>
-    <li>Business Tax documentation, from tax ID from tax Declarations</li>
-    <li>Personal information of the people in the company that will be eligible for financial services (eg. names, contact information, SSN ID)</li>
-    <li>List of services you may want to apply for</li>
-</ul>
-<br>
-<br>
-<p class="title-welcome"> What to expect after sign up</p>
-<ul class="list">
-    <li>When your sign up is done, you will have to complete the application form</li>
-    <li>After you send in the business documentation requested for your business type, the bank team will validate it</li>
-    <li>After your account is approved, you can fund your account while applying by using a debit card, transferring money from another account or writing a check.</li>
-    <li>Once your account is open, you may access Online Banking and you will receive your checks, debit cards and service activation in approximately 7 to 10 business days.</li>
-</ul>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <ul class="list-unstyled">
 <li class=" dropdown
@@ -2340,34 +2399,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
         </div>
     </form>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
-  <div class="label-box">
-    <div class="label-box-title">Application</div>
-    <div class="label-box-descr">Tell us more about the business</div>
-  </div>
-  <div class="bullet-progress-container">
-    <div class="bullet-progress-item active">
-      <div class="bullet">1</div>
-      <div class="bullet-label">Business Details</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">2</div>
-      <div class="bullet-label">Account User</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">3</div>
-      <div class="bullet-label">Banking Services</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">4</div>
-      <div class="bullet-label">Declaration</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">5</div>
-      <div class="bullet-label">Confirm</div>
-    </div>
-  </div>
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'
 <div class="application-breadcrumbs-wrapper">

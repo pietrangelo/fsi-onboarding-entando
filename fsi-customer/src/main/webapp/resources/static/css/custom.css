@@ -713,3 +713,61 @@ a.dropdown-fsi-login{
     text-transform: uppercase;
     color:#fff;
 }
+
+.fsi-customer-overview {
+  font-family: "Open Sans", sans-serif;
+  max-width: 400px;
+  background: #ffffff;
+}
+.fsi-customer-overview .title-welcome {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #3498DB;
+}
+.fsi-customer-overview .mini-filters {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #666666;
+}
+.fsi-customer-overview .mini-filters .mini-filter-label {
+  font-size: 14px;
+  margin-right: 25px;
+}
+.fsi-customer-overview .mini-filters .fa.fa-caret-down {
+  font-size: 16px;
+}
+.fsi-customer-overview .fsi-customer-overview-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+.fsi-customer-overview .fsi-customer-overview-item .label-number {
+  font-size: 24px;
+  font-weight: 300;
+  color: #676A6C;
+  margin-bottom: 10px;
+}
+.fsi-customer-overview .fsi-customer-overview-item .label-text {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.fsi-customer-overview .progress {
+  height: 10px;
+}
+.fsi-customer-overview .progress .progress-bar {
+  background: #99CBED;
+  box-shadow: 0;
+  -webkit-box-shadow: 0;
+}
+.fsi-customer-overview .progress .progress-bar.progress-bar-today {
+  background: #99CBED;
+}
+.fsi-customer-overview .progress .progress-bar.progress-bar-yesterday {
+  background: #8CDDCD;
+}
+.fsi-customer-overview .progress .progress-bar.progress-bar-lastyear {
+  background: #F8E187;
+}
+
