@@ -1,5 +1,7 @@
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-footer',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',11,'Loans-3-images ',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',7,'Login-Customer',NULL);

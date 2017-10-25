@@ -51,3 +51,16 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-10-25 12:22:54');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('dashboard_internal','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">dashboard-internal</property><property key="it">dashboard-interna</property></properties>
+','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="customers" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-10-25 12:33:35');
