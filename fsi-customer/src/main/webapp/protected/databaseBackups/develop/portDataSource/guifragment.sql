@@ -13,14 +13,14 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         </div>
       </div>
       <div class="fsi-customer-overview-item">
-        <div class="label-number">120</div>
+        <div class="label-number">100</div>
         <div class="label-text">Today Total Sign Up</div>
         <div class="progress">
           <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
         </div>
       </div>
       <div class="fsi-customer-overview-item">
-        <div class="label-number">120</div>
+        <div class="label-number">95</div>
         <div class="label-text">Today Total Sign Up</div>
         <div class="progress">
           <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
