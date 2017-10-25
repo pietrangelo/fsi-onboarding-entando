@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="<wp:resourceURL />static/css/c3.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/morris-0.4.3.min.css" rel="stylesheet">
 
+
 <script src="<wp:resourceURL />static/js/bootstrap.min.js"></script>
 <script src="<wp:resourceURL />static/js/inspinia.js"></script>
 <script src="<wp:resourceURL />static/js/pace.min.js"></script>
