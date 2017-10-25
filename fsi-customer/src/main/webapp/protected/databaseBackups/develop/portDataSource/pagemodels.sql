@@ -720,14 +720,11 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <@wp.show frame=6 />
-                    </div>
-                </div>
-
                 <div class="container">
-                    <div class="row">
+                     <div class="row">
+                         <div class="col-md-12">
+                        <@wp.show frame=6 />
+                     </div>
                         <div class="col-md-12">
                             <@wp.show frame=7 />
                         </div>
