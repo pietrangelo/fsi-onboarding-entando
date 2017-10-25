@@ -625,3 +625,54 @@ a.dropdown-fsi-login{
 .bullet-progress-container .bullet-progress-item.active:after {
     background: #6EC664;
 }
+
+
+.application-breadcrumbs-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #00659C;
+    padding: 50px 20px;
+}
+
+.application-breadcrumbs {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+}
+.application-breadcrumbs .application-breadcrumbs-item {
+    color: #ffffff;
+    background: #00659C;
+    height: 60px;
+    flex-grow: 1;
+    flex-basis: 250px;
+    display: flex;
+}
+.application-breadcrumbs .application-breadcrumbs-item:not(:first-child) {
+    margin-left: 4px;
+}
+.application-breadcrumbs .application-breadcrumbs-item .application-breadcrumbs-number {
+    display: inline-block;
+    font-size: 37px;
+    font-weight: bold;
+    margin-left: 14px;
+}
+.application-breadcrumbs .application-breadcrumbs-item .application-breadcrumbs-text {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+.application-breadcrumbs .application-breadcrumbs-item.active {
+    background: #6EC664;
+}
+.application-breadcrumbs .application-breadcrumbs-item.active ~ .application-breadcrumbs-item {
+    background: #D8D8D8;
+}
+.application-breadcrumbs .application-breadcrumbs-item.active ~ .application-breadcrumbs-item .application-breadcrumbs-number {
+    color: #B6B8B9;
+}
+.application-breadcrumbs .application-breadcrumbs-item.active ~ .application-breadcrumbs-item .application-breadcrumbs-text {
+    color: #676A6C;
+}
+

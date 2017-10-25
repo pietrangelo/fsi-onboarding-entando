@@ -2407,3 +2407,29 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>  
   </div>  
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'
+<div class="application-breadcrumbs-wrapper">
+  <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
+  <div class="application-breadcrumbs">
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">1</div>
+      <div class="application-breadcrumbs-text">Start</div>
+    </div>
+    <div class="application-breadcrumbs-item active">
+      <div class="application-breadcrumbs-number">2</div>
+      <div class="application-breadcrumbs-text">Application</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">3</div>
+      <div class="application-breadcrumbs-text">Background check</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">4</div>
+      <div class="application-breadcrumbs-text">Legal review</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">5</div>
+      <div class="application-breadcrumbs-text">Account creation</div>
+    </div>
+  </div>
+</div>',NULL,0);
