@@ -15,3 +15,5 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('cu
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',12,'fsi-footer',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',6,'fsi-apllication-breadcrumb',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',7,'fsi-application-progress',NULL);
