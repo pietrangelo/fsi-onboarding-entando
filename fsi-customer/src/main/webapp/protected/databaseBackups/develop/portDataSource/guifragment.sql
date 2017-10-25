@@ -2414,8 +2414,9 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="row">
-    <div class="col-md-11"><span class="fsi-progess-bar-title">Your Performance</span></div>
-    <div class="col-md-1">
+    <div class="col-md-10"><span class="fsi-progess-bar-title">Your Performance</span></div>
+    <div class="col-md-1" >&nbsp;</div>
+    <div class="col-md-1" >
         <div class="ibox-tools">
             <a class="collapse-link fsi-progess-bar-tools-icon ">
                 <i class="fa fa-chevron-up"></i>
@@ -2426,7 +2427,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         </div>
     </div>
 </div>
-</div>
+
 <div class="row">
     <div class="col-md-10"></div>
     <div class="col-md-1">
@@ -2435,12 +2436,12 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 All<span class="caret" style="margin-left: 15px;"></span>
             </button>
-
-
         </div>
     </div>
     <div class="col-md-1">
-        <i class="fa fa-calendar"></i>
+        <div style="text-align: right">
+            <i class="fa fa-calendar"></i>
+        </div>
     </div>
 
 </div>
