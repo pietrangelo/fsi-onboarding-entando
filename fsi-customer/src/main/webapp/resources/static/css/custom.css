@@ -537,3 +537,91 @@ a.dropdown-fsi-login{
     color: #fff;
     text-decoration:none;
 }
+.application-progress {
+    background: #ffffff;
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+}
+.application-progress .label-box {
+    margin-left: 20px;
+    width: 224px;
+}
+.application-progress .label-box .label-box-title {
+    font-size: 24px;
+    font-weight: 300;
+    color: #00659C;
+    margin-top: 55px;
+}
+.application-progress .label-box .label-box-descr {
+    font-size: 16px;
+    font-weight: 300;
+    color: #8B8D8F;
+    margin-top: 10px;
+}
+.application-progress .bullet-progress-container {
+    flex-grow: 2;
+}
+
+.bullet-progress-container {
+    height: 200px;
+    display: flex;
+    background: #ffffff;
+}
+.bullet-progress-container .bullet-progress-item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    position: relative;
+}
+.bullet-progress-container .bullet-progress-item .bullet {
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50%;
+    border: 2px solid #8B8D8F;
+    font-size: 20px;
+    background: #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    user-select: none;
+}
+.bullet-progress-container .bullet-progress-item .bullet-label {
+    color: #8B8D8F;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 150px;
+    margin-top: 20px;
+}
+.bullet-progress-container .bullet-progress-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 98%;
+    height: 2px;
+    left: 50%;
+    top: 75px;
+    background: #8B8D8F;
+    z-index: 10;
+}
+.bullet-progress-container .bullet-progress-item:last-child:after {
+    display: none;
+}
+.bullet-progress-container .bullet-progress-item.active .bullet {
+    background: #6EC664;
+    border-color: #6EC664;
+}
+.bullet-progress-container .bullet-progress-item.active .bullet-label {
+    color: #6EC664;
+    font-weight: bold;
+}
+.bullet-progress-container .bullet-progress-item.active:after {
+    background: #6EC664;
+}
