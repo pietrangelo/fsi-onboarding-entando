@@ -2069,6 +2069,25 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     <p class="title-label-loan" >Ad interim support to "bridge the gap" before permanent financing </p>
                 </div>
             </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
+<br>
+<p class="title-paragraph"> What you''ll need to complete the application</p>
+<ul class="list">
+    <li>Business documentation such as company profile information, business certifications (eg.articles of incorporation), lists of assets</li>
+    <li>Business Tax documentation, from tax ID from tax Declarations</li>
+    <li>Personal information of the people in the company that will be eligible for financial services (eg. names, contact information, SSN ID)</li>
+    <li>List of services you may want to apply for</li>
+</ul>
+<br>
+<br>
+<p class="title-welcome"> What to expect after sign up</p>
+<ul class="list">
+    <li>When your sign up is done, you will have to complete the application form</li>
+    <li>After you send in the business documentation requested for your business type, the bank team will validate it</li>
+    <li>After your account is approved, you can fund your account while applying by using a debit card, transferring money from another account or writing a check.</li>
+    <li>Once your account is open, you may access Online Banking and you will receive your checks, debit cards and service activation in approximately 7 to 10 business days.</li>
+</ul>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-club-credit-card','fsi-club-credit-card',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="middle-box-cc">

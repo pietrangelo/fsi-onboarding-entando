@@ -10,3 +10,4 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('ap
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',11,'Loans-3-images ',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',6,'banner-main-internal',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',7,'complete-registration-BPM',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',8,'How-to-complete-instructions',NULL);

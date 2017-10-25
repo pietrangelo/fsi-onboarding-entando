@@ -170,3 +170,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('complete-registration-BPM','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Complete registration form BPM</property><property key="it">Form di completamento registrazione BPM</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('How-to-complete-instructions','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">How to complete instructions</property><property key="it">Registrazione how to</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
