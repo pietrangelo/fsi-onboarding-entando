@@ -625,3 +625,25 @@ a.dropdown-fsi-login{
 .bullet-progress-container .bullet-progress-item.active:after {
     background: #6EC664;
 }
+
+.fsi-progess-bar-box-label {
+    margin-bottom: 20px;
+}
+
+.fsi-progess-bar-dropdown {
+    border-color: white;
+}
+
+.fsi-progess-bar-label {
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.fsi-progess-bar-default {
+    background-color: #3498DB;
+}
+.fsi-progess-bar-success {
+    background-color: #2ECC71;
+}
