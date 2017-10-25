@@ -477,3 +477,41 @@ input[type=checkbox]:checked~#menu {
     font-size: 14px;
     line-height: 18px;
 }
+.middle-box-internal {
+    max-width: 600px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 40px;
+    height: 400px;
+}
+.pass-hint{
+    color: #676A6C;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    margin: -14px 0 14px 0;
+}
+.presentation{
+    color: #676A6C;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0 0 40px 0;
+}
+.subtitle{
+    color: #676A6C;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33px;
+}
+.bpm-wrapper-background{
+    padding: 1em;
+    background-color: #FAFAFA;
+}
+.right-side-button{
+    text-align: right;
+    text-align:-webkit-right;
+}

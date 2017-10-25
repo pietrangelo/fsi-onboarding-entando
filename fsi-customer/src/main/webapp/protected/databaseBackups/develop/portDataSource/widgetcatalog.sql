@@ -164,3 +164,9 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES (' Credit-card-banner-right','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Credit card banner right</property><property key="it">Credit card banner right</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-internal','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Banner main internal</property><property key="it">Banner principale pagina interna</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('complete-registration-BPM','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Complete registration form BPM</property><property key="it">Form di completamento registrazione BPM</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');

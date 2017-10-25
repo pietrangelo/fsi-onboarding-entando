@@ -2210,3 +2210,49 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </p>
 <input type="submit" value="CONTACT US" class="btn btn-primary login-button">
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-internal','banner-main-internal',NULL,'<div class=" left-banner middle-box-internal text-center">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('complete-registration-BPM','complete-registration-BPM',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="bpm-wrapper-background">
+<p class="title-welcome"> Complete registration </p>
+<p class="subtitle">Sign in </p>
+<p class="presentation">Hi . Type your and a password to complete the registration. </p>
+
+ <form action="#" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="first_name" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="first_name" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="last_name" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="last_name" />" class="form-control input-custom" />
+        </div>
+       <div class="form-group">
+            <label class="login-label"><@wp.i18n key="company_name" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="company_name" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="Email" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="Email" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <p class="pass-hint">5 or more characters</p>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="CONFIRM_PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="CONFIRM_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div class="right-side-button">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+        </div>
+    </form>
+</div>',NULL,0);
