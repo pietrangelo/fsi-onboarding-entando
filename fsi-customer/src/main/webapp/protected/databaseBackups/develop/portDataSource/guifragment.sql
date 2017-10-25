@@ -2395,6 +2395,62 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="ibox float-e-margins">
+    <div class="row">
+        <div class="col-md-10"><span class="title-welcome">Your Performance</span></div>
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-1">
+            <div class="ibox-tools">
+                <a class="collapse-link fsi-progess-bar-tools-icon ">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="close-link fsi-progess-bar-tools-icon ">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ibox-content" style="display: block; border-style: none;">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All<span class="caret" style="margin-left: 15px;"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div style="text-align: right">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="row fsi-progess-bar-box-label ">
+            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
+            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="progress">
+                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
+                        <span class="sr-only">60% Complete (success)</span>60%
+                    </div>
+                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <p class="title-welcome">Customer Rate</p>
@@ -2410,57 +2466,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     <div class="ibox-content">
         <div>
             <div id="torta"></div>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="row">
-    <div class="col-md-10"><span class="fsi-progess-bar-title">Your Performance</span></div>
-    <div class="col-md-1" >&nbsp;</div>
-    <div class="col-md-1" >
-        <div class="ibox-tools">
-            <a class="collapse-link fsi-progess-bar-tools-icon ">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link fsi-progess-bar-tools-icon ">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-10"></div>
-    <div class="col-md-1">
-        <div class="dropdown">
-            <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                All<span class="caret" style="margin-left: 15px;"></span>
-            </button>
-        </div>
-    </div>
-    <div class="col-md-1">
-        <div style="text-align: right">
-            <i class="fa fa-calendar"></i>
-        </div>
-    </div>
-
-</div>
-<div class="row fsi-progess-bar-box-label ">
-    <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
-    <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
-    <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
-    <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b></div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <div class="progress">
-            <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
-                <span class="sr-only">60% Complete (success)</span>60%
-            </div>
-            <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
-                <span class="sr-only">20% Complete (warning)</span>
-            </div>
-
         </div>
     </div>
 </div>',NULL,0);

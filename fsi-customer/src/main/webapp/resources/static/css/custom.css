@@ -704,3 +704,12 @@ a.dropdown-fsi-login{
 .application-breadcrumbs .application-breadcrumbs-item.active ~ .application-breadcrumbs-item .application-breadcrumbs-text {
     color: #676A6C;
 }
+
+.logo-menu-pages a{
+    font-size: 16px;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    line-height: 22px;
+    text-transform: uppercase;
+    color:#fff;
+}

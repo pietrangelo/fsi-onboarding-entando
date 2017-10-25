@@ -700,19 +700,19 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
                     <div class="col-md-6 col-md-offset-2">
                         <@wp.show frame=1 />
                         <div class="logo-menu-pages">
-                            <b>personal</b>
+                            <a href="<@wp.url page="customer_internal" />" >personal</a>
                         </div>
                         <div class="logo-menu-pages">
                             <@wp.show frame=2 />
-                            <b>enterprise</b>
-                        </div>
-                        <div class="logo-menu-pages">
-                            <@wp.show frame=3 />
                             <b>small business</b>
                         </div>
                         <div class="logo-menu-pages">
+                            <@wp.show frame=3 />
+                            <b>Account</b>
+                        </div>
+                        <div class="logo-menu-pages">
                             <@wp.show frame=4 />
-                            <b>commercial</b>
+                            <a href="<@wp.url page="dashboard_internal" />" >dashboard</a>
                         </div>
                         <div class="logo-menu-pages">
                             <@wp.show frame=5 />
