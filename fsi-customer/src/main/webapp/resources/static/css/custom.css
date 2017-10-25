@@ -528,3 +528,12 @@ input[type=checkbox]:checked~#menu {
     font-size: 30px;
     font-weight: 300;
 }
+a.dropdown-fsi-login{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration:none;
+}
