@@ -11,3 +11,5 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('ap
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',6,'banner-main-internal',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',7,'complete-registration-BPM',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',8,'How-to-complete-instructions',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-footer',NULL);
