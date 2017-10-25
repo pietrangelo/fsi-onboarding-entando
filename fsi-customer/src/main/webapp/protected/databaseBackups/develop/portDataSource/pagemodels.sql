@@ -637,27 +637,27 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
 	</frame>
 	<frame pos="7">
 		<descr>Main Bar 2</descr>
-		<sketch x1="0" y1="2" x2="5" y2="2" />
+		<sketch x1="0" y1="2" x2="11" y2="2" />
 	</frame>
 	<frame pos="8">
 		<descr>Content 1</descr>
-		<sketch x1="6" y1="2" x2="11" y2="2" />
+		<sketch x1="0" y1="3" x2="11" y2="3" />
 	</frame>
 	<frame pos="9">
 		<descr>Content 2 left</descr>
-		<sketch x1="0" y1="3" x2="5" y2="3" />
+		<sketch x1="0" y1="4" x2="11" y2="4" />
 	</frame>
 	<frame pos="10">
 		<descr>Content 2 right</descr>
-		<sketch x1="6" y1="3" x2="11" y2="3" />
+		<sketch x1="0" y1="5" x2="11" y2="5" />
 	</frame>
 	<frame pos="11">
 		<descr>Content 3</descr>
-		<sketch x1="0" y1="4" x2="11" y2="4" />
+		<sketch x1="0" y1="6" x2="11" y2="6" />
 	</frame>
 	<frame pos="12">
 		<descr>Footer</descr>
-		<sketch x1="0" y1="5" x2="11" y2="5" />
+		<sketch x1="0" y1="7" x2="11" y2="7" />
 	</frame>
 </frames>
 
@@ -720,40 +720,33 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
                     </div>
                 </div>
 
-                 <div class="row">
+                <div class="row">
                     <div class="col-md-12">
                         <@wp.show frame=6 />
-                    </div>
-                 </div>
-
-                <div class="container">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <@wp.show frame=7 />
-                      </div>
-                      <div class="col-md-6">
-                         <@wp.show frame=8 />
-                      </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <@wp.show frame=9 />
-                    </div>
-                    <div class="col-md-6">
-                        <@wp.show frame=10 />
                     </div>
                 </div>
 
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <@wp.show frame=11 />
+                            <@wp.show frame=7 />
+                        </div>
+                        <div class="col-md-12">
+                            <@wp.show frame=8 />
+                        </div>
+                        <div class="col-md-6">
+                            <@wp.show frame=9 />
+                        </div>
+                        <div class="col-md-6">
+                            <@wp.show frame=10 />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <@wp.show frame=11 />
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-md-12">
                         <@wp.show frame=12 />
@@ -762,4 +755,5 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
 
             </div>
     </body>
-</html>');
+</html>
+');
