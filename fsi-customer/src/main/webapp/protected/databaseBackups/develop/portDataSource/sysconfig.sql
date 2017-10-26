@@ -1,51 +1,3 @@
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
-<kieBpmConfig>
-   <active>false</active>
-   <username>USERNAME</username>
-   <password>PASSWORD</password>
-   <hostname>HOSTNAME</hostname>
-   <schema>http</schema>
-   <port>8080</port>
-   <webapp>kie</webapp>
-</kieBpmConfig>');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','langs','Definition of the system languages','<?xml version="1.0" encoding="UTF-8"?>
-<Langs>
-	<Lang>
-		<code>it</code>
-		<descr>Italiano</descr>
-	</Lang>
-	<Lang>
-		<code>en</code>
-		<descr>English</descr>
-		<default>true</default>
-	</Lang>
-</Langs>
-');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','userProfileTypes','User Profile Types Definitions','<?xml version="1.0" encoding="UTF-8"?>
-<profiletypes>
-	<profiletype typecode="PFL" typedescr="Default user profile">
-		<attributes>
-			<attribute name="fullname" attributetype="Monotext" description="Full Name" searchable="true">
-				<validations>
-					<required>true</required>
-				</validations>
-				<roles>
-					<role>userprofile:fullname</role>
-				</roles>
-			</attribute>
-			<attribute name="email" attributetype="Monotext" description="Email" searchable="true">
-				<validations>
-					<required>true</required>
-					<regexp><![CDATA[.+@.+.[a-z]+]]></regexp>
-				</validations>
-				<roles>
-					<role>userprofile:email</role>
-				</roles>
-			</attribute>
-		</attributes>
-	</profiletype>
-</profiletypes>');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataTypeDefinitions','Definition of the Type Types','<datatypes />');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataobjectsubdir','Name of the sub-directory containing dataobject indexing files','index');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpmail_config','Configurazione del servizio di invio eMail','<?xml version="1.0" encoding="UTF-8"?>
 <mailConfig>
@@ -375,3 +327,51 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','entandoC
 </reports>
 
 ');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
+<kieBpmConfig>
+   <active>false</active>
+   <username>USERNAME</username>
+   <password>PASSWORD</password>
+   <hostname>HOSTNAME</hostname>
+   <schema>http</schema>
+   <port>8080</port>
+   <webapp>kie</webapp>
+</kieBpmConfig>');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','langs','Definition of the system languages','<?xml version="1.0" encoding="UTF-8"?>
+<Langs>
+	<Lang>
+		<code>it</code>
+		<descr>Italiano</descr>
+	</Lang>
+	<Lang>
+		<code>en</code>
+		<descr>English</descr>
+		<default>true</default>
+	</Lang>
+</Langs>
+');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','userProfileTypes','User Profile Types Definitions','<?xml version="1.0" encoding="UTF-8"?>
+<profiletypes>
+	<profiletype typecode="PFL" typedescr="Default user profile">
+		<attributes>
+			<attribute name="fullname" attributetype="Monotext" description="Full Name" searchable="true">
+				<validations>
+					<required>true</required>
+				</validations>
+				<roles>
+					<role>userprofile:fullname</role>
+				</roles>
+			</attribute>
+			<attribute name="email" attributetype="Monotext" description="Email" searchable="true">
+				<validations>
+					<required>true</required>
+					<regexp><![CDATA[.+@.+.[a-z]+]]></regexp>
+				</validations>
+				<roles>
+					<role>userprofile:email</role>
+				</roles>
+			</attribute>
+		</attributes>
+	</profiletype>
+</profiletypes>');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataTypeDefinitions','Definition of the Type Types','<datatypes />');

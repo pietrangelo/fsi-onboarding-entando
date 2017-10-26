@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : header-inclusions-light
     Created on : 12-set-2017, 13.14.31
     Author     : kusakkuma
@@ -15,3 +15,5 @@
 <script src="<wp:resourceURL />static/js/jquery.app.js"></script>
 <script src="<wp:resourceURL />static/js/jquery.magnific-popup.min.js"></script>
 <script src="<wp:resourceURL />static/js/parsley.min.js"></script>
+
+

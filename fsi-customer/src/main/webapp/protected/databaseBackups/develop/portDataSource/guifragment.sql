@@ -1,3 +1,544 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="login-label">Company Name</label>
+                    <input id="username" type="text" name="username" placeholder="Company Name" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">The state in which the business operates</label>
+                    <input id="password" type="text" name="password" placeholder="The state in which the business operates" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">The state in which the business was formed</label>
+                    <input id="username" type="text" name="username" placeholder="The state in which the business was formed" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Name</label>
+                    <input id="password" type="text" name="password" placeholder="Name" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Email</label>
+                    <input id="password" type="text" name="password" placeholder="Email" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Customer type</label>
+                    <input id="password" type="text" name="password" placeholder="Customer type" class="form-control input-custom" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="login-label">Address of the business</label>
+                    <input id="username" type="text" name="username" placeholder="Address of the business" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">ZIP CODE</label>
+                    <input id="username" type="text" name="username" placeholder="ZIP CODE" class="form-control input-custom" />
+                </div>
+
+                <div class="form-group" id="data_1">
+                    <label class="login-label">Simple data input format</label>
+                    <div class="input-group date">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control input-custom" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Surname</label>
+                    <input id="password" type="password" name="password" placeholder="Surname" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Phone Number</label>
+                    <input id="password" type="password" name="password" placeholder="Phone Number" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">I am an existing customer </label>
+                    <div class="i-checks checkbox-pos-form"><label><input type="radio" value="option1" name="a" checked> <i></i> YES</label>&nbsp;&nbsp;&nbsp;
+                        <label><input type="radio" value="option2" name="a"> <i></i> NO</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left spacers">
+                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(''#data_1 .input-group.date'').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        });
+    });
+</script>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'
+<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="login-label">Company Name</label>
+                    <input id="username" type="text" name="username" placeholder="Enter First Name" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Last Name</label>
+                    <input id="password" type="text" name="password" placeholder="Enter Last Name" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Email</label>
+                    <input id="username" type="text" name="username" placeholder="Enter Email" class="form-control input-custom" />
+                </div>
+                <br>
+                <p>Additional Info</p>
+
+                <div class="form-group">
+                    <label class="login-label">ENRIC / Passport No.</label>
+                    <input id="password" type="text" name="password" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Nationality</label>
+                    <input id="password" type="text" name="password" placeholder="Enter nationality" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Job Number</label>
+                    <input id="password" type="text" name="password" placeholder="Job Number" class="form-control input-custom" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left spacers">
+                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <p class="title-welcome">State</p>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div id="morris-donut-chart" ></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+       Morris.Donut({
+            element: ''morris-donut-chart'',
+            data: [{label: "Pending", value: 12},
+                {label: "Complete", value: 30},
+                {label: "Suspended", value: 20}],
+            resize: true,
+            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
+        });
+    });
+</script>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="fsi-form-banking-services">
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h5>Selects the financial services that your company is applying for</h5>
+      <div class="ibox-tools"><a class="collapse-link">
+          <div class="fa fa-chevron-up"></div></a><a class="collapse-link">
+          <div class="fa fa-repeat"></div></a></div>
+    </div>
+    <div class="ibox-content">
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>BUSINESS CHECKING</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>BUSINESS CREDIT CARDS</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>BUSINESS LENDING AND FINANCING</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>INTERNATIONAL BANKING</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>MERCHANT SERVICES</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>TREASURY SERVICES</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>CASH MANAGEMENT SERVICES</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>EMPLOYEE BENEFIT SERVICES</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>CASH MANAGEMENT SERVICES</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>EMPLOYEE BENEFIT SERVICES</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button type="button" class="btn btn-w-m btn-default">Back</button>
+        <button type="button" class="btn btn-w-m btn-primary pull-right">Next</button>
+        <button type="button" class="btn btn-w-m btn-success pull-right">Save as draft</button>
+      </div>
+    </div>
+  </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="form-title">Business legal documentation</p>
+
+                <label class="login-label">Article for incorporation</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <label class="login-label">Commercial lease</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <label class="login-label">Franchise agreement</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Business financial documentation</p>
+
+                <label class="login-label">Profits and loss statements 1099 forms from the previuos 2 years</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+                <label class="login-label">List of your debts such as credit cards, employess loans, car loans and real estate</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+                <label class="login-label">List of your assets including bank statements, mutaul fund statements, reak estates and automobile titles, brokerage</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Tax financial documentation</p>
+
+                <label class="login-label">Most recent federal tx return possibly the last 2 tax returns</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Other</p>
+                <label class="login-label">canceled checks for your rent or mortage</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left spacers">
+                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+
+<div class="text-center pdf-toolbar">
+    <div class="btn-group">
+
+        <div class="ibox-content border-sbottom" style="display: inline-flex; padding-left: 0px; padding-right: 0px;">
+            <button id="prev" type="button" data-role="none" class="fa fa-chevron-left" aria-label="Previous"
+                    role="button"
+                    style="background: transparent; border: none"></button>
+            <div id="thumbnail-pdf"></div>
+            <button id="next" type="button" data-role="none" class="fa fa-chevron-right" aria-label="Next" role="button"
+                    style="background: transparent; border: none"></button>
+        </div>
+        <div class="ibox-content border-sbottom" style="display: inline-flex; padding-left: 0px; padding-right: 0px;">
+            <b>Page:</b> <div id="page_num"> </div> /  <div id="page_count"> </div>
+            <button id="zoomin" class="btn btn-white"><i class="fa fa-search-minus"></i></button>
+            <button id="zoomout" class="btn btn-white"><i class="fa fa-search-plus"></i></button>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="text-center m-t-md">
+    <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262"
+            width="892"></canvas>
+</div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AttributeInfo',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<@s.if test="#attribute.required">
+	<abbr class="icon icon-asterisk" title="<@wp.i18n key="userprofile_ENTITY_ATTRIBUTE_MANDATORY_FULL" />"><span class="noscreen"><@wp.i18n key="userprofile_ENTITY_ATTRIBUTE_MANDATORY_SHORT" /></span></abbr>
+</@s.if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AllList_operationModule',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+
+<@s.if test="null == #operationButtonDisabled">
+	<@s.set var="operationButtonDisabled" value="false" />
+</@s.if>
+<div class="btn-toolbar">
+	<div class="btn-group btn-group-sm">
+		<@wpsa.actionParam action="moveListElement" var="actionName" >
+			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
+			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
+			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
+			<@wpsa.actionSubParam name="movement" value="UP" />
+		</@wpsa.actionParam>
+		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default" title="%{getText(''label.moveInPositionNumber'')}: %{#elementIndex}">
+		<span class="icon fa fa-sort-desc"></span>
+		<span class="sr-only"><@s.text name="label.moveInPositionNumber" />: <@s.property value="%{#elementIndex}" /></span>
+		</@wpsf.submit>
+
+		<@wpsa.actionParam action="moveListElement" var="actionName" >
+			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
+			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
+			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
+			<@wpsa.actionSubParam name="movement" value="DOWN" />
+		</@wpsa.actionParam>
+		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default" title="%{getText(''label.moveInPositionNumber'')}: %{#elementIndex+2}">
+		<span class="icon fa fa-sort-asc"></span>
+		<span class="sr-only"><@s.text name="label.moveInPositionNumber" />: <@s.property value="%{#elementIndex}" /></span>
+		</@wpsf.submit>
+	</div>
+	<div class="btn-group btn-group-sm">
+		<@wpsa.actionParam action="removeListElement" var="actionName" >
+			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
+			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
+			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
+		</@wpsa.actionParam>
+		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default btn-warning" title="%{getText(''label.remove'')}: %{#elementIndex}">
+		<span class="icon fa fa-times-circle-o"></span>
+		<span class="sr-only"><@s.text name="label.remove" />: <@s.property value="%{#elementIndex}" /></span>
+		</@wpsf.submit>
+	</div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-AllList-addElementButton',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+
+<@s.set var="add_label"><@wp.i18n key="userprofile_ADDITEM_LIST" /></@s.set>
+
+<@wpsa.actionParam action="addListElement" var="actionName" >
+	<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
+	<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
+</@wpsa.actionParam>
+<@s.set var="iconImagePath" id="iconImagePath"><@wp.resourceURL/>administration/common/img/icons/list-add.png</@s.set> 
+<@wpsf.submit 
+	cssClass="btn"
+	useTabindexAutoIncrement=true 
+	action="%{#actionName}" 
+	value="%{add_label}" 
+	title="%{i18n_attribute_name}%{'': ''}%{add_label}" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-search_result_inspinia','entando-widget-search_result_inspinia',NULL,NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="ibox-content">
@@ -164,6 +705,41 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-ThreeStateAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-none''}" />">
+	<@wpsf.radio 
+		useTabindexAutoIncrement=true  
+		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
+		id="%{#attribute_id + ''-none''}" 
+		value="" 
+		checked="%{#attribute.booleanValue == null}" 
+		cssClass="radio" />
+		<@wp.i18n key="userprofile_BOTH_YES_AND_NO" />
+</label>
+&#32;
+<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-true''}" />">
+	<@wpsf.radio 
+		useTabindexAutoIncrement=true  
+		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
+		id="%{#attribute_id + ''-true''}" 
+		value="true" 
+		checked="%{#attribute.booleanValue != null && #attribute.booleanValue == true}"
+		cssClass="radio" />
+		<@wp.i18n key="userprofile_YES" />
+</label>
+&#32;
+<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-false''}" />">
+	<@wpsf.radio 
+		useTabindexAutoIncrement=true  
+		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
+		id="%{#attribute_id + ''-false''}" 
+		value="false" 
+		checked="%{#attribute.booleanValue != null && #attribute.booleanValue == false}" 
+		cssClass="radio" />
+		<@wp.i18n key="userprofile_NO" />
+</label>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_profile','userprofile_editCurrentUser_profile',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -363,109 +939,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-ThreeStateAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-none''}" />">
-	<@wpsf.radio 
-		useTabindexAutoIncrement=true  
-		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
-		id="%{#attribute_id + ''-none''}" 
-		value="" 
-		checked="%{#attribute.booleanValue == null}" 
-		cssClass="radio" />
-		<@wp.i18n key="userprofile_BOTH_YES_AND_NO" />
-</label>
-&#32;
-<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-true''}" />">
-	<@wpsf.radio 
-		useTabindexAutoIncrement=true  
-		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
-		id="%{#attribute_id + ''-true''}" 
-		value="true" 
-		checked="%{#attribute.booleanValue != null && #attribute.booleanValue == true}"
-		cssClass="radio" />
-		<@wp.i18n key="userprofile_YES" />
-</label>
-&#32;
-<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-false''}" />">
-	<@wpsf.radio 
-		useTabindexAutoIncrement=true  
-		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
-		id="%{#attribute_id + ''-false''}" 
-		value="false" 
-		checked="%{#attribute.booleanValue != null && #attribute.booleanValue == false}" 
-		cssClass="radio" />
-		<@wp.i18n key="userprofile_NO" />
-</label>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AttributeInfo',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<@s.if test="#attribute.required">
-	<abbr class="icon icon-asterisk" title="<@wp.i18n key="userprofile_ENTITY_ATTRIBUTE_MANDATORY_FULL" />"><span class="noscreen"><@wp.i18n key="userprofile_ENTITY_ATTRIBUTE_MANDATORY_SHORT" /></span></abbr>
-</@s.if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AllList_operationModule',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-
-<@s.if test="null == #operationButtonDisabled">
-	<@s.set var="operationButtonDisabled" value="false" />
-</@s.if>
-<div class="btn-toolbar">
-	<div class="btn-group btn-group-sm">
-		<@wpsa.actionParam action="moveListElement" var="actionName" >
-			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
-			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
-			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
-			<@wpsa.actionSubParam name="movement" value="UP" />
-		</@wpsa.actionParam>
-		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default" title="%{getText(''label.moveInPositionNumber'')}: %{#elementIndex}">
-		<span class="icon fa fa-sort-desc"></span>
-		<span class="sr-only"><@s.text name="label.moveInPositionNumber" />: <@s.property value="%{#elementIndex}" /></span>
-		</@wpsf.submit>
-
-		<@wpsa.actionParam action="moveListElement" var="actionName" >
-			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
-			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
-			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
-			<@wpsa.actionSubParam name="movement" value="DOWN" />
-		</@wpsa.actionParam>
-		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default" title="%{getText(''label.moveInPositionNumber'')}: %{#elementIndex+2}">
-		<span class="icon fa fa-sort-asc"></span>
-		<span class="sr-only"><@s.text name="label.moveInPositionNumber" />: <@s.property value="%{#elementIndex}" /></span>
-		</@wpsf.submit>
-	</div>
-	<div class="btn-group btn-group-sm">
-		<@wpsa.actionParam action="removeListElement" var="actionName" >
-			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
-			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
-			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
-		</@wpsa.actionParam>
-		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default btn-warning" title="%{getText(''label.remove'')}: %{#elementIndex}">
-		<span class="icon fa fa-times-circle-o"></span>
-		<span class="sr-only"><@s.text name="label.remove" />: <@s.property value="%{#elementIndex}" /></span>
-		</@wpsf.submit>
-	</div>
-</div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-AllList-addElementButton',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-
-<@s.set var="add_label"><@wp.i18n key="userprofile_ADDITEM_LIST" /></@s.set>
-
-<@wpsa.actionParam action="addListElement" var="actionName" >
-	<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
-	<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
-</@wpsa.actionParam>
-<@s.set var="iconImagePath" id="iconImagePath"><@wp.resourceURL/>administration/common/img/icons/list-add.png</@s.set> 
-<@wpsf.submit 
-	cssClass="btn"
-	useTabindexAutoIncrement=true 
-	action="%{#actionName}" 
-	value="%{add_label}" 
-	title="%{i18n_attribute_name}%{'': ''}%{add_label}" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_IteratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -2201,33 +2674,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </#list>
     </@wp.freemarkerTemplateParameter>
 </ul>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <p class="title-welcome">State</p>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div id="morris-donut-chart" ></div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<h1>PDF.js Previous/Next example</h1>
-<div id="thumbnail-pdf"></div>
-<div>
-  <button id="prev">Previous</button>
-  <button id="next">Next</button>
-  &nbsp; &nbsp;
-  <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-</div>
-
-<canvas id="the-canvas"></canvas>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">

@@ -1,3 +1,4 @@
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('GENERIC_ERROR','it','Errore Generico');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE','en','page');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE','it','pagina');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE_MODEL','en','page model');
@@ -21,7 +22,6 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('USER_NOT_ALLOWE
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE_NOT_FOUND','en','Page not found');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE_NOT_FOUND','it','Pagina non trovata');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('GENERIC_ERROR','en','Generic Error');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('GENERIC_ERROR','it','Errore Generico');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ADMINISTRATION_BASIC','it','Normale');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ADMINISTRATION_BASIC','en','Normal');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ADMINISTRATION_MINT','it','Avanzata');

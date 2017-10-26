@@ -661,7 +661,8 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
 	</frame>
 </frames>
 
-',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+',NULL,'
+<#assign wp=JspTaglibs["/aps-core"]>
 <#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
 <!DOCTYPE html>
 <html lang="en">
@@ -721,15 +722,13 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
                 </div>
 
                 <div class="container">
-                     <div class="row">
-                         <div class="col-md-12">
-                        <@wp.show frame=6 />
-                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <@wp.show frame=6 />
+                        </div>
                         <div class="col-md-12">
                             <@wp.show frame=7 />
                         </div>
-                       
-                       
                         <div class="col-md-4">
                             <@wp.show frame=8 />
                         </div>
@@ -739,12 +738,8 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
                         <div class="col-md-4">
                             <@wp.show frame=10 />
                         </div>
-                       
-                       
-                        <div class="row">
-                            <div class="col-md-12">
-                                <@wp.show frame=11 />
-                            </div>
+                        <div class="col-md-12">
+                            <@wp.show frame=11 />
                         </div>
                     </div>
                 </div>
