@@ -140,14 +140,7 @@
                 type: 'pie'
             }
         });
-        Morris.Donut({
-            element: 'morris-donut-chart',
-            data: [{label: "Pending", value: 12},
-                {label: "Complete", value: 30},
-                {label: "Suspended", value: 20}],
-            resize: true,
-            colors: ['#F1C40F', '#2ECC71', '#E74C3C'],
-        });
+
     });
 </script>
 
@@ -240,7 +233,7 @@
 
             // Update page counters
             pageNum = num;
-            document.getElementById('page_num').textContent = pageNum;
+            document.getElementById('page_num').innerHTML = pageNum;
         }
 
         /**
@@ -283,6 +276,27 @@
 
 
         /**
+         *  Zoom In.
+         */
+        function zoomIn() {
+            scale -= 0.25;
+            renderPage(pageNum);
+        }
+
+        document.getElementById('zoomin').addEventListener('click', zoomIn);
+
+        /**
+         *  Zoom Out.
+         */
+        function zoomOut() {
+            scale += 0.25;
+            renderPage(pageNum);
+        }
+
+        document.getElementById('zoomout').addEventListener('click', zoomOut);
+
+
+        /**
          * Asynchronously downloads PDF.
          */
         PDFJS.getDocument(url).then(function (pdfDoc_) {
@@ -315,15 +329,14 @@
 
         function onThumbClick(event) {
             var page = parseInt(event.currentTarget.getAttribute("page"), 10);
-
             renderPage(page);
         }
 
         function makeThumb(page) {
-            // draw page to fit into 96x96 canvas
+            // draw page to fit into 50x50 canvas
             var vp = page.getViewport(1);
             var canvas = document.createElement("canvas");
-            canvas.width = canvas.height = 96;
+            canvas.width = canvas.height = 50;
             var scale = Math.min(canvas.width / vp.width, canvas.height / vp.height);
             return page.render({
                 canvasContext: canvas.getContext("2d"),
