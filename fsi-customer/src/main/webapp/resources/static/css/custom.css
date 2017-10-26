@@ -778,8 +778,8 @@ a.dropdown-fsi-login{
 #thumbnail-pdf {
     border:1px solid red;
     width:auto;
-    height:100px;
-    display:flex;
+    height:70px;
+    display:inline-flex;
 }
 .page-active {
     border:1px solid blue;
