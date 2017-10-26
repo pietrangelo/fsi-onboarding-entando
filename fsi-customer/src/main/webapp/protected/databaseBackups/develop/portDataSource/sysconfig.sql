@@ -1,3 +1,13 @@
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
+<kieBpmConfig>
+   <active>false</active>
+   <username>USERNAME</username>
+   <password>PASSWORD</password>
+   <hostname>HOSTNAME</hostname>
+   <schema>http</schema>
+   <port>8080</port>
+   <webapp>kie</webapp>
+</kieBpmConfig>');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','langs','Definition of the system languages','<?xml version="1.0" encoding="UTF-8"?>
 <Langs>
 	<Lang>
@@ -70,16 +80,6 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','imageDim
 </Dimensions>
 ');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','subIndexDir','Name of the sub-directory containing content indexing files','index');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
-<kieBpmConfig>
-   <active>false</active>
-   <username>USERNAME</username>
-   <password>PASSWORD</password>
-   <hostname>HOSTNAME</hostname>
-   <schema>http</schema>
-   <port>8080</port>
-   <webapp>kie</webapp>
-</kieBpmConfig>');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','contentTypes','Definition of the Content Types','<?xml version="1.0" encoding="UTF-8"?>
 <contenttypes>
 	<contenttype typecode="CNG" typedescr="Generic Content" viewpage="**NULL**" listmodel="10011" defaultmodel="10001">

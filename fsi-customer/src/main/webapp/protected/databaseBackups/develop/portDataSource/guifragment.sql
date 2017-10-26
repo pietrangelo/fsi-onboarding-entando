@@ -1,3 +1,138 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-search_result_inspinia','entando-widget-search_result_inspinia',NULL,NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="ibox-content">
+<#if (RequestParameters.search?? && RequestParameters.search!='''')>
+<@jacms.searcher listName="contentListResult" />
+</#if>
+<#if (contentListResult??) && (contentListResult?has_content) && (contentListResult?size > 0)>
+<@wp.pager listName="contentListResult" objectName="groupContent" max=10 pagerIdFromFrame=true advanced=true offset=5>
+	<@wp.freemarkerTemplateParameter var="group" valueName="groupContent" removeOnEndTag=true >
+	<h2> <@wp.i18n key="SEARCHED_FOR" />: <span class="text-navy">&#34;<#if (RequestParameters.search??)>${RequestParameters.search}</#if>&#34;</span> </h2>
+	<small>${groupContent.size} <@wp.i18n key="SEARCH_RESULTS_OUTRO" /> [${groupContent.begin + 1} &ndash; ${groupContent.end + 1}]:</small>
+	<@wp.fragment code="default_pagerBlock" escapeXml=false />
+        <div class="hr-line-dashed"></div>
+	<#list contentListResult as contentId>
+	<#if (contentId_index >= groupContent.begin) && (contentId_index <= groupContent.end)>
+		<@jacms.content contentId="${contentId}" modelId="list" />
+	</#if>
+	</#list>
+	<@wp.fragment code="default_pagerBlock" escapeXml=false />
+	</@wp.freemarkerTemplateParameter>
+</@wp.pager>
+<#else>
+<h2><@wp.i18n key="SEARCH_RESULTS" /></h2>
+<p class="text-danger"><@wp.i18n key="SEARCH_NOTHING_FOUND" /></p>
+</#if>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-navigation_bar_inspinia','entando-widget-navigation_bar_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+<@wp.currentPage param="code" var="currentPageCode" />
+<@wp.freemarkerTemplateParameter var="currentPageCode" valueName="currentPageCode" />
+
+<@wp.nav var="page">
+
+<#if (previousPage?? && previousPage.code??)>
+	<#assign previousLevel=previousPage.level>
+	<#assign level=page.level>
+        <@wp.freemarkerTemplateParameter var="level" valueName="level" />
+	<@wp.freemarkerTemplateParameter var="previousLevel" valueName="previousLevel" />
+	<@wp.fragment code="entando-widget-navigation_bar_inspinia_include" escapeXml=false />
+</#if>
+
+	<@wp.freemarkerTemplateParameter var="previousPage" valueName="page" />
+</@wp.nav>
+
+<#if (previousPage??)>
+	<#assign previousLevel=previousPage.level>
+        <#assign level=0>
+	<@wp.freemarkerTemplateParameter var="level" valueName="level" />
+	<@wp.freemarkerTemplateParameter var="previousLevel" valueName="previousLevel" />
+	<@wp.fragment code="entando-widget-navigation_bar_inspinia_include" escapeXml=false />
+
+        <#if (previousLevel != 0)>
+        <#list 0..(previousLevel - 1) as ignoreMe>
+            </ul></li>
+        </#list>
+                
+	</#if>
+</#if>
+
+<@wp.freemarkerTemplateParameter var="previousPage" valueName="" removeOnEndTag=true />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-navigation_bar_inspinia_include',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
+
+
+<#assign liClass="">
+<#assign homeIcon="">
+<#assign caret="">
+<#assign ulClass='' class="dropdown-menu"''>
+<#assign aClassAndData="">
+<#assign aURL=previousPage.url>
+
+<#if (previousPage.voidPage)>
+       <#assign aURL=''#'' />
+</#if>
+
+<#if (previousPage.code?contains("homepage"))>
+     <#assign homeIcon=''<i class="icon-home"></i>&#32;''>
+</#if>
+
+<#if (previousPage.code == currentPageCode)>
+     <#assign liClass='' class="active"''>
+</#if>
+
+<#if (previousLevel < level)>
+    <#assign liClass='' class="dropdown"'' >
+
+    <#if (previousPage.code == currentPageCode)>
+	<#assign liClass='' class="dropdown active"''>
+    </#if>
+
+    <#if previousPage.voidPage>
+	<#assign liClass='' class=" dropdown"'' >
+    </#if>
+
+    <#if (previousLevel > 0) >
+	<#assign liClass='' class="dropdown-submenu"''>
+	<#if (previousPage.code == currentPageCode)>
+		<#assign liClass='' class="dropdown-submenu active"''>
+    	</#if>
+
+	<#assign ulClass='' class="dropdown-menu"''>
+    </#if>
+
+    <#assign aClassAndData='' class="dropdown-toggle" data-toggle="dropdown"''>
+
+    <#if (previousLevel == 0)>
+	<#assign caret='' <span class="caret"></span>''>
+    </#if>
+</#if>
+
+<li ${liClass} > 
+	<a href="${aURL}"  ${aClassAndData} >
+				<!-- [ ${previousLevel} ] -->
+				${homeIcon}
+				${previousPage.title}
+				${caret}
+	</a>
+
+<#if (previousLevel == level)></li></#if>
+<#if (previousLevel < level)>
+    <ul ${ulClass}>
+</#if>
+<#if (previousLevel > level)>
+     <#list 1..(previousLevel - level) as ignoreMe>
+            </li></ul>
+     </#list>
+    </li>
+</#if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-search_form_inspinia','entando-widget-search_form_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.pageWithWidget var="searchResultPageVar" widgetTypeCode="search_result" listResult=false />
+<form class="navbar-form-custom" action="<#if (searchResultPageVar??) ><@wp.url page="${searchResultPageVar.code}" /></#if>" method="get">
+<div class="form-group">
+<input type="text" name="search" class="form-control" placeholder="<@wp.i18n key="ESSF_SEARCH" />" />
+</div>
+</form>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
   <div class="ibox float-e-margins">
     <div class="ibox-title">
@@ -515,6 +650,11 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		</div>
 	</div>
 </@s.else>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-internal','banner-main-internal',NULL,'<div class=" left-banner middle-box-internal text-center">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_password','userprofile_editCurrentUser_password',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -1158,6 +1298,47 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </p>
 
 </section>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('complete-registration-BPM','complete-registration-BPM',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="bpm-wrapper-background">
+<p class="title-welcome"> Complete registration </p>
+<p class="subtitle">Sign in </p>
+<p class="presentation">Hi . Type your and a password to complete the registration. </p>
+
+ <form action="#" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="first_name" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="first_name" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="last_name" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="last_name" />" class="form-control input-custom" />
+        </div>
+       <div class="form-group">
+            <label class="login-label"><@wp.i18n key="company_name" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="company_name" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="Email" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="Email" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <p class="pass-hint">5 or more characters</p>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="CONFIRM_PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="CONFIRM_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div class="right-side-button">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+        </div>
+    </form>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -1638,6 +1819,32 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		<input name="${formFieldNameVar}" id="${formFieldNameVar}" value="${formFieldValue}" type="text" class="input-xlarge"/>
 	</div>
 </div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'
+<div class="application-breadcrumbs-wrapper">
+  <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
+  <div class="application-breadcrumbs">
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">1</div>
+      <div class="application-breadcrumbs-text">Start</div>
+    </div>
+    <div class="application-breadcrumbs-item active">
+      <div class="application-breadcrumbs-number">2</div>
+      <div class="application-breadcrumbs-text">Application</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">3</div>
+      <div class="application-breadcrumbs-text">Background check</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">4</div>
+      <div class="application-breadcrumbs-text">Legal review</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">5</div>
+      <div class="application-breadcrumbs-text">Account creation</div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list','content_viewer_list','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <@wp.headInfo type="JS_EXT" info="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" />
@@ -1738,6 +1945,62 @@ jQuery(function($){
 	</div>
 </div>
 </fieldset>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="ibox float-e-margins">
+    <div class="row">
+        <div class="col-md-10"><span class="title-welcome">Your Performance</span></div>
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-1">
+            <div class="ibox-tools">
+                <a class="collapse-link fsi-progess-bar-tools-icon ">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="close-link fsi-progess-bar-tools-icon ">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ibox-content" style="display: block; border-style: none;">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All<span class="caret" style="margin-left: 15px;"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div style="text-align: right">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="row fsi-progess-bar-box-label ">
+            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
+            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="progress">
+                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
+                        <span class="sr-only">60% Complete (success)</span>60%
+                    </div>
+                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -1784,6 +2047,24 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	</div>
 </div>
 </fieldset>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <p class="title-welcome">Customer Rate</p>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div>
+            <div id="torta"></div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_ThreeSt',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -1920,141 +2201,33 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </#list>
     </@wp.freemarkerTemplateParameter>
 </ul>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-search_result_inspinia','entando-widget-search_result_inspinia',NULL,NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="ibox-content">
-<#if (RequestParameters.search?? && RequestParameters.search!='''')>
-<@jacms.searcher listName="contentListResult" />
-</#if>
-<#if (contentListResult??) && (contentListResult?has_content) && (contentListResult?size > 0)>
-<@wp.pager listName="contentListResult" objectName="groupContent" max=10 pagerIdFromFrame=true advanced=true offset=5>
-	<@wp.freemarkerTemplateParameter var="group" valueName="groupContent" removeOnEndTag=true >
-	<h2> <@wp.i18n key="SEARCHED_FOR" />: <span class="text-navy">&#34;<#if (RequestParameters.search??)>${RequestParameters.search}</#if>&#34;</span> </h2>
-	<small>${groupContent.size} <@wp.i18n key="SEARCH_RESULTS_OUTRO" /> [${groupContent.begin + 1} &ndash; ${groupContent.end + 1}]:</small>
-	<@wp.fragment code="default_pagerBlock" escapeXml=false />
-        <div class="hr-line-dashed"></div>
-	<#list contentListResult as contentId>
-	<#if (contentId_index >= groupContent.begin) && (contentId_index <= groupContent.end)>
-		<@jacms.content contentId="${contentId}" modelId="list" />
-	</#if>
-	</#list>
-	<@wp.fragment code="default_pagerBlock" escapeXml=false />
-	</@wp.freemarkerTemplateParameter>
-</@wp.pager>
-<#else>
-<h2><@wp.i18n key="SEARCH_RESULTS" /></h2>
-<p class="text-danger"><@wp.i18n key="SEARCH_NOTHING_FOUND" /></p>
-</#if>
-</div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-navigation_bar_inspinia','entando-widget-navigation_bar_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-
-<@wp.currentPage param="code" var="currentPageCode" />
-<@wp.freemarkerTemplateParameter var="currentPageCode" valueName="currentPageCode" />
-
-<@wp.nav var="page">
-
-<#if (previousPage?? && previousPage.code??)>
-	<#assign previousLevel=previousPage.level>
-	<#assign level=page.level>
-        <@wp.freemarkerTemplateParameter var="level" valueName="level" />
-	<@wp.freemarkerTemplateParameter var="previousLevel" valueName="previousLevel" />
-	<@wp.fragment code="entando-widget-navigation_bar_inspinia_include" escapeXml=false />
-</#if>
-
-	<@wp.freemarkerTemplateParameter var="previousPage" valueName="page" />
-</@wp.nav>
-
-<#if (previousPage??)>
-	<#assign previousLevel=previousPage.level>
-        <#assign level=0>
-	<@wp.freemarkerTemplateParameter var="level" valueName="level" />
-	<@wp.freemarkerTemplateParameter var="previousLevel" valueName="previousLevel" />
-	<@wp.fragment code="entando-widget-navigation_bar_inspinia_include" escapeXml=false />
-
-        <#if (previousLevel != 0)>
-        <#list 0..(previousLevel - 1) as ignoreMe>
-            </ul></li>
-        </#list>
-                
-	</#if>
-</#if>
-
-<@wp.freemarkerTemplateParameter var="previousPage" valueName="" removeOnEndTag=true />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-navigation_bar_inspinia_include',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
-
-
-<#assign liClass="">
-<#assign homeIcon="">
-<#assign caret="">
-<#assign ulClass='' class="dropdown-menu"''>
-<#assign aClassAndData="">
-<#assign aURL=previousPage.url>
-
-<#if (previousPage.voidPage)>
-       <#assign aURL=''#'' />
-</#if>
-
-<#if (previousPage.code?contains("homepage"))>
-     <#assign homeIcon=''<i class="icon-home"></i>&#32;''>
-</#if>
-
-<#if (previousPage.code == currentPageCode)>
-     <#assign liClass='' class="active"''>
-</#if>
-
-<#if (previousLevel < level)>
-    <#assign liClass='' class="dropdown"'' >
-
-    <#if (previousPage.code == currentPageCode)>
-	<#assign liClass='' class="dropdown active"''>
-    </#if>
-
-    <#if previousPage.voidPage>
-	<#assign liClass='' class=" dropdown"'' >
-    </#if>
-
-    <#if (previousLevel > 0) >
-	<#assign liClass='' class="dropdown-submenu"''>
-	<#if (previousPage.code == currentPageCode)>
-		<#assign liClass='' class="dropdown-submenu active"''>
-    	</#if>
-
-	<#assign ulClass='' class="dropdown-menu"''>
-    </#if>
-
-    <#assign aClassAndData='' class="dropdown-toggle" data-toggle="dropdown"''>
-
-    <#if (previousLevel == 0)>
-	<#assign caret='' <span class="caret"></span>''>
-    </#if>
-</#if>
-
-<li ${liClass} > 
-	<a href="${aURL}"  ${aClassAndData} >
-				<!-- [ ${previousLevel} ] -->
-				${homeIcon}
-				${previousPage.title}
-				${caret}
-	</a>
-
-<#if (previousLevel == level)></li></#if>
-<#if (previousLevel < level)>
-    <ul ${ulClass}>
-</#if>
-<#if (previousLevel > level)>
-     <#list 1..(previousLevel - level) as ignoreMe>
-            </li></ul>
-     </#list>
-    </li>
-</#if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-search_form_inspinia','entando-widget-search_form_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<@wp.pageWithWidget var="searchResultPageVar" widgetTypeCode="search_result" listResult=false />
-<form class="navbar-form-custom" action="<#if (searchResultPageVar??) ><@wp.url page="${searchResultPageVar.code}" /></#if>" method="get">
-<div class="form-group">
-<input type="text" name="search" class="form-control" placeholder="<@wp.i18n key="ESSF_SEARCH" />" />
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <p class="title-welcome">State</p>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div id="morris-donut-chart" ></div>
+    </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<h1>PDF.js Previous/Next example</h1>
+<div id="thumbnail-pdf"></div>
+<div>
+  <button id="prev">Previous</button>
+  <button id="next">Next</button>
+  &nbsp; &nbsp;
+  <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
 </div>
-</form>',1);
+
+<canvas id="the-canvas"></canvas>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">
@@ -2353,166 +2526,4 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 <p>Improving businesses&apos; life through meaningful services.
 </p>
 <input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-internal','banner-main-internal',NULL,'<div class=" left-banner middle-box-internal text-center">
-<p>Improving businesses&apos; life through meaningful services.
-</p>
-<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('complete-registration-BPM','complete-registration-BPM',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="bpm-wrapper-background">
-<p class="title-welcome"> Complete registration </p>
-<p class="subtitle">Sign in </p>
-<p class="presentation">Hi . Type your and a password to complete the registration. </p>
-
- <form action="#" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="first_name" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="first_name" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="last_name" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="last_name" />" class="form-control input-custom" />
-        </div>
-       <div class="form-group">
-            <label class="login-label"><@wp.i18n key="company_name" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="company_name" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="Email" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="Email" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <p class="pass-hint">5 or more characters</p>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="CONFIRM_PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="CONFIRM_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div class="right-side-button">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-        </div>
-    </form>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'
-<div class="application-breadcrumbs-wrapper">
-  <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
-  <div class="application-breadcrumbs">
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">1</div>
-      <div class="application-breadcrumbs-text">Start</div>
-    </div>
-    <div class="application-breadcrumbs-item active">
-      <div class="application-breadcrumbs-number">2</div>
-      <div class="application-breadcrumbs-text">Application</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">3</div>
-      <div class="application-breadcrumbs-text">Background check</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">4</div>
-      <div class="application-breadcrumbs-text">Legal review</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">5</div>
-      <div class="application-breadcrumbs-text">Account creation</div>
-    </div>
-  </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="ibox float-e-margins">
-    <div class="row">
-        <div class="col-md-10"><span class="title-welcome">Your Performance</span></div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-1">
-            <div class="ibox-tools">
-                <a class="collapse-link fsi-progess-bar-tools-icon ">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-                <a class="close-link fsi-progess-bar-tools-icon ">
-                    <i class="fa fa-times"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="ibox-content" style="display: block; border-style: none;">
-        <div class="row">
-            <div class="col-md-10"></div>
-            <div class="col-md-1">
-                <div class="dropdown">
-                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        All<span class="caret" style="margin-left: 15px;"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div style="text-align: right">
-                    <i class="fa fa-calendar"></i>
-                </div>
-            </div>
-
-        </div>
-        <div class="row fsi-progess-bar-box-label ">
-            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
-            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="progress">
-                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
-                        <span class="sr-only">60% Complete (success)</span>60%
-                    </div>
-                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
-                        <span class="sr-only">20% Complete (warning)</span>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <p class="title-welcome">Customer Rate</p>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div>
-            <div id="torta"></div>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <p class="title-welcome">State</p>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div id="morris-donut-chart" ></div>
-    </div>
 </div>',NULL,0);

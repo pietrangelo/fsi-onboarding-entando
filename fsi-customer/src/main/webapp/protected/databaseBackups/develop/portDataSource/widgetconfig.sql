@@ -21,3 +21,4 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboar
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',10,'fsi-state',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',9,'fsi-customer-rate',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',6,'fsi-progress-bar',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',11,'fsi-pdf-document',NULL);

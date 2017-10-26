@@ -771,3 +771,16 @@ a.dropdown-fsi-login{
   background: #F8E187;
 }
 
+#the-canvas {
+    border:1px solid black;
+    width:auto;
+}
+#thumbnail-pdf {
+    border:1px solid red;
+    width:auto;
+    height:100px;
+    display:flex;
+}
+.page-active {
+    border:1px solid blue;
+}
