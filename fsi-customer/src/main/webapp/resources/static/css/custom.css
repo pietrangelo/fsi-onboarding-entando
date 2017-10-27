@@ -1738,4 +1738,5 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 
 .scrollbar-auto {
     overflow: auto;
+    width: auto;
 }
