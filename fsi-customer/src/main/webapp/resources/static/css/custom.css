@@ -777,8 +777,8 @@ a.dropdown-fsi-login{
     width:auto;
 }
 #thumbnail-pdf {
-    border:1px solid red;
-    width:auto;
+    border:0px solid red;
+    width:100%;
     height:70px;
     display:inline-flex;
 }
