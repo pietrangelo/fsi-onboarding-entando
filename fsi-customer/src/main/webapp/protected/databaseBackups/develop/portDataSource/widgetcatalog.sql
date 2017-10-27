@@ -4,6 +4,12 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-form-banking-services','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI form banking</property><property key="it">FSI form banking</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-legal-check','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI-legal-check</property><property key="it">FSI-legal-check</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-welcome-personal-area','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI welcome personal area</property><property key="it">FSI welcome personal area</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-registration-form-advanced','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI registration advanced</property><property key="it">FSI registrazione avanzata</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');

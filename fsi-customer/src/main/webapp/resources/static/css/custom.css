@@ -1579,3 +1579,163 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     margin: 0 5px;
 }
 .form-title{font-size: 30px;margin: 30px 0 20px 0;}
+
+.fsi-upload-new-file {
+    font-family: "Open Sans", sans-serif;
+    background: #ffffff;
+    border: 2px solid #00659C;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.fsi-upload-new-file .fsi-warning-title {
+    font-size: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #00659C;
+    min-width: 180px;
+}
+.fsi-upload-new-file .fsi-error-desc {
+    font-weight: 600;
+    min-width: 250px;
+    padding: 0 20px;
+}
+.fsi-upload-new-file .fsi-message {
+    padding: 0 20px;
+}
+.fsi-upload-new-file .fsi-upload-new-link {
+    border: 1px dashed #00659C;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    min-width: 110px;
+    color: #676a6c;
+    text-decoration: none;
+}
+.fsi-upload-new-file .fsi-upload-new-link:hover {
+    color: #00659C;
+}
+.fsi-upload-new-file .fsi-upload-new-link .fsi-label {
+    max-width: 60px;
+    text-align: center;
+    padding: 0 10px;
+}
+.fsi-upload-new-file .fsi-upload-new-link .fa {
+    font-size: 30px;
+}
+
+.fsi-welcome-personal-area {
+    font-family: "Open Sans", sans-serif;
+    background: #ffffff;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fsi-welcome-personal-area .fsi-welcome-title {
+    font-size: 26px;
+    font-weight: 300;
+    color: #00659C;
+    padding: 30px;
+    text-align: center;
+}
+.fsi-welcome-personal-area .fsi-welcome-message {
+    font-size: 16px;
+    font-weight: 300;
+}
+.fsi-welcome-personal-area .fsi-time-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.fsi-welcome-personal-area .fsi-time-left .fa {
+    font-size: 40px;
+}
+.fsi-welcome-personal-area .fsi-time-left .fsi-time-left-message {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.fsi-legal-review-wrapper {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+.fsi-legal-review-wrapper .fsi-legal-review-intro {
+    padding: 0 20px;
+}
+
+.fsi-blue-banner {
+    background: #004368;
+    min-width: 350px;
+    min-height: 350px;
+    padding: 20px;
+    position: relative;
+}
+.fsi-blue-banner .bb-small {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    max-width: 60%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.fsi-blue-banner .bb-big {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.fsi-blue-banner .bb-big.bb-big-bigger {
+    font-size: 48px;
+}
+.fsi-blue-banner .bb-expect-it {
+    color: #f49d3c;
+    font-size: 35px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+}
+
+.box-toolbar-pdf-thumbnail {
+    padding:0;
+    border-style: solid;
+    border-width: 1px 0px 1px 0;
+    border-color: #999999;
+}
+
+.background-white {
+    background: #ffffff;
+}
+
+.background-grey {
+    background: #f1f1f1;
+}
+
+.background-white, .box-select-file {
+    border: none;
+}
+
+.no-border {
+    background: transparent;
+    border: none;
+}
+
+.no-border:hover {
+    background: transparent;
+    border: none;
+}
+
+.scrollbar-auto {
+    overflow: auto;
+}

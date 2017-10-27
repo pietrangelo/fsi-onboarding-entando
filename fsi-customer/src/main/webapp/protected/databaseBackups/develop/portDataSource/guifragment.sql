@@ -426,51 +426,110 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="container background-white">
+    <div class="row">
+        <div class="col-md-2">DOCUMENTS</div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">TIME TO REVIEW</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <div>
+                    <select class="chosen-select box-select-file">
+                        <option value="">Select</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">0.30 min <i class="fa fa-clock-o"></i></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 box-toolbar-pdf-thumbnail">
+            <div style="display: flex;">
+                <button id="prev" type="button" data-role="none" class="fa fa-chevron-left no-border"
+                        aria-label="Previous"
+                        role="button"></button>
+                <div id="thumbnail-pdf"></div>
+                <button id="next" type="button" data-role="none" class="fa fa-chevron-right no-border" aria-label="Next"
+                        role="button"></button>
+            </div>
         </div>
     </div>
-    <div class="ibox-content">
+    <div class="row"><br></div>
+    <div class="row">
 
-<div class="text-center pdf-toolbar">
-    <div class="btn-group">
-
-        <div class="ibox-content border-sbottom" style="display: inline-flex; padding-left: 0px; padding-right: 0px;">
-            <button id="prev" type="button" data-role="none" class="fa fa-chevron-left" aria-label="Previous"
-                    role="button"
-                    style="background: transparent; border: none"></button>
-            <div id="thumbnail-pdf"></div>
-            <button id="next" type="button" data-role="none" class="fa fa-chevron-right" aria-label="Next" role="button"
-                    style="background: transparent; border: none"></button>
+        <div class="text-center pdf-toolbar">
+            <div class="col-md-2">BUSINESS DOC (PDF)</div>
+            <div class="col-md-2">GENERAL INFO</div>
+            <div class="col-md-2">
+                <b>Page:</b>
+                <span id="page_num"> </span> / <span id="page_count"></span>
+            </div>
+            <div class="col-md-2">
+                <button id="zoomin" class="btn btn-white no-border"><i class="fa fa-search-minus"></i>
+                </button>
+                <button id="zoomout" class="btn btn-white no-border"><i class="fa fa-search-plus"></i>
+                </button>
+            </div>
+            <div class="col-md-4 background-grey">
+                BUSINESS FORM
+            </div>
         </div>
-        <div class="ibox-content border-sbottom" style="display: inline-flex; padding-left: 0px; padding-right: 0px;">
-            <b>Page:</b> <div id="page_num"> </div> /  <div id="page_count"> </div>
-            <button id="zoomin" class="btn btn-white"><i class="fa fa-search-minus"></i></button>
-            <button id="zoomout" class="btn btn-white"><i class="fa fa-search-plus"></i></button>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="text-center m-t-md scrollbar-auto">
+                <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262"
+                        width="892"></canvas>
+            </div>
         </div>
-
-
+        <div class="col-md-4">
+            MTGZ
+        </div>
     </div>
 </div>
-
-
-<div class="text-center m-t-md">
-    <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262"
-            width="892"></canvas>
-</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-legal-check','fsi-legal-check',NULL,'<div class="fsi-upload-new-file">
+    <div class="fsi-warning-title">Legal check</div>
+    <div class="fsi-error-desc">
+      <div class="fsi-error-desc-filename">Articles_of_corporation.pdf</div>
+      <div class="fsi-error-desc-message">Digital sign not clearly readable</div>
+    </div>
+    <div class="fsi-message"><span>Can you please upload a new document ther address to the&nbsp;</span><b>following conditions</b></div><a class="fsi-upload-new-link" href="#">
+      <div class="fsi-label">Upload a new file</div><i class="fa fa-upload"></i></a>
+  </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
+    <div class="fsi-welcome-title">Welcome to your personal area</div>
+    <div class="fsi-welcome-message">You can check the status of your request</div>
+    <div class="fsi-time-left"><i class="fa fa-clock-o"></i>
+      <div class="fsi-time-left-message">About 15 days left</div>
+    </div>
   </div>
-</div>',NULL,0);
+  <div class="fsi-legal-review-wrapper">
+    <div class="fsi-legal-review-intro">
+      <h2>What''s involved in a legal review? </h2>
+      <p> 
+        <div>As anticipated, when applying for financial services, you are supposed to document the status of your business</div>
+        <div>After the completeness of the documentation has been verified, the next step is the Legal Review.</div>
+      </p>
+      <p> 
+        <div>At this stage of your application, the Legal Worker is asked to check the compliance of the submitted documentation.</div>
+        <div>This is a one time activity, that is performed once: should you apply for further services, all that you have documented is still considered valid.</div>
+      </p>
+      <p>It means then shorter approval time frame for the next services you''ll decide to request.</p>
+      <p>After the Legal Review has been completed, your account will be created.</p>
+    </div>
+    <div class="fsi-blue-banner">
+      <div class="bb-small">Now your check deposits can</div>
+      <div class="bb-big">go to the bank</div>
+      <div class="bb-big bb-big-bigger">without you</div>
+      <div class="bb-expect-it">Expect it.</div>
+    </div>
+  </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AttributeInfo',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
