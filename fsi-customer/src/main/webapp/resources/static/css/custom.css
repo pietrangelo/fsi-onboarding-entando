@@ -542,13 +542,14 @@ a.dropdown-fsi-login{
     background: #ffffff;
     display: flex;
     font-family: "Open Sans", sans-serif;
+    margin: 13px 0 0 0;
 }
 .application-progress .label-box {
     margin-left: 20px;
     width: 224px;
 }
 .application-progress .label-box .label-box-title {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 300;
     color: #00659C;
     margin-top: 55px;
@@ -662,7 +663,7 @@ a.dropdown-fsi-login{
     font-size: 30px;
     font-weight: 300;
     color: #00659C;
-    padding: 50px 0px;
+    padding: 50px 20px;
 }
 
 .application-breadcrumbs {
@@ -1739,4 +1740,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .scrollbar-auto {
     overflow: auto;
     width: auto;
+}
+.application-breadcrumbs-wrapper{
+    margin: 10px 0 10px 0;
+    background:#fff;
 }
