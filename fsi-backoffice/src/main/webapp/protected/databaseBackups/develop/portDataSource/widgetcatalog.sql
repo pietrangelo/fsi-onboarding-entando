@@ -210,3 +210,21 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Login-Customer','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Login Customer</property><property key="it">Login Cliente</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-completed','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Completed</property><property key="it">FSI Completed</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-performance','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Performance</property><property key="it">FSI Performance</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-backlog','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Backlog</property><property key="it">FSI Backlog</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-average-review-time','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Average Review Time</property><property key="it">FSI Average Review Time</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-in-progress','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI In Progress</property><property key="it">FSI In Progress</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-overview-big','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Customer Overview Big</property><property key="it">FSI Customer Overview Big</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');

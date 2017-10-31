@@ -11,3 +11,9 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applican
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',6,'banner-main-internal',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',7,'complete-registration-BPM',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',8,'How-to-complete-instructions',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',7,'fsi-average-review-time',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',6,'fsi-performance',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',8,'fsi-completed',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',9,'fsi-backlog',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',10,'fsi-in-progress',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',11,'fsi-customer-overview-big',NULL);
