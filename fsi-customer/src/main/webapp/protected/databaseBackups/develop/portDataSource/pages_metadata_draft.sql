@@ -23,7 +23,7 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-10-26 17:25:37');
+','2017-10-31 10:14:29');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('service','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="it">Pagine di Servizio</property>

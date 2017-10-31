@@ -1,10 +1,6 @@
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',5,'entando-widget-login_form_inspinia',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',11,'fsi-registration-form-advanced',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',8,'fsi-account-user',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',6,'fsi-application-progress',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',9,'fsi-form-banking-services',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',10,'fsi-Declaration',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',7,'fsi-apllication-breadcrumb',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',6,'fsi-progress-bar',NULL);
@@ -14,6 +10,10 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('da
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',11,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',7,'fsi-legal-check',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',18,'fsi-footer',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-account-user',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',13,'fsi-Declaration',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',14,'fsi-form-banking-services',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('homepage',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('homepage',11,'Loans-3-images ',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('homepage',7,'Login-Customer',NULL);
