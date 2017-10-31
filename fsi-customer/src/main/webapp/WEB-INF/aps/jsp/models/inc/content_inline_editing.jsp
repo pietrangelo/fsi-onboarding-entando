@@ -234,8 +234,6 @@
                     while (pages.length < pdfDoc_.numPages)
                         pages.push(pages.length + 1);
                     document.getElementById('page_count').textContent = pdfDoc.numPages;
-
-
                     return Promise.all(pages.map(function (num) {
                         // create a div for each page and build a small canvas for it
                         var div = document.createElement("div");
@@ -357,8 +355,7 @@
 
                 /**
                  *  Zoom In.
-                 */
-                function zoomIn() {
+                 */                 function zoomIn() {
                     scale -= 0.25;
                     renderPage(pageNum);
                 }

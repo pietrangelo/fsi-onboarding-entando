@@ -4,6 +4,8 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (64,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (64,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (65,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (65,'administrators');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (67,'customers');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (67,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (51,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (51,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (52,'customers');

@@ -1,3 +1,31 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>State</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div id="morris-donut-chart" ></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+       Morris.Donut({
+            element: ''morris-donut-chart'',
+            data: [{label: "Pending", value: 12},
+                {label: "Complete", value: 30},
+                {label: "Suspended", value: 20}],
+            resize: true,
+            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
+        });
+    });
+</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -164,195 +192,54 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
-        <p class="title-welcome">State</p>
-        <div class="ibox-tools">
+        <h5>Your performance</h5>
+        <div class="ibox-tools"><a class="collapse-link">
+                <div class="fa fa-chevron-up"></div>
+            </a>
             <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
+                <div class="fa fa-repeat"></div>
             </a>
         </div>
     </div>
-    <div class="ibox-content">
-        <div id="morris-donut-chart" ></div>
-    </div>
-</div>
-<script>
-    $(document).ready(function () {
-       Morris.Donut({
-            element: ''morris-donut-chart'',
-            data: [{label: "Pending", value: 12},
-                {label: "Complete", value: 30},
-                {label: "Suspended", value: 20}],
-            resize: true,
-            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
-        });
-    });
-</script>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="fsi-form-banking-services">
-  <div class="ibox float-e-margins">
-    <div class="ibox-title">
-      <h5>Selects the financial services that your company is applying for</h5>
-      <div class="ibox-tools"><a class="collapse-link">
-          <div class="fa fa-chevron-up"></div></a><a class="collapse-link">
-          <div class="fa fa-repeat"></div></a></div>
-    </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>BUSINESS CHECKING</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>BUSINESS CREDIT CARDS</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>BUSINESS LENDING AND FINANCING</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>INTERNATIONAL BANKING</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>MERCHANT SERVICES</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>TREASURY SERVICES</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>CASH MANAGEMENT SERVICES</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>EMPLOYEE BENEFIT SERVICES</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>CASH MANAGEMENT SERVICES</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>EMPLOYEE BENEFIT SERVICES</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button type="button" class="btn btn-w-m btn-default">Back</button>
-        <button type="button" class="btn btn-w-m btn-primary pull-right">Next</button>
-        <button type="button" class="btn btn-w-m btn-success pull-right">Save as draft</button>
-      </div>
-    </div>
-  </div>
-</div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="container background-white">
-    <div class="row">
-        <div class="col-md-2">DOCUMENTS</div>
-        <div class="col-md-2"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-2">TIME TO REVIEW</div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            <div class="form-group">
-                <div>
-                    <select id="select-files" class="chosen-select box-select-file">
-                       
-                    </select>
+    <div class="ibox-content" >
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All<span class="caret" style="margin-left: 15px;"></span>
+                    </button>
                 </div>
             </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-2">0.30 min <i class="fa fa-clock-o"></i></div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 box-toolbar-pdf-thumbnail">
-            <div style="display: flex;">
-                <button id="prev" type="button" data-role="none" class="fa fa-chevron-left no-border"
-                        aria-label="Previous"
-                        role="button"></button>
-                <div id="thumbnail-pdf"></div>
-                <button id="next" type="button" data-role="none" class="fa fa-chevron-right no-border" aria-label="Next"
-                        role="button"></button>
+            <div class="col-md-1">
+                <div style="text-align: right">
+                    <i class="fa fa-calendar"></i>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row"><br></div>
-    <div class="row">
 
-        <div class="text-center pdf-toolbar">
-            <div class="col-md-2">BUSINESS DOC (PDF)</div>
-            <div class="col-md-2">GENERAL INFO</div>
-            <div class="col-md-2">
-                <b>Page:</b>
-                <span id="page_num"> </span> / <span id="page_count"></span>
-            </div>
-            <div class="col-md-2">
-                <button id="zoomin" class="btn btn-white no-border"><i class="fa fa-search-minus"></i>
-                </button>
-                <button id="zoomout" class="btn btn-white no-border"><i class="fa fa-search-plus"></i>
-                </button>
-            </div>
-            <div class="col-md-4 background-grey">
-                BUSINESS FORM
+        </div>
+        <div class="row fsi-progess-bar-box-label ">
+            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
+            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="text-center m-t-md scrollbar-auto">
-                <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262"
-                        width="892"></canvas>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="progress">
+                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
+                        <span class="sr-only">60% Complete (success)</span>60%
+                    </div>
+                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            MTGZ
         </div>
     </div>
 </div>',NULL,0);
@@ -529,6 +416,162 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       <div class="bb-expect-it">Expect it.</div>
     </div>
   </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="perfomance-bar">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Your performance</h5>
+         <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All<span class="caret" style="margin-left: 15px;"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div style="text-align: right">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="row fsi-progess-bar-box-label ">
+            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
+            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="progress">
+                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
+                        <span class="sr-only">60% Complete (success)</span>60%
+                    </div>
+                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h5>Customer Overview</h5>
+      <div class="ibox-tools"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a><a class="close-link"><i class="fa fa-times"></i></a></div>
+    </div>
+    <div class="ibox-content">
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">120</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">100</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">95</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Documents review</h5>
+        <div class="ibox-tools"><a class="collapse-link">
+                <div class="fa fa-chevron-up"></div>
+            </a>
+            <a class="collapse-link">
+                <div class="fa fa-repeat"></div>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content" >
+        <span class="pull-right text-right">
+            <small>TIME TO REVIEW</small>
+            <br>
+            0.30 min <i class="fa fa-clock-o"></i>
+        </span>
+        <h3 class="font-bold no-margins">
+            DOCUMENTS
+            <br>
+            <select data-placeholder="Choose a Country..."  id="select-files" class="chosen-select ">
+
+            </select>
+        </h3>
+        <br>
+        <div class="row">
+            <div class="col-md-12 box-toolbar-pdf-thumbnail">
+                <div style="display: flex;">
+                    <button id="prev" type="button" data-role="none" class="fa fa-chevron-left no-border"
+                            aria-label="Previous"
+                            role="button"></button>
+                    <div id="thumbnail-pdf"></div>
+                    <button id="next" type="button" data-role="none" class="fa fa-chevron-right no-border" aria-label="Next"
+                            role="button"></button>
+                </div>
+            </div>
+        </div>
+        <div class="row"><br></div>
+        <div class="row">
+
+            <div class="text-center pdf-toolbar">
+                <div class="col-md-2">BUSINESS DOC (PDF)</div>
+                <div class="col-md-2">GENERAL INFO</div>
+                <div class="col-md-2">
+                    <b>Page:</b>
+                    <span id="page_num"> </span> / <span id="page_count"></span>
+                </div>
+                <div class="col-md-2">
+                    <button id="zoomin" class="btn btn-white no-border"><i class="fa fa-search-minus"></i>
+                    </button>
+                    <button id="zoomout" class="btn btn-white no-border"><i class="fa fa-search-plus"></i>
+                    </button>
+                </div>
+                <div class="col-md-4 background-grey">
+                    BUSINESS FORM
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="text-center m-t-md scrollbar-auto">
+                    <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262" width="892">
+                    </canvas>
+                </div>
+            </div>
+            <div class="col-md-4">
+                MTGZ
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AttributeInfo',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -732,37 +775,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 <input type="text" name="search" class="form-control" placeholder="<@wp.i18n key="ESSF_SEARCH" />" />
 </div>
 </form>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
-  <div class="ibox float-e-margins">
-    <div class="ibox-title">
-      <p class="title-welcome">Customer Overview</p>
-      <div class="ibox-tools"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a><a class="close-link"><i class="fa fa-times"></i></a></div>
-    </div>
-    <div class="ibox-content">
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">120</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">100</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">95</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-ThreeStateAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsf=JspTaglibs["/apsadmin-form"]>
@@ -2476,62 +2488,6 @@ jQuery(function($){
 	</div>
 </div>
 </fieldset>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="ibox float-e-margins">
-    <div class="row">
-        <div class="col-md-10"><span class="title-welcome">Your Performance</span></div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-1">
-            <div class="ibox-tools">
-                <a class="collapse-link fsi-progess-bar-tools-icon ">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-                <a class="close-link fsi-progess-bar-tools-icon ">
-                    <i class="fa fa-times"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="ibox-content" style="display: block; border-style: none;">
-        <div class="row">
-            <div class="col-md-10"></div>
-            <div class="col-md-1">
-                <div class="dropdown">
-                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        All<span class="caret" style="margin-left: 15px;"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div style="text-align: right">
-                    <i class="fa fa-calendar"></i>
-                </div>
-            </div>
-
-        </div>
-        <div class="row fsi-progess-bar-box-label ">
-            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
-            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="progress">
-                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
-                        <span class="sr-only">60% Complete (success)</span>60%
-                    </div>
-                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
-                        <span class="sr-only">20% Complete (warning)</span>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -2580,7 +2536,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </fieldset>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
-        <p class="title-welcome">Customer Rate</p>
+        <h5>Customer Rate</h5>
         <div class="ibox-tools">
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>

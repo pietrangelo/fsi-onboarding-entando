@@ -10,7 +10,7 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-10-27 15:59:04');
+','2017-10-31 15:19:41');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('customer_internal','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">customer-internal</property><property key="it">cliente-interna</property></properties>
 ','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
