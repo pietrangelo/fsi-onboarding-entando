@@ -1,3 +1,890 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview-big','fsi-customer-overview-big',NULL,'<div class="ibox float-e-margins fsi-customer-overview-big">
+  <div class="ibox-title">
+    <h5>Customer Overview</h5>
+  </div>
+  <div class="ibox-content">
+    <div class="row">
+      <div class="col-md-4">
+
+
+<div class="fsi-customer-overview-item">
+        <h2>120</h2>
+        <div class="label-text">Today Total Sign Up <h3>48% <i class="fa fa-level-up"></i></h3></div>
+        
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <h2>100</h2>
+        <div class="label-text">Today Total Sign Up <h3>60% <i class="fa fa-level-down"></i></h3></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <h2>95</h2>
+        <div class="label-text">Today Total Sign Up <h3>22% <i class="fa fa-bolt"></i></h3></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+
+
+      </div>
+      <div class="col-md-4">
+        <div id="bar-area-chart"></div>
+      </div>
+      <div class="col-md-4">
+        <div id="donut-chart"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+
+var chart = c3.generate({
+    bindto: ''#bar-area-chart'',
+    data: {
+        x: ''x'',
+        columns: [
+            [''x'', ''2013-01-01'', ''2013-01-02'', ''2013-01-03'', ''2013-01-04'', ''2013-01-05'', ''2013-01-06'', ''2013-01-07'', ''2013-01-08'', ''2013-01-09'', ''2013-01-10'', ''2013-01-11'', ''2013-01-12'', ''2013-01-13'', ''2013-01-14'', ''2013-01-15'', ''2013-01-16'', ''2013-01-17'', ''2013-01-18''],
+            [''data1'', 760, 500, 600, 700, 500, 450, 520, 750, 760, 430, 600, 370, 390, 790, 780, 600, 400, 750],
+            [''data2'', 13, 15, 4, 7, 12, 13, 7, 4, 5, 9, 12, 3, 4, 14, 13, 13, 8, 14],
+        ],
+        axes: {
+            data1: ''y'',
+            data2: ''y2''
+        },
+        type: ''bar'',
+        types: {
+            data2: ''area'',
+        },
+      colors: {
+        data1: ''#b8dcf4'',
+        data2: ''#464f88''
+      },
+      names: {
+        data1: ''Signed up'',
+        data2: ''Sign ups''
+      }
+    },
+    axis: {
+      y: { 
+        min: 0, 
+        max: 1000,
+        padding: {top: 0, bottom: 0 },
+        tick: { count: 5 }
+      },
+      
+      y2: { 
+        min: 0, 
+        max: 30,
+        padding: {top: 0, bottom: 0 },
+        tick: { count: 7 },
+        show: true
+      },
+      
+      x: {
+            type: ''timeseries'',
+            tick: {
+              culling: { max: 6 } ,
+              format: ''Jan %d''
+            },
+            
+        }
+    },
+    legend: { position: ''inset'' },
+    grid: {
+        y: {
+            show: true
+        }
+    }
+});
+
+var chart = c3.generate({
+    bindto: ''#donut-chart'',
+    data: {
+        columns: [
+            [''Suspended'', 25],
+            [''Pending'', 25],
+            [''Completed'', 50],
+        ],
+        type : ''donut'',
+        colors: {
+          Suspended: ''#7dc3e7'',
+          Pending: ''#0088ce'',
+          Completed: ''#dff2ff''
+        }
+    },
+    donut: {
+        label: {
+          format: function (value, ratio, id) {
+            return value + ''%'';
+          }
+        }
+    }
+});
+</script>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-MonolistAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@s.if test="#attribute.attributes.size() != 0">
+	<ul class="unstyled">
+</@s.if>
+
+<@s.set var="masterListAttributeTracer" value="#attributeTracer" />
+<@s.set var="masterListAttribute" value="#attribute" />
+
+<@s.iterator value="#attribute.attributes" var="attribute" status="elementStatus">
+	<@s.set var="attributeTracer" value="#masterListAttributeTracer.getMonoListElementTracer(#elementStatus.index)"></@s.set>
+	<@s.set var="elementIndex" value="#elementStatus.index" />
+	<@s.set var="i18n_attribute_name">userprofile_ATTR<@s.property value="#attribute.name" /></@s.set>
+	<@s.set var="attribute_id">userprofile_<@s.property value="#attribute.name" />_<@s.property value="#elementStatus.count" /></@s.set>
+
+	<li class="control-group  <@s.property value="%{'' attribute-type-''+#attribute.type+'' ''}" />">
+		<label class="control-label" for="<@s.property value="#attribute_id" />">
+			<@s.if test="#attribute.type == ''Composite''">
+				<@s.property value="#elementStatus.count" /><span class="noscreen">&#32;<@s.text name="label.compositeAttribute.element" /></span>
+				&#32;
+				<@s.if test="#lang.default">
+					<@wp.fragment code="userprofile_is_front_AllList_operationModule" escapeXml=false /> 
+				</@s.if>
+			</@s.if>
+			<@s.else>
+				<@s.property value="#elementStatus.count" />
+				&#32;
+				<@wp.fragment code="userprofile_is_front_AllList_operationModule" escapeXml=false /> 
+			</@s.else>
+		</label>
+		<div class="controls">
+			<@s.if test="#attribute.type == ''Boolean''">
+				<@wp.fragment code="userprofile_is_front-BooleanAttribute" escapeXml=false />
+			</@s.if>
+			<@s.elseif test="#attribute.type == ''CheckBox''">
+				<@wp.fragment code="userprofile_is_front-CheckboxAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''Composite''">
+				<@wp.fragment code="userprofile_is_front-CompositeAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''Date''">
+				<@wp.fragment code="userprofile_is_front-DateAttribute" escapeXml=false /> 
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''Enumerator''">
+				<@wp.fragment code="userprofile_is_front-EnumeratorAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''EnumeratorMap''">
+				<@wp.fragment code="userprofile_is_front-EnumeratorMapAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''Hypertext''">
+				<@wp.fragment code="userprofile_is_front-HypertextAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''Longtext''">
+				<@wp.fragment code="userprofile_is_front-LongtextAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''Monotext''">
+				<@wp.fragment code="userprofile_is_front-MonotextAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''Number''">
+				<@wp.fragment code="userprofile_is_front-NumberAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''ThreeState''">
+				<@wp.fragment code="userprofile_is_front-ThreeStateAttribute" escapeXml=false />
+			</@s.elseif>
+			<@s.elseif test="#attribute.type == ''Text''">
+				<@wp.fragment code="userprofile_is_front-MonotextAttribute" escapeXml=false />				
+			</@s.elseif>
+			<@s.else>
+				<@wp.fragment code="userprofile_is_front-MonotextAttribute" escapeXml=false />	
+			</@s.else>
+			<@wp.fragment code="userprofile_is_front_attributeInfo-help-block" escapeXml=false />
+		</div>
+	</li>
+</@s.iterator>
+
+<@s.set var="attributeTracer" value="#masterListAttributeTracer" />
+<@s.set var="attribute" value="#masterListAttribute" />
+<@s.set var="elementIndex" value="" />
+<@s.if test="#attribute.attributes.size() != 0">
+</ul>
+</@s.if>
+<@s.if test="#lang.default">
+	<div class="control-group">
+		<div class="controls">
+			<@wp.fragment code="userprofile_is_front-AllList-addElementButton" escapeXml=false />				
+		</div>
+	</div>
+</@s.if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_profileChangeConfirmation',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<h1><@wp.i18n key="userprofile_EDITPROFILE_TITLE" /></h1>
+<p><@wp.i18n key="userprofile_PROFILE_UPDATED" /></p>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_detail_include',NULL,NULL,'','<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<@s.if test="#methodVar == null">
+	<p>
+		<@s.property value="#currentMethodNameVar" />,&#32;<@wp.i18n key="ENTANDO_API_METHOD_KO" />
+	</p>
+</@s.if>
+<@s.else>
+	<dl class="dl-horizontal">
+		<dt>
+			<@wp.i18n key="ENTANDO_API_METHOD" />
+		</dt>
+			<dd>
+				<@wp.i18n key="ENTANDO_API_METHOD_OK" />
+			</dd>
+		<@s.if test="#methodVar != null">
+			<dt>
+				<@wp.i18n key="ENTANDO_API_DESCRIPTION" />
+			</dt>
+				<dd><@s.property value="#methodVar.description" /></dd>
+			<dt>
+				<@wp.i18n key="ENTANDO_API_METHOD_AUTHORIZATION" />
+			</dt>
+				<dd>
+					<@s.if test="%{null != #methodVar.requiredPermission}">
+						<@s.iterator value="methodAuthorityOptions" var="permission"><@s.if test="#permission.key==#methodVar.requiredPermission"><@s.property value="#permission.value" /></@s.if></@s.iterator>
+					</@s.if>
+					<@s.elseif test="%{#methodVar.requiredAuth}">
+						<@wp.i18n key="ENTANDO_API_METHOD_AUTH_SIMPLE" />
+					</@s.elseif>
+					<@s.else>
+						<@wp.i18n key="ENTANDO_API_METHOD_AUTH_FREE" />
+					</@s.else>
+				</dd>
+			<@s.if test=''%{!#methodVar.resourceName.equalsIgnoreCase("getService")}'' >
+			<dt>
+				<@wp.i18n key="ENTANDO_API_METHOD_SCHEMAS" />
+			</dt>
+				<dd class="schemas">
+					<@s.if test=''%{#methodVar.httpMethod.toString().equalsIgnoreCase("POST") || #methodVar.httpMethod.toString().equalsIgnoreCase("PUT")}''>
+						<@wp.action path="/ExtStr2/do/Front/Api/Resource/requestSchema.action" var="requestSchemaURLVar" >
+							<@wp.parameter name="resourceName"><@s.property value="#methodVar.resourceName" /></@wp.parameter>
+							<@wp.parameter name="namespace"><@s.property value="#methodVar.namespace" /></@wp.parameter>
+							<@wp.parameter name="httpMethod"><@s.property value="#methodVar.httpMethod" /></@wp.parameter>
+						</@wp.action>
+						<a href="${requestSchemaURLVar}" >
+							<@wp.i18n key="ENTANDO_API_METHOD_SCHEMA_REQ" />
+						</a>
+						<br />
+					</@s.if>
+						<@wp.action path="/ExtStr2/do/Front/Api/Resource/responseSchema.action" var="responseSchemaURLVar" >
+							<@wp.parameter name="resourceName"><@s.property value="#methodVar.resourceName" /></@wp.parameter>
+							<@wp.parameter name="namespace"><@s.property value="#methodVar.namespace" /></@wp.parameter>
+							<@wp.parameter name="httpMethod"><@s.property value="#methodVar.httpMethod" /></@wp.parameter>
+						</@wp.action>
+						<a href="${responseSchemaURLVar}" >
+							<@wp.i18n key="ENTANDO_API_METHOD_SCHEMA_RESP" />
+						</a>
+				</dd>
+			</@s.if>
+		</@s.if>
+	</dl>
+	<@s.if test="#methodVar != null">
+		<@s.set var="methodParametersVar" value="#methodVar.parameters" />
+		<@s.if test="null != #methodParametersVar && #methodParametersVar.size() > 0">
+			<table class="table table-striped table-bordered table-condensed">
+				<caption><@wp.i18n key="ENTANDO_API_METHOD_REQUEST_PARAMS" /></caption>
+				<tr>
+					<th><@wp.i18n key="ENTANDO_API_PARAM_NAME" /></th>
+					<th><@wp.i18n key="ENTANDO_API_PARAM_DESCRIPTION" /></th>
+					<th><@wp.i18n key="ENTANDO_API_PARAM_REQUIRED" /></th>
+				</tr>
+				<@s.iterator value="#methodParametersVar" var="apiParameter" >
+					<tr>
+						<td><@s.property value="#apiParameter.key" /></td>
+						<td><@s.property value="#apiParameter.description" /></td>
+						<td class="icon required_<@s.property value="#apiParameter.required" />">
+							<@s.if test="#apiParameter.required">
+								<@wp.i18n key="YES" />
+							</@s.if>
+							<@s.else>
+								<@wp.i18n key="NO" />
+							</@s.else>
+						</td>
+					</tr>
+				</@s.iterator>
+			</table>
+		</@s.if>
+	</@s.if>
+</@s.else>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerBlock',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+<#if (group.size > group.max)>
+	<div class="pagination pagination-centered">
+		<ul>
+		<#if (1 != group.currItem)>
+			<#if (group.advanced)>
+				<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >1</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_FIRST" />"><i class="icon-fast-backward"></i></a></li>
+				<#if (1 != group.beginItemAnchor)>
+					<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.currItem - group.offset}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_STEP_BACKWARD" />&#32;${group.offset}"><i class="icon-step-backward"></i></a></li>
+				</#if>
+			</#if>
+			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.prevItem}</@wp.parameter></@wp.url>"><@wp.i18n key="PAGER_PREV" /></a></li>
+		</#if>
+		<#list group.items as item>
+		<#if (item_index >= (group.beginItemAnchor-1)) && (item_index <= (group.endItemAnchor-1))>
+			<#if (item == group.currItem)>
+			<li class="active"><a href="#">${item}</a></li>
+			<#else>
+			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${item}</@wp.parameter></@wp.url>">${item}</a></li>
+			</#if>
+		</#if>
+		</#list>
+		<#if (group.maxItem != group.currItem)>
+			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.nextItem}</@wp.parameter></@wp.url>"><@wp.i18n key="PAGER_NEXT" /></a></li>
+			<#if (group.advanced)>
+				<#if (group.maxItem != group.endItemAnchor)>
+					<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.currItem + group.offset}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_STEP_FORWARD" />&#32;${group.offset}"><i class="icon-step-forward"></i></a></li>
+				</#if>
+				<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.maxItem}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_LAST" />"><i class="icon-fast-forward"></i></a></li>
+			</#if>
+		</#if>
+		</ul>
+	</div>
+</#if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_entryCurrentProfile',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+
+<#if (Session.currentUser != "guest") >
+<form action="<@wp.action path="/ExtStr2/do/Front/CurrentUser/Profile/save.action" />" method="post" class="form-horizontal">
+	<@s.if test="hasFieldErrors()">
+		<div class="alert alert-block">
+			<p><strong><@wp.i18n key="userprofile_MESSAGE_TITLE_FIELDERRORS" /></strong></p>
+			<ul class="unstyled">
+				<@s.iterator value="fieldErrors">
+					<@s.iterator value="value">
+						<li><@s.property escapeHtml=false /></li>
+					</@s.iterator>
+				</@s.iterator>
+			</ul>
+		</div>
+	</@s.if>
+	<@s.set var="lang" value="defaultLang" />
+	<@s.iterator value="userProfile.attributeList" var="attribute">
+		<@s.if test="%{#attribute.active}">
+			<@wpsa.tracerFactory var="attributeTracer" lang="%{#lang.code}" />
+			<@s.set var="i18n_attribute_name">userprofile_<@s.property value="userProfile.typeCode" />_<@s.property value="#attribute.name" /></@s.set>
+			<@s.set var="attribute_id">userprofile_<@s.property value="#attribute.name" /></@s.set>
+			<@wp.fragment code="userprofile_is_IteratorAttribute" escapeXml=false /> 
+		</@s.if>
+	</@s.iterator>
+	<p class="form-actions">
+		<@wp.i18n key="userprofile_SAVE_PROFILE" var="userprofile_SAVE_PROFILE" />
+		<@wpsf.submit useTabindexAutoIncrement=true value="%{#attr.userprofile_SAVE_PROFILE}" cssClass="btn btn-primary" />
+	</p>
+</form>
+<#else>
+	<p><@wp.i18n key="userprofile_PLEASE_LOGIN" /></p>
+</#if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_currentWithoutProfile',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<h1><@wp.i18n key="userprofile_EDITPROFILE_TITLE" /></h1>
+<p class="label label-info">
+	<@wp.i18n key="userprofile_CURRENT_USER_WITHOUT_PROFILE" />
+</p>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-CheckboxAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+
+<@wpsf.checkbox useTabindexAutoIncrement=true 
+	name="%{#attributeTracer.getFormFieldName(#attribute)}" 
+	id="%{attribute_id}" value="%{#attribute.value == true}"/>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-MonotextAttribute',NULL,NULL,NULL,'<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.textfield useTabindexAutoIncrement=true id="%{attribute_id}" 
+	name="%{#attributeTracer.getFormFieldName(#attribute)}" value="%{#attribute.getTextForLang(#lang.code)}"
+	maxlength="254" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-LongtextAttribute',NULL,NULL,NULL,'<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.textarea useTabindexAutoIncrement=true cols="30" rows="5" id="%{attribute_id}" name="%{#attributeTracer.getFormFieldName(#attribute)}" value="%{#attribute.getTextForLang(#lang.code)}" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-CompositeAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@s.set var="i18n_parent_attribute_name" value="#attribute.name" />
+<@s.set var="masterCompositeAttributeTracer" value="#attributeTracer" />
+<@s.set var="masterCompositeAttribute" value="#attribute" />
+<@s.iterator value="#attribute.attributes" var="attribute">
+	<@s.set var="attributeTracer" value="#masterCompositeAttributeTracer.getCompositeTracer(#masterCompositeAttribute)"></@s.set>
+	<@s.set var="parentAttribute" value="#masterCompositeAttribute"></@s.set>
+	<@s.set var="i18n_attribute_name">userprofile_ATTR<@s.property value="%{i18n_parent_attribute_name}" /><@s.property value="#attribute.name" /></@s.set>
+	<@s.set var="attribute_id">userprofile_<@s.property value="%{i18n_parent_attribute_name}" /><@s.property value="#attribute.name" />_<@s.property value="#elementIndex" /></@s.set>
+	<@wp.fragment code="userprofile_is_IteratorAttribute" escapeXml=false />
+</@s.iterator>
+<@s.set var="attributeTracer" value="#masterCompositeAttributeTracer" />
+<@s.set var="attribute" value="#masterCompositeAttribute" />
+<@s.set var="parentAttribute" value=""></@s.set>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.select useTabindexAutoIncrement=true
+	name="%{#attributeTracer.getFormFieldName(#attribute)}"
+	id="%{attribute_id}"  
+	headerKey="" headerValue="" 
+	list="#attribute.items" value="%{#attribute.getText()}" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorMapAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.select useTabindexAutoIncrement=true
+	name="%{#attributeTracer.getFormFieldName(#attribute)}"
+	id="%{attribute_id}"  
+	headerKey="" headerValue="" 
+	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<h2><@wp.i18n key="ENTANDO_API_RESOURCES" /></h2>
+<@s.if test="hasActionErrors()">
+	<div class="alert alert-block alert-error">
+		<h3 class="alert-heading"><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
+		<ul>
+			<@s.iterator value="actionErrors">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+<@s.set var="resourceFlavoursVar" value="resourceFlavours" />
+
+<@s.if test="#resourceFlavoursVar.size() > 0">
+	<@s.set var="icon_free"><span class="icon icon-ok"></span><span class="noscreen sr-only"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_FREE" /></span></@s.set>
+	<@s.set var="title_free"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_FREE" />. <@wp.i18n key="ENTANDO_API_GOTO_DETAILS" /></@s.set>
+
+	<@s.set var="icon_auth"><span class="icon icon-user"></span><span class="noscreen sr-only"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_AUTH" /></span></@s.set>
+	<@s.set var="title_auth"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_AUTH" />. <@wp.i18n key="ENTANDO_API_GOTO_DETAILS" /></@s.set>
+
+	<@s.set var="icon_lock"><span class="icon icon-lock"></span><span class="noscreen sr-only"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_LOCK" /></span></@s.set>
+	<@s.set var="title_lock"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_LOCK" />. <@wp.i18n key="ENTANDO_API_GOTO_DETAILS" /></@s.set>
+
+	<@s.iterator var="resourceFlavourVar" value="#resourceFlavoursVar" status="resourceFlavourStatusVar">
+		<table class="table table-striped table-bordered table-condensed">
+			<@s.iterator value="#resourceFlavourVar" var="resourceVar" status="statusVar" >
+				<@s.if test="#statusVar.first">
+					<@s.if test="#resourceVar.source==''core''"><@s.set var="captionVar"><@s.property value="#resourceVar.source" escapeHtml=false /></@s.set></@s.if>
+					<@s.else><@s.set var="captionVar"><@s.property value="%{getText(#resourceVar.sectionCode+''.name'')}" escapeHtml=false /></@s.set></@s.else>
+					<caption>
+						<@s.property value="#captionVar" />
+					</caption>
+					<tr>
+						<th class="span3"><@wp.i18n key="ENTANDO_API_RESOURCE" /></th>
+						<th><@wp.i18n key="ENTANDO_API_DESCRIPTION" /></th>
+						<th class="text-center span1">GET</th>
+						<th class="text-center span1">POST</th>
+						<th class="text-center span1">PUT</th>
+						<th class="text-center span1">DELETE</th>
+					</tr>
+				</@s.if>
+				<tr>
+					<td>
+						<@wp.action path="/ExtStr2/do/Front/Api/Resource/detail.action" var="detailActionURL">
+							<@wp.parameter name="resourceName"><@s.property value="#resourceVar.resourceName" /></@wp.parameter>
+							<@wp.parameter name="namespace"><@s.property value="#resourceVar.namespace" /></@wp.parameter>
+						</@wp.action>
+						<a title="<@wp.i18n key="ENTANDO_API_GOTO_DETAILS" />:&#32;/<@s.property value="%{#resourceVar.namespace.length()>0?#resourceVar.namespace+''/'':''''}" /><@s.property value="#resourceVar.resourceName" />" href="${detailActionURL}" ><@s.property value="#resourceVar.resourceName" /></a>
+					</td>
+					<td><@s.property value="#resourceVar.description" /></td>
+					<td class="text-center">
+						<@s.if test="#resourceVar.getMethod != null && #resourceVar.getMethod.active && (!#resourceVar.getMethod.hidden)" >
+							<@s.if test="#resourceVar.getMethod.requiredPermission != null" ><@s.set var="icon" value="#icon_lock" /><@s.set var="title" value="#title_lock" /></@s.if>
+							<@s.elseif test="#resourceVar.getMethod.requiredAuth" ><@s.set var="icon" value="#icon_auth" /><@s.set var="title" value="#title_auth" /></@s.elseif>
+							<@s.else><@s.set var="icon" value="#icon_free" /><@s.set var="title" value="#title_free" /></@s.else>
+							<a href="${detailActionURL}#api_method_GET" title="<@s.property value="#title" />">
+								<@s.property value="#icon" escapeHtml=false />
+							</a>
+						</@s.if>
+						<@s.else><abbr title="<@wp.i18n key="ENTANDO_API_METHOD_STATUS_NA" />">&ndash;</abbr></@s.else>
+					</td>
+					<td class="text-center">
+						<@s.if test="#resourceVar.postMethod != null && #resourceVar.postMethod.active && (!#resourceVar.postMethod.hidden)" >
+							<@s.if test="#resourceVar.postMethod.requiredPermission != null" ><@s.set var="icon" value="#icon_lock" /><@s.set var="title" value="#title_lock" /></@s.if>
+							<@s.elseif test="#resourceVar.postMethod.requiredAuth" ><@s.set var="icon" value="#icon_auth" /><@s.set var="title" value="#title_auth" /></@s.elseif>
+							<@s.else><@s.set var="icon" value="#icon_free" /><@s.set var="title" value="#title_free" /></@s.else>
+							<a href="${detailActionURL}#api_method_POST" title="<@s.property value="#title" />">
+								<@s.property value="#icon" escapeHtml=false />
+							</a>
+						</@s.if>
+						<@s.else><abbr title="<@wp.i18n key="ENTANDO_API_METHOD_STATUS_NA" />">&ndash;</abbr></@s.else>
+					</td>
+					<td class="text-center">
+						<@s.if test="#resourceVar.putMethod != null && #resourceVar.putMethod.active && (!#resourceVar.putMethod.hidden)" >
+							<@s.if test="#resourceVar.putMethod.requiredPermission != null" ><@s.set var="icon" value="#icon_lock" /><@s.set var="title" value="#title_lock" /></@s.if>
+							<@s.elseif test="#resourceVar.putMethod.requiredAuth" ><@s.set var="icon" value="#icon_auth" /><@s.set var="title" value="#title_auth" /></@s.elseif>
+							<@s.else><@s.set var="icon" value="#icon_free" /><@s.set var="title" value="#title_free" /></@s.else>
+							<a href="${detailActionURL}#api_method_PUT" title="<@s.property value="#title" />">
+								<@s.property value="#icon" escapeHtml=false />
+							</a>
+						</@s.if>
+						<@s.else><abbr title="<@wp.i18n key="ENTANDO_API_METHOD_STATUS_NA" />">&ndash;</abbr></@s.else>
+					</td>
+					<td class="text-center">
+						<@s.if test="#resourceVar.deleteMethod != null && #resourceVar.deleteMethod.active && (!#resourceVar.deleteMethod.hidden)" >
+							<@s.if test="#resourceVar.deleteMethod.requiredPermission != null" ><@s.set var="icon" value="#icon_lock" /><@s.set var="title" value="#title_lock" /></@s.if>
+							<@s.elseif test="#resourceVar.deleteMethod.requiredAuth" ><@s.set var="icon" value="#icon_auth" /><@s.set var="title" value="#title_auth" /></@s.elseif>
+							<@s.else><@s.set var="icon" value="#icon_free" /><@s.set var="title" value="#title_free" /></@s.else>
+							<a href="${detailActionURL}#api_method_DELETE" title="<@s.property value="#title" />">
+								<@s.property value="#icon" escapeHtml=false />
+							</a>
+						</@s.if>
+						<@s.else><abbr title="<@wp.i18n key="ENTANDO_API_METHOD_STATUS_NA" />">&ndash;</abbr></@s.else>
+					</td>
+				</tr>
+			</@s.iterator>
+		</table>
+
+		<@s.if test="#resourceVar.source==''core''">
+			<a href="<@wp.action path="/ExtStr2/do/Front/Api/Service/list.action" />" class="btn btn-primary pull-right"><@wp.i18n key="ENTANDO_API_GOTO_SERVICE_LIST" /></a>
+		</@s.if>
+	</@s.iterator>
+</@s.if>
+<@s.else>
+	<p><@wp.i18n key="ENTANDO_API_NO_RESOURCES" /></p>
+</@s.else>
+<script>
+  $(function () {
+    $(''#api-togglers a:first'').tab(''show'');
+  })
+</script>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<@s.set var="apiResourceVar" value="apiResource" />
+<@s.set var="GETMethodVar" value="#apiResourceVar.getMethod" />
+<@s.set var="POSTMethodVar" value="#apiResourceVar.postMethod" />
+<@s.set var="PUTMethodVar" value="#apiResourceVar.putMethod" />
+<@s.set var="DELETEMethodVar" value="#apiResourceVar.deleteMethod" />
+<@s.set var="apiNameVar" value="(#apiResourceVar.namespace!=null && #apiResourceVar.namespace.length()>0 ? ''/'' + #apiResourceVar.namespace : '''')+''/''+#apiResourceVar.resourceName" />
+<section>
+<p>
+	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
+</p>
+<h2><@wp.i18n key="ENTANDO_API_RESOURCE" />&#32;<@s.property value="#apiNameVar" /></h2>
+<@s.if test="hasActionMessages()">
+	<div class="alert alert-box alert-success">
+		<h3 class="alert-heading"><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
+		<ul>
+			<@s.iterator value="actionMessages">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+<@s.if test="hasActionErrors()">
+	<div class="alert alert-box alert-error">
+		<h3 class="alert-heading"><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
+		<ul>
+			<@s.iterator value="actionErrors">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+<!-- DESCRIPTION -->
+<p><@s.property value="#apiResourceVar.description" /></p>
+
+<!-- INFO -->
+<dl class="dl-horizontal">
+	<dt><@wp.i18n key="ENTANDO_API_RESOURCE_NAME" /></dt>
+		<dd><@s.property value="#apiResourceVar.resourceName" /></dd>
+	<dt><span lang="en"><@wp.i18n key="ENTANDO_API_RESOURCE_NAMESPACE" /></span></dt>
+		<dd>/<@s.property value="#apiResourceVar.namespace" /></dd>
+	<dt><@wp.i18n key="ENTANDO_API_RESOURCE_SOURCE" /></dt>
+		<dd>
+			<@s.property value="#apiResourceVar.source" /><@s.if test="%{#apiResourceVar.pluginCode != null && #apiResourceVar.pluginCode.length() > 0}">,&#32;<@s.property value="%{getText(#apiResourceVar.pluginCode+''.name'')}" />&#32;(<@s.property value="%{#apiResourceVar.pluginCode}" />)</@s.if>
+		</dd>
+	<dt><@wp.i18n key="ENTANDO_API_RESOURCE_URI" /></dt>
+		<dd>
+			<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" /><@s.if test="null != #apiResourceVar.namespace">/<@s.property value="#apiResourceVar.namespace" /></@s.if>/<@s.property value="#apiResourceVar.resourceName" />"><@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" /><@s.if test="null != #apiResourceVar.namespace">/<@s.property value="#apiResourceVar.namespace" /></@s.if>/<@s.property value="#apiResourceVar.resourceName" /></a>
+		</dd>
+	<dt>
+		<@wp.i18n key="ENTANDO_API_EXTENSION" />
+	</dt>
+		<dd>
+			<@wp.i18n key="ENTANDO_API_EXTENSION_NOTE" />
+		</dd>
+</dl>
+
+	<@s.set var="methodVar" value="#GETMethodVar" />
+	<@s.set var="currentMethodNameVar" value="%{''GET''}" />
+	<h3 id="api_method_GET">GET</h3>
+	<@wp.fragment code="entandoapi_is_resource_detail_include" escapeXml=false />
+
+	<@s.set var="methodVar" value="#POSTMethodVar" />
+	<@s.set var="currentMethodNameVar" value="%{''POST''}" />
+	<h3 id="api_method_POST">POST</h3>
+	<@wp.fragment code="entandoapi_is_resource_detail_include" escapeXml=false />
+
+	<@s.set var="methodVar" value="#PUTMethodVar" />
+	<@s.set var="currentMethodNameVar" value="%{''PUT''}" />
+	<h3 id="api_method_PUT">PUT</h3>
+	<@wp.fragment code="entandoapi_is_resource_detail_include" escapeXml=false />
+
+	<@s.set var="methodVar" value="#DELETEMethodVar" />
+	<@s.set var="currentMethodNameVar" value="%{''DELETE''}" />
+	<h3 id="api_method_DELETE">DELETE</h3>
+	<@wp.fragment code="entandoapi_is_resource_detail_include" escapeXml=false />
+<p>
+	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
+</p>
+</section>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<section>
+
+<p>
+	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
+</p>
+
+<h2><@wp.i18n key="ENTANDO_API_GOTO_SERVICE_LIST" /></h2>
+<@s.if test="hasActionErrors()">
+	<div class="alert alert-block alert-error">
+		<h3 class="alert-heading"><@s.text name="message.title.ActionErrors" /></h3>
+		<ul>
+			<@s.iterator value="actionErrors">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+<@s.if test="hasFieldErrors()">
+	<div class="alert alert-block alert-error">
+		<h3 class="alert-heading"><@s.text name="message.title.FieldErrors" /></h3>
+		<ul>
+			<@s.iterator value="fieldErrors">
+				<@s.iterator value="value">
+				<li><@s.property escapeHtml=false /></li>
+				</@s.iterator>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+<@s.if test="hasActionMessages()">
+	<div class="alert alert-block alert-info">
+		<h3 class="alert-heading"><@s.text name="messages.confirm" /></h3>
+		<ul>
+			<@s.iterator value="actionMessages">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+<@s.set var="resourceFlavoursVar" value="resourceFlavours" />
+<@s.set var="serviceFlavoursVar" value="serviceFlavours" />
+
+<@s.if test="#serviceFlavoursVar != null && #serviceFlavoursVar.size() > 0">
+<div class="tabbable tabs-left">
+	<ul class="nav nav-tabs">
+		<@s.iterator var="resourceFlavour" value="#resourceFlavoursVar" status="statusVar">
+			<@s.set var="serviceGroupVar" value="#resourceFlavour.get(0).getSectionCode()" />
+			<@s.set var="servicesByGroupVar" value="#serviceFlavoursVar[#serviceGroupVar]" />
+			<@s.if test="null != #servicesByGroupVar && #servicesByGroupVar.size() > 0">
+				<@s.if test="#serviceGroupVar == ''core''"><@s.set var="captionVar" value="%{#serviceGroupVar}" /></@s.if>
+				<@s.else><@s.set var="captionVar" value="%{getText(#serviceGroupVar + ''.name'')}" /></@s.else>
+				<li<@s.if test="#statusVar.first"> class="active"</@s.if>>
+					<a href="#api-flavour-<@s.property value=''%{#captionVar.toLowerCase().replaceAll("[^a-z0-9-]", "")}'' />" data-toggle="tab"><@s.property value=''%{#captionVar}'' /></a>
+				</li>
+			</@s.if>
+		</@s.iterator>
+	</ul>
+
+  <div class="tab-content">
+	<@s.iterator var="resourceFlavour" value="#resourceFlavoursVar" status="moreStatusVar">
+		<@s.set var="serviceGroupVar" value="#resourceFlavour.get(0).getSectionCode()" />
+		<@s.set var="servicesByGroupVar" value="#serviceFlavoursVar[#serviceGroupVar]" />
+		<@s.if test="null != #servicesByGroupVar && #servicesByGroupVar.size() > 0">
+			<@s.if test="#serviceGroupVar == ''core''"><@s.set var="captionVar" value="%{#serviceGroupVar}" /></@s.if>
+			<@s.else><@s.set var="captionVar" value="%{getText(#serviceGroupVar + ''.name'')}" /></@s.else>
+			<div class="tab-pane<@s.if test="#moreStatusVar.first"> active</@s.if>" id="api-flavour-<@s.property value=''%{#captionVar.toLowerCase().replaceAll("[^a-z0-9]", "")}'' />">
+			<table class="table table-striped table-bordered table-condensed">
+				<caption>
+					<@s.property value="#captionVar" />
+				</caption>
+				<tr>
+					<th><@wp.i18n key="ENTANDO_API_SERVICE" /></th>
+					<th><@wp.i18n key="ENTANDO_API_DESCRIPTION" /></th>
+				</tr>
+				<@s.iterator var="serviceVar" value="#servicesByGroupVar" >
+					<tr>
+						<td class="monospace">
+							<@wp.action path="/ExtStr2/do/Front/Api/Service/detail.action" var="detailActionURL">
+								<@wp.parameter name="serviceKey"><@s.property value="#serviceVar.key" /></@wp.parameter>
+							</@wp.action>
+							<a href="${detailActionURL}"><@s.property value="#serviceVar.key" /></a>
+						</td>
+						<td><@s.property value="#serviceVar.value" /></td>
+					</tr>
+				</@s.iterator>
+			</table>
+			</div>
+		</@s.if>
+	</@s.iterator>
+	</div>
+</div>
+</@s.if>
+<@s.else>
+<div class="alert alert-block alert-info">
+	<p><@wp.i18n key="ENTANDO_API_NO_SERVICES" escapeXml=false /></p>
+</div>
+</@s.else>
+
+<p>
+	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
+</p>
+
+</section>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('complete-registration-BPM','complete-registration-BPM',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="bpm-wrapper-background">
+<p class="title-welcome"> Complete registration </p>
+<p class="subtitle">Sign in </p>
+<p class="presentation">Hi . Type your and a password to complete the registration. </p>
+
+ <form action="#" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="first_name" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="first_name" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="last_name" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="last_name" />" class="form-control input-custom" />
+        </div>
+       <div class="form-group">
+            <label class="login-label"><@wp.i18n key="company_name" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="company_name" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="Email" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="Email" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <p class="pass-hint">5 or more characters</p>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="CONFIRM_PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="CONFIRM_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div class="right-side-button">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+        </div>
+    </form>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<@wp.headInfo type="CSS" info="widgets/api.css"/>
+<@s.set var="apiServiceVar" value="%{getApiService(serviceKey)}" />
+<div class="entando-api api-resource-detail">
+<h2><@wp.i18n key="ENTANDO_API_SERVICE" />&#32;<@s.property value="serviceKey" /></h2>
+<@s.if test="hasActionMessages()">
+	<div class="message message_confirm">
+		<h3><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
+		<ul>
+			<@s.iterator value="actionMessages">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+<@s.if test="hasActionErrors()">
+	<div class="message message_error">
+		<h3><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
+		<ul>
+			<@s.iterator value="actionErrors">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+
+<p class="description"><@s.property value="getTitle(serviceKey, #apiServiceVar.description)" /></p>
+
+<@s.set var="masterMethodVar" value="#apiServiceVar.master" />
+
+<dl class="dl-horizontal">
+	<dt><@wp.i18n key="ENTANDO_API_SERVICE_KEY" /></dt>
+		<dd><@s.property value="serviceKey" /></dd>
+	<dt><@wp.i18n key="ENTANDO_API_SERVICE_PARENT_API" /></dt>
+		<dd><@s.property value="#masterMethodVar.description" />&#32;(/<@s.if test="#masterMethodVar.namespace!=null && #masterMethodVar.namespace.length()>0"><@s.property value="#masterMethodVar.namespace" />/</@s.if><@s.property value="#masterMethodVar.resourceName" />)</dd>
+	<dt>
+		<@wp.i18n key="ENTANDO_API_SERVICE_AUTHORIZATION" />
+	</dt>
+		<dd>
+			<@s.if test="%{!#apiServiceVar.requiredAuth}" >
+				<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_FREE" />
+			</@s.if>
+			<@s.elseif test="%{null == #apiServiceVar.requiredPermission && null == #apiServiceVar.requiredGroup}">
+				<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_SIMPLE" />
+			</@s.elseif>
+			<@s.else>
+				<@s.set var="serviceAuthGroupVar" value="%{getGroup(#apiServiceVar.requiredGroup)}" />
+				<@s.set var="serviceAuthPermissionVar" value="%{getPermission(#apiServiceVar.requiredPermission)}" />
+				<@s.if test="%{null != #serviceAuthPermissionVar}">
+					<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_WITH_PERM" />&#32;<@s.property value="#serviceAuthPermissionVar.description" />
+				</@s.if>
+				<@s.if test="%{null != #serviceAuthGroupVar}">
+					<@s.if test="%{null != #serviceAuthPermissionVar}"><br /></@s.if>
+					<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_WITH_GROUP" />&#32;<@s.property value="#serviceAuthGroupVar.descr" />
+				</@s.if>
+			</@s.else>
+		</dd>
+	<dt><@wp.i18n key="ENTANDO_API_SERVICE_URI" /></dt>
+		<dd>
+			<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" />/getService?key=<@s.property value="serviceKey" />"><@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" />/getService?key=<@s.property value="serviceKey" /></a>
+		</dd>
+	<dt>
+		<@wp.i18n key="ENTANDO_API_EXTENSION" />
+	</dt>
+		<dd>
+			<@wp.i18n key="ENTANDO_API_EXTENSION_NOTE" />
+		</dd>
+	<dt>
+		<@wp.i18n key="ENTANDO_API_SERVICE_SCHEMAS" />
+	</dt>
+		<dd class="schemas">
+			<@wp.action path="/ExtStr2/do/Front/Api/Service/responseSchema.action" var="responseSchemaURLVar" >
+				<@wp.parameter name="serviceKey"><@s.property value="serviceKey" /></@wp.parameter>
+			</@wp.action>
+			<a href="${responseSchemaURLVar}" >
+				<@wp.i18n key="ENTANDO_API_SERVICE_SCHEMA_RESP" />
+			</a>
+		</dd>
+</dl>
+
+<@s.if test="%{null != #apiServiceVar.freeParameters && #apiServiceVar.freeParameters.length > 0}" >
+<table class="table table-striped table-bordered table-condensed" summary="<@wp.i18n key="ENTANDO_API_SERVICE_PARAMETERS_SUMMARY" />">
+	<caption><span><@wp.i18n key="ENTANDO_API_SERVICE_PARAMETERS" /></span></caption>
+	<tr>
+		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_NAME" /></th>
+		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_DESCRIPTION" /></th>
+		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_REQUIRED" /></th>
+		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_DEFAULT_VALUE" /></th>
+	</tr>
+	<@s.iterator value="#apiServiceVar.freeParameters" var="apiParameterNameVar" >
+		<@s.set var="apiParameterValueVar" value="%{#apiServiceVar.parameters[#apiParameterNameVar]}" />
+		<@s.set var="apiParameterVar" value="%{#apiServiceVar.master.getParameter(#apiParameterNameVar)}" />
+		<@s.set var="apiParameterRequiredVar" value="%{#apiParameterVar.required && null == #apiParameterValueVar}" />
+		<tr>
+			<td><label for="<@s.property value="#apiParameterNameVar" />"><@s.property value="#apiParameterNameVar" /></label></td>
+			<td><@s.property value="%{#apiParameterVar.description}" /></td>
+			<td class="icon required_<@s.property value="#apiParameterRequiredVar" />">
+				<@s.if test="#apiParameterRequiredVar" ><@wp.i18n key="YES" /></@s.if>
+				<@s.else><@wp.i18n key="NO" /></@s.else>
+			</td>
+			<td><@s.if test="null != #apiParameterValueVar"><@s.property value="#apiParameterValueVar" /></@s.if><@s.else>-</@s.else></td>
+		</tr>
+	</@s.iterator>
+</table>
+</@s.if>
+<p class="api-back">
+	<a class="btn btn-primary" href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />"><span class="icon-arrow-left icon-white"></span>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
+</p>
+</div>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -884,6 +1771,25 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		cssClass="radio" />
 		<@wp.i18n key="userprofile_NO" />
 </label>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
+<br>
+<p class="title-paragraph"> What you''ll need to complete the application</p>
+<ul class="list">
+    <li>Business documentation such as company profile information, business certifications (eg.articles of incorporation), lists of assets</li>
+    <li>Business Tax documentation, from tax ID from tax Declarations</li>
+    <li>Personal information of the people in the company that will be eligible for financial services (eg. names, contact information, SSN ID)</li>
+    <li>List of services you may want to apply for</li>
+</ul>
+<br>
+<br>
+<p class="title-welcome"> What to expect after sign up</p>
+<ul class="list">
+    <li>When your sign up is done, you will have to complete the application form</li>
+    <li>After you send in the business documentation requested for your business type, the bank team will validate it</li>
+    <li>After your account is approved, you can fund your account while applying by using a debit card, transferring money from another account or writing a check.</li>
+    <li>Once your account is open, you may access Online Banking and you will receive your checks, debit cards and service activation in approximately 7 to 10 business days.</li>
+</ul>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_profile','userprofile_editCurrentUser_profile',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -1259,782 +2165,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		<@wp.i18n key="userprofile_PLEASE_LOGIN_TO_EDIT_PASSWORD" />
 	</p>
 </#if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-MonolistAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@s.if test="#attribute.attributes.size() != 0">
-	<ul class="unstyled">
-</@s.if>
-
-<@s.set var="masterListAttributeTracer" value="#attributeTracer" />
-<@s.set var="masterListAttribute" value="#attribute" />
-
-<@s.iterator value="#attribute.attributes" var="attribute" status="elementStatus">
-	<@s.set var="attributeTracer" value="#masterListAttributeTracer.getMonoListElementTracer(#elementStatus.index)"></@s.set>
-	<@s.set var="elementIndex" value="#elementStatus.index" />
-	<@s.set var="i18n_attribute_name">userprofile_ATTR<@s.property value="#attribute.name" /></@s.set>
-	<@s.set var="attribute_id">userprofile_<@s.property value="#attribute.name" />_<@s.property value="#elementStatus.count" /></@s.set>
-
-	<li class="control-group  <@s.property value="%{'' attribute-type-''+#attribute.type+'' ''}" />">
-		<label class="control-label" for="<@s.property value="#attribute_id" />">
-			<@s.if test="#attribute.type == ''Composite''">
-				<@s.property value="#elementStatus.count" /><span class="noscreen">&#32;<@s.text name="label.compositeAttribute.element" /></span>
-				&#32;
-				<@s.if test="#lang.default">
-					<@wp.fragment code="userprofile_is_front_AllList_operationModule" escapeXml=false /> 
-				</@s.if>
-			</@s.if>
-			<@s.else>
-				<@s.property value="#elementStatus.count" />
-				&#32;
-				<@wp.fragment code="userprofile_is_front_AllList_operationModule" escapeXml=false /> 
-			</@s.else>
-		</label>
-		<div class="controls">
-			<@s.if test="#attribute.type == ''Boolean''">
-				<@wp.fragment code="userprofile_is_front-BooleanAttribute" escapeXml=false />
-			</@s.if>
-			<@s.elseif test="#attribute.type == ''CheckBox''">
-				<@wp.fragment code="userprofile_is_front-CheckboxAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''Composite''">
-				<@wp.fragment code="userprofile_is_front-CompositeAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''Date''">
-				<@wp.fragment code="userprofile_is_front-DateAttribute" escapeXml=false /> 
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''Enumerator''">
-				<@wp.fragment code="userprofile_is_front-EnumeratorAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''EnumeratorMap''">
-				<@wp.fragment code="userprofile_is_front-EnumeratorMapAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''Hypertext''">
-				<@wp.fragment code="userprofile_is_front-HypertextAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''Longtext''">
-				<@wp.fragment code="userprofile_is_front-LongtextAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''Monotext''">
-				<@wp.fragment code="userprofile_is_front-MonotextAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''Number''">
-				<@wp.fragment code="userprofile_is_front-NumberAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''ThreeState''">
-				<@wp.fragment code="userprofile_is_front-ThreeStateAttribute" escapeXml=false />
-			</@s.elseif>
-			<@s.elseif test="#attribute.type == ''Text''">
-				<@wp.fragment code="userprofile_is_front-MonotextAttribute" escapeXml=false />				
-			</@s.elseif>
-			<@s.else>
-				<@wp.fragment code="userprofile_is_front-MonotextAttribute" escapeXml=false />	
-			</@s.else>
-			<@wp.fragment code="userprofile_is_front_attributeInfo-help-block" escapeXml=false />
-		</div>
-	</li>
-</@s.iterator>
-
-<@s.set var="attributeTracer" value="#masterListAttributeTracer" />
-<@s.set var="attribute" value="#masterListAttribute" />
-<@s.set var="elementIndex" value="" />
-<@s.if test="#attribute.attributes.size() != 0">
-</ul>
-</@s.if>
-<@s.if test="#lang.default">
-	<div class="control-group">
-		<div class="controls">
-			<@wp.fragment code="userprofile_is_front-AllList-addElementButton" escapeXml=false />				
-		</div>
-	</div>
-</@s.if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_profileChangeConfirmation',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<h1><@wp.i18n key="userprofile_EDITPROFILE_TITLE" /></h1>
-<p><@wp.i18n key="userprofile_PROFILE_UPDATED" /></p>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_detail_include',NULL,NULL,'','<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<@s.if test="#methodVar == null">
-	<p>
-		<@s.property value="#currentMethodNameVar" />,&#32;<@wp.i18n key="ENTANDO_API_METHOD_KO" />
-	</p>
-</@s.if>
-<@s.else>
-	<dl class="dl-horizontal">
-		<dt>
-			<@wp.i18n key="ENTANDO_API_METHOD" />
-		</dt>
-			<dd>
-				<@wp.i18n key="ENTANDO_API_METHOD_OK" />
-			</dd>
-		<@s.if test="#methodVar != null">
-			<dt>
-				<@wp.i18n key="ENTANDO_API_DESCRIPTION" />
-			</dt>
-				<dd><@s.property value="#methodVar.description" /></dd>
-			<dt>
-				<@wp.i18n key="ENTANDO_API_METHOD_AUTHORIZATION" />
-			</dt>
-				<dd>
-					<@s.if test="%{null != #methodVar.requiredPermission}">
-						<@s.iterator value="methodAuthorityOptions" var="permission"><@s.if test="#permission.key==#methodVar.requiredPermission"><@s.property value="#permission.value" /></@s.if></@s.iterator>
-					</@s.if>
-					<@s.elseif test="%{#methodVar.requiredAuth}">
-						<@wp.i18n key="ENTANDO_API_METHOD_AUTH_SIMPLE" />
-					</@s.elseif>
-					<@s.else>
-						<@wp.i18n key="ENTANDO_API_METHOD_AUTH_FREE" />
-					</@s.else>
-				</dd>
-			<@s.if test=''%{!#methodVar.resourceName.equalsIgnoreCase("getService")}'' >
-			<dt>
-				<@wp.i18n key="ENTANDO_API_METHOD_SCHEMAS" />
-			</dt>
-				<dd class="schemas">
-					<@s.if test=''%{#methodVar.httpMethod.toString().equalsIgnoreCase("POST") || #methodVar.httpMethod.toString().equalsIgnoreCase("PUT")}''>
-						<@wp.action path="/ExtStr2/do/Front/Api/Resource/requestSchema.action" var="requestSchemaURLVar" >
-							<@wp.parameter name="resourceName"><@s.property value="#methodVar.resourceName" /></@wp.parameter>
-							<@wp.parameter name="namespace"><@s.property value="#methodVar.namespace" /></@wp.parameter>
-							<@wp.parameter name="httpMethod"><@s.property value="#methodVar.httpMethod" /></@wp.parameter>
-						</@wp.action>
-						<a href="${requestSchemaURLVar}" >
-							<@wp.i18n key="ENTANDO_API_METHOD_SCHEMA_REQ" />
-						</a>
-						<br />
-					</@s.if>
-						<@wp.action path="/ExtStr2/do/Front/Api/Resource/responseSchema.action" var="responseSchemaURLVar" >
-							<@wp.parameter name="resourceName"><@s.property value="#methodVar.resourceName" /></@wp.parameter>
-							<@wp.parameter name="namespace"><@s.property value="#methodVar.namespace" /></@wp.parameter>
-							<@wp.parameter name="httpMethod"><@s.property value="#methodVar.httpMethod" /></@wp.parameter>
-						</@wp.action>
-						<a href="${responseSchemaURLVar}" >
-							<@wp.i18n key="ENTANDO_API_METHOD_SCHEMA_RESP" />
-						</a>
-				</dd>
-			</@s.if>
-		</@s.if>
-	</dl>
-	<@s.if test="#methodVar != null">
-		<@s.set var="methodParametersVar" value="#methodVar.parameters" />
-		<@s.if test="null != #methodParametersVar && #methodParametersVar.size() > 0">
-			<table class="table table-striped table-bordered table-condensed">
-				<caption><@wp.i18n key="ENTANDO_API_METHOD_REQUEST_PARAMS" /></caption>
-				<tr>
-					<th><@wp.i18n key="ENTANDO_API_PARAM_NAME" /></th>
-					<th><@wp.i18n key="ENTANDO_API_PARAM_DESCRIPTION" /></th>
-					<th><@wp.i18n key="ENTANDO_API_PARAM_REQUIRED" /></th>
-				</tr>
-				<@s.iterator value="#methodParametersVar" var="apiParameter" >
-					<tr>
-						<td><@s.property value="#apiParameter.key" /></td>
-						<td><@s.property value="#apiParameter.description" /></td>
-						<td class="icon required_<@s.property value="#apiParameter.required" />">
-							<@s.if test="#apiParameter.required">
-								<@wp.i18n key="YES" />
-							</@s.if>
-							<@s.else>
-								<@wp.i18n key="NO" />
-							</@s.else>
-						</td>
-					</tr>
-				</@s.iterator>
-			</table>
-		</@s.if>
-	</@s.if>
-</@s.else>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerBlock',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-
-<#if (group.size > group.max)>
-	<div class="pagination pagination-centered">
-		<ul>
-		<#if (1 != group.currItem)>
-			<#if (group.advanced)>
-				<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >1</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_FIRST" />"><i class="icon-fast-backward"></i></a></li>
-				<#if (1 != group.beginItemAnchor)>
-					<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.currItem - group.offset}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_STEP_BACKWARD" />&#32;${group.offset}"><i class="icon-step-backward"></i></a></li>
-				</#if>
-			</#if>
-			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.prevItem}</@wp.parameter></@wp.url>"><@wp.i18n key="PAGER_PREV" /></a></li>
-		</#if>
-		<#list group.items as item>
-		<#if (item_index >= (group.beginItemAnchor-1)) && (item_index <= (group.endItemAnchor-1))>
-			<#if (item == group.currItem)>
-			<li class="active"><a href="#">${item}</a></li>
-			<#else>
-			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${item}</@wp.parameter></@wp.url>">${item}</a></li>
-			</#if>
-		</#if>
-		</#list>
-		<#if (group.maxItem != group.currItem)>
-			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.nextItem}</@wp.parameter></@wp.url>"><@wp.i18n key="PAGER_NEXT" /></a></li>
-			<#if (group.advanced)>
-				<#if (group.maxItem != group.endItemAnchor)>
-					<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.currItem + group.offset}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_STEP_FORWARD" />&#32;${group.offset}"><i class="icon-step-forward"></i></a></li>
-				</#if>
-				<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.maxItem}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_LAST" />"><i class="icon-fast-forward"></i></a></li>
-			</#if>
-		</#if>
-		</ul>
-	</div>
-</#if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_entryCurrentProfile',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-
-<#if (Session.currentUser != "guest") >
-<form action="<@wp.action path="/ExtStr2/do/Front/CurrentUser/Profile/save.action" />" method="post" class="form-horizontal">
-	<@s.if test="hasFieldErrors()">
-		<div class="alert alert-block">
-			<p><strong><@wp.i18n key="userprofile_MESSAGE_TITLE_FIELDERRORS" /></strong></p>
-			<ul class="unstyled">
-				<@s.iterator value="fieldErrors">
-					<@s.iterator value="value">
-						<li><@s.property escapeHtml=false /></li>
-					</@s.iterator>
-				</@s.iterator>
-			</ul>
-		</div>
-	</@s.if>
-	<@s.set var="lang" value="defaultLang" />
-	<@s.iterator value="userProfile.attributeList" var="attribute">
-		<@s.if test="%{#attribute.active}">
-			<@wpsa.tracerFactory var="attributeTracer" lang="%{#lang.code}" />
-			<@s.set var="i18n_attribute_name">userprofile_<@s.property value="userProfile.typeCode" />_<@s.property value="#attribute.name" /></@s.set>
-			<@s.set var="attribute_id">userprofile_<@s.property value="#attribute.name" /></@s.set>
-			<@wp.fragment code="userprofile_is_IteratorAttribute" escapeXml=false /> 
-		</@s.if>
-	</@s.iterator>
-	<p class="form-actions">
-		<@wp.i18n key="userprofile_SAVE_PROFILE" var="userprofile_SAVE_PROFILE" />
-		<@wpsf.submit useTabindexAutoIncrement=true value="%{#attr.userprofile_SAVE_PROFILE}" cssClass="btn btn-primary" />
-	</p>
-</form>
-<#else>
-	<p><@wp.i18n key="userprofile_PLEASE_LOGIN" /></p>
-</#if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_currentWithoutProfile',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<h1><@wp.i18n key="userprofile_EDITPROFILE_TITLE" /></h1>
-<p class="label label-info">
-	<@wp.i18n key="userprofile_CURRENT_USER_WITHOUT_PROFILE" />
-</p>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-CheckboxAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-
-<@wpsf.checkbox useTabindexAutoIncrement=true 
-	name="%{#attributeTracer.getFormFieldName(#attribute)}" 
-	id="%{attribute_id}" value="%{#attribute.value == true}"/>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-MonotextAttribute',NULL,NULL,NULL,'<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.textfield useTabindexAutoIncrement=true id="%{attribute_id}" 
-	name="%{#attributeTracer.getFormFieldName(#attribute)}" value="%{#attribute.getTextForLang(#lang.code)}"
-	maxlength="254" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-LongtextAttribute',NULL,NULL,NULL,'<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.textarea useTabindexAutoIncrement=true cols="30" rows="5" id="%{attribute_id}" name="%{#attributeTracer.getFormFieldName(#attribute)}" value="%{#attribute.getTextForLang(#lang.code)}" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-CompositeAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@s.set var="i18n_parent_attribute_name" value="#attribute.name" />
-<@s.set var="masterCompositeAttributeTracer" value="#attributeTracer" />
-<@s.set var="masterCompositeAttribute" value="#attribute" />
-<@s.iterator value="#attribute.attributes" var="attribute">
-	<@s.set var="attributeTracer" value="#masterCompositeAttributeTracer.getCompositeTracer(#masterCompositeAttribute)"></@s.set>
-	<@s.set var="parentAttribute" value="#masterCompositeAttribute"></@s.set>
-	<@s.set var="i18n_attribute_name">userprofile_ATTR<@s.property value="%{i18n_parent_attribute_name}" /><@s.property value="#attribute.name" /></@s.set>
-	<@s.set var="attribute_id">userprofile_<@s.property value="%{i18n_parent_attribute_name}" /><@s.property value="#attribute.name" />_<@s.property value="#elementIndex" /></@s.set>
-	<@wp.fragment code="userprofile_is_IteratorAttribute" escapeXml=false />
-</@s.iterator>
-<@s.set var="attributeTracer" value="#masterCompositeAttributeTracer" />
-<@s.set var="attribute" value="#masterCompositeAttribute" />
-<@s.set var="parentAttribute" value=""></@s.set>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.select useTabindexAutoIncrement=true
-	name="%{#attributeTracer.getFormFieldName(#attribute)}"
-	id="%{attribute_id}"  
-	headerKey="" headerValue="" 
-	list="#attribute.items" value="%{#attribute.getText()}" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorMapAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.select useTabindexAutoIncrement=true
-	name="%{#attributeTracer.getFormFieldName(#attribute)}"
-	id="%{attribute_id}"  
-	headerKey="" headerValue="" 
-	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<h2><@wp.i18n key="ENTANDO_API_RESOURCES" /></h2>
-<@s.if test="hasActionErrors()">
-	<div class="alert alert-block alert-error">
-		<h3 class="alert-heading"><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
-		<ul>
-			<@s.iterator value="actionErrors">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-<@s.set var="resourceFlavoursVar" value="resourceFlavours" />
-
-<@s.if test="#resourceFlavoursVar.size() > 0">
-	<@s.set var="icon_free"><span class="icon icon-ok"></span><span class="noscreen sr-only"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_FREE" /></span></@s.set>
-	<@s.set var="title_free"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_FREE" />. <@wp.i18n key="ENTANDO_API_GOTO_DETAILS" /></@s.set>
-
-	<@s.set var="icon_auth"><span class="icon icon-user"></span><span class="noscreen sr-only"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_AUTH" /></span></@s.set>
-	<@s.set var="title_auth"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_AUTH" />. <@wp.i18n key="ENTANDO_API_GOTO_DETAILS" /></@s.set>
-
-	<@s.set var="icon_lock"><span class="icon icon-lock"></span><span class="noscreen sr-only"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_LOCK" /></span></@s.set>
-	<@s.set var="title_lock"><@wp.i18n key="ENTANDO_API_METHOD_STATUS_LOCK" />. <@wp.i18n key="ENTANDO_API_GOTO_DETAILS" /></@s.set>
-
-	<@s.iterator var="resourceFlavourVar" value="#resourceFlavoursVar" status="resourceFlavourStatusVar">
-		<table class="table table-striped table-bordered table-condensed">
-			<@s.iterator value="#resourceFlavourVar" var="resourceVar" status="statusVar" >
-				<@s.if test="#statusVar.first">
-					<@s.if test="#resourceVar.source==''core''"><@s.set var="captionVar"><@s.property value="#resourceVar.source" escapeHtml=false /></@s.set></@s.if>
-					<@s.else><@s.set var="captionVar"><@s.property value="%{getText(#resourceVar.sectionCode+''.name'')}" escapeHtml=false /></@s.set></@s.else>
-					<caption>
-						<@s.property value="#captionVar" />
-					</caption>
-					<tr>
-						<th class="span3"><@wp.i18n key="ENTANDO_API_RESOURCE" /></th>
-						<th><@wp.i18n key="ENTANDO_API_DESCRIPTION" /></th>
-						<th class="text-center span1">GET</th>
-						<th class="text-center span1">POST</th>
-						<th class="text-center span1">PUT</th>
-						<th class="text-center span1">DELETE</th>
-					</tr>
-				</@s.if>
-				<tr>
-					<td>
-						<@wp.action path="/ExtStr2/do/Front/Api/Resource/detail.action" var="detailActionURL">
-							<@wp.parameter name="resourceName"><@s.property value="#resourceVar.resourceName" /></@wp.parameter>
-							<@wp.parameter name="namespace"><@s.property value="#resourceVar.namespace" /></@wp.parameter>
-						</@wp.action>
-						<a title="<@wp.i18n key="ENTANDO_API_GOTO_DETAILS" />:&#32;/<@s.property value="%{#resourceVar.namespace.length()>0?#resourceVar.namespace+''/'':''''}" /><@s.property value="#resourceVar.resourceName" />" href="${detailActionURL}" ><@s.property value="#resourceVar.resourceName" /></a>
-					</td>
-					<td><@s.property value="#resourceVar.description" /></td>
-					<td class="text-center">
-						<@s.if test="#resourceVar.getMethod != null && #resourceVar.getMethod.active && (!#resourceVar.getMethod.hidden)" >
-							<@s.if test="#resourceVar.getMethod.requiredPermission != null" ><@s.set var="icon" value="#icon_lock" /><@s.set var="title" value="#title_lock" /></@s.if>
-							<@s.elseif test="#resourceVar.getMethod.requiredAuth" ><@s.set var="icon" value="#icon_auth" /><@s.set var="title" value="#title_auth" /></@s.elseif>
-							<@s.else><@s.set var="icon" value="#icon_free" /><@s.set var="title" value="#title_free" /></@s.else>
-							<a href="${detailActionURL}#api_method_GET" title="<@s.property value="#title" />">
-								<@s.property value="#icon" escapeHtml=false />
-							</a>
-						</@s.if>
-						<@s.else><abbr title="<@wp.i18n key="ENTANDO_API_METHOD_STATUS_NA" />">&ndash;</abbr></@s.else>
-					</td>
-					<td class="text-center">
-						<@s.if test="#resourceVar.postMethod != null && #resourceVar.postMethod.active && (!#resourceVar.postMethod.hidden)" >
-							<@s.if test="#resourceVar.postMethod.requiredPermission != null" ><@s.set var="icon" value="#icon_lock" /><@s.set var="title" value="#title_lock" /></@s.if>
-							<@s.elseif test="#resourceVar.postMethod.requiredAuth" ><@s.set var="icon" value="#icon_auth" /><@s.set var="title" value="#title_auth" /></@s.elseif>
-							<@s.else><@s.set var="icon" value="#icon_free" /><@s.set var="title" value="#title_free" /></@s.else>
-							<a href="${detailActionURL}#api_method_POST" title="<@s.property value="#title" />">
-								<@s.property value="#icon" escapeHtml=false />
-							</a>
-						</@s.if>
-						<@s.else><abbr title="<@wp.i18n key="ENTANDO_API_METHOD_STATUS_NA" />">&ndash;</abbr></@s.else>
-					</td>
-					<td class="text-center">
-						<@s.if test="#resourceVar.putMethod != null && #resourceVar.putMethod.active && (!#resourceVar.putMethod.hidden)" >
-							<@s.if test="#resourceVar.putMethod.requiredPermission != null" ><@s.set var="icon" value="#icon_lock" /><@s.set var="title" value="#title_lock" /></@s.if>
-							<@s.elseif test="#resourceVar.putMethod.requiredAuth" ><@s.set var="icon" value="#icon_auth" /><@s.set var="title" value="#title_auth" /></@s.elseif>
-							<@s.else><@s.set var="icon" value="#icon_free" /><@s.set var="title" value="#title_free" /></@s.else>
-							<a href="${detailActionURL}#api_method_PUT" title="<@s.property value="#title" />">
-								<@s.property value="#icon" escapeHtml=false />
-							</a>
-						</@s.if>
-						<@s.else><abbr title="<@wp.i18n key="ENTANDO_API_METHOD_STATUS_NA" />">&ndash;</abbr></@s.else>
-					</td>
-					<td class="text-center">
-						<@s.if test="#resourceVar.deleteMethod != null && #resourceVar.deleteMethod.active && (!#resourceVar.deleteMethod.hidden)" >
-							<@s.if test="#resourceVar.deleteMethod.requiredPermission != null" ><@s.set var="icon" value="#icon_lock" /><@s.set var="title" value="#title_lock" /></@s.if>
-							<@s.elseif test="#resourceVar.deleteMethod.requiredAuth" ><@s.set var="icon" value="#icon_auth" /><@s.set var="title" value="#title_auth" /></@s.elseif>
-							<@s.else><@s.set var="icon" value="#icon_free" /><@s.set var="title" value="#title_free" /></@s.else>
-							<a href="${detailActionURL}#api_method_DELETE" title="<@s.property value="#title" />">
-								<@s.property value="#icon" escapeHtml=false />
-							</a>
-						</@s.if>
-						<@s.else><abbr title="<@wp.i18n key="ENTANDO_API_METHOD_STATUS_NA" />">&ndash;</abbr></@s.else>
-					</td>
-				</tr>
-			</@s.iterator>
-		</table>
-
-		<@s.if test="#resourceVar.source==''core''">
-			<a href="<@wp.action path="/ExtStr2/do/Front/Api/Service/list.action" />" class="btn btn-primary pull-right"><@wp.i18n key="ENTANDO_API_GOTO_SERVICE_LIST" /></a>
-		</@s.if>
-	</@s.iterator>
-</@s.if>
-<@s.else>
-	<p><@wp.i18n key="ENTANDO_API_NO_RESOURCES" /></p>
-</@s.else>
-<script>
-  $(function () {
-    $(''#api-togglers a:first'').tab(''show'');
-  })
-</script>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<@s.set var="apiResourceVar" value="apiResource" />
-<@s.set var="GETMethodVar" value="#apiResourceVar.getMethod" />
-<@s.set var="POSTMethodVar" value="#apiResourceVar.postMethod" />
-<@s.set var="PUTMethodVar" value="#apiResourceVar.putMethod" />
-<@s.set var="DELETEMethodVar" value="#apiResourceVar.deleteMethod" />
-<@s.set var="apiNameVar" value="(#apiResourceVar.namespace!=null && #apiResourceVar.namespace.length()>0 ? ''/'' + #apiResourceVar.namespace : '''')+''/''+#apiResourceVar.resourceName" />
-<section>
-<p>
-	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
-</p>
-<h2><@wp.i18n key="ENTANDO_API_RESOURCE" />&#32;<@s.property value="#apiNameVar" /></h2>
-<@s.if test="hasActionMessages()">
-	<div class="alert alert-box alert-success">
-		<h3 class="alert-heading"><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
-		<ul>
-			<@s.iterator value="actionMessages">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-<@s.if test="hasActionErrors()">
-	<div class="alert alert-box alert-error">
-		<h3 class="alert-heading"><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
-		<ul>
-			<@s.iterator value="actionErrors">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-<!-- DESCRIPTION -->
-<p><@s.property value="#apiResourceVar.description" /></p>
-
-<!-- INFO -->
-<dl class="dl-horizontal">
-	<dt><@wp.i18n key="ENTANDO_API_RESOURCE_NAME" /></dt>
-		<dd><@s.property value="#apiResourceVar.resourceName" /></dd>
-	<dt><span lang="en"><@wp.i18n key="ENTANDO_API_RESOURCE_NAMESPACE" /></span></dt>
-		<dd>/<@s.property value="#apiResourceVar.namespace" /></dd>
-	<dt><@wp.i18n key="ENTANDO_API_RESOURCE_SOURCE" /></dt>
-		<dd>
-			<@s.property value="#apiResourceVar.source" /><@s.if test="%{#apiResourceVar.pluginCode != null && #apiResourceVar.pluginCode.length() > 0}">,&#32;<@s.property value="%{getText(#apiResourceVar.pluginCode+''.name'')}" />&#32;(<@s.property value="%{#apiResourceVar.pluginCode}" />)</@s.if>
-		</dd>
-	<dt><@wp.i18n key="ENTANDO_API_RESOURCE_URI" /></dt>
-		<dd>
-			<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" /><@s.if test="null != #apiResourceVar.namespace">/<@s.property value="#apiResourceVar.namespace" /></@s.if>/<@s.property value="#apiResourceVar.resourceName" />"><@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" /><@s.if test="null != #apiResourceVar.namespace">/<@s.property value="#apiResourceVar.namespace" /></@s.if>/<@s.property value="#apiResourceVar.resourceName" /></a>
-		</dd>
-	<dt>
-		<@wp.i18n key="ENTANDO_API_EXTENSION" />
-	</dt>
-		<dd>
-			<@wp.i18n key="ENTANDO_API_EXTENSION_NOTE" />
-		</dd>
-</dl>
-
-	<@s.set var="methodVar" value="#GETMethodVar" />
-	<@s.set var="currentMethodNameVar" value="%{''GET''}" />
-	<h3 id="api_method_GET">GET</h3>
-	<@wp.fragment code="entandoapi_is_resource_detail_include" escapeXml=false />
-
-	<@s.set var="methodVar" value="#POSTMethodVar" />
-	<@s.set var="currentMethodNameVar" value="%{''POST''}" />
-	<h3 id="api_method_POST">POST</h3>
-	<@wp.fragment code="entandoapi_is_resource_detail_include" escapeXml=false />
-
-	<@s.set var="methodVar" value="#PUTMethodVar" />
-	<@s.set var="currentMethodNameVar" value="%{''PUT''}" />
-	<h3 id="api_method_PUT">PUT</h3>
-	<@wp.fragment code="entandoapi_is_resource_detail_include" escapeXml=false />
-
-	<@s.set var="methodVar" value="#DELETEMethodVar" />
-	<@s.set var="currentMethodNameVar" value="%{''DELETE''}" />
-	<h3 id="api_method_DELETE">DELETE</h3>
-	<@wp.fragment code="entandoapi_is_resource_detail_include" escapeXml=false />
-<p>
-	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
-</p>
-</section>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<section>
-
-<p>
-	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
-</p>
-
-<h2><@wp.i18n key="ENTANDO_API_GOTO_SERVICE_LIST" /></h2>
-<@s.if test="hasActionErrors()">
-	<div class="alert alert-block alert-error">
-		<h3 class="alert-heading"><@s.text name="message.title.ActionErrors" /></h3>
-		<ul>
-			<@s.iterator value="actionErrors">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-<@s.if test="hasFieldErrors()">
-	<div class="alert alert-block alert-error">
-		<h3 class="alert-heading"><@s.text name="message.title.FieldErrors" /></h3>
-		<ul>
-			<@s.iterator value="fieldErrors">
-				<@s.iterator value="value">
-				<li><@s.property escapeHtml=false /></li>
-				</@s.iterator>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-<@s.if test="hasActionMessages()">
-	<div class="alert alert-block alert-info">
-		<h3 class="alert-heading"><@s.text name="messages.confirm" /></h3>
-		<ul>
-			<@s.iterator value="actionMessages">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-<@s.set var="resourceFlavoursVar" value="resourceFlavours" />
-<@s.set var="serviceFlavoursVar" value="serviceFlavours" />
-
-<@s.if test="#serviceFlavoursVar != null && #serviceFlavoursVar.size() > 0">
-<div class="tabbable tabs-left">
-	<ul class="nav nav-tabs">
-		<@s.iterator var="resourceFlavour" value="#resourceFlavoursVar" status="statusVar">
-			<@s.set var="serviceGroupVar" value="#resourceFlavour.get(0).getSectionCode()" />
-			<@s.set var="servicesByGroupVar" value="#serviceFlavoursVar[#serviceGroupVar]" />
-			<@s.if test="null != #servicesByGroupVar && #servicesByGroupVar.size() > 0">
-				<@s.if test="#serviceGroupVar == ''core''"><@s.set var="captionVar" value="%{#serviceGroupVar}" /></@s.if>
-				<@s.else><@s.set var="captionVar" value="%{getText(#serviceGroupVar + ''.name'')}" /></@s.else>
-				<li<@s.if test="#statusVar.first"> class="active"</@s.if>>
-					<a href="#api-flavour-<@s.property value=''%{#captionVar.toLowerCase().replaceAll("[^a-z0-9-]", "")}'' />" data-toggle="tab"><@s.property value=''%{#captionVar}'' /></a>
-				</li>
-			</@s.if>
-		</@s.iterator>
-	</ul>
-
-  <div class="tab-content">
-	<@s.iterator var="resourceFlavour" value="#resourceFlavoursVar" status="moreStatusVar">
-		<@s.set var="serviceGroupVar" value="#resourceFlavour.get(0).getSectionCode()" />
-		<@s.set var="servicesByGroupVar" value="#serviceFlavoursVar[#serviceGroupVar]" />
-		<@s.if test="null != #servicesByGroupVar && #servicesByGroupVar.size() > 0">
-			<@s.if test="#serviceGroupVar == ''core''"><@s.set var="captionVar" value="%{#serviceGroupVar}" /></@s.if>
-			<@s.else><@s.set var="captionVar" value="%{getText(#serviceGroupVar + ''.name'')}" /></@s.else>
-			<div class="tab-pane<@s.if test="#moreStatusVar.first"> active</@s.if>" id="api-flavour-<@s.property value=''%{#captionVar.toLowerCase().replaceAll("[^a-z0-9]", "")}'' />">
-			<table class="table table-striped table-bordered table-condensed">
-				<caption>
-					<@s.property value="#captionVar" />
-				</caption>
-				<tr>
-					<th><@wp.i18n key="ENTANDO_API_SERVICE" /></th>
-					<th><@wp.i18n key="ENTANDO_API_DESCRIPTION" /></th>
-				</tr>
-				<@s.iterator var="serviceVar" value="#servicesByGroupVar" >
-					<tr>
-						<td class="monospace">
-							<@wp.action path="/ExtStr2/do/Front/Api/Service/detail.action" var="detailActionURL">
-								<@wp.parameter name="serviceKey"><@s.property value="#serviceVar.key" /></@wp.parameter>
-							</@wp.action>
-							<a href="${detailActionURL}"><@s.property value="#serviceVar.key" /></a>
-						</td>
-						<td><@s.property value="#serviceVar.value" /></td>
-					</tr>
-				</@s.iterator>
-			</table>
-			</div>
-		</@s.if>
-	</@s.iterator>
-	</div>
-</div>
-</@s.if>
-<@s.else>
-<div class="alert alert-block alert-info">
-	<p><@wp.i18n key="ENTANDO_API_NO_SERVICES" escapeXml=false /></p>
-</div>
-</@s.else>
-
-<p>
-	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
-</p>
-
-</section>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('complete-registration-BPM','complete-registration-BPM',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="bpm-wrapper-background">
-<p class="title-welcome"> Complete registration </p>
-<p class="subtitle">Sign in </p>
-<p class="presentation">Hi . Type your and a password to complete the registration. </p>
-
- <form action="#" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="first_name" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="first_name" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="last_name" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="last_name" />" class="form-control input-custom" />
-        </div>
-       <div class="form-group">
-            <label class="login-label"><@wp.i18n key="company_name" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="company_name" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="Email" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="Email" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <p class="pass-hint">5 or more characters</p>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="CONFIRM_PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="CONFIRM_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div class="right-side-button">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-        </div>
-    </form>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<@wp.headInfo type="CSS" info="widgets/api.css"/>
-<@s.set var="apiServiceVar" value="%{getApiService(serviceKey)}" />
-<div class="entando-api api-resource-detail">
-<h2><@wp.i18n key="ENTANDO_API_SERVICE" />&#32;<@s.property value="serviceKey" /></h2>
-<@s.if test="hasActionMessages()">
-	<div class="message message_confirm">
-		<h3><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
-		<ul>
-			<@s.iterator value="actionMessages">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-<@s.if test="hasActionErrors()">
-	<div class="message message_error">
-		<h3><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
-		<ul>
-			<@s.iterator value="actionErrors">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-
-<p class="description"><@s.property value="getTitle(serviceKey, #apiServiceVar.description)" /></p>
-
-<@s.set var="masterMethodVar" value="#apiServiceVar.master" />
-
-<dl class="dl-horizontal">
-	<dt><@wp.i18n key="ENTANDO_API_SERVICE_KEY" /></dt>
-		<dd><@s.property value="serviceKey" /></dd>
-	<dt><@wp.i18n key="ENTANDO_API_SERVICE_PARENT_API" /></dt>
-		<dd><@s.property value="#masterMethodVar.description" />&#32;(/<@s.if test="#masterMethodVar.namespace!=null && #masterMethodVar.namespace.length()>0"><@s.property value="#masterMethodVar.namespace" />/</@s.if><@s.property value="#masterMethodVar.resourceName" />)</dd>
-	<dt>
-		<@wp.i18n key="ENTANDO_API_SERVICE_AUTHORIZATION" />
-	</dt>
-		<dd>
-			<@s.if test="%{!#apiServiceVar.requiredAuth}" >
-				<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_FREE" />
-			</@s.if>
-			<@s.elseif test="%{null == #apiServiceVar.requiredPermission && null == #apiServiceVar.requiredGroup}">
-				<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_SIMPLE" />
-			</@s.elseif>
-			<@s.else>
-				<@s.set var="serviceAuthGroupVar" value="%{getGroup(#apiServiceVar.requiredGroup)}" />
-				<@s.set var="serviceAuthPermissionVar" value="%{getPermission(#apiServiceVar.requiredPermission)}" />
-				<@s.if test="%{null != #serviceAuthPermissionVar}">
-					<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_WITH_PERM" />&#32;<@s.property value="#serviceAuthPermissionVar.description" />
-				</@s.if>
-				<@s.if test="%{null != #serviceAuthGroupVar}">
-					<@s.if test="%{null != #serviceAuthPermissionVar}"><br /></@s.if>
-					<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_WITH_GROUP" />&#32;<@s.property value="#serviceAuthGroupVar.descr" />
-				</@s.if>
-			</@s.else>
-		</dd>
-	<dt><@wp.i18n key="ENTANDO_API_SERVICE_URI" /></dt>
-		<dd>
-			<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" />/getService?key=<@s.property value="serviceKey" />"><@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" />/getService?key=<@s.property value="serviceKey" /></a>
-		</dd>
-	<dt>
-		<@wp.i18n key="ENTANDO_API_EXTENSION" />
-	</dt>
-		<dd>
-			<@wp.i18n key="ENTANDO_API_EXTENSION_NOTE" />
-		</dd>
-	<dt>
-		<@wp.i18n key="ENTANDO_API_SERVICE_SCHEMAS" />
-	</dt>
-		<dd class="schemas">
-			<@wp.action path="/ExtStr2/do/Front/Api/Service/responseSchema.action" var="responseSchemaURLVar" >
-				<@wp.parameter name="serviceKey"><@s.property value="serviceKey" /></@wp.parameter>
-			</@wp.action>
-			<a href="${responseSchemaURLVar}" >
-				<@wp.i18n key="ENTANDO_API_SERVICE_SCHEMA_RESP" />
-			</a>
-		</dd>
-</dl>
-
-<@s.if test="%{null != #apiServiceVar.freeParameters && #apiServiceVar.freeParameters.length > 0}" >
-<table class="table table-striped table-bordered table-condensed" summary="<@wp.i18n key="ENTANDO_API_SERVICE_PARAMETERS_SUMMARY" />">
-	<caption><span><@wp.i18n key="ENTANDO_API_SERVICE_PARAMETERS" /></span></caption>
-	<tr>
-		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_NAME" /></th>
-		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_DESCRIPTION" /></th>
-		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_REQUIRED" /></th>
-		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_DEFAULT_VALUE" /></th>
-	</tr>
-	<@s.iterator value="#apiServiceVar.freeParameters" var="apiParameterNameVar" >
-		<@s.set var="apiParameterValueVar" value="%{#apiServiceVar.parameters[#apiParameterNameVar]}" />
-		<@s.set var="apiParameterVar" value="%{#apiServiceVar.master.getParameter(#apiParameterNameVar)}" />
-		<@s.set var="apiParameterRequiredVar" value="%{#apiParameterVar.required && null == #apiParameterValueVar}" />
-		<tr>
-			<td><label for="<@s.property value="#apiParameterNameVar" />"><@s.property value="#apiParameterNameVar" /></label></td>
-			<td><@s.property value="%{#apiParameterVar.description}" /></td>
-			<td class="icon required_<@s.property value="#apiParameterRequiredVar" />">
-				<@s.if test="#apiParameterRequiredVar" ><@wp.i18n key="YES" /></@s.if>
-				<@s.else><@wp.i18n key="NO" /></@s.else>
-			</td>
-			<td><@s.if test="null != #apiParameterValueVar"><@s.property value="#apiParameterValueVar" /></@s.if><@s.else>-</@s.else></td>
-		</tr>
-	</@s.iterator>
-</table>
-</@s.if>
-<p class="api-back">
-	<a class="btn btn-primary" href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />"><span class="icon-arrow-left icon-white"></span>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
-</p>
-</div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
-<br>
-<p class="title-paragraph"> What you''ll need to complete the application</p>
-<ul class="list">
-    <li>Business documentation such as company profile information, business certifications (eg.articles of incorporation), lists of assets</li>
-    <li>Business Tax documentation, from tax ID from tax Declarations</li>
-    <li>Personal information of the people in the company that will be eligible for financial services (eg. names, contact information, SSN ID)</li>
-    <li>List of services you may want to apply for</li>
-</ul>
-<br>
-<br>
-<p class="title-welcome"> What to expect after sign up</p>
-<ul class="list">
-    <li>When your sign up is done, you will have to complete the application form</li>
-    <li>After you send in the business documentation requested for your business type, the bank team will validate it</li>
-    <li>After your account is approved, you can fund your account while applying by using a debit card, transferring money from another account or writing a check.</li>
-    <li>Once your account is open, you may access Online Banking and you will receive your checks, debit cards and service activation in approximately 7 to 10 business days.</li>
-</ul>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('login_form','login_form',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <h1><@wp.i18n key="RESERVED_AREA" /></h1>
 <#if (Session.currentUser.username != "guest") >
@@ -2246,6 +2376,62 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	</div>
 </div>
 </fieldset>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="ibox float-e-margins">
+    <div class="row">
+        <div class="col-md-10"><span class="title-welcome">Your Performance</span></div>
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-1">
+            <div class="ibox-tools">
+                <a class="collapse-link fsi-progess-bar-tools-icon ">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="close-link fsi-progess-bar-tools-icon ">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ibox-content" style="display: block; border-style: none;">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All<span class="caret" style="margin-left: 15px;"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div style="text-align: right">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="row fsi-progess-bar-box-label ">
+            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
+            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="progress">
+                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
+                        <span class="sr-only">60% Complete (success)</span>60%
+                    </div>
+                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilters',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#if (userFilterOptionsVar??) && userFilterOptionsVar?has_content && (userFilterOptionsVar?size > 0)>
 <div class="row-fluid"><div class="span12 padding-medium-top">
@@ -2476,62 +2662,6 @@ jQuery(function($){
 	</div>
 </div>
 </fieldset>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="ibox float-e-margins">
-    <div class="row">
-        <div class="col-md-10"><span class="title-welcome">Your Performance</span></div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-1">
-            <div class="ibox-tools">
-                <a class="collapse-link fsi-progess-bar-tools-icon ">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-                <a class="close-link fsi-progess-bar-tools-icon ">
-                    <i class="fa fa-times"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="ibox-content" style="display: block; border-style: none;">
-        <div class="row">
-            <div class="col-md-10"></div>
-            <div class="col-md-1">
-                <div class="dropdown">
-                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        All<span class="caret" style="margin-left: 15px;"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div style="text-align: right">
-                    <i class="fa fa-calendar"></i>
-                </div>
-            </div>
-
-        </div>
-        <div class="row fsi-progess-bar-box-label ">
-            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
-            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="progress">
-                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
-                        <span class="sr-only">60% Complete (success)</span>60%
-                    </div>
-                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
-                        <span class="sr-only">20% Complete (warning)</span>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >

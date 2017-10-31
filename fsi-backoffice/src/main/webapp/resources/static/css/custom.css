@@ -1743,3 +1743,33 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .margin-top-15 {
     margin-top: 15px;
 }
+
+
+
+.fsi-customer-overview-big .fsi-customer-overview-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+.fsi-customer-overview-big .fsi-customer-overview-item .label-text {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 7px;
+}
+.fsi-customer-overview-big .fsi-customer-overview-item .label-text h3 {
+    float: right;
+}
+.fsi-customer-overview-big .fsi-customer-overview-item .label-text h3 .fa {
+    color: #005994;
+}
+.fsi-customer-overview-big .progress {
+    height: 10px;
+}
+.fsi-customer-overview-big .progress .progress-bar {
+    background: #99CBED;
+    box-shadow: 0;
+    -webkit-box-shadow: 0;
+}
+
+.fsi-customer-overview-big #donut-chart .c3-chart-arc.c3-target text {
+  fill: #333;
+}

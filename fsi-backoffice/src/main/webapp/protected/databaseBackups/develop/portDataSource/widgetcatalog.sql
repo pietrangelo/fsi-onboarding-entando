@@ -225,3 +225,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-in-progress','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI In Progress</property><property key="it">FSI In Progress</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-overview-big','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Customer Overview Big</property><property key="it">FSI Customer Overview Big</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
