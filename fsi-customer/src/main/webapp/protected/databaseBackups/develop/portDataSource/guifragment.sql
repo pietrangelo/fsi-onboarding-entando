@@ -290,6 +290,72 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
   </div>
 </div>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="container background-white">
+    <div class="row">
+        <div class="col-md-2">DOCUMENTS</div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">TIME TO REVIEW</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <div>
+                    <select class="chosen-select box-select-file">
+                        <option value="">Select</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">0.30 min <i class="fa fa-clock-o"></i></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 box-toolbar-pdf-thumbnail">
+            <div style="display: flex;">
+                <button id="prev" type="button" data-role="none" class="fa fa-chevron-left no-border"
+                        aria-label="Previous"
+                        role="button"></button>
+                <div id="thumbnail-pdf"></div>
+                <button id="next" type="button" data-role="none" class="fa fa-chevron-right no-border" aria-label="Next"
+                        role="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+
+        <div class="text-center pdf-toolbar">
+            <div class="col-md-2">BUSINESS DOC (PDF)</div>
+            <div class="col-md-2">GENERAL INFO</div>
+            <div class="col-md-2">
+                <b>Page:</b>
+                <span id="page_num"> </span> / <span id="page_count"></span>
+            </div>
+            <div class="col-md-2">
+                <button id="zoomin" class="btn btn-white no-border"><i class="fa fa-search-minus"></i>
+                </button>
+                <button id="zoomout" class="btn btn-white no-border"><i class="fa fa-search-plus"></i>
+                </button>
+            </div>
+            <div class="col-md-4 background-grey">
+                BUSINESS FORM
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="text-center m-t-md scrollbar-auto">
+                <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262"
+                        width="892"></canvas>
+            </div>
+        </div>
+        <div class="col-md-4">
+            MTGZ
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -422,73 +488,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="container background-white">
-    <div class="row">
-        <div class="col-md-2">DOCUMENTS</div>
-        <div class="col-md-2"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-2">TIME TO REVIEW</div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            <div class="form-group">
-                <div>
-                    <select class="chosen-select box-select-file">
-                        <option value="">Select</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-2">0.30 min <i class="fa fa-clock-o"></i></div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 box-toolbar-pdf-thumbnail">
-            <div style="display: flex;">
-                <button id="prev" type="button" data-role="none" class="fa fa-chevron-left no-border"
-                        aria-label="Previous"
-                        role="button"></button>
-                <div id="thumbnail-pdf"></div>
-                <button id="next" type="button" data-role="none" class="fa fa-chevron-right no-border" aria-label="Next"
-                        role="button"></button>
-            </div>
-        </div>
-    </div>
-    <div class="row"><br></div>
-    <div class="row">
-
-        <div class="text-center pdf-toolbar">
-            <div class="col-md-2">BUSINESS DOC (PDF)</div>
-            <div class="col-md-2">GENERAL INFO</div>
-            <div class="col-md-2">
-                <b>Page:</b>
-                <span id="page_num"> </span> / <span id="page_count"></span>
-            </div>
-            <div class="col-md-2">
-                <button id="zoomin" class="btn btn-white no-border"><i class="fa fa-search-minus"></i>
-                </button>
-                <button id="zoomout" class="btn btn-white no-border"><i class="fa fa-search-plus"></i>
-                </button>
-            </div>
-            <div class="col-md-4 background-grey">
-                BUSINESS FORM
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="text-center m-t-md scrollbar-auto">
-                <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262"
-                        width="892"></canvas>
-            </div>
-        </div>
-        <div class="col-md-4">
-            MTGZ
         </div>
     </div>
 </div>
