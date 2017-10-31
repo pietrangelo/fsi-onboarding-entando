@@ -2349,6 +2349,35 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		</select>
 	</div>
 </div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Completed</h5>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-white active">Today</button>
+                <button type="button" class="btn btn-xs btn-white">Monthly</button>
+                <button type="button" class="btn btn-xs btn-white">Annual</button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="no-margins">1800</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="progress progress-mini margin-top-15">
+                    <div style="width: 44%;" class="progress-bar"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="stat-percent font-bold text-info">44% <i class="fa fa-level-up"></i></div>
+        <small>Total tast 2500</small>
+
+    </div>
+
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Number',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <fieldset>
 <legend>
@@ -2562,6 +2591,26 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-average-review-time','fsi-average-review-time',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Average Review Time</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div style="text-align: center">
+            <h3>3,5</h3>
+            <small>Min.</small>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list','content_viewer_list','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <@wp.headInfo type="JS_EXT" info="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" />
@@ -2726,6 +2775,59 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         </div>
     </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<div class="middle-box loginscreen animated fadeInDown">
+    <#if (Session.currentUser.username != "guest") >
+    <#if (Session.currentUser.entandoUser) >
+    <#if (!Session.currentUser.credentialsNotExpired) >
+    <div class="alert alert-block">
+        <p>
+            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
+               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
+        </p>
+    </div>
+    </#if>
+    </#if>
+    <p>
+        <script>window.location = "<@wp.url page="backoffice" />";</script>
+    </p>
+    <#else>
+    <#if (accountExpired?? && accountExpired == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
+    </div>
+    </#if>
+    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
+    </div>
+    </#if>
+    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
+    <form action="<@wp.url/>" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div>
+            <label class="remember-me-label">
+                   <input type="checkbox" class="i-checks"> Remember me </label>
+        </div>
+        <div class="form-actions text-center">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+                   <p class="forget">Forgot your password or Email/Username?</p>
+        </div>
+    </form>
+    </#if>
+</div>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_ThreeSt',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -2862,6 +2964,62 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </#list>
     </@wp.freemarkerTemplateParameter>
 </ul>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-backlog','fsi-backlog',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Backlog</h5>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-white active">Today</button>
+                <button type="button" class="btn btn-xs btn-white">Monthly</button>
+                <button type="button" class="btn btn-xs btn-white">Annual</button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="no-margins">350</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="progress progress-mini margin-top-15">
+                    <div style="width: 38%;" class="progress-bar progress-bar-danger"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
+        <small>Total tast 2500</small>
+
+    </div>
+
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-performance','fsi-performance',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Performance</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        <div>
+            <div style="text-align: right">
+                <small>Last update 3 min ago</small>
+            </div>
+            <div class="progress progress-mini">
+                <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90"
+                     class="progress-bar progress-bar-success"></div>
+            </div>
+            <small>Well Done!You completed 2360 task. You have 140 tasks to complete activities.</small>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">
@@ -3107,164 +3265,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 <p>Improving businesses&apos; life through meaningful services.
 </p>
 <input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<div class="middle-box loginscreen animated fadeInDown">
-    <#if (Session.currentUser.username != "guest") >
-    <#if (Session.currentUser.entandoUser) >
-    <#if (!Session.currentUser.credentialsNotExpired) >
-    <div class="alert alert-block">
-        <p>
-            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
-               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
-        </p>
-    </div>
-    </#if>
-    </#if>
-    <p>
-        <script>window.location = "<@wp.url page="applicant" />";</script>
-    </p>
-    <#else>
-    <#if (accountExpired?? && accountExpired == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
-    </div>
-    </#if>
-    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
-    </div>
-    </#if>
-    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
-    <form action="<@wp.url/>" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div>
-            <label class="remember-me-label">
-                   <input type="checkbox" class="i-checks"> Remember me </label>
-        </div>
-        <div class="form-actions text-center">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-                   <p class="forget">Forgot your password or Email/Username?</p>
-        </div>
-    </form>
-    </#if>
-</div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-performance','fsi-performance',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Performance</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="ibox-content">
-
-        <div>
-            <div style="text-align: right">
-                <small>Last update 3 min ago</small>
-            </div>
-            <div class="progress progress-mini">
-                <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90"
-                     class="progress-bar progress-bar-success"></div>
-            </div>
-            <small>Well Done!You completed 2360 task. You have 140 tasks to complete activities.</small>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Completed</h5>
-        <div class="pull-right">
-            <div class="btn-group">
-                <button type="button" class="btn btn-xs btn-white active">Today</button>
-                <button type="button" class="btn btn-xs btn-white">Monthly</button>
-                <button type="button" class="btn btn-xs btn-white">Annual</button>
-            </div>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="no-margins">1800</h1>
-            </div>
-            <div class="col-md-8">
-                <div class="progress progress-mini margin-top-15">
-                    <div style="width: 44%;" class="progress-bar"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="stat-percent font-bold text-info">44% <i class="fa fa-level-up"></i></div>
-        <small>Total tast 2500</small>
-
-    </div>
-
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-average-review-time','fsi-average-review-time',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Average Review Time</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="ibox-content">
-        <div style="text-align: center">
-            <h3>3,5</h3>
-            <small>Min.</small>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-backlog','fsi-backlog',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Backlog</h5>
-        <div class="pull-right">
-            <div class="btn-group">
-                <button type="button" class="btn btn-xs btn-white active">Today</button>
-                <button type="button" class="btn btn-xs btn-white">Monthly</button>
-                <button type="button" class="btn btn-xs btn-white">Annual</button>
-            </div>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="no-margins">350</h1>
-            </div>
-            <div class="col-md-8">
-                <div class="progress progress-mini margin-top-15">
-                    <div style="width: 38%;" class="progress-bar progress-bar-danger"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
-        <small>Total tast 2500</small>
-
-    </div>
-
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-in-progress','fsi-in-progress',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">

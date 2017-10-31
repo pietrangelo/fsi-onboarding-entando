@@ -20,31 +20,21 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </properties>','service',1,NULL,'2017-02-17 21:11:54');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('homepage','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Home</property><property key="it">Home</property></properties>
-','fsi-landing-page',1,'<?xml version="1.0" encoding="UTF-8"?>
+','fsi-landing',1,'<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>false</useextratitles>
   <charset>utf-8</charset>
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-10-24 15:21:48');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('applicant','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">applicant</property><property key="it">applicante</property></properties>
-','fsi-customer-internal-page',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-10-25 09:03:08');
+','2017-10-31 17:27:00');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('backoffice','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">backoffice</property><property key="it">backoffice</property></properties>
-','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>false</useextratitles>
   <charset>utf-8</charset>
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-10-31 16:13:50');
+','2017-10-31 17:28:04');
