@@ -183,7 +183,85 @@
 
             // If absolute URL from the remote server is provided, configure the CORS
             // header on that server.
-            var url = '//cdn.mozilla.net/pdfjs/tracemonkey.pdf';
+
+            function load_binary_resource(url) {
+                var req = new XMLHttpRequest();
+                req.open('GET', url, false);
+                //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
+                req.overrideMimeType('text\/plain; charset=x-user-defined');
+                req.send(null);
+                if (req.status != 200) return '';
+                return req.responseText;
+            }
+
+            var urls = new Array();
+
+            urls.push('//cdn.mozilla.net/pdfjs/tracemonkey.pdf');
+            urls.push('http://www.pdf995.com/samples/pdf.pdf');
+
+            var selectFiles = document.getElementById("select-files");
+
+            urls.forEach(function(el,index){
+                var option = document.createElement("option");
+                option.text = el;
+                if (index===0){
+                    selectFiles.setAttribute("selected",true);
+                }
+                selectFiles.add(option);
+            });
+
+            selectFiles.addEventListener('change', loadPdfDocument);
+
+            function loadPdfDocument(){
+                var thumbnails = document.getElementById("thumbnail-pdf");
+                while (thumbnails.firstChild) {
+                    thumbnails.removeChild(thumbnails.firstChild);
+                }
+
+                url = document.getElementById("select-files").value;
+
+
+
+                //console.log(load_binary_resource(url));
+
+                /**
+                 * Asynchronously downloads PDF.
+                 */
+                PDFJS.getDocument(url).then(function (pdfDoc_) {
+                    pdfDoc = pdfDoc_;
+                    var pages = [];
+                    while (pages.length < pdfDoc_.numPages)
+                        pages.push(pages.length + 1);
+                    document.getElementById('page_count').textContent = pdfDoc.numPages;
+
+
+                    return Promise.all(pages.map(function (num) {
+                        // create a div for each page and build a small canvas for it
+                        var div = document.createElement("div");
+                        div.setAttribute("page", num);
+                        div.addEventListener("click", onThumbClick);
+                        if (num === 1) {
+                            div.classList.add("page-active");
+                        }
+
+                        var thumbnails = document.getElementById("thumbnail-pdf");
+                        thumbnails.appendChild(div);
+                        return pdfDoc_.getPage(num).then(makeThumb)
+                            .then(function (canvas) {
+                                div.appendChild(canvas);
+                            });
+                    })).then(function () {
+                        canvas = document.getElementById('the-canvas');
+                        ctx = canvas.getContext('2d');
+                        // Initial/first page rendering
+                        renderPage(pageNum);
+                    });
+                }).catch(console.error);
+
+            };
+
+
+            loadPdfDocument();
 
             // The workerSrc property shall be specified.
             PDFJS.workerSrc = '<wp:info key="systemParam" paramName="applicationBaseURL" />resources/static/js/pdf.worker.js';
@@ -295,37 +373,7 @@
 
                 document.getElementById('zoomout').addEventListener('click', zoomOut);
 
-                /**
-                 * Asynchronously downloads PDF.
-                 */
-                PDFJS.getDocument(url).then(function (pdfDoc_) {
-                    pdfDoc = pdfDoc_;
-                    var pages = [];
-                    while (pages.length < pdfDoc_.numPages)
-                        pages.push(pages.length + 1);
-                    document.getElementById('page_count').textContent = pdfDoc.numPages;
 
-
-                    return Promise.all(pages.map(function (num) {
-                        // create a div for each page and build a small canvas for it
-                        var div = document.createElement("div");
-                        div.setAttribute("page", num);
-                        div.addEventListener("click", onThumbClick);
-                        if (num === 1) {
-                            div.classList.add("page-active");
-                        }
-                        document.getElementById("thumbnail-pdf").appendChild(div);
-                        return pdfDoc_.getPage(num).then(makeThumb)
-                            .then(function (canvas) {
-                                div.appendChild(canvas);
-                            });
-                    })).then(function () {
-                        canvas = document.getElementById('the-canvas');
-                        ctx = canvas.getContext('2d');
-                        // Initial/first page rendering
-                        renderPage(pageNum);
-                    });
-                }).catch(console.error);
 
                 function onThumbClick(event) {
                     var page = parseInt(event.currentTarget.getAttribute("page"), 10);
@@ -349,7 +397,7 @@
 
         }
         catch (err) {
-            //console.error(err);git s
+            console.error(err);
         }
     });
 
