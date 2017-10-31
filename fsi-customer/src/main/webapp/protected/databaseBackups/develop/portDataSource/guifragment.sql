@@ -301,8 +301,8 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         <div class="col-md-2">
             <div class="form-group">
                 <div>
-                    <select class="chosen-select box-select-file">
-                        <option value="">Select</option>
+                    <select id="select-files" class="chosen-select box-select-file">
+                       
                     </select>
                 </div>
             </div>
