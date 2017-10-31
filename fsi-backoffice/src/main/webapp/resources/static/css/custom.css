@@ -1740,3 +1740,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     overflow: auto;
     width: auto;
 }
+.margin-top-15 {
+    margin-top: 15px;
+}

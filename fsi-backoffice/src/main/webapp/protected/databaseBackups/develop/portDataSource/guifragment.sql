@@ -3031,3 +3031,137 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </#if>
 </div>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-performance','fsi-performance',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Performance</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        <div>
+            <div style="text-align: right">
+                <small>Last update 3 min ago</small>
+            </div>
+            <div class="progress progress-mini">
+                <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90"
+                     class="progress-bar progress-bar-success"></div>
+            </div>
+            <small>Well Done!You completed 2360 task. You have 140 tasks to complete activities.</small>
+        </div>
+    </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Completed</h5>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-white active">Today</button>
+                <button type="button" class="btn btn-xs btn-white">Monthly</button>
+                <button type="button" class="btn btn-xs btn-white">Annual</button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="no-margins">1800</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="progress progress-mini margin-top-15">
+                    <div style="width: 44%;" class="progress-bar"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="stat-percent font-bold text-info">44% <i class="fa fa-level-up"></i></div>
+        <small>Total tast 2500</small>
+
+    </div>
+
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-average-review-time','fsi-average-review-time',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Average Review Time</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div style="text-align: center">
+            <h3>3,5</h3>
+            <small>Min.</small>
+        </div>
+    </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-backlog','fsi-backlog',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Backlog</h5>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-white active">Today</button>
+                <button type="button" class="btn btn-xs btn-white">Monthly</button>
+                <button type="button" class="btn btn-xs btn-white">Annual</button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="no-margins">350</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="progress progress-mini margin-top-15">
+                    <div style="width: 38%;" class="progress-bar progress-bar-danger"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
+        <small>Total tast 2500</small>
+
+    </div>
+
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-in-progress','fsi-in-progress',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>In progress</h5>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-white active">Today</button>
+                <button type="button" class="btn btn-xs btn-white">Monthly</button>
+                <button type="button" class="btn btn-xs btn-white">Annual</button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="no-margins">350</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="progress progress-mini margin-top-15">
+                    <div style="width: 98%;" class="progress-bar progress-bar-success"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="stat-percent font-bold text-success">98% <i class="fa fa-level-down"></i></div>
+        <small>Total tast 2500</small>
+
+    </div>
+
+</div>',NULL,0);

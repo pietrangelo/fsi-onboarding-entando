@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <backup>
-	<date>2017-10-31 12:02:29</date>
-	<requiredTime>682</requiredTime>
+	<date>2017-10-31 15:53:17</date>
+	<requiredTime>256</requiredTime>
 	<subfolder>develop</subfolder>
 	<componentsHistory>
-		<component code="entandoCore" date="2017-10-24 11:31:17" status="OK">
+		<component code="entandoCore" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="OK">
 					<table name="sysconfig" />
@@ -49,7 +49,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpmail" date="2017-10-24 11:31:19" status="OK">
+		<component code="entando-widget-right_col_help_purple" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -60,7 +60,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jprestapi" date="2017-10-24 11:31:19" status="OK">
+		<component code="jpmail" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -71,7 +71,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-widget-login_form_inspinia" date="2017-10-24 11:31:19" status="OK">
+		<component code="jprestapi" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -82,7 +82,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jacms" date="2017-10-24 11:31:19" status="OK">
+		<component code="jacms" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="OK">
 					<table name="contentmodels" />
@@ -104,7 +104,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-content-generic" date="2017-10-24 11:31:20" status="OK">
+		<component code="entando-content-generic" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -115,7 +115,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-widget-language_choose_inspinia" date="2017-10-24 11:31:20" status="OK">
+		<component code="inspinia-meter-center-page" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -126,7 +126,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-widget-search_result_inspinia" date="2017-10-24 11:31:20" status="OK">
+		<component code="inspinia-meter-left-page" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -137,7 +137,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-misc-inspinia" date="2017-10-24 11:31:20" status="OK">
+		<component code="entando-widget-banner_main_page_light" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -148,18 +148,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-page-inspinia" date="2017-10-24 11:31:20" status="OK">
-			<schema status="OK">
-				<datasource name="portDataSource" status="NOT_AVAILABLE" />
-				<datasource name="servDataSource" status="NOT_AVAILABLE" />
-			</schema>
-			<data status="OK">
-				<datasource name="portDataSource" status="RESTORE" />
-				<datasource name="servDataSource" status="RESTORE" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component code="entando-admin-console" date="2017-10-24 11:31:20" status="OK">
+		<component code="entando-admin-console" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="OK">
@@ -174,7 +163,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-portal-ui" date="2017-10-24 11:31:20" status="OK">
+		<component code="entando-portal-ui" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -185,7 +174,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-widget-navigation_bar_inspinia" date="2017-10-24 11:31:20" status="OK">
+		<component code="entando-widget-security_banner_light" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -196,7 +185,139 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpkiebpm" date="2017-10-24 11:31:20" status="OK">
+		<component code="entando-widget-data_report_tweets" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-login_form_inspinia" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-language_choose_inspinia" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-meeting_list-purple" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-search_result_inspinia" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-misc-inspinia" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-page-inspinia" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-misc-light" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-navigation_bar_inspinia" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="inspinia-meter-right-page" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-left_columns_mortgage" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-banner_avarage_light" date="2017-10-31 14:02:29" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="RESTORE" />
+				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="jpkiebpm" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="OK">
@@ -210,7 +331,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="entando-widget-search_form_inspinia" date="2017-10-24 11:31:20" status="OK">
+		<component code="entando-widget-search_form_inspinia" date="2017-10-31 14:02:29" status="OK">
 			<schema status="OK">
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
@@ -224,53 +345,53 @@
 	</componentsHistory>
 	<datasource name="portDataSource">
 		<table name="categories" requiredTime="3" rows="1" />
-		<table name="contentattributeroles" requiredTime="6" rows="2" />
-		<table name="contentmodels" requiredTime="15" rows="4" />
-		<table name="contentrelations" requiredTime="6" rows="4" />
-		<table name="contents" requiredTime="5" rows="2" />
-		<table name="contentsearch" requiredTime="5" rows="4" />
-		<table name="guifragment" requiredTime="9" rows="80" />
-		<table name="localstrings" requiredTime="6" rows="288" />
-		<table name="pagemodels" requiredTime="5" rows="7" />
-		<table name="pages" requiredTime="3" rows="6" />
-		<table name="pages_metadata_draft" requiredTime="3" rows="6" />
-		<table name="pages_metadata_online" requiredTime="3" rows="6" />
-		<table name="resourcerelations" requiredTime="5" rows="0" />
+		<table name="contentattributeroles" requiredTime="2" rows="2" />
+		<table name="contentmodels" requiredTime="32" rows="4" />
+		<table name="contentrelations" requiredTime="3" rows="4" />
+		<table name="contents" requiredTime="9" rows="2" />
+		<table name="contentsearch" requiredTime="2" rows="4" />
+		<table name="guifragment" requiredTime="12" rows="85" />
+		<table name="localstrings" requiredTime="7" rows="288" />
+		<table name="pagemodels" requiredTime="4" rows="7" />
+		<table name="pages" requiredTime="1" rows="7" />
+		<table name="pages_metadata_draft" requiredTime="2" rows="7" />
+		<table name="pages_metadata_online" requiredTime="2" rows="7" />
+		<table name="resourcerelations" requiredTime="3" rows="0" />
 		<table name="resources" requiredTime="4" rows="1" />
 		<table name="sysconfig" requiredTime="4" rows="11" />
-		<table name="uniquekeys" requiredTime="0" rows="1" />
-		<table name="widgetcatalog" requiredTime="5" rows="41" />
-		<table name="widgetconfig" requiredTime="2" rows="13" />
-		<table name="widgetconfig_draft" requiredTime="3" rows="13" />
-		<table name="workcontentattributeroles" requiredTime="7" rows="2" />
-		<table name="workcontentrelations" requiredTime="6" rows="0" />
-		<table name="workcontentsearch" requiredTime="19" rows="4" />
+		<table name="uniquekeys" requiredTime="1" rows="1" />
+		<table name="widgetcatalog" requiredTime="4" rows="46" />
+		<table name="widgetconfig" requiredTime="1" rows="18" />
+		<table name="widgetconfig_draft" requiredTime="1" rows="18" />
+		<table name="workcontentattributeroles" requiredTime="2" rows="2" />
+		<table name="workcontentrelations" requiredTime="1" rows="0" />
+		<table name="workcontentsearch" requiredTime="2" rows="4" />
 	</datasource>
 	<datasource name="servDataSource">
-		<table name="actionlogcommentrecords" requiredTime="5" rows="0" />
-		<table name="actionloglikerecords" requiredTime="6" rows="0" />
-		<table name="actionlogrecords" requiredTime="0" rows="68" />
-		<table name="actionlogrelations" requiredTime="0" rows="105" />
-		<table name="api_oauth_consumers" requiredTime="0" rows="0" />
-		<table name="api_oauth_tokens" requiredTime="0" rows="0" />
-		<table name="apicatalog_methods" requiredTime="16" rows="0" />
-		<table name="apicatalog_services" requiredTime="0" rows="0" />
-		<table name="authgroups" requiredTime="0" rows="7" />
-		<table name="authpermissions" requiredTime="4" rows="10" />
+		<table name="actionlogcommentrecords" requiredTime="3" rows="0" />
+		<table name="actionloglikerecords" requiredTime="3" rows="0" />
+		<table name="actionlogrecords" requiredTime="16" rows="79" />
+		<table name="actionlogrelations" requiredTime="3" rows="115" />
+		<table name="api_oauth_consumers" requiredTime="2" rows="0" />
+		<table name="api_oauth_tokens" requiredTime="2" rows="0" />
+		<table name="apicatalog_methods" requiredTime="1" rows="0" />
+		<table name="apicatalog_services" requiredTime="3" rows="0" />
+		<table name="authgroups" requiredTime="1" rows="7" />
+		<table name="authpermissions" requiredTime="1" rows="10" />
 		<table name="authrolepermissions" requiredTime="3" rows="1" />
-		<table name="authroles" requiredTime="3" rows="1" />
-		<table name="authusergrouprole" requiredTime="0" rows="2" />
-		<table name="authuserprofileattrroles" requiredTime="16" rows="2" />
-		<table name="authuserprofiles" requiredTime="0" rows="2" />
-		<table name="authuserprofilesearch" requiredTime="0" rows="2" />
-		<table name="authusers" requiredTime="2" rows="2" />
-		<table name="authusershortcuts" requiredTime="9" rows="1" />
-		<table name="dataobjectattributeroles" requiredTime="3" rows="0" />
-		<table name="dataobjectmodels" requiredTime="0" rows="0" />
-		<table name="dataobjectrelations" requiredTime="19" rows="0" />
-		<table name="dataobjects" requiredTime="0" rows="0" />
-		<table name="dataobjectsearch" requiredTime="4" rows="0" />
-		<table name="jpkiebpm_kieformoverride" requiredTime="5" rows="0" />
+		<table name="authroles" requiredTime="4" rows="1" />
+		<table name="authusergrouprole" requiredTime="2" rows="2" />
+		<table name="authuserprofileattrroles" requiredTime="8" rows="2" />
+		<table name="authuserprofiles" requiredTime="2" rows="2" />
+		<table name="authuserprofilesearch" requiredTime="3" rows="2" />
+		<table name="authusers" requiredTime="5" rows="2" />
+		<table name="authusershortcuts" requiredTime="5" rows="1" />
+		<table name="dataobjectattributeroles" requiredTime="4" rows="0" />
+		<table name="dataobjectmodels" requiredTime="1" rows="0" />
+		<table name="dataobjectrelations" requiredTime="5" rows="0" />
+		<table name="dataobjects" requiredTime="8" rows="0" />
+		<table name="dataobjectsearch" requiredTime="2" rows="0" />
+		<table name="jpkiebpm_kieformoverride" requiredTime="6" rows="0" />
 		<table name="jpkiebpm_widgetinfo" requiredTime="3" rows="0" />
 	</datasource>
 </backup>
