@@ -1,133 +1,3 @@
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview-big','fsi-customer-overview-big',NULL,'<div class="ibox float-e-margins fsi-customer-overview-big">
-  <div class="ibox-title">
-    <h5>Customer Overview</h5>
-  </div>
-  <div class="ibox-content">
-    <div class="row">
-      <div class="col-md-4">
-
-
-<div class="fsi-customer-overview-item">
-        <h2>120</h2>
-        <div class="label-text">Today Total Sign Up <h3>48% <i class="fa fa-level-up"></i></h3></div>
-        
-        <div class="progress">
-          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <h2>100</h2>
-        <div class="label-text">Today Total Sign Up <h3>60% <i class="fa fa-level-down"></i></h3></div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <h2>95</h2>
-        <div class="label-text">Today Total Sign Up <h3>22% <i class="fa fa-bolt"></i></h3></div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-
-
-      </div>
-      <div class="col-md-4">
-        <div id="bar-area-chart"></div>
-      </div>
-      <div class="col-md-4">
-        <div id="donut-chart"></div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<script>
-
-var chart = c3.generate({
-    bindto: ''#bar-area-chart'',
-    data: {
-        x: ''x'',
-        columns: [
-            [''x'', ''2013-01-01'', ''2013-01-02'', ''2013-01-03'', ''2013-01-04'', ''2013-01-05'', ''2013-01-06'', ''2013-01-07'', ''2013-01-08'', ''2013-01-09'', ''2013-01-10'', ''2013-01-11'', ''2013-01-12'', ''2013-01-13'', ''2013-01-14'', ''2013-01-15'', ''2013-01-16'', ''2013-01-17'', ''2013-01-18''],
-            [''data1'', 760, 500, 600, 700, 500, 450, 520, 750, 760, 430, 600, 370, 390, 790, 780, 600, 400, 750],
-            [''data2'', 13, 15, 4, 7, 12, 13, 7, 4, 5, 9, 12, 3, 4, 14, 13, 13, 8, 14],
-        ],
-        axes: {
-            data1: ''y'',
-            data2: ''y2''
-        },
-        type: ''bar'',
-        types: {
-            data2: ''area'',
-        },
-      colors: {
-        data1: ''#b8dcf4'',
-        data2: ''#464f88''
-      },
-      names: {
-        data1: ''Signed up'',
-        data2: ''Sign ups''
-      }
-    },
-    axis: {
-      y: { 
-        min: 0, 
-        max: 1000,
-        padding: {top: 0, bottom: 0 },
-        tick: { count: 5 }
-      },
-      
-      y2: { 
-        min: 0, 
-        max: 30,
-        padding: {top: 0, bottom: 0 },
-        tick: { count: 7 },
-        show: true
-      },
-      
-      x: {
-            type: ''timeseries'',
-            tick: {
-              culling: { max: 6 } ,
-              format: ''Jan %d''
-            },
-            
-        }
-    },
-    legend: { position: ''inset'' },
-    grid: {
-        y: {
-            show: true
-        }
-    }
-});
-
-var chart = c3.generate({
-    bindto: ''#donut-chart'',
-    data: {
-        columns: [
-            [''Suspended'', 25],
-            [''Pending'', 25],
-            [''Completed'', 50],
-        ],
-        type : ''donut'',
-        colors: {
-          Suspended: ''#7dc3e7'',
-          Pending: ''#0088ce'',
-          Completed: ''#dff2ff''
-        }
-    },
-    donut: {
-        label: {
-          format: function (value, ratio, id) {
-            return value + ''%'';
-          }
-        }
-    }
-});
-</script>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-MonolistAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -3019,6 +2889,136 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview-big','fsi-customer-overview-big',NULL,'<div class="ibox float-e-margins fsi-customer-overview-big">
+  <div class="ibox-title">
+    <h5>Customer Overview</h5>
+  </div>
+  <div class="ibox-content">
+    <div class="row">
+      <div class="col-md-3">
+
+
+<div class="fsi-customer-overview-item">
+        <h2>120</h2>
+        <div class="label-text">Today Total Sign Up <h3>48% <i class="fa fa-level-up"></i></h3></div>
+        
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <h2>100</h2>
+        <div class="label-text">Today Total Sign Up <h3>60% <i class="fa fa-level-down"></i></h3></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <h2>95</h2>
+        <div class="label-text">Today Total Sign Up <h3>22% <i class="fa fa-bolt"></i></h3></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+
+
+      </div>
+      <div class="col-md-6">
+        <div id="bar-area-chart"></div>
+      </div>
+      <div class="col-md-3">
+        <div id="donut-chart"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+
+var chart = c3.generate({
+    bindto: ''#bar-area-chart'',
+    data: {
+        x: ''x'',
+        columns: [
+            [''x'', ''2013-01-01'', ''2013-01-02'', ''2013-01-03'', ''2013-01-04'', ''2013-01-05'', ''2013-01-06'', ''2013-01-07'', ''2013-01-08'', ''2013-01-09'', ''2013-01-10'', ''2013-01-11'', ''2013-01-12'', ''2013-01-13'', ''2013-01-14'', ''2013-01-15'', ''2013-01-16'', ''2013-01-17'', ''2013-01-18''],
+            [''data1'', 760, 500, 600, 700, 500, 450, 520, 750, 760, 430, 600, 370, 390, 790, 780, 600, 400, 750],
+            [''data2'', 13, 15, 4, 7, 12, 13, 7, 4, 5, 9, 12, 3, 4, 14, 13, 13, 8, 14],
+        ],
+        axes: {
+            data1: ''y'',
+            data2: ''y2''
+        },
+        type: ''bar'',
+        types: {
+            data2: ''area'',
+        },
+      colors: {
+        data1: ''#b8dcf4'',
+        data2: ''#464f88''
+      },
+      names: {
+        data1: ''Signed up'',
+        data2: ''Sign ups''
+      }
+    },
+    axis: {
+      y: { 
+        min: 0, 
+        max: 1000,
+        padding: {top: 0, bottom: 0 },
+        tick: { count: 5 }
+      },
+      
+      y2: { 
+        min: 0, 
+        max: 30,
+        padding: {top: 0, bottom: 0 },
+        tick: { count: 7 },
+        show: true
+      },
+      
+      x: {
+            type: ''timeseries'',
+            tick: {
+              culling: { max: 6 } ,
+              format: ''Jan %d''
+            },
+            
+        }
+    },
+    legend: { position: ''inset'' },
+    grid: {
+        y: {
+            show: true
+        }
+    }
+});
+
+var chart = c3.generate({
+    bindto: ''#donut-chart'',
+    data: {
+        columns: [
+            [''Suspended'', 25],
+            [''Pending'', 25],
+            [''Completed'', 50],
+        ],
+        type : ''donut'',
+        colors: {
+          Suspended: ''#7dc3e7'',
+          Pending: ''#0088ce'',
+          Completed: ''#dff2ff''
+        }
+    },
+    donut: {
+        label: {
+          format: function (value, ratio, id) {
+            return value + ''%'';
+          }
+        }
+    }
+});
+</script>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">

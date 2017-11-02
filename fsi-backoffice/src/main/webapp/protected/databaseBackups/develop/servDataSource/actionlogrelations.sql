@@ -111,6 +111,8 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (93,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (94,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (96,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (97,'free');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (99,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (100,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (83,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (84,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (86,'free');

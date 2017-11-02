@@ -5,3 +5,4 @@ INSERT INTO authgroups (groupname,descr) VALUES ('bpm_admin','Bpm Admin');
 INSERT INTO authgroups (groupname,descr) VALUES ('bpm_manager','Bpm Manager');
 INSERT INTO authgroups (groupname,descr) VALUES ('bpm_appraiser','Bpm Appraiser');
 INSERT INTO authgroups (groupname,descr) VALUES ('customers','Customers');
+INSERT INTO authgroups (groupname,descr) VALUES ('account_executive','Account Executive');
