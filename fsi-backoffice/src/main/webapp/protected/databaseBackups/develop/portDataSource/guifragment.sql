@@ -857,70 +857,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         });
     });
 </script>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'
-<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label class="login-label">Company Name</label>
-                    <input id="username" type="text" name="username" placeholder="Enter First Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Last Name</label>
-                    <input id="password" type="text" name="password" placeholder="Enter Last Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Email</label>
-                    <input id="username" type="text" name="username" placeholder="Enter Email" class="form-control input-custom" />
-                </div>
-                <br>
-                <p>Additional Info</p>
-
-                <div class="form-group">
-                    <label class="login-label">ENRIC / Passport No.</label>
-                    <input id="password" type="text" name="password" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Nationality</label>
-                    <input id="password" type="text" name="password" placeholder="Enter nationality" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Job Number</label>
-                    <input id="password" type="text" name="password" placeholder="Job Number" class="form-control input-custom" />
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-left spacers">
-                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <p class="title-welcome">State</p>
@@ -1183,6 +1119,86 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+
+        <div class="tabs-container">
+            <div class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab-1"><i class="fa fa-chevron-circle-down" style="color:green;"></i> Enrollment</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-2"><i class="fa fa-circle-o" style="color:#218fd8;"></i> Verification</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-3"><i class="fa fa-circle-o"></i> Fulfilment</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane active">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Account Registration</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Application Submission</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">TBA </p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp;<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">TBA</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-legal-check','fsi-legal-check',NULL,'<div class="fsi-upload-new-file">
     <div class="fsi-warning-title">Legal check</div>
     <div class="fsi-error-desc">
@@ -2550,59 +2566,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         </div>
     </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<div class="middle-box loginscreen animated fadeInDown">
-    <#if (Session.currentUser.username != "guest") >
-    <#if (Session.currentUser.entandoUser) >
-    <#if (!Session.currentUser.credentialsNotExpired) >
-    <div class="alert alert-block">
-        <p>
-            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
-               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
-        </p>
-    </div>
-    </#if>
-    </#if>
-    <p>
-        <script>window.location = "<@wp.url page="backoffice" />";</script>
-    </p>
-    <#else>
-    <#if (accountExpired?? && accountExpired == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
-    </div>
-    </#if>
-    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
-    </div>
-    </#if>
-    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
-    <form action="<@wp.url/>" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div>
-            <label class="remember-me-label">
-                   <input type="checkbox" class="i-checks"> Remember me </label>
-        </div>
-        <div class="form-actions text-center">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-                   <p class="forget">Forgot your password or Email/Username?</p>
-        </div>
-    </form>
-    </#if>
-</div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_ThreeSt',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -3148,6 +3111,258 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<div class="middle-box loginscreen animated fadeInDown">
+    <#if (Session.currentUser.username != "guest") >
+    <#if (Session.currentUser.entandoUser) >
+    <#if (!Session.currentUser.credentialsNotExpired) >
+    <div class="alert alert-block">
+        <p>
+            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
+               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
+        </p>
+    </div>
+    </#if>
+    </#if>
+    <p>
+        <script>window.location = "<@wp.url page="backoffice" />";</script>
+    </p>
+    <#else>
+    <#if (accountExpired?? && accountExpired == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
+    </div>
+    </#if>
+    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
+    </div>
+    </#if>
+    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
+    <form action="<@wp.url/>" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div>
+            <label class="remember-me-label">
+                   <input type="checkbox" class="i-checks"> Remember me 
+            </label>
+        </div>
+        <div class="form-actions text-center">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+                   <p class="forget">Forgot your password or Email/Username?</p>
+        </div>
+    </form>
+    </#if>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-chandler-hi-dashboard','fsi-chandler-hi-dashboard',NULL,'<h2>Hi Chandler</h2> 
+  <ol class="breadcrumb">
+    <li>
+   <a href="#">Dashboard</a>
+   </li>
+</ol>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-information','fsi-customer-information',NULL,'<div class="fsi-customer-information ibox float-e-margins">
+  <div class="ibox-title">
+    <h5>Interstellar</h5>
+    <div class="ibox-tools">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="fa fa-wrench"></i>
+      </a>
+      <a class="collapse-link">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+  </div>
+  <div class="ibox-content">
+    <div class="row">
+      <div class="col-md-6">
+        <h4 class="fsi-subheader">Customer information</h4>
+        <p>
+          <div>Organisation full name</div>
+          <b>Kevin Smith</b>
+        </p>
+        <p>
+          <div>International application ID</div>
+          <b>001002003004</b>
+        </p>
+        <p>
+          <div>Entity Type</div>
+          <b>Corporate</b>
+        </p>
+      </div>
+      <div class="col-md-6">
+      	<h4 class="fsi-subheader">Primary contact information</h4>
+        <p>
+          <div>Point of contact</div>
+          <b>21 Forest View - London, 98104 Brittain</b>
+        </p>
+        <p>
+          <div>Phone</div>
+          <b>055 1234567890</b>
+        </p>
+        <p>
+          <div>Email</div>
+          <b>kevinsmith@interstellar.com</b>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-transaction-history','fsi-transaction-history',NULL,'
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Transaction history</h5>
+        <span class="label label-primary">Timeline</span>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content inspinia-timeline">
+
+        <div class="timeline-item">
+            <div class="row">
+                <div class="col-xs-3 date">
+                    <i class="fa fa-briefcase"></i>
+                    9:00 am
+                    <br>
+                    <small class="text-navy">2 hour ago</small>
+                </div>
+                <div class="col-xs-7 content no-top-border">
+                    <p class="m-b-xs"><strong>Initiate Signup mail</strong></p>
+
+                    <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="row">
+                <div class="col-xs-3 date">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    9:21 am
+                    <br>
+                    <small class="text-navy">3 hour ago</small>
+                </div>
+                <div class="col-xs-7 content">
+                    <p class="m-b-xs"><strong>Send payments to Mike</strong></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since.</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="row">
+                <div class="col-xs-3 date">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    10:00 am
+                    <br>
+                </div>
+                <div class="col-xs-7 content">
+                    <p class="m-b-xs"><strong>Application Submitted</strong></p>
+                    <p>
+                        Go to shop and find some products.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-onboarding-stages','fsi-onboarding-stages',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Onboarding stages</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+
+        <div class="tabs-container">
+            <div class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-1"><i class="fa fa-chevron-circle-down" style="color:green;"></i> Enrollment</a>
+                    </li>
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab-2"><i class="fa fa-circle-o" style="color:#218fd8;"></i> Verification</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-3"><i class="fa fa-circle-o"></i> Fulfilment</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane active">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Account Registration</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Application Submission</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">TBA </p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp;<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">TBA</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">

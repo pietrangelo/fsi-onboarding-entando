@@ -237,32 +237,41 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
 		<sketch x1="8" y1="1" x2="11" y2="1" />
 	</frame>
 	<frame pos="8">
-		<descr>Content 1 left</descr>
-		<sketch x1="0" y1="2" x2="3" y2="2" />
+		<descr>Sub Bar 1</descr>
+		<sketch x1="0" y1="2" x2="6" y2="2" />
 	</frame>
 	<frame pos="9">
-		<descr>Content 1 center</descr>
-		<sketch x1="4" y1="2" x2="7" y2="2" />
+		<descr>Sub Bar 2</descr>
+		<sketch x1="7" y1="2" x2="11" y2="2" />
 	</frame>
 	<frame pos="10">
-		<descr>Content 1 right</descr>
-		<sketch x1="8" y1="2" x2="11" y2="2" />
+		<descr>Content 1 left</descr>
+		<sketch x1="0" y1="3" x2="3" y2="3" />
 	</frame>
 	<frame pos="11">
-		<descr>Content 2</descr>
-		<sketch x1="0" y1="3" x2="11" y2="3" />
+		<descr>Content 1 center</descr>
+		<sketch x1="4" y1="3" x2="7" y2="3" />
 	</frame>
 	<frame pos="12">
-		<descr>Content 3</descr>
-		<sketch x1="0" y1="4" x2="11" y2="4" />
+		<descr>Content 1 right</descr>
+		<sketch x1="8" y1="3" x2="11" y2="3" />
 	</frame>
 	<frame pos="13">
-		<descr>Footer</descr>
+		<descr>Content 2</descr>
+		<sketch x1="0" y1="4" x2="11" y2="4" />
+	</frame>
+	<frame pos="14">
+		<descr>Content 3</descr>
 		<sketch x1="0" y1="5" x2="11" y2="5" />
+	</frame>
+	<frame pos="15">
+		<descr>Footer</descr>
+		<sketch x1="0" y1="6" x2="11" y2="6" />
 	</frame>
 </frames>
 
-',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+',NULL,'
+<#assign wp=JspTaglibs["/aps-core"]>
 <#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
 <!DOCTYPE html>
 <html lang="en">
@@ -450,24 +459,32 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-7">
                                 <@wp.show frame=8 />
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-5">
                                 <@wp.show frame=9 />
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-4">
                                 <@wp.show frame=10 />
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <@wp.show frame=11 />
+                            <div class="col-md-4">
+                                <@wp.show frame=11/>
+                            </div>
+                            <div class="col-md-4">
+                                <@wp.show frame=12 />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <@wp.show frame=12 />
+                                <@wp.show frame=13 />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <@wp.show frame=14 />
                             </div>
                         </div>
                     </div>
@@ -475,7 +492,7 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
 
                 <div class="row">
                     <div class="col-md-12">
-                        <@wp.show frame=13 />
+                        <@wp.show frame=15 />
                     </div>
                 </div>
             </div>

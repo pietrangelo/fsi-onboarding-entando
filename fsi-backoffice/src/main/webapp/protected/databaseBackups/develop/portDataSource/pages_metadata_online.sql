@@ -50,4 +50,14 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-11-02 14:38:27');
+','2017-11-02 16:41:40');
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_customer','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Account Executive Customer</property><property key="it">Account Executive Customer</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-02 16:59:29');

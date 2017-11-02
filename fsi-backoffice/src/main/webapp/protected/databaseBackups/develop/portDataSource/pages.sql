@@ -5,3 +5,4 @@ INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('errorpage','service',
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('homepage','homepage',-1,'free');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('backoffice','homepage',6,'free');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_dashboard','homepage',7,'account_executive');
+INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_customer','homepage',8,'account_executive');

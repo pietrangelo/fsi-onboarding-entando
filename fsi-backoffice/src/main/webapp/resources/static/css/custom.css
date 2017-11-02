@@ -1821,3 +1821,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .list-unstyled .open > a, .list-unstyled .open > a:hover, .list-unstyled .open > a:focus {
     background: #084465;
 }
+.fsi-backoffice-subtitle, .fsi-backoffice-date{margin-left: 30px;}
+
+.fsi-customer-information h4.fsi-subheader{
+    margin-bottom: 20px;
+}
