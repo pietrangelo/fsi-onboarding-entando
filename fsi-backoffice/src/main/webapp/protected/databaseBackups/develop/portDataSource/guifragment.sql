@@ -1177,72 +1177,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
   </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="container background-white">
-    <div class="row">
-        <div class="col-md-2">DOCUMENTS</div>
-        <div class="col-md-2"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-2">TIME TO REVIEW</div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            <div class="form-group">
-                <div>
-                    <select class="chosen-select box-select-file">
-                        <option value="">Select</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-2">0.30 min <i class="fa fa-clock-o"></i></div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 box-toolbar-pdf-thumbnail">
-            <div style="display: flex;">
-                <button id="prev" type="button" data-role="none" class="fa fa-chevron-left no-border"
-                        aria-label="Previous"
-                        role="button"></button>
-                <div id="thumbnail-pdf"></div>
-                <button id="next" type="button" data-role="none" class="fa fa-chevron-right no-border" aria-label="Next"
-                        role="button"></button>
-            </div>
-        </div>
-    </div>
-    <div class="row"><br></div>
-    <div class="row">
-
-        <div class="text-center pdf-toolbar">
-            <div class="col-md-2">BUSINESS DOC (PDF)</div>
-            <div class="col-md-2">GENERAL INFO</div>
-            <div class="col-md-2">
-                <b>Page:</b>
-                <span id="page_num"> </span> / <span id="page_count"></span>
-            </div>
-            <div class="col-md-2">
-                <button id="zoomin" class="btn btn-white no-border"><i class="fa fa-search-minus"></i>
-                </button>
-                <button id="zoomout" class="btn btn-white no-border"><i class="fa fa-search-plus"></i>
-                </button>
-            </div>
-            <div class="col-md-4 background-grey">
-                BUSINESS FORM
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="text-center m-t-md scrollbar-auto">
-                <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262"
-                        width="892"></canvas>
-            </div>
-        </div>
-        <div class="col-md-4">
-            MTGZ
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2349,35 +2283,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		</select>
 	</div>
 </div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Completed</h5>
-        <div class="pull-right">
-            <div class="btn-group">
-                <button type="button" class="btn btn-xs btn-white active">Today</button>
-                <button type="button" class="btn btn-xs btn-white">Monthly</button>
-                <button type="button" class="btn btn-xs btn-white">Annual</button>
-            </div>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="no-margins">1800</h1>
-            </div>
-            <div class="col-md-8">
-                <div class="progress progress-mini margin-top-15">
-                    <div style="width: 44%;" class="progress-bar"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="stat-percent font-bold text-info">44% <i class="fa fa-level-up"></i></div>
-        <small>Total tast 2500</small>
-
-    </div>
-
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Number',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <fieldset>
 <legend>
@@ -3019,6 +2924,100 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             <small>Well Done!You completed 2360 task. You have 140 tasks to complete activities.</small>
         </div>
     </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="container-pdf">
+    <div class="row">
+        <div class="col-md-2">DOCUMENTS</div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">TIME TO REVIEW</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <div>
+                    <select class="chosen-select box-select-file">
+                        <option value="">Select</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">0.30 min <i class="fa fa-clock-o"></i></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 box-toolbar-pdf-thumbnail">
+            <div style="display: flex;">
+                <button id="prev" type="button" data-role="none" class="fa fa-chevron-left no-border"
+                        aria-label="Previous"
+                        role="button"></button>
+                <div id="thumbnail-pdf"></div>
+                <button id="next" type="button" data-role="none" class="fa fa-chevron-right no-border" aria-label="Next"
+                        role="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+
+        <div class="text-center pdf-toolbar">
+            <div class="col-md-2">BUSINESS DOC (PDF)</div>
+            <div class="col-md-2">GENERAL INFO</div>
+            <div class="col-md-2">
+                <b>Page:</b>
+                <span id="page_num"> </span> / <span id="page_count"></span>
+            </div>
+            <div class="col-md-2">
+                <button id="zoomin" class="btn btn-white no-border"><i class="fa fa-search-minus"></i>
+                </button>
+                <button id="zoomout" class="btn btn-white no-border"><i class="fa fa-search-plus"></i>
+                </button>
+            </div>
+            <div class="col-md-4 background-grey">
+                BUSINESS FORM
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="text-center m-t-md scrollbar-auto">
+                <canvas id="the-canvas" class="pdfcanvas border-left-right border-top-bottom b-r-md" height="1262"
+                        width="892"></canvas>
+            </div>
+        </div>
+        <div class="col-md-4">
+            MTGZ
+        </div>
+    </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Completed</h5>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-white active">Today</button>
+                <button type="button" class="btn btn-xs btn-white">Monthly</button>
+                <button type="button" class="btn btn-xs btn-white">Annual</button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="no-margins">1800</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="progress progress-mini margin-top-15">
+                    <div style="width: 44%;" class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="stat-percent font-bold text-info">44% <i class="fa fa-level-up"></i></div>
+        <small>Total tast 2500</small>
+
+    </div>
+
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>

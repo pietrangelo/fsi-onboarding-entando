@@ -1755,3 +1755,13 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .perfomance-bar{
     margin:  10px 0 10px 0;
 }
+.container-custom{
+    margin:3em;
+}
+.container-pdf{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #fff;
+}
