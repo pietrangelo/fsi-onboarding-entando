@@ -45,7 +45,7 @@ h5 {
     padding: 14px 20px 14px 25px;
 }
 .nav.navbar-right > li > a {
-    color: #999c9e;
+    color: #ffffff;
 }
 .nav > li.active > a {
     color: #ffffff;
@@ -314,7 +314,8 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
     font-weight: 600;
     color: white;
     display: none;
-    padding: 18px 0;
+    padding: 9px 0;
+    background: black;
 }
 .pace-done .navbar-static-side,
 .pace-done .nav-header,
@@ -334,7 +335,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 }
 .navbar-fixed-top,
 .navbar-static-top {
-    background: #f3f3f4;
+    background: #002235;
 }
 .fixed-nav #wrapper {
     margin-top: 0;
@@ -3634,12 +3635,14 @@ video {
 #wrapper {
     width: 100%;
     overflow-x: hidden;
+    background: #002235;
 }
 .wrapper {
-    padding: 0 20px;
+    padding: 20px 0px;
 }
 .wrapper-content {
-    padding: 20px 10px 40px;
+    padding: 20px 0px 0 0;
+    margin: 0px -15px 0 -15px;
 }
 #page-wrapper {
     padding: 0 15px;
@@ -8565,14 +8568,14 @@ body.md-skin {
 }
 
 body.mini-navbar .navbar-default .nav > li > a {
-    font-size: 13px;
-    margin-left: -7px;
+    font-size: 23px;
+    margin-left: -2px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+    /* white-space: nowrap; */
 }
 body.mini-navbar .navbar-default .nav > li.active > a {
-    margin-left: -17px;
+    margin-left: -4px;
 }
 .editableform .control-group button {
     color:#fff;

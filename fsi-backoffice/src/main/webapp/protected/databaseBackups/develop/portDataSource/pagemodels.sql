@@ -276,89 +276,210 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
         <meta name="author" content="" />
         <link rel="icon" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />
               favicon.png" type="image/png" />
-              <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-              <!--[if lt IE 9]>
-              <script src="<@wp.resourceURL />static/js/entando-misc-html5-essentials/html5shiv.js"></script>
-              <![endif]-->
               <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 
         <@c.import url="/WEB-INF/aps/jsp/models/inc/content_inline_editing.jsp" />
         <@c.import url="/WEB-INF/aps/jsp/models/inc/header-inclusions.jsp" />
 
     </head>
-    <body>
+    <body class="pace-done mini-navbar">
         <div id="wrapper">
-            <div class="row header-custom">
-                <div class="fsi-header">
-                    <div class="col-md-2 col-md-offset-1">
-                        <div class="logo-names">
-                            <@wp.show frame=0 />
-                            <img alt="image" class="" src="/fsi-backoffice/resources/static/img/shield-logo.png">&nbsp;
-                            <b>FORTRESS -</b>
-                            <span>Bank &amp; Loan</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-md-offset-2">
-                        <@wp.show frame=1 />
-                        <div class="logo-menu-pages">
+
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="side-menu">
+                        <li class="nav-header">
+                            <div class="dropdown profile-element">
+                                <span>
+                                    <img alt="image" class="" src="/fsi-backoffice/resources/static/img/shield-logo.png">
+                                </span>
+                            </div>
+                            <div class="logo-element">
+                                <img alt="image" class="" src="/fsi-backoffice/resources/static/img/shield-logo.png">
+                            </div>
+                        </li>
+                        <li class="active">
+                            <!--<a href="<@wp.url page="customer_internal" />" ><i class="fa fa-th-large"></i></a>-->
+                            <a href="#" ><i class="fa fa-tachometer"></i></a>
+                        </li>
+                        <li>
+                            <!--<a href="<@wp.url page="customer_internal" />" ><i class="fa fa-diamond"></i></a>-->
+                            <a href="#"><i class="fa fa-user"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div id="page-wrapper" class="gray-bg dashbard-1">
+                <div class="row border-bottom">
+                    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                        <div class="navbar-header">
+
+                            <div class="logo-names">
+                                <@wp.show frame=0 />
+
+                                <b>FORTRESS -</b>
+                                <span>Bank &amp; Loan</span>
+                            </div>
 
                         </div>
-                        <div class="logo-menu-pages">
-                            <@wp.show frame=2 />
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <@wp.show frame=1 />
+                                <span class="m-r-sm  welcome-message"></span>
+                            </li>
+                            <li class="dropdown">
+                                <@wp.show frame=2 />
 
-                        </div>
-                        <div class="logo-menu-pages">
-                            <@wp.show frame=3 />
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-messages">
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <img alt="image" class="img-circle" src="img/a7.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <small class="pull-right">46h ago</small>
+                                                <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                                <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <img alt="image" class="img-circle" src="img/a4.jpg">
+                                            </a>
+                                            <div class="media-body ">
+                                                <small class="pull-right text-navy">5h ago</small>
+                                                <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                                <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <img alt="image" class="img-circle" src="img/profile.jpg">
+                                            </a>
+                                            <div class="media-body ">
+                                                <small class="pull-right">23h ago</small>
+                                                <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                                <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a href="#">
+                                                <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <@wp.show frame=3 />
 
-                        </div>
-                        <div class="logo-menu-pages">
-                            <@wp.show frame=4 />
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="false">
+                                    <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-alerts">
+                                    <li>
+                                        <a href="mailbox.html">
+                                            <div>
+                                                <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="profile.html">
+                                            <div>
+                                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                                <span class="pull-right text-muted small">12 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="grid_options.html">
+                                            <div>
+                                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a href="notifications.html">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <@wp.show frame=4 />
+                            </li>
+                            <li>
+                                <@wp.show frame=5 />
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="wrapper wrapper-content">
+
+                            <div class="col-md-8">
+                                <@wp.show frame=6 />
+                            </div>
+                            <div class="col-md-4">
+                                <@wp.show frame=7 />
+                            </div>
                         </div>
-                        <div class="logo-menu-pages">
-                            <@wp.show frame=5 />
+                        <div class="row">
+                            <div class="col-md-4">
+                                <@wp.show frame=8 />
+                            </div>
+                            <div class="col-md-4">
+                                <@wp.show frame=9 />
+                            </div>
+                            <div class="col-md-4">
+                                <@wp.show frame=10 />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <@wp.show frame=11 />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <@wp.show frame=12 />
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="container-custom">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <@wp.show frame=6 />
-                        </div>
-                        <div class="col-md-4">
-                            <@wp.show frame=7 />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <@wp.show frame=8 />
-                        </div>
-                        <div class="col-md-4">
-                            <@wp.show frame=9 />
-                        </div>
-                        <div class="col-md-4">
-                            <@wp.show frame=10 />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <@wp.show frame=11 />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <@wp.show frame=12 />
-                        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <@wp.show frame=13 />
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <@wp.show frame=13 />
-                </div>
-            </div>
-
         </div>
     </body>
-</html>');
+</html>
+');

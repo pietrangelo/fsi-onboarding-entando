@@ -3,6 +3,8 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffi
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',7,'fsi-average-review-time',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',9,'fsi-backlog',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',10,'fsi-in-progress',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',12,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',8,'fsi-completed',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',12,'fsi-pdf-document',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',11,'fsi-customer-overview-big',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
