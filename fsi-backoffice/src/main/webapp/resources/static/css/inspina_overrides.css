@@ -315,7 +315,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
     color: white;
     display: none;
     padding: 9px 0;
-    background: black;
+    background: #002235;
 }
 .pace-done .navbar-static-side,
 .pace-done .nav-header,
@@ -392,7 +392,7 @@ body.fixed-nav.fixed-nav-basic.fixed-sidebar.mini-navbar.body-small .navbar-fixe
     margin-left: 0;
 }
 body.mini-navbar .navbar-static-side {
-    width: 70px;
+    width: 51px;
 }
 body.mini-navbar .profile-element,
 body.mini-navbar .nav-label,
@@ -422,7 +422,7 @@ body.canvas-menu .nav-header {
     padding: 33px 25px;
 }
 body.mini-navbar #page-wrapper {
-    margin: 0 0 0 70px;
+    margin: 0 0 0 51px;
 }
 body.fixed-sidebar.mini-navbar .footer,
 body.canvas-menu.mini-navbar .footer {
@@ -8569,13 +8569,13 @@ body.md-skin {
 
 body.mini-navbar .navbar-default .nav > li > a {
     font-size: 23px;
-    margin-left: -2px;
+    margin-left: -7px;
     overflow: hidden;
     /* text-overflow: ellipsis; */
     /* white-space: nowrap; */
 }
 body.mini-navbar .navbar-default .nav > li.active > a {
-    margin-left: -4px;
+    margin-left: -13px;
 }
 .editableform .control-group button {
     color:#fff;
