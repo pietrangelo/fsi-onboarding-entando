@@ -1826,3 +1826,18 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .fsi-customer-information h4.fsi-subheader{
     margin-bottom: 20px;
 }
+
+.fsi-customer-information .fsi-verification-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fsi-customer-information .progressbar-label {
+    text-align: center;
+    font-size: 16px;
+    color: #1AB394;
+    margin-bottom: 5px;
+}
+.fsi-customer-information .progress {
+    height: 10px;
+}
