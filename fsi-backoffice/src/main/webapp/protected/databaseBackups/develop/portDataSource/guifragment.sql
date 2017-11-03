@@ -3406,6 +3406,19 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-mock-datatable-account','fsi-mock-datatable-account',NULL,'<table id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>&nbsp;</th>
+        <th>Status Progress</th>
+        <th>Customer Name</th>
+        <th>Company</th>
+        <th>Date</th>
+        <th>Case Due in</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+</table',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">

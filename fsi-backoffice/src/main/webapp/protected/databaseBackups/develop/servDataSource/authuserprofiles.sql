@@ -7,3 +7,6 @@ INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VAL
 INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('knowledge','PFL','<?xml version="1.0" encoding="UTF-8"?>
 <profile id="knowledge" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext"><monotext>Tommy Knowledge</monotext></attribute><attribute name="email" attributetype="Monotext"><monotext>knowledge@gmail.com</monotext></attribute></attributes></profile>
 ',0);
+INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('account','PFL','<?xml version="1.0" encoding="UTF-8"?>
+<profile id="account" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext"><monotext>Tommy Account</monotext></attribute><attribute name="email" attributetype="Monotext"><monotext>t.account@gmail.com</monotext></attribute></attributes></profile>
+',0);

@@ -192,56 +192,102 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="ibox float-e-margins">
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="fsi-form-banking-services">
+  <div class="ibox float-e-margins">
     <div class="ibox-title">
-        <h5>Your performance</h5>
-        <div class="ibox-tools"><a class="collapse-link">
-                <div class="fa fa-chevron-up"></div>
-            </a>
-            <a class="collapse-link">
-                <div class="fa fa-repeat"></div>
-            </a>
-        </div>
+      <h5>Selects the financial services that your company is applying for</h5>
+      <div class="ibox-tools"><a class="collapse-link">
+          <div class="fa fa-chevron-up"></div></a><a class="collapse-link">
+          <div class="fa fa-repeat"></div></a></div>
     </div>
-    <div class="ibox-content" >
-        <div class="row">
-            <div class="col-md-10"></div>
-            <div class="col-md-1">
-                <div class="dropdown">
-                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        All<span class="caret" style="margin-left: 15px;"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div style="text-align: right">
-                    <i class="fa fa-calendar"></i>
-                </div>
-            </div>
-
+    <div class="ibox-content">
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>BUSINESS CHECKING</span>
+            </label>
+          </div>
         </div>
-        <div class="row fsi-progess-bar-box-label ">
-            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
-            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
-            </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>BUSINESS CREDIT CARDS</span>
+            </label>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="progress">
-                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
-                        <span class="sr-only">60% Complete (success)</span>60%
-                    </div>
-                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
-                        <span class="sr-only">20% Complete (warning)</span>
-                    </div>
-
-                </div>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>BUSINESS LENDING AND FINANCING</span>
+            </label>
+          </div>
         </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>INTERNATIONAL BANKING</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>MERCHANT SERVICES</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>TREASURY SERVICES</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>CASH MANAGEMENT SERVICES</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>EMPLOYEE BENEFIT SERVICES</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>CASH MANAGEMENT SERVICES</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox"/><span>EMPLOYEE BENEFIT SERVICES</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button type="button" class="btn btn-w-m btn-default">Back</button>
+        <button type="button" class="btn btn-w-m btn-primary pull-right">Next</button>
+        <button type="button" class="btn btn-w-m btn-success pull-right">Save as draft</button>
+      </div>
     </div>
+  </div>
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
@@ -570,6 +616,59 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             </div>
         </div>
     </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<div class="middle-box loginscreen animated fadeInDown">
+    <#if (Session.currentUser.username != "guest") >
+    <#if (Session.currentUser.entandoUser) >
+    <#if (!Session.currentUser.credentialsNotExpired) >
+    <div class="alert alert-block">
+        <p>
+            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
+               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
+        </p>
+    </div>
+    </#if>
+    </#if>
+    <p>
+        <script>window.location = "<@wp.url page="customer_internal" />";</script>
+    </p>
+    <#else>
+    <#if (accountExpired?? && accountExpired == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
+    </div>
+    </#if>
+    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
+    </div>
+    </#if>
+    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
+    <form action="<@wp.url/>" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div>
+            <label class="remember-me-label">
+                   <input type="checkbox" class="i-checks"> Remember me </label>
+        </div>
+        <div class="form-actions text-center">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+                   <p class="forget">Forgot your password or Email/Username?</p>
+        </div>
+    </form>
+    </#if>
 </div>
 ',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AttributeInfo',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
@@ -2846,59 +2945,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<div class="middle-box loginscreen animated fadeInDown">
-    <#if (Session.currentUser.username != "guest") >
-    <#if (Session.currentUser.entandoUser) >
-    <#if (!Session.currentUser.credentialsNotExpired) >
-    <div class="alert alert-block">
-        <p>
-            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
-               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
-        </p>
-    </div>
-    </#if>
-    </#if>
-    <p>
-        <script>window.location = "<@wp.url page="customer_internal" />";</script>
-    </p>
-    <#else>
-    <#if (accountExpired?? && accountExpired == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
-    </div>
-    </#if>
-    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
-    </div>
-    </#if>
-    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
-    <form action="<@wp.url/>" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div>
-            <label class="remember-me-label">
-                   <input type="checkbox" class="i-checks"> Remember me </label>
-        </div>
-        <div class="form-actions text-center">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-                   <p class="forget">Forgot your password or Email/Username?</p>
-        </div>
-    </form>
-    </#if>
-</div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-club-credit-card','fsi-club-credit-card',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="middle-box-cc">
