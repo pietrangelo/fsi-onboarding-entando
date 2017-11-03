@@ -3218,6 +3218,40 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-verification','fsi-customer-verification',NULL,'<div class="fsi-customer-information ibox float-e-margins">
+  <div class="ibox-title">
+    <h5>Stage</h5>
+    <div class="ibox-tools">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="fa fa-wrench"></i>
+      </a>
+      <a class="collapse-link">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+  </div>
+  <div class="ibox-content">
+    <div class="fsi-verification-header-row">
+      <h2 style="display: inline-block">Verification</h2>
+      <span class="label label-primary pull-right">ON TRACK</span>
+    </div>
+    <div class="progressbar-label">40%</div>
+    <div class="progress progress-bar-default">
+      <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
+    
+      </div>
+    </div>
+    <p>
+      <b>Expected Delivery Date: </b>2/16/2017
+    </p>
+    <p>
+      <b>Signup Date: </b>2/2/2017
+    </p>
+    <div style="text-align: right">
+      <button class="btn btn-w-m btn-success">CONTACT CUSTOMER</button>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-transaction-history','fsi-transaction-history',NULL,'
 <div class="ibox float-e-margins">
     <div class="ibox-title">

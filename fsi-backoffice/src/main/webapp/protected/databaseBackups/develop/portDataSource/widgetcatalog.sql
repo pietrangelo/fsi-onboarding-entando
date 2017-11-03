@@ -10,6 +10,9 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-information','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Customer information</property><property key="it">FSI Customer information</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-verification','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Customer verification</property><property key="it">FSI Customer verification</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-account-user','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Account user</property><property key="it">FSI Account user</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');

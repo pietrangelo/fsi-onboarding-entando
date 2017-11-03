@@ -119,7 +119,7 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
 
     </head>
     <body>
-        <div id="wrapper">
+        <div id="">
             <div class="row header-custom">
                 <div class="fsi-header">
                     <div class="col-md-2 col-md-offset-1">
