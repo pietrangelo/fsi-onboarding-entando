@@ -1841,3 +1841,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .fsi-customer-information .progress {
     height: 10px;
 }
+.fsi-customer-header {
+    background: #fff;
+    padding: 9px 5px 7px 29px;
+    margin: -40px 0px 18px 0px;
+}

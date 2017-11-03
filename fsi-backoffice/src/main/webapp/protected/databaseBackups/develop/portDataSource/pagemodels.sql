@@ -133,19 +133,15 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
                     <div class="col-md-6 col-md-offset-2">
                         <@wp.show frame=1 />
                         <div class="logo-menu-pages">
-                            <a href="<@wp.url page="customer_internal" />" >personal</a>
                         </div>
                         <div class="logo-menu-pages">
                             <@wp.show frame=2 />
-                            <b>small business</b>
                         </div>
                         <div class="logo-menu-pages">
                             <@wp.show frame=3 />
-                            <b>Account</b>
                         </div>
                         <div class="logo-menu-pages">
                             <@wp.show frame=4 />
-                            <a href="<@wp.url page="dashboard_internal" />" >dashboard</a>
                         </div>
                         <div class="logo-menu-pages">
                             <@wp.show frame=5 />
@@ -270,8 +266,7 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
 	</frame>
 </frames>
 
-',NULL,'
-<#assign wp=JspTaglibs["/aps-core"]>
+',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
 <!DOCTYPE html>
 <html lang="en">
@@ -450,6 +445,32 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="wrapper wrapper-content">
+
+
+                    <@wp.ifauthorized groupName="knowledge_worker">
+                            <div class="fsi-customer-header">   
+                               <h2>Hi Chandler Bing</h2>
+                                 <ol class="breadcrumb">
+                                      <li>
+                                        <a href="#"><@wp.currentPage param="title" /></a>
+                                      </li>
+                                  </ol>
+                            </div>
+                    </@wp.ifauthorized>
+
+                    <@wp.ifauthorized groupName="legal_worker">
+                            <div class="fsi-customer-header">   
+                               <h2>Hi Monica Brown </h2>
+                                 <ol class="breadcrumb">
+                                      <li>
+                                        <a href="#"><@wp.currentPage param="title" /></a>
+                                      </li>
+                                  </ol>
+                            </div>
+                    </@wp.ifauthorized>
+
+
+
 
                             <div class="col-md-8">
                                 <@wp.show frame=6 />

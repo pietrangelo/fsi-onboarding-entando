@@ -2982,136 +2982,8 @@ var chart = c3.generate({
 });
 </script>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<ul class="list-unstyled">
-    <li class=" dropdown
-        <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
-        <#if (Session.currentUser != "guest")>
-
-        <a class="dropdown-fsi-login dropdown-toggle" href="#" data-toggle="dropdown">
-            ${Session.currentUser}
-            <span class="caret"></span>&nbsp;
-        </a>
-        <ul class="dropdown-menu dropdown-menu-custom dropdown-messages">
-            <li>
-                <@wp.ifauthorized permission="enterBackend">
-                <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
-                   <@wp.i18n key="ESLF_ADMINISTRATION" />
-            </a>
-            </@wp.ifauthorized>
-        </li>
-        <div class="divider"></div>
-        <li>
-            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
-               <@wp.i18n key="ESLF_SIGNOUT" />
-        </a>
-    </li>
-    <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
-    <#if (editProfilePageVar??) >
-    <li>
-        <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
-    </li>
-    </#if>
-</ul>
-<#else>
-
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-    <@wp.i18n key="ESLF_SIGNIN" />
-    <span class="caret"></span>&nbsp;
-</a>
-<ul class=" dropdown-messages">
-    <li>
-        <form class="m-t" style="padding:10px;" method="POST">
-            <#if (accountExpired?? && accountExpired == true)>
-            <div class="alert alert-error">
-                <button class="close" data-dismiss="alert">x</button>
-                <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
-            </div>
-            </#if>
-            <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
-            <div class="alert alert-error">
-                <button class="close" data-dismiss="alert">x</button>
-                <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
-            </div>
-            </#if>
-            <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
-            </div>
-            <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
-        </form>
-    </li>
-</ul>
-</#if>
-</li>
-</ul>','<#assign wp=JspTaglibs["/aps-core"]>
-<li class=" dropdown
-    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
-    <#if (Session.currentUser != "guest")>
-  
-    <a class="btn  text-left dropdown-toggle" href="#" data-toggle="dropdown">
-        ${Session.currentUser}
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li>
-            <@wp.ifauthorized permission="enterBackend">
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
-               <i class="fa fa-cube"></i>      
-                <@wp.i18n key="ESLF_ADMINISTRATION" />
-            </a>
-            </@wp.ifauthorized>
-        </li>
-        <div class="divider"></div>
-        <li> 
-            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
-               <i class="fa fa-sign-out"></i>           
-                <@wp.i18n key="ESLF_SIGNOUT" />
-            </a>
-        </li>
-        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
-        <#if (editProfilePageVar??) >
-        <li>
-            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
-        </li>
-        </#if>
-    </ul>
-    <#else>
- 
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <@wp.i18n key="ESLF_SIGNIN" />
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li>
-            <form class="m-t" style="padding:10px;" method="POST">
-                <#if (accountExpired?? && accountExpired == true)>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert">x</button>
-                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
-                </div>
-                </#if>
-                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert">x</button>
-                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
-                </div>
-                </#if>
-                <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
-                </div>
-                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
-            </form>
-        </li>
-    </ul>
-    </#if>
-</li>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
 <div class="middle-box loginscreen animated fadeInDown">
     <#if (Session.currentUser.username != "guest") >
     <#if (Session.currentUser.entandoUser) >
@@ -3125,9 +2997,17 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
     </#if>
     </#if>
+
     <p>
+
+        <@wp.ifauthorized groupName="knowledge_worker">
+        <script>window.location = "<@wp.url page="account_executive_customer" />";</script>
+        </@wp.ifauthorized>
+        <@wp.ifauthorized groupName="legal_worker">
         <script>window.location = "<@wp.url page="backoffice" />";</script>
+        </@wp.ifauthorized>
     </p>
+
     <#else>
     <#if (accountExpired?? && accountExpired == true) >
     <div class="alert alert-block alert-error">
@@ -3154,7 +3034,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         </div>
         <div>
             <label class="remember-me-label">
-                   <input type="checkbox" class="i-checks"> Remember me 
+                <input type="checkbox" class="i-checks"> Remember me
             </label>
         </div>
         <div class="form-actions text-center">
@@ -3397,6 +3277,135 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<ul class="list-unstyled">
+    <li class=" dropdown
+        <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+        <#if (Session.currentUser != "guest")>
+
+        <a class="dropdown-fsi-login dropdown-toggle" href="#" data-toggle="dropdown">
+            ${Session.currentUser}
+            <span class="caret"></span>&nbsp;
+        </a>
+        <ul class="dropdown-menu dropdown-menu-custom dropdown-messages">
+            <li>
+                <@wp.ifauthorized permission="enterBackend">
+                <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+                   <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+               <@wp.i18n key="ESLF_SIGNOUT" />
+        </a>
+    </li>
+    <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+    <#if (editProfilePageVar??) >
+    <li>
+        <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+    </li>
+    </#if>
+</ul>
+<#else>
+
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <@wp.i18n key="ESLF_SIGNIN" />
+    <span class="caret"></span>&nbsp;
+</a>
+<ul class=" dropdown-messages">
+    <li>
+        <form class="m-t" style="padding:10px;" method="POST">
+            <#if (accountExpired?? && accountExpired == true)>
+            <div class="alert alert-error">
+                <button class="close" data-dismiss="alert">x</button>
+                <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+            </div>
+            </#if>
+            <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+            <div class="alert alert-error">
+                <button class="close" data-dismiss="alert">x</button>
+                <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+            </div>
+            </#if>
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+            </div>
+            <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+        </form>
+    </li>
+</ul>
+</#if>
+</li>
+</ul>','<#assign wp=JspTaglibs["/aps-core"]>
+<li class=" dropdown
+    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+    <#if (Session.currentUser != "guest")>
+  
+    <a class="btn  text-left dropdown-toggle" href="#" data-toggle="dropdown">
+        ${Session.currentUser}
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <@wp.ifauthorized permission="enterBackend">
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+               <i class="fa fa-cube"></i>      
+                <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li> 
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+               <i class="fa fa-sign-out"></i>           
+                <@wp.i18n key="ESLF_SIGNOUT" />
+            </a>
+        </li>
+        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+        <#if (editProfilePageVar??) >
+        <li>
+            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+        </li>
+        </#if>
+    </ul>
+    <#else>
+ 
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <@wp.i18n key="ESLF_SIGNIN" />
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <form class="m-t" style="padding:10px;" method="POST">
+                <#if (accountExpired?? && accountExpired == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+                </div>
+                </#if>
+                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+                </div>
+                </#if>
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+                </div>
+                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+            </form>
+        </li>
+    </ul>
+    </#if>
+</li>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">

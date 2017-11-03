@@ -285,4 +285,6 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('USERNAME','it',
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTER_PASSWORD','en','Enter Password');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTER_PASSWORD','it','Inserisci password');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','en','LOGIN');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PFL_fullname','en','Full Name');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PFL_email','en','Email');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','it','ACCEDI');

@@ -119,6 +119,12 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (108,'account_executiv
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (111,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (112,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (113,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (117,'knowledge_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (117,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (119,'knowledge_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (119,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (120,'knowledge_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (120,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (83,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (84,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (86,'free');
@@ -137,6 +143,8 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (110,'account_executiv
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (114,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (115,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (116,'free');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (118,'knowledge_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (118,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (68,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (70,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (71,'free');
