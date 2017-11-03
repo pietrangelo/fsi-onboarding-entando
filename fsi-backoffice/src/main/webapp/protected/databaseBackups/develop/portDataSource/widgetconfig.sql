@@ -1,3 +1,9 @@
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',13,'fsi-customer-overview-big',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',14,'fsi-mock-datatable-backoffice',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'fsi-customer-overview-big',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',14,'fsi-mock-datatable-backoffice',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',9,'Login-Customer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',13,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',11,'fsi-completed',NULL);
@@ -14,9 +20,3 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'fsi-mock-datatable-account',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',5,'entando-widget-login_form_inspinia',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'fsi-customer-overview-big',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',14,'fsi-mock-datatable-account',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',5,'entando-widget-login_form_inspinia',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',13,'fsi-customer-overview-big',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',14,'fsi-mock-datatable-account',NULL);

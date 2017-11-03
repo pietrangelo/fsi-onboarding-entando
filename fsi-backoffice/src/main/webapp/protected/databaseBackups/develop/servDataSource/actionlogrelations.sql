@@ -174,6 +174,10 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (136,'account_executiv
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (136,'legal_worker');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (137,'knowledge_worker');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (137,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (138,'knowledge_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (138,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (139,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (139,'legal_worker');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (68,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (70,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (71,'free');

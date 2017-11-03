@@ -1,3 +1,29 @@
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('knowledge_dashboard','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Knowledge Dashboard</property><property key="it">Knowledge Dashboard</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="knowledge_worker" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-03 16:19:18');
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('legal_dashboard','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Legal Dashboard</property><property key="it">Legal Dashboard</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="legal_worker" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-03 16:19:43');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('service','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="it">Pagine di Servizio</property>
@@ -51,32 +77,6 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-11-03 09:32:46');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('legal_dashboard','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Legal Dashboard</property><property key="it">Legal Dashboard</property></properties>
-','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="legal_worker" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-03 16:08:33');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('knowledge_dashboard','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Knowledge Dashboard</property><property key="it">Knowledge Dashboard</property></properties>
-','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="knowledge_worker" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-03 16:08:39');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_dashboard','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Account Executive Dashboard</property><property key="it">Account Executive Dashboard</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>

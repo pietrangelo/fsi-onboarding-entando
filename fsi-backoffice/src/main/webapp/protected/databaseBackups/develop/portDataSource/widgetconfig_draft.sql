@@ -16,7 +16,7 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('ac
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'fsi-mock-datatable-account',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',13,'fsi-customer-overview-big',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',14,'fsi-mock-datatable-account',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'fsi-customer-overview-big',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',14,'fsi-mock-datatable-account',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',14,'fsi-mock-datatable-backoffice',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',14,'fsi-mock-datatable-backoffice',NULL);
