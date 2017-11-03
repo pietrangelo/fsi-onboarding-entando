@@ -3000,11 +3000,14 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
     <p>
 
-        <@wp.ifauthorized groupName="knowledge_worker">
-        <script>window.location = "<@wp.url page="account_executive_customer" />";</script>
+        <@wp.ifauthorized groupName="account_executiver">
+        <script>window.location = "<@wp.url page="account_executive_dashboard" />";</script>
         </@wp.ifauthorized>
         <@wp.ifauthorized groupName="legal_worker">
-        <script>window.location = "<@wp.url page="backoffice" />";</script>
+        <script>window.location = "<@wp.url page="legal_dashboard" />";</script>
+        </@wp.ifauthorized>
+        <@wp.ifauthorized groupName="knowledge_worker">
+        <script>window.location = "<@wp.url page="knowledge_dashboard" />";</script>
         </@wp.ifauthorized>
     </p>
 
