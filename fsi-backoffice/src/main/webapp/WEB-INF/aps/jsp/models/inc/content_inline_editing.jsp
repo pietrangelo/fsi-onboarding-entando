@@ -152,6 +152,9 @@
         $('#example').DataTable({
             "ajax": '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/json/data.json'
         });
+        $('#example2').DataTable({
+            "ajax": '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/json/data2.json'
+        });
     });
 </script>
 
