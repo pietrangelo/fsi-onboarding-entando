@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<wp:resourceURL />administration/css/jqueryui-editable.css" media="screen"/>
 <script src="<wp:resourceURL />static/js/pdf.js"></script>
 <script src="<wp:resourceURL />static/js/pdf.worker.js"></script>
+<script src="<wp:resourceURL />static/js/jquery.dataTables.min.js"></script>
 
 <!-----------inclusione x-editable inline------------------------>
 <wp:ifauthorized permission="superuser">
@@ -144,6 +145,15 @@
     });
 </script>
 
+
+<script>
+
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "ajax": '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/json/data.json'
+        });
+    });
+</script>
 
 <script>
 
@@ -351,3 +361,5 @@
     });
 
 </script>
+
+

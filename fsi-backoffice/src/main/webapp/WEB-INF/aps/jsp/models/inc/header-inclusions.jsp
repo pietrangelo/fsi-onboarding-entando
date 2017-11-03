@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="<wp:resourceURL />static/css/c3.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/morris-0.4.3.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/jasny.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/jquery.dataTables.css" rel="stylesheet">
 
 
 <script src="<wp:resourceURL />static/js/bootstrap.min.js"></script>
@@ -21,7 +22,6 @@
 <script src="<wp:resourceURL />static/js/jquery.slimscroll.min.js"></script>
 <script src="<wp:resourceURL />static/js/jquery.metisMenu.js"></script>
 <script src="<wp:resourceURL />static/js/d3.min.js"></script>
-<script src="<wp:resourceURL />static/js/c3.min.js"></script>
 <script src="<wp:resourceURL />static/js/c3.min.js"></script>
 <script src="<wp:resourceURL />static/js/morris.js"></script>
 <script src="<wp:resourceURL />static/js/raphael-2.1.0.min.js"></script>
