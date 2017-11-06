@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<wp:resourceURL />administration/css/jqueryui-editable.css" media="screen"/>
 <script src="<wp:resourceURL />static/js/pdf.js"></script>
 <script src="<wp:resourceURL />static/js/pdf.worker.js"></script>
+<script src="<wp:resourceURL />static/js/viewer.js"></script>
 <script src="<wp:resourceURL />static/js/jquery.dataTables.min.js"></script>
 
 <!-----------inclusione x-editable inline------------------------>
@@ -158,6 +159,17 @@
     });
 </script>
 
+
+<script>
+
+    $(document).ready(function () {
+        document.getElementById('pdfViewer').src = 'http://mozilla.github.com/pdf.js/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf'
+
+    });
+</script>
+
+
+
 <script>
 
     $(document).ready(function () {
@@ -195,7 +207,7 @@
 
         // If absolute URL from the remote server is provided, configure the CORS
         // header on that server.
-        var url = '//cdn.mozilla.net/pdfjs/tracemonkey.pdf';
+        var url = '//cdn.mozilla.net/pdfjs/tracemonkey1.pdf';
 
         // The workerSrc property shall be specified.
         PDFJS.workerSrc = '<wp:info key="systemParam" paramName="applicationBaseURL" />resources/static/js/pdf.worker.js';
@@ -206,8 +218,9 @@
             pageNumPending = null,
             scale = 1,
             canvas = document.getElementById('the-canvas');
-            if (canvas !== null ) {
-             ctx = canvas.getContext('2d');
+        $('#pdf-zoom-document').val(scale);
+        if (canvas !== null) {
+            ctx = canvas.getContext('2d');
 
             /**
              * Get page info from document, resize canvas accordingly, and render page.
@@ -222,6 +235,8 @@
                 // Using promise to fetch the page
                 pdfDoc.getPage(num).then(function (page) {
                     var viewport = page.getViewport(scale);
+                    $('#pdf-zoom-document').val(scale);
+
                     canvas.height = viewport.height;
                     canvas.width = viewport.width;
 
@@ -245,7 +260,7 @@
 
                 // Update page counters
                 pageNum = num;
-                document.getElementById('page_num').innerHTML = pageNum;
+                document.getElementById('page_num').value = pageNum;
             }
 
             /**
@@ -271,7 +286,7 @@
                 queueRenderPage(pageNum);
             }
 
-            document.getElementById('prev').addEventListener('click', onPrevPage);
+            //document.getElementById('prev').addEventListener('click', onPrevPage);
 
             /**
              * Displays next page.
@@ -284,15 +299,17 @@
                 queueRenderPage(pageNum);
             }
 
-            document.getElementById('next').addEventListener('click', onNextPage);
+            //document.getElementById('next').addEventListener('click', onNextPage);
 
 
             /**
              *  Zoom In.
              */
             function zoomIn() {
-                scale -= 0.25;
-                renderPage(pageNum);
+                if (scale + 0 > 0.75) {
+                    scale -= 0.25;
+                    renderPage(pageNum);
+                }
             }
 
             document.getElementById('zoomin').addEventListener('click', zoomIn);
@@ -301,8 +318,11 @@
              *  Zoom Out.
              */
             function zoomOut() {
-                scale += 0.25;
-                renderPage(pageNum);
+                if (scale + 0 < 2.5) {
+
+                    scale += 0.25;
+                    renderPage(pageNum);
+                }
             }
 
             document.getElementById('zoomout').addEventListener('click', zoomOut);
@@ -348,6 +368,7 @@
                 // draw page to fit into 50x50 canvas
                 var vp = page.getViewport(1);
                 var canvas = document.createElement("canvas");
+                canvas.classList.add("border-canvas-thumbnail");
                 canvas.width = canvas.height = 50;
                 var scale = Math.min(canvas.width / vp.width, canvas.height / vp.height);
                 return page.render({
