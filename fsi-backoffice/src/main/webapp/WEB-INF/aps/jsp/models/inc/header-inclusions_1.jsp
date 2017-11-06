@@ -1,0 +1,32 @@
+<%--
+    Document   : header-inclusions
+    Created on : 8-ago-2017, 7.14.28
+    Author     : D.minnai
+--%>
+<%@ taglib prefix="wp" uri="/aps-core" %>
+
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"  crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="<wp:resourceURL />static/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/animate.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/awesome-bootstrap-checkbox.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/custom.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/c3.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/morris-0.4.3.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/jasny.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/jquery.dataTables.css" rel="stylesheet">
+
+
+<script src="<wp:resourceURL />static/js/bootstrap.min.js"></script>
+<script src="<wp:resourceURL />static/js/jquery.slimscroll.min.js"></script>
+<script src="<wp:resourceURL />static/js/jquery.metisMenu.js"></script>
+<script src="<wp:resourceURL />static/js/d3.min.js"></script>
+<script src="<wp:resourceURL />static/js/c3.min.js"></script>
+<script src="<wp:resourceURL />static/js/morris.js"></script>
+<script src="<wp:resourceURL />static/js/raphael-2.1.0.min.js"></script>
+<script src="<wp:resourceURL />static/js/datepicker.js"></script>
+<script src="<wp:resourceURL />static/js/jasny.js"></script>

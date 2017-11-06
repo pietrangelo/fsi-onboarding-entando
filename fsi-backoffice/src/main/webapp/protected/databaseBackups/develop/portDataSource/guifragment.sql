@@ -2934,7 +2934,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
     <p>
 
-        <@wp.ifauthorized groupName="account_executiver">
+        <@wp.ifauthorized groupName="account_executive">
         <script>window.location = "<@wp.url page="account_executive_dashboard" />";</script>
         </@wp.ifauthorized>
         <@wp.ifauthorized groupName="legal_worker">
