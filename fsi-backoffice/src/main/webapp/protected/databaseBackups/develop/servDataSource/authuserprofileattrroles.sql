@@ -4,3 +4,5 @@ INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('knowl
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('knowledge','email','userprofile:email');
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('account','fullname','userprofile:fullname');
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('account','email','userprofile:email');
+INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('executive','fullname','userprofile:fullname');
+INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('executive','email','userprofile:email');
