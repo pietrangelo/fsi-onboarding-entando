@@ -64,6 +64,19 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-10-31 17:27:00');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_dashboard','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Account Executive Dashboard</property><property key="it">Account Executive Dashboard</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="account_executive" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-03 16:07:51');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('knowledge_dashboard','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Compliance Manager Dashboard</property><property key="it">Compliance Manager Dashboard</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -90,16 +103,3 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-11-06 15:20:33');
-INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_dashboard','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Account Executive Dashboard</property><property key="it">Account Executive Dashboard</property></properties>
-','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="account_executive" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-03 16:07:51');
