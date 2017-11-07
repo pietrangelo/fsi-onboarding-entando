@@ -1,3 +1,4 @@
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',13,'fsi_client_on_board_mananger_tabs',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'fsi-mock-datatable-account',NULL);

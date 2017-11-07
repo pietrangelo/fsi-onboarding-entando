@@ -89,7 +89,7 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-11-07 13:17:32');
+','2017-11-07 14:55:22');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('knowledge_dashboard','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">KYC Analyst Dashboard</property><property key="it">KYC Analyst Dashboard</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>

@@ -639,7 +639,7 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
                                 .navbar-fixed-top, .navbar-static-top {
                                     background: #2A125A;
                                 }
-                                .nav > li.active {
+                                .metismenu > li.active {
                                     border-left: 4px solid #8959E9;
                                     background: #1B083F;
                                 }
@@ -988,7 +988,7 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-c
                                 .navbar-fixed-top, .navbar-static-top {
                                     background: #117cbb;
                                 }
-                                .nav > li.active {
+                                .metismenu > li.active {
                                    border-left: 4px solid #91d4fb;
                                    background: #00456d;
                                 }

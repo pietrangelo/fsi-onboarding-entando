@@ -105,6 +105,143 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_client_on_board_mananger_tabs','fsi_client_on_board_mananger_tabs',NULL,'<div class="fsi-customer-rate">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer rate</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+<div class="tabs-container">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> Prospects count </a></li>
+        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Onboarding</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab-1" class="tab-pane active">
+            <div class="panel-body">
+
+
+                <div class="ibox float-e-margins">
+
+
+                    <div class="row">
+                        <div class="col-lg-9 text-align-left">
+                            <h2 style="margin-top:5px;">Prospect count</h2>
+                        </div>
+                        <div class="col-lg-3 text-align-right">
+                            <div class="input-group"><input type="text" placeholder="Search"
+                                                            class="input-sm form-control">
+                                <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-success"> Go!</button> </span></div>
+                        </div>
+
+
+                        <div class="col-lg-9 text-align-left">
+                            <h4><b>COMPANY FILTER</b></h4>
+                        </div>
+                        <div class="col-lg-3 text-align-right">
+                            <h4><b>TIME FILTER</b></h4>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <select class="form-control m-b">
+                                <option>INDUSTRY TYPE</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control m-b">
+                                <option>CUSTOMER VALUE</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control m-b">
+                                <option>STATE</option>
+                            </select>
+                        </div>
+                        <div class="col-md-offset-3 col-md-3">
+                            <div class="form-group pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-w-m btn-primary active">Year</button>
+                                    <button type="button" class="btn btn-w-m btn-white">Month</button>
+                                    <button type="button" class="btn btn-w-m btn-white">Week</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-9">
+
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control m-b pull-right" style="width: 15em;">
+                                <option>ALL YEAR</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+
+                                <div id="lineChart" class="c3" style="max-height: 320px; position: relative;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="tab-2" class="tab-pane">
+            <div class="panel-body">
+                <strong>Onborading</strong>
+
+                <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little world among the
+                    stalks, and grow familiar with the countless indescribable forms of the insects
+                    and flies, then I feel the presence of the Almighty, who formed us in his own image, and the
+                    breath </p>
+
+                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of
+                    souls like mine. I am so happy, my dear friend, so absorbed in the exquisite
+                    sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a
+                    single stroke at the present moment; and yet.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<script>
+
+    var chart = c3.generate({
+        bindto: ''#lineChart'',
+        data: {
+            columns: [
+                [''data1'', 30, 200, 100, 400, 150, 250],
+                [''data2'', 50, 20, 10, 40, 15, 25]
+            ]
+        }
+    });
+
+</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >

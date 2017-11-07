@@ -249,3 +249,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Login-Customer','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Login Customer</property><property key="it">Login Cliente</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi_client_on_board_mananger_tabs','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Client On Board Mananger Tabs</property><property key="it">FSI Client On Board Mananger Tabs</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');

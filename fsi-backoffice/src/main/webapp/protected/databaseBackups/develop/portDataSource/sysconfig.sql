@@ -495,5 +495,6 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm
    <schema>http</schema>
    <port>80</port>
    <webapp>kie-server</webapp>
+   <timeout>500</timeout>
 </kieBpmConfig>
 ');

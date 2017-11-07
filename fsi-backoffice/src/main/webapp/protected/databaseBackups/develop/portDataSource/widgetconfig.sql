@@ -12,6 +12,7 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_da
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',11,'fsi-completed',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',12,'fsi-backlog',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',14,'fsi-mock-datatable-backoffice',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',13,'fsi_client_on_board_mananger_tabs',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',6,'fsi-performance',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',7,'fsi-customer-overview',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',8,'fsi-customer-rate',NULL);
