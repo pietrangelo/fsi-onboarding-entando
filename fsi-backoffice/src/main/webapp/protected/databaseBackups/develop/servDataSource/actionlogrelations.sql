@@ -160,6 +160,16 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (183,'client_manager')
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (183,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (184,'client_manager');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (184,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (185,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (185,'free');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (187,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (187,'free');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (189,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (189,'free');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (190,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (190,'free');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (192,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (192,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (159,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (165,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (166,'account_executive');

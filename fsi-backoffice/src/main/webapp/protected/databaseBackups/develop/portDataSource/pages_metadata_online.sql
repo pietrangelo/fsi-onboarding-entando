@@ -18,19 +18,6 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 <property key="en">Error page</property>
 <property key="it">Pagina di errore</property>
 </properties>','service',1,NULL,'2017-02-17 21:11:54');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('form_mobile','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Form Mobile</property><property key="it">Form Mobile</property></properties>
-','fsi-dashboard-responsive',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="account_executive" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-06 16:50:05');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('homepage','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Home</property><property key="it">Home</property></properties>
 ','fsi-landing',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -116,3 +103,16 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-11-07 14:55:22');
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('form_mobile','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Form Mobile</property><property key="it">Form Mobile</property></properties>
+','fsi-dashboard-responsive',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="account_executive" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-07 15:04:58');

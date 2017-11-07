@@ -138,7 +138,6 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','userProf
 		</attributes>
 	</profiletype>
 </profiletypes>');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataTypeDefinitions','Definition of the Type Types','<datatypes />');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','entandoComponentsReport','The component installation report','<?xml version="1.0" encoding="UTF-8"?>
 <reports status="OK">
 	<creation>2017-10-31 14:02:29</creation>
@@ -497,4 +496,21 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm
    <webapp>kie-server</webapp>
    <timeout>500</timeout>
 </kieBpmConfig>
+');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataTypeDefinitions','Definition of the Type Types','<?xml version="1.0" encoding="UTF-8"?>
+<datatypes>
+	<datatype typecode="AAA" typedescr="commercial-client-onboarding.ClientOnboardingProcess_5fdf1ed1672f5358e70570bd7f50b163" viewpage="**NULL**" listmodel="1" defaultmodel="1">
+		<attributes>
+			<attribute name="accountName" attributetype="Monotext" />
+			<attribute name="client_creditScore" attributetype="Number" />
+			<attribute name="client_type" attributetype="Monotext" />
+			<attribute name="client_name" attributetype="Monotext" />
+			<attribute name="client_country" attributetype="Monotext" />
+			<attribute name="accountManager" attributetype="Monotext" />
+			<attribute name="client_phoneNumber" attributetype="Monotext" />
+			<attribute name="client_bic" attributetype="Monotext" />
+		</attributes>
+	</datatype>
+</datatypes>
+
 ');
