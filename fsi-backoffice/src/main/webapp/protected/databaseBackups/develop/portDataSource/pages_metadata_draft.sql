@@ -103,3 +103,13 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-11-06 15:20:33');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('client_onboarding_manager','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Client Onboarding Manager</property><property key="it">Client Onboarding Manager</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-07 10:48:10');
