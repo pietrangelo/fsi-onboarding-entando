@@ -1,3 +1,6 @@
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (174,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (175,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (176,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (171,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (172,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (173,'account_executive');
@@ -142,6 +145,19 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (153,'account_executiv
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (156,'knowledge_worker');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (156,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (159,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (177,'knowledge_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (177,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (178,'knowledge_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (178,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (179,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (179,'legal_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (180,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (180,'legal_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (181,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (182,'client_manager');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (182,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (183,'client_manager');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (183,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (159,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (165,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (166,'account_executive');

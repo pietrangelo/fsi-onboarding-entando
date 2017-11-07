@@ -402,7 +402,8 @@ input[type=checkbox]:checked~#menu {
     margin-bottom:10px ;
 }
 .fsi-club-cc {
-    background: url("../img/Credit_Card_bg.png") center center;
+    background-image: url("../img/Credit_Card_bg.png");
+    background-position: center center;
     background-size: cover;
     min-height: 435px;
     color: #ffffff;
@@ -721,7 +722,7 @@ a.dropdown-fsi-login{
 
 .fsi-customer-overview {
     font-family: "Open Sans", sans-serif;
-    max-width: 400px;
+    /* max-width: 400px; */
     background: #ffffff;
 }
 .fsi-customer-overview .title-welcome {
@@ -751,12 +752,12 @@ a.dropdown-fsi-login{
     font-size: 24px;
     font-weight: 300;
     color: #676A6C;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 .fsi-customer-overview .fsi-customer-overview-item .label-text {
     font-size: 14px;
     color: #666666;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
 }
 .fsi-customer-overview .progress {
     height: 10px;
@@ -777,16 +778,18 @@ a.dropdown-fsi-login{
 }
 
 #the-canvas {
-    /*    border:1px solid black;*/
+    border:1px solid black;
     width:auto;
 }
 #thumbnail-pdf {
     width:100%;
     height: 53px;
+    display:inline-flex;
 }
 .page-active {
     border: 2px solid #9a9494;
     border-radius: 0px;
+    background: #999999;
 }
 .spacers{
     margin:3px;
@@ -1711,53 +1714,11 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     bottom: 30px;
 }
 
-.container-pdf-document {
-    display: inline-flex;
-}
-
-.border-pdf-document {
-    border-top: 10px solid;
-    border-right: 5px solid;
-    border-left: 5px solid;
-}
-
-.border-canvas-thumbnail {
-    border: 5px solid #262424;
-}
-
-.box-toolbar-pdf-tools {
-
-}
-
-#page_num {
-    width: 4em;
-    text-align: right;
-}
-
 .box-toolbar-pdf-thumbnail {
-    text-align: center;
-    max-width: 150px;
-    overflow-y: scroll;
-    padding-right: 30px;
-}
-
-.box-toolbar-pdf-tools select {
-    background: #FFFFFF none;
-    border: 1px solid #e5e6e7;
-    width: auto;
-    border-radius: 1px;
-    color: inherit;
-    padding: 5px 12px;
-    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-
-}
-
-.text-align-right {
-    text-align: right;
-}
-
-.text-align-left {
-    text-align: left;
+    padding:0;
+    border-style: solid;
+    border-width: 1px 0px 1px 0;
+    border-color: #dcdcdc;
 }
 
 .background-white {
@@ -1788,9 +1749,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 }
 
 .scrollbar-auto {
-    display: block;
     overflow: auto;
-    width: 100%;
+    width: auto;
 }
 .application-breadcrumbs-wrapper{
     margin: 10px 0 10px 0;
@@ -1912,24 +1872,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .btn-spacer-executive{
     margin: -6px 0px 0px 30px;
 }
-
-#fsi-pdf-check .fa {
-    font-size: 20px;
-}
-
-#fsi-pdf-check .fa-check-circle-o {
-    color: #1ab394;
-}
-#fsi-pdf-check .fa-times-circle-o {
-    color: #ED5565;
-}
-#fsi-pdf-check .button-row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-#fsi-pdf-check .button-row  > * {
-    margin-left: 10px;
+#morris-donut-chart text{
+    fill:#666666;
 }

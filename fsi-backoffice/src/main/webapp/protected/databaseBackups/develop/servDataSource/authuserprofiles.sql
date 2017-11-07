@@ -13,3 +13,6 @@ INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VAL
 INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('executive','PFL','<?xml version="1.0" encoding="UTF-8"?>
 <profile id="executive" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext"><monotext>Tommy Executive</monotext></attribute><attribute name="email" attributetype="Monotext"><monotext>t.executive@gmail.com</monotext></attribute></attributes></profile>
 ',0);
+INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('Manager','PFL','<?xml version="1.0" encoding="UTF-8"?>
+<profile id="Manager" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext"><monotext>Tommy Manager</monotext></attribute><attribute name="email" attributetype="Monotext"><monotext>t.manager@gmail.com</monotext></attribute></attributes></profile>
+',0);

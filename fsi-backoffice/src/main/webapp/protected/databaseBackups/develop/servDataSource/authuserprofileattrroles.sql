@@ -6,3 +6,5 @@ INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('accou
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('account','email','userprofile:email');
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('executive','fullname','userprofile:fullname');
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('executive','email','userprofile:email');
+INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('Manager','fullname','userprofile:fullname');
+INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('Manager','email','userprofile:email');

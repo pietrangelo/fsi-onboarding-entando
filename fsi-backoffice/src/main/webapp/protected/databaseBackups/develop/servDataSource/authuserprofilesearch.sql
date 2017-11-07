@@ -6,3 +6,5 @@ INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalu
 INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('account','email','t.account@gmail.com',NULL,NULL,NULL);
 INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('executive','fullname','Tommy Executive',NULL,NULL,NULL);
 INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('executive','email','t.executive@gmail.com',NULL,NULL,NULL);
+INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('Manager','fullname','Tommy Manager',NULL,NULL,NULL);
+INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('Manager','email','t.manager@gmail.com',NULL,NULL,NULL);

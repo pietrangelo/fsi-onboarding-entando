@@ -1,3 +1,326 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="middle-box loginscreen animated fadeInDown">
+    <#if (Session.currentUser.username != "guest") >
+    <#if (Session.currentUser.entandoUser) >
+    <#if (!Session.currentUser.credentialsNotExpired) >
+    <div class="alert alert-block">
+        <p>
+            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
+               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
+        </p>
+    </div>
+    </#if>
+    </#if>
+
+    <p>
+
+        <@wp.ifauthorized groupName="account_executive">
+        <script>window.location = "<@wp.url page="account_executive_dashboard" />";</script>
+        </@wp.ifauthorized>
+        <@wp.ifauthorized groupName="legal_worker">
+        <script>window.location = "<@wp.url page="legal_dashboard" />";</script>
+        </@wp.ifauthorized>
+        <@wp.ifauthorized groupName="knowledge_worker">
+        <script>window.location = "<@wp.url page="knowledge_dashboard" />";</script>
+        </@wp.ifauthorized>
+        <@wp.ifauthorized groupName="client_manager">
+        <script>window.location = "<@wp.url page="client_onboarding_manager" />";</script>
+        </@wp.ifauthorized>
+    </p>
+
+    <#else>
+    <#if (accountExpired?? && accountExpired == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
+    </div>
+    </#if>
+    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
+    </div>
+    </#if>
+    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
+    <form action="<@wp.url/>" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div>
+            <label class="remember-me-label">
+                <input type="checkbox" class="i-checks"> Remember me
+            </label>
+        </div>
+        <div class="form-actions text-center">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+                   <p class="forget">Forgot your password or Email/Username?</p>
+        </div>
+    </form>
+    </#if>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer overview</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">120</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">100</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">95</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
+<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
+<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
+<fieldset>
+<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
+<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
+<div class="control-group">
+	<div class="controls">
+		<label for="${formFieldNameVar}" class="radio">
+		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="radio" />
+		<@wp.i18n key="YES"/></label>
+	</div>
+	<div class="controls">
+		<label for="false_${formFieldNameVar}" class="radio">
+		<input name="${formFieldNameVar}" id="false_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "false")>checked="checked"</#if> value="false" type="radio" />
+		<@wp.i18n key="NO"/></label>
+	</div>
+</div>
+</fieldset>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="fsi-customer-rate">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer rate</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div>
+            <div id="torta"></div>
+        </div>
+    </div>
+</div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Bool_io',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign formFieldNameControlVar = userFilterOptionVar.formFieldNames[2] >
+<input name="${formFieldNameControlVar}" type="hidden" value="true" />
+<#assign formFieldNameIgnoreVar = userFilterOptionVar.formFieldNames[1] >
+<#assign formFieldIgnoreValue = userFilterOptionVar.getFormFieldValue(formFieldNameIgnoreVar) >
+<#assign formFieldControlValue = userFilterOptionVar.getFormFieldValue(formFieldNameControlVar) >
+<div class="controls">
+	<label for="ignore_${formFieldNameIgnoreVar}" class="checkbox">
+	<input id="ignore_${formFieldNameIgnoreVar}" name="${formFieldNameIgnoreVar}" <#if (formFieldIgnoreValue?? && formFieldIgnoreValue == "true")>checked="checked"</#if> value="true" type="checkbox" />
+	<@wp.i18n key="IGNORE" /></label>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_CheckBox',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
+<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
+<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
+<fieldset>
+<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
+<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
+<div class="control-group">
+	<div class="controls">
+		<label for="true_${formFieldNameVar}" class="checkbox">
+		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="checkbox" />
+		<@wp.i18n key="YES"/></label>
+	</div>
+</div>
+</fieldset>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<ul class="list-unstyled">
+    <li class=" dropdown
+        <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+        <#if (Session.currentUser != "guest")>
+
+        <a class="dropdown-fsi-login dropdown-toggle" href="#" data-toggle="dropdown">
+            ${Session.currentUser}
+            <span class="caret"></span>&nbsp;
+        </a>
+        <ul class="dropdown-menu dropdown-menu-custom dropdown-messages">
+            <li>
+                <@wp.ifauthorized permission="enterBackend">
+                <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+                   <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+               <@wp.i18n key="ESLF_SIGNOUT" />
+        </a>
+    </li>
+    <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+    <#if (editProfilePageVar??) >
+    <li>
+        <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+    </li>
+    </#if>
+</ul>
+<#else>
+
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <@wp.i18n key="ESLF_SIGNIN" />
+    <span class="caret"></span>&nbsp;
+</a>
+<ul class=" dropdown-messages">
+    <li>
+        <form class="m-t" style="padding:10px;" method="POST">
+            <#if (accountExpired?? && accountExpired == true)>
+            <div class="alert alert-error">
+                <button class="close" data-dismiss="alert">x</button>
+                <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+            </div>
+            </#if>
+            <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+            <div class="alert alert-error">
+                <button class="close" data-dismiss="alert">x</button>
+                <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+            </div>
+            </#if>
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+            </div>
+            <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+        </form>
+    </li>
+</ul>
+</#if>
+</li>
+</ul>','<#assign wp=JspTaglibs["/aps-core"]>
+<li class=" dropdown
+    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+    <#if (Session.currentUser != "guest")>
+  
+    <a class="btn  text-left dropdown-toggle" href="#" data-toggle="dropdown">
+        ${Session.currentUser}
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <@wp.ifauthorized permission="enterBackend">
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+               <i class="fa fa-cube"></i>      
+                <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li> 
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+               <i class="fa fa-sign-out"></i>           
+                <@wp.i18n key="ESLF_SIGNOUT" />
+            </a>
+        </li>
+        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+        <#if (editProfilePageVar??) >
+        <li>
+            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+        </li>
+        </#if>
+    </ul>
+    <#else>
+ 
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <@wp.i18n key="ESLF_SIGNIN" />
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <form class="m-t" style="padding:10px;" method="POST">
+                <#if (accountExpired?? && accountExpired == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+                </div>
+                </#if>
+                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+                </div>
+                </#if>
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+                </div>
+                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+            </form>
+        </li>
+    </ul>
+    </#if>
+</li>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_ThreeSt',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
+<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
+<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
+<fieldset>
+<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
+<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
+<div class="control-group">
+	<div class="controls">
+		<label for="true_${formFieldNameVar}" class="radio">
+		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="radio" />
+		<@wp.i18n key="YES"/></label>
+		<label for="false_${formFieldNameVar}" class="radio">
+		<input name="${formFieldNameVar}" id="false_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "false")>checked="checked"</#if> value="false" type="radio" />
+		<@wp.i18n key="NO"/></label>
+		<label for="both_${formFieldNameVar}" class="radio">
+		<input name="${formFieldNameVar}" id="both_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "both")>checked="checked"</#if> value="both" type="radio" />
+		<@wp.i18n key="BOTH"/></label>
+	</div>
+</div>
+</fieldset>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-MonolistAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -301,6 +624,34 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	id="%{attribute_id}"  
 	headerKey="" headerValue="" 
 	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Completed</h5>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-white active">Today</button>
+                <button type="button" class="btn btn-xs btn-white">Monthly</button>
+                <button type="button" class="btn btn-xs btn-white">Annual</button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="no-margins">1800</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="progress progress-mini margin-top-15">
+                    <div style="width: 44%;" class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="stat-percent font-bold text-info">44% <i class="fa fa-level-up"></i></div>
+        <small>Total tast 2500</small>
+
+    </div>
+
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -857,34 +1208,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         });
     });
 </script>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <p class="title-welcome">State</p>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div id="morris-donut-chart" ></div>
-    </div>
-</div>
-<script>
-    $(document).ready(function () {
-       Morris.Donut({
-            element: ''morris-donut-chart'',
-            data: [{label: "Pending", value: 12},
-                {label: "Complete", value: 30},
-                {label: "Suspended", value: 20}],
-            resize: true,
-            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
-        });
-    });
-</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="fsi-form-banking-services">
   <div class="ibox float-e-margins">
     <div class="ibox-title">
@@ -1265,6 +1588,36 @@ jQuery(function($){
 <@wp.headInfo type="JS_EXT" info="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" />
 <@wp.headInfo type="CSS_EXT" info="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.min.css" />
 <@wp.headInfo type="JS_RAW" info="${js_for_datepicker}" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="fsi-customer-state">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer state</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div id="morris-donut-chart" ></div>
+    </div>
+</div>
+</div>
+<script>
+    $(document).ready(function () {
+       Morris.Donut({
+            element: ''morris-donut-chart'',
+            data: [{label: "Pending", value: 12},
+                {label: "Complete", value: 30},
+                {label: "Suspended", value: 20}],
+            resize: true,
+            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
+        });
+    });
+</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
     <div class="fsi-welcome-title">Welcome to your personal area</div>
     <div class="fsi-welcome-message">You can check the status of your request</div>
@@ -1525,37 +1878,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 <input type="text" name="search" class="form-control" placeholder="<@wp.i18n key="ESSF_SEARCH" />" />
 </div>
 </form>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
-  <div class="ibox float-e-margins">
-    <div class="ibox-title">
-      <p class="title-welcome">Customer Overview</p>
-      <div class="ibox-tools"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a><a class="close-link"><i class="fa fa-times"></i></a></div>
-    </div>
-    <div class="ibox-content">
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">120</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">100</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">95</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-ThreeStateAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsf=JspTaglibs["/apsadmin-form"]>
@@ -2502,91 +2824,6 @@ jQuery(function($){
 	</div>
 </div>
 </fieldset>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
-<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
-<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
-<fieldset>
-<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
-<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
-<div class="control-group">
-	<div class="controls">
-		<label for="${formFieldNameVar}" class="radio">
-		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="radio" />
-		<@wp.i18n key="YES"/></label>
-	</div>
-	<div class="controls">
-		<label for="false_${formFieldNameVar}" class="radio">
-		<input name="${formFieldNameVar}" id="false_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "false")>checked="checked"</#if> value="false" type="radio" />
-		<@wp.i18n key="NO"/></label>
-	</div>
-</div>
-</fieldset>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Bool_io',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign formFieldNameControlVar = userFilterOptionVar.formFieldNames[2] >
-<input name="${formFieldNameControlVar}" type="hidden" value="true" />
-<#assign formFieldNameIgnoreVar = userFilterOptionVar.formFieldNames[1] >
-<#assign formFieldIgnoreValue = userFilterOptionVar.getFormFieldValue(formFieldNameIgnoreVar) >
-<#assign formFieldControlValue = userFilterOptionVar.getFormFieldValue(formFieldNameControlVar) >
-<div class="controls">
-	<label for="ignore_${formFieldNameIgnoreVar}" class="checkbox">
-	<input id="ignore_${formFieldNameIgnoreVar}" name="${formFieldNameIgnoreVar}" <#if (formFieldIgnoreValue?? && formFieldIgnoreValue == "true")>checked="checked"</#if> value="true" type="checkbox" />
-	<@wp.i18n key="IGNORE" /></label>
-</div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_CheckBox',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
-<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
-<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
-<fieldset>
-<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
-<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
-<div class="control-group">
-	<div class="controls">
-		<label for="true_${formFieldNameVar}" class="checkbox">
-		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="checkbox" />
-		<@wp.i18n key="YES"/></label>
-	</div>
-</div>
-</fieldset>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <p class="title-welcome">Customer Rate</p>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div>
-            <div id="torta"></div>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_ThreeSt',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
-<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
-<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
-<fieldset>
-<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
-<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
-<div class="control-group">
-	<div class="controls">
-		<label for="true_${formFieldNameVar}" class="radio">
-		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="radio" />
-		<@wp.i18n key="YES"/></label>
-		<label for="false_${formFieldNameVar}" class="radio">
-		<input name="${formFieldNameVar}" id="false_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "false")>checked="checked"</#if> value="false" type="radio" />
-		<@wp.i18n key="NO"/></label>
-		<label for="both_${formFieldNameVar}" class="radio">
-		<input name="${formFieldNameVar}" id="both_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "both")>checked="checked"</#if> value="both" type="radio" />
-		<@wp.i18n key="BOTH"/></label>
-	</div>
-</div>
-</fieldset>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('search_result','search_result','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <h1><@wp.i18n key="SEARCH_RESULTS" /></h1>
@@ -2758,34 +2995,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         </div>
     </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Completed</h5>
-        <div class="pull-right">
-            <div class="btn-group">
-                <button type="button" class="btn btn-xs btn-white active">Today</button>
-                <button type="button" class="btn btn-xs btn-white">Monthly</button>
-                <button type="button" class="btn btn-xs btn-white">Annual</button>
-            </div>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="no-margins">1800</h1>
-            </div>
-            <div class="col-md-8">
-                <div class="progress progress-mini margin-top-15">
-                    <div style="width: 44%;" class="progress-bar"></div>
-                </div>
-            </div>
-        </div>
-        <div class="stat-percent font-bold text-info">44% <i class="fa fa-level-up"></i></div>
-        <small>Total tast 2500</small>
-
-    </div>
-
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview-big','fsi-customer-overview-big',NULL,'<div class="ibox float-e-margins fsi-customer-overview-big">
   <div class="ibox-title">
     <h5>Customer Overview</h5>
@@ -2915,72 +3124,6 @@ var chart = c3.generate({
     }
 });
 </script>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="middle-box loginscreen animated fadeInDown">
-    <#if (Session.currentUser.username != "guest") >
-    <#if (Session.currentUser.entandoUser) >
-    <#if (!Session.currentUser.credentialsNotExpired) >
-    <div class="alert alert-block">
-        <p>
-            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
-               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
-        </p>
-    </div>
-    </#if>
-    </#if>
-
-    <p>
-
-        <@wp.ifauthorized groupName="account_executive">
-        <script>window.location = "<@wp.url page="account_executive_dashboard" />";</script>
-        </@wp.ifauthorized>
-        <@wp.ifauthorized groupName="legal_worker">
-        <script>window.location = "<@wp.url page="legal_dashboard" />";</script>
-        </@wp.ifauthorized>
-        <@wp.ifauthorized groupName="knowledge_worker">
-        <script>window.location = "<@wp.url page="knowledge_dashboard" />";</script>
-        </@wp.ifauthorized>
-    </p>
-
-    <#else>
-    <#if (accountExpired?? && accountExpired == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
-    </div>
-    </#if>
-    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
-    </div>
-    </#if>
-    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
-    <form action="<@wp.url/>" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div>
-            <label class="remember-me-label">
-                <input type="checkbox" class="i-checks"> Remember me
-            </label>
-        </div>
-        <div class="form-actions text-center">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-                   <p class="forget">Forgot your password or Email/Username?</p>
-        </div>
-    </form>
-    </#if>
-</div>
 ',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-chandler-hi-dashboard','fsi-chandler-hi-dashboard',NULL,'<h2>Hi Chandler</h2> 
   <ol class="breadcrumb">
@@ -3214,135 +3357,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<ul class="list-unstyled">
-    <li class=" dropdown
-        <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
-        <#if (Session.currentUser != "guest")>
-
-        <a class="dropdown-fsi-login dropdown-toggle" href="#" data-toggle="dropdown">
-            ${Session.currentUser}
-            <span class="caret"></span>&nbsp;
-        </a>
-        <ul class="dropdown-menu dropdown-menu-custom dropdown-messages">
-            <li>
-                <@wp.ifauthorized permission="enterBackend">
-                <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
-                   <@wp.i18n key="ESLF_ADMINISTRATION" />
-            </a>
-            </@wp.ifauthorized>
-        </li>
-        <div class="divider"></div>
-        <li>
-            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
-               <@wp.i18n key="ESLF_SIGNOUT" />
-        </a>
-    </li>
-    <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
-    <#if (editProfilePageVar??) >
-    <li>
-        <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
-    </li>
-    </#if>
-</ul>
-<#else>
-
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-    <@wp.i18n key="ESLF_SIGNIN" />
-    <span class="caret"></span>&nbsp;
-</a>
-<ul class=" dropdown-messages">
-    <li>
-        <form class="m-t" style="padding:10px;" method="POST">
-            <#if (accountExpired?? && accountExpired == true)>
-            <div class="alert alert-error">
-                <button class="close" data-dismiss="alert">x</button>
-                <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
-            </div>
-            </#if>
-            <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
-            <div class="alert alert-error">
-                <button class="close" data-dismiss="alert">x</button>
-                <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
-            </div>
-            </#if>
-            <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
-            </div>
-            <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
-        </form>
-    </li>
-</ul>
-</#if>
-</li>
-</ul>','<#assign wp=JspTaglibs["/aps-core"]>
-<li class=" dropdown
-    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
-    <#if (Session.currentUser != "guest")>
-  
-    <a class="btn  text-left dropdown-toggle" href="#" data-toggle="dropdown">
-        ${Session.currentUser}
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li>
-            <@wp.ifauthorized permission="enterBackend">
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
-               <i class="fa fa-cube"></i>      
-                <@wp.i18n key="ESLF_ADMINISTRATION" />
-            </a>
-            </@wp.ifauthorized>
-        </li>
-        <div class="divider"></div>
-        <li> 
-            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
-               <i class="fa fa-sign-out"></i>           
-                <@wp.i18n key="ESLF_SIGNOUT" />
-            </a>
-        </li>
-        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
-        <#if (editProfilePageVar??) >
-        <li>
-            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
-        </li>
-        </#if>
-    </ul>
-    <#else>
- 
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <@wp.i18n key="ESLF_SIGNIN" />
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li>
-            <form class="m-t" style="padding:10px;" method="POST">
-                <#if (accountExpired?? && accountExpired == true)>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert">x</button>
-                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
-                </div>
-                </#if>
-                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert">x</button>
-                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
-                </div>
-                </#if>
-                <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
-                </div>
-                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
-            </form>
-        </li>
-    </ul>
-    </#if>
-</li>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>Documents check section</h5>
