@@ -207,40 +207,160 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     </div>
 
                 </div>
+
             </div>
         </div>
+
+
+
         <div id="tab-2" class="tab-pane">
             <div class="panel-body">
-                <strong>Onborading</strong>
 
-                <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little world among the
-                    stalks, and grow familiar with the countless indescribable forms of the insects
-                    and flies, then I feel the presence of the Almighty, who formed us in his own image, and the
-                    breath </p>
 
-                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of
-                    souls like mine. I am so happy, my dear friend, so absorbed in the exquisite
-                    sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a
-                    single stroke at the present moment; and yet.</p>
+                <div class="ibox float-e-margins">
+
+
+                    <div class="row">
+                        <div class="col-lg-9 text-align-left">
+                            <h2 style="margin-top:5px;">Onboarding</h2>
+                            <br><br>
+                            <h2 style="margin-top:5px;">AVERAGE TIME CONVERSIONE</h2>
+                        </div>
+                        <div class="col-lg-3 text-align-right">
+                            <div class="input-group"><input type="text" placeholder="Search"
+                                                            class="input-sm form-control">
+                                <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-success"> Go!</button> </span></div>
+                        </div>
+
+
+                        <div class="col-lg-9 text-align-left">
+                            <h4><b>COMPANY FILTER</b></h4>
+                        </div>
+                        <div class="col-lg-3 text-align-right">
+                            <h4><b>TIME FILTER</b></h4>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <select class="form-control m-b">
+                                <option>INDUSTRY TYPE</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control m-b">
+                                <option>CUSTOMER VALUE</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control m-b">
+                                <option>STATE</option>
+                            </select>
+                        </div>
+                        <div class="col-md-offset-3 col-md-3">
+                            <div class="form-group pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-w-m btn-primary active">Year</button>
+                                    <button type="button" class="btn btn-w-m btn-white">Month</button>
+                                    <button type="button" class="btn btn-w-m btn-white">Week</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-9">
+
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control m-b pull-right" style="width: 15em;">
+                                <option>ALL YEAR</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+
+                                <div id="barChart" class="c3" style="max-height: 320px; position: relative;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
         </div>
-    </div>
-</div>
+
+
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
 
-    var chart = c3.generate({
+    c3.generate({
         bindto: ''#lineChart'',
         data: {
             columns: [
-                [''data1'', 30, 200, 100, 400, 150, 250],
-                [''data2'', 50, 20, 10, 40, 15, 25]
+                [''worker selected'', 30, 200, 100, 400, 150, 250,345,987,887,120,555,504],
+                [''average'', 130, 300, 200, 300, 250, 450,456,767,888,231,06,56]
             ]
+        },
+        color: {
+            pattern : [''#18a689'',''#2f4050'']
+
+
+        },
+
+        axis: {
+        x: {
+            type: ''category'',
+                categories: [''JAN'', ''FEB'', ''MAR'', ''APR'', ''MAY'', ''JUN'', ''JUL'', ''AGO'', ''SEP'',''OCT'',''NOV'',''DIC'']
+        }
+    }
+    })
+
+
+
+    c3.generate({
+        bindto: ''#barChart'',
+        data: {
+            x : ''x'',
+            columns: [
+                [''x'', ''JAN'', ''FEB'', ''MAR'', ''APR'', ''MAY'', ''JUN'', ''JUL'', ''AGO'', ''SEP'',''OCT'',''NOV'',''DIC''],
+                [''Onboarded'', 30, 200, 100, 400, 150, 250,345,987,887,120,555,504],
+                [''Lost'', 130, 300, 200, 300, 250, 450,456,767,888,231,06,56],
+            ],
+            groups: [
+                [''Onboarded'', ''Lost'']
+            ],
+            type: ''bar''
+        },
+        bar: {
+            width: 30
+        },
+        color: {
+            pattern : [''#23c6c8'',''#1c84c6'']
+
+
+        },
+        axis: {
+            x: {
+                type: ''category'' // this needed to load string x value
+            }
         }
     });
-
 </script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >

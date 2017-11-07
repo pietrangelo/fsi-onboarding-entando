@@ -174,8 +174,7 @@
 </script>
 
 <%--
-
-
+-----------to decide whether to include it or not---------
 <script>
 
     $(document).ready(function () {
