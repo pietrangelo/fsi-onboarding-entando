@@ -163,7 +163,12 @@
 
     $(document).ready(function () {
         console.log('load pdf viewer');
-        document.getElementById('pdf-viewer').src = '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/js/jspdf/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf'
+
+        target = document.getElementById('pdf-viewer');
+        if (target != null) {
+            target.src = '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/js/jspdf/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf'
+
+        }
 
     });
 </script>
