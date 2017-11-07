@@ -9,7 +9,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"  crossorigin="anonymous">
 
-
+<link rel="stylesheet" href="<wp:resourceURL />static/css/inspina_overrides.css">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/animate.css" rel="stylesheet">
