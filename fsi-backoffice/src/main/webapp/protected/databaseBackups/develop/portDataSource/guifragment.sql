@@ -362,6 +362,161 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         }
     });
 </script>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Documents check section</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="container-pdf">
+            <div class="row"><br></div>
+            <div class="row">
+                <div class="col-md-8 pdf-stuff">
+                    <iframe id="pdf-viewer" style="width: 100%; height: 700px;" allowfullscreen="" webkitallowfullscreen="" ></iframe>
+                </div>
+                <div class="col-md-4 form-stuff ">
+                    <div class="panel-group" id="fsi-pdf-check" role="tablist"></div>
+                    <div class="review-completed-panel">
+                        <h3>REVIEW COMPLETED</h3>
+                        <div class="buttons">
+                            <button disabled type="button" class="btn btn-outlina btn-lg btn-danger reject-btn">REJECT</button>
+                            <button disabled type="button" class="btn btn-outlina btn-lg btn-primary approve-btn">APPROVE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/template" id="accordion-panel-template">
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="###">
+    <h4 class="panel-title">
+    <a role="button" data-toggle="collapse" data-parent="#fsi-pdf-check" href="###" aria-expanded="false" aria-controls="collapseOne">
+    <h2 class="heading-title">###</h2>
+    </a>
+    </h4>
+    </div>
+    <div id="###" class="panel-collapse collapse" role="tabpanel" aria-labelledby="###">
+
+    </div>
+    </div>
+</script>
+<script type="text/template" id="fsi-pdf-field-template">
+    <div class="panel-body fsi-pdf-field">
+    <h2 class="field-name">###</h2>
+    <div><input class="value-input form-control input-custom" value="###" readonly /></div>
+    <div class="button-row">
+    <input type="radio" name="###" class="i-checks radio-approve">
+    <i class="fa fa-check-circle-o"></i>
+    <input type="radio" name="###" class="i-checks radio-reject">
+    <i class="fa fa-times-circle-o"></i>
+
+    </div>
+    </div>
+</script>
+
+<script>
+
+
+
+    $(function () {
+
+        var MOCK_FIELD_DATA = [
+            {
+                title: ''PART I GENERAL INFO'',
+                fields: [
+                    {
+                        name: ''08. Company Name'',
+                        value: ''Interstellar''
+                    },
+                    {
+                        name: ''09. Firm Name'',
+                        value: ''Interstellar Ltd''
+                    },
+                ]
+            },
+            {
+                title: ''PART II DISTRIBUTIONS'',
+                fields: [
+                    {
+                        name: ''10. Customer Name'',
+                        value: ''John Smith''
+                    },
+                    {
+                        name: ''11. Signature'',
+                        value: ''True''
+                    },
+                ]
+            }
+        ];
+
+        var $accordionElement = $(''#fsi-pdf-check'');
+        MOCK_FIELD_DATA.forEach(function (section, i) {
+            var panelElement = $($(''#accordion-panel-template'').html());
+
+            $(panelElement).find(''.heading-title'').text(section.title);
+            $(panelElement).find(''[data-toggle="collapse"]'').attr({
+                ''href'': ''#collapse-'' + i,
+                ''aria-controls'': ''#collapse-'' + i,
+                ''id'': ''toggle-'' + i
+            });
+            $(panelElement).find(''.collapse'').attr({
+                ''aria-labelledby'': ''#toggle-'' + i,
+                ''id'': ''collapse-'' + i
+            });
+
+            $accordionElement.append(panelElement);
+            var panelBody = $(panelElement).find(''.panel-collapse'');
+            section.fields.forEach(function (field, j) {
+                var fieldElement = $($(''#fsi-pdf-field-template'').html());
+                $(fieldElement).find(''.field-name'').text(field.name);
+                $(fieldElement).find(''.value-input'').attr(''value'', field.value);
+                $(fieldElement).find(''input[type="radio"]'').attr(''name'', ''section-'' + i + ''-field-'' + j);
+
+                $(panelBody).append(fieldElement);
+            });
+        });
+        var $rejectBtn = $(''.reject-btn''),
+                $approveBtn = $(''.approve-btn'');
+        function updateButtonStatus() {
+            var nFields = $accordionElement.find(''.fsi-pdf-field'').length;
+            var nRejectedFields = $accordionElement.find(''.radio-reject'').closest(''.iradio_square-green.checked'').length;
+            var nApprovedFields = $accordionElement.find(''.radio-approve'').closest(''.iradio_square-green.checked'').length;
+            if (nRejectedFields > 0) {
+                $rejectBtn.prop(''disabled'', false);
+                $approveBtn.prop(''disabled'', true);
+            } else if (nApprovedFields === nFields) {
+                $rejectBtn.prop(''disabled'', true);
+                $approveBtn.prop(''disabled'', false);
+            } else {
+                $rejectBtn.prop(''disabled'', true);
+                $approveBtn.prop(''disabled'', true);
+            }
+        }
+        setTimeout(function () {
+            $accordionElement.find(''.iradio_square-green ins'').click(function () {
+                updateButtonStatus();
+            });
+        });
+    });
+</script>
+
+
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -3614,154 +3769,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Documents check section</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-<div class="container-pdf">
-    <div class="row"><br></div>
-    <div class="row">
-        <div class="col-md-10 pdf-stuff">
-            <iframe id="pdf-viewer" style="width: 100%; height: 700px;" allowfullscreen="" webkitallowfullscreen="" ></iframe>
-        </div>
-        <div class="col-md-2 form-stuff ">
-            <div class="panel-group" id="fsi-pdf-check" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                               aria-expanded="false" aria-controls="collapseOne">
-                                <h2>PART I GENERAL INFO</h2>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body fsi-pdf-field">
-                            <h2>08. Company Name</h2>
-                            <div><input class="form-control input-custom" value="Interstellar" readonly/></div>
-                            <div class="button-row">
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-check-circle-o"></i>
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-times-circle-o"></i>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </div>
-
-                        <div class="panel-body fsi-pdf-field">
-                            <h2>09. Firm Name</h2>
-                            <div><input class="form-control input-custom" value="Interstellar Ltd" readonly/></div>
-                            <div class="button-row">
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-check-circle-o"></i>
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-times-circle-o"></i>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </div>
-
-                        <div class="panel-body fsi-pdf-field">
-                            <h2>10. Customer Name</h2>
-                            <div><input class="form-control input-custom" value="John Name" readonly/></div>
-                            <div class="button-row">
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-check-circle-o"></i>
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-times-circle-o"></i>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </div>
-
-                        <div class="panel-body fsi-pdf-field">
-                            <h2>11. Signature</h2>
-                            <div><input class="form-control input-custom" value="No" readonly/></div>
-                            <div class="button-row">
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-check-circle-o"></i>
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-times-circle-o"></i>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                               aria-expanded="false" aria-controls="collapseOne">
-                                <h2>PART II DISTRIBUTIONS</h2>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body fsi-pdf-field">
-                            <h2>08. Company Name</h2>
-                            <div><input class="form-control input-custom" value="Interstellar" readonly/></div>
-                            <div class="button-row">
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-check-circle-o"></i>
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-times-circle-o"></i>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </div>
-
-                        <div class="panel-body fsi-pdf-field">
-                            <h2>09. Firm Name</h2>
-                            <div><input class="form-control input-custom" value="Nenno" readonly/></div>
-                            <div class="button-row">
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-check-circle-o"></i>
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-times-circle-o"></i>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </div>
-
-                        <div class="panel-body fsi-pdf-field">
-                            <h2>10. Customer Name</h2>
-                            <div><input class="form-control input-custom" value="Jack Smidth" readonly/></div>
-                            <div class="button-row">
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-check-circle-o"></i>
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-times-circle-o"></i>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </div>
-
-                        <div class="panel-body fsi-pdf-field">
-                            <h2>11. Signature</h2>
-                            <div><input class="form-control input-custom" value="Yes" readonly/></div>
-                            <div class="button-row">
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-check-circle-o"></i>
-                                <input type="radio" name="testField1" class="i-checks">
-                                <i class="fa fa-times-circle-o"></i>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </div>
-    </div>
-</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-mock-datatable-account','fsi-mock-datatable-account',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>BPM data table</h5>
