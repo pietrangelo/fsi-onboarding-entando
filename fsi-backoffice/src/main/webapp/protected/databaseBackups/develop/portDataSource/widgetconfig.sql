@@ -29,3 +29,7 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('form_mob
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'fsi-mock-datatable-account',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',6,'fsi-performance',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',10,'fsi-customer-overview',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',11,'fsi-customer-rate',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',12,'fsi-state',NULL);

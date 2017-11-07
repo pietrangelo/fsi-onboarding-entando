@@ -29,3 +29,7 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('kn
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',12,'fsi-backlog',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',14,'fsi-mock-datatable-backoffice',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('form_mobile',13,'complete-registration-BPM',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',6,'fsi-performance',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',10,'fsi-customer-overview',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',11,'fsi-customer-rate',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',12,'fsi-state',NULL);
