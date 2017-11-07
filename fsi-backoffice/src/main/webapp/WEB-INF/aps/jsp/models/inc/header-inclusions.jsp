@@ -14,7 +14,11 @@
 <link rel="stylesheet" href="<wp:resourceURL />static/css/morris-0.4.3.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/jasny.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/jquery.dataTables.css" rel="stylesheet">
-<link rel="stylesheet" href="<wp:resourceURL />static/css/viewer.css" rel="stylesheet">
+<%--
+
+<link rel="stylesheet" href="<wp:resourceURL />static/js/jspdf/web/viewer.css" rel="stylesheet">
+<link rel="resource" type="application/l10n" href="<wp:resourceURL />static/js/jspdf/web/locale/locale.properties">
+--%>
 
 
 <script src="<wp:resourceURL />static/js/bootstrap.min.js"></script>

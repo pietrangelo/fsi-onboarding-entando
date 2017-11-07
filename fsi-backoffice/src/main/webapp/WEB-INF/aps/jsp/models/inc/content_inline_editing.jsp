@@ -6,9 +6,9 @@
 <script src="<wp:resourceURL />administration/js/inline-editing/jqueryui-editable.min.js"></script>
 <link rel="stylesheet" href="<wp:resourceURL />administration/css/jquery-ui-1.10.1.custom.css" media="screen"/>
 <link rel="stylesheet" href="<wp:resourceURL />administration/css/jqueryui-editable.css" media="screen"/>
-<script src="<wp:resourceURL />static/js/pdf.js"></script>
-<script src="<wp:resourceURL />static/js/pdf.worker.js"></script>
-<script src="<wp:resourceURL />static/js/viewer.js"></script>
+<%--<script src="<wp:resourceURL />static/js/jspdf/build/pdf.js"></script>
+<script src="<wp:resourceURL />static/js/jspdf/build/pdf.worker.js"></script>
+<script src="<wp:resourceURL />static/js/jspdf/web/viewer.js"></script>--%>
 <script src="<wp:resourceURL />static/js/jquery.dataTables.min.js"></script>
 
 <!-----------inclusione x-editable inline------------------------>
@@ -159,15 +159,16 @@
     });
 </script>
 
-
 <script>
 
     $(document).ready(function () {
-        document.getElementById('pdfViewer').src = 'http://mozilla.github.com/pdf.js/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf'
+        console.log('load pdf viewer');
+        document.getElementById('pdf-viewer').src = '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/js/jspdf/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf'
 
     });
 </script>
 
+<%--
 
 
 <script>
@@ -210,7 +211,7 @@
         var url = '//cdn.mozilla.net/pdfjs/tracemonkey1.pdf';
 
         // The workerSrc property shall be specified.
-        PDFJS.workerSrc = '<wp:info key="systemParam" paramName="applicationBaseURL" />resources/static/js/pdf.worker.js';
+        PDFJS.workerSrc = '<wp:info key="systemParam" paramName="applicationBaseURL" />resources/static/js/jspdf/build/pdf.worker.js';
 
         var pdfDoc = null,
             pageNum = 1,
@@ -387,3 +388,4 @@
 </script>
 
 
+--%>
