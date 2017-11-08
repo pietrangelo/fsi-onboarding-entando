@@ -24,7 +24,7 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_bi
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_bic','it','bic (client)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_id','en','id (client)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_id','it','id (client)');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_TITLE_ClientOnboardingProcess','en','PROCESS CLIENTON BOARDING PROCESS');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_TITLE_ClientOnboardingProcess','en','PROCESS CLIENT ON-BOARDING');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_TITLE_ClientOnboardingProcess','it','PROCESS CLIENTONBOARDINGPROCESS');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('GENERIC_ERROR','it','Errore Generico');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PAGE','en','page');

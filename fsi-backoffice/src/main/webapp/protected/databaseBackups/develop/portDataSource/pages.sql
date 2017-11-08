@@ -3,10 +3,10 @@ INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('login','service',6,'f
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('notfound','service',4,'free');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('errorpage','service',5,'free');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('homepage','homepage',-1,'free');
-INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('backoffice','homepage',6,'free');
-INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_customer','homepage',8,'account_executive');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('form_mobile','homepage',11,'free');
-INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_dashboard','homepage',7,'account_executive');
-INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('knowledge_dashboard','homepage',9,'account_executive');
-INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('legal_dashboard','homepage',10,'account_executive');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('client_onboarding_manager','homepage',12,'account_executive');
+INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('legal_dashboard','homepage',10,'account_executive');
+INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('knowledge_dashboard','homepage',9,'account_executive');
+INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_customer','homepage',8,'account_executive');
+INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_dashboard','homepage',7,'account_executive');
+INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('backoffice','homepage',6,'free');

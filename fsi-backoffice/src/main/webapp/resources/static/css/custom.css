@@ -1959,3 +1959,28 @@ a.dropdown-fsi-login {
     text-decoration: none;
     padding: 20px;
 }
+.mobile-background{
+    background: #eaeaea;
+}
+
+.bpm-title{
+    font-size: 22px;
+    text-transform: capitalize;
+    margin: 0 0 24px 0;
+    color: #676A6C;
+    font-weight: 600;
+}
+.fsi-backoffice-footer{
+    background: none repeat scroll 0 0 white;
+    border-top: 1px solid #e7eaec;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+}
+.fsi-backoffice-footer span{
+    font-weight:600;
+    line-height: 22px;
+}

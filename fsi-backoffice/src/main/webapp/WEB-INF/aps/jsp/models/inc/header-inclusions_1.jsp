@@ -30,3 +30,4 @@
 <script src="<wp:resourceURL />static/js/raphael-2.1.0.min.js"></script>
 <script src="<wp:resourceURL />static/js/datepicker.js"></script>
 <script src="<wp:resourceURL />static/js/jasny.js"></script>
+<script src="<wp:resourceURL />static/js/icheck.min.js"></script>

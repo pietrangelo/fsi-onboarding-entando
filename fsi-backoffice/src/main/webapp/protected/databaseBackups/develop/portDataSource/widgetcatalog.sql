@@ -40,6 +40,9 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-overview','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Customer Overview</property><property key="it">FSI Panoramica Cliente</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('generic-footer','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Footer backoffice</property><property key="it">FSI Footer backoffice</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-registration-form-advanced','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI registration advanced</property><property key="it">FSI registrazione avanzata</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
