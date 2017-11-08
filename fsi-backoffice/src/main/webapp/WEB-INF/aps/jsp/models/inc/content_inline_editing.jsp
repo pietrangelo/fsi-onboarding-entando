@@ -170,15 +170,16 @@
             uint8Array[i] = raw.charCodeAt(i);
         }
         return uint8Array;
-    };
+    }
+    ;
 
     $(document).ready(function () {
         console.log('load pdf viewer');
         var iframe = document.getElementById('pdf-viewer');
-        if (iframe !== null ) {
+        if (iframe !== null) {
             iframe.src = '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/js/jspdf/web/viewer.html';
-            iframe.onload = function(){
-                iframe.contentWindow.postMessage("compressed.tracemonkey-pldi-09.pdf","*");
+            iframe.onload = function () {
+                iframe.contentWindow.postMessage("compressed.tracemonkey-pldi-09.pdf", "*");
             }
         }
 
@@ -186,8 +187,6 @@
 
 </script>
 
-
------------to decide whether to include it or not---------
 <script>
 
     $(document).ready(function () {
@@ -231,11 +230,11 @@
         //PDFJS.workerSrc = '<wp:info key="systemParam" paramName="applicationBaseURL" />resources/static/js/pdf.worker.js';
 
         var pdfDoc = null,
-            pageNum = 1,
-            pageRendering = false,
-            pageNumPending = null,
-            scale = 1,
-            canvas = document.getElementById('the-canvas');
+                pageNum = 1,
+                pageRendering = false,
+                pageNumPending = null,
+                scale = 1,
+                canvas = document.getElementById('the-canvas');
         $('#pdf-zoom-document').val(scale);
         if (canvas !== null) {
             ctx = canvas.getContext('2d');
@@ -366,9 +365,9 @@
                     }
                     document.getElementById("thumbnail-pdf").appendChild(div);
                     return pdfDoc_.getPage(num).then(makeThumb)
-                        .then(function (canvas) {
-                            div.appendChild(canvas);
-                        });
+                            .then(function (canvas) {
+                                div.appendChild(canvas);
+                            });
                 })).then(function () {
                     canvas = document.getElementById('the-canvas');
                     ctx = canvas.getContext('2d');
