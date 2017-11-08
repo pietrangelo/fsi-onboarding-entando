@@ -517,6 +517,72 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
 
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('dropdown_menu_responsive','dropdown_menu_responsive',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<ul class="list-unstyled menu-pos">
+    <li class=" dropdown <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+        <#if (Session.currentUser != "guest")>
+        <a class="dropdown-toggle dropdown-fsi-login" href="#" data-toggle="dropdown">
+            ${Session.currentUser}
+            <span class="caret"></span>&nbsp;
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <@wp.ifauthorized permission="enterBackend">
+                <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+                   <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+               <@wp.i18n key="ESLF_SIGNOUT" />
+        </a>
+    </li>
+    <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+    <#if (editProfilePageVar??) >
+    <li>
+        <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+    </li>
+    </#if>
+</ul>
+<#else>
+
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <@wp.i18n key="ESLF_SIGNIN" />
+    <span class="caret"></span>&nbsp;
+</a>
+<ul class=" dropdown-messages">
+    <li>
+        <form class="m-t" style="padding:10px;" method="POST">
+            <#if (accountExpired?? && accountExpired == true)>
+            <div class="alert alert-error">
+                <button class="close" data-dismiss="alert">x</button>
+                <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+            </div>
+            </#if>
+            <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+            <div class="alert alert-error">
+                <button class="close" data-dismiss="alert">x</button>
+                <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+            </div>
+            </#if>
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+            </div>
+            <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+        </form>
+    </li>
+</ul>
+</#if>
+</li>
+</ul>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('generic-footer','generic-footer',NULL,'<div class="fsi-backoffice-footer">
+<span>Copyright Fortress Bank & Loan &commat; 2017</span>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -557,32 +623,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Bool_io',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign formFieldNameControlVar = userFilterOptionVar.formFieldNames[2] >
-<input name="${formFieldNameControlVar}" type="hidden" value="true" />
-<#assign formFieldNameIgnoreVar = userFilterOptionVar.formFieldNames[1] >
-<#assign formFieldIgnoreValue = userFilterOptionVar.getFormFieldValue(formFieldNameIgnoreVar) >
-<#assign formFieldControlValue = userFilterOptionVar.getFormFieldValue(formFieldNameControlVar) >
-<div class="controls">
-	<label for="ignore_${formFieldNameIgnoreVar}" class="checkbox">
-	<input id="ignore_${formFieldNameIgnoreVar}" name="${formFieldNameIgnoreVar}" <#if (formFieldIgnoreValue?? && formFieldIgnoreValue == "true")>checked="checked"</#if> value="true" type="checkbox" />
-	<@wp.i18n key="IGNORE" /></label>
-</div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_CheckBox',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
-<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
-<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
-<fieldset>
-<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
-<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
-<div class="control-group">
-	<div class="controls">
-		<label for="true_${formFieldNameVar}" class="checkbox">
-		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="checkbox" />
-		<@wp.i18n key="YES"/></label>
-	</div>
-</div>
-</fieldset>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <ul class="list-unstyled">
     <li class=" dropdown
@@ -712,6 +752,32 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Bool_io',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign formFieldNameControlVar = userFilterOptionVar.formFieldNames[2] >
+<input name="${formFieldNameControlVar}" type="hidden" value="true" />
+<#assign formFieldNameIgnoreVar = userFilterOptionVar.formFieldNames[1] >
+<#assign formFieldIgnoreValue = userFilterOptionVar.getFormFieldValue(formFieldNameIgnoreVar) >
+<#assign formFieldControlValue = userFilterOptionVar.getFormFieldValue(formFieldNameControlVar) >
+<div class="controls">
+	<label for="ignore_${formFieldNameIgnoreVar}" class="checkbox">
+	<input id="ignore_${formFieldNameIgnoreVar}" name="${formFieldNameIgnoreVar}" <#if (formFieldIgnoreValue?? && formFieldIgnoreValue == "true")>checked="checked"</#if> value="true" type="checkbox" />
+	<@wp.i18n key="IGNORE" /></label>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_CheckBox',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
+<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
+<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
+<fieldset>
+<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
+<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
+<div class="control-group">
+	<div class="controls">
+		<label for="true_${formFieldNameVar}" class="checkbox">
+		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="checkbox" />
+		<@wp.i18n key="YES"/></label>
+	</div>
+</div>
+</fieldset>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_ThreeSt',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >

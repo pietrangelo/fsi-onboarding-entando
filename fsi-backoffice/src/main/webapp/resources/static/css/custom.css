@@ -1946,3 +1946,41 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .review-completed-panel .buttons button {
     flex-grow: 1;
 }
+.menu-pos .open > a, .menu-pos .open > a:hover, .menu-pos .open > a:focus {
+    background: #084465;
+    padding: 20px;
+}
+a.dropdown-fsi-login {
+    font-size: 13px !important;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    line-height: 22px;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+}
+.mobile-background{
+    background: #eaeaea;
+}
+
+.bpm-title{
+    font-size: 22px;
+    text-transform: capitalize;
+    margin: 0 0 24px 0;
+    color: #676A6C;
+    font-weight: 600;
+}
+.fsi-backoffice-footer{
+    background: none repeat scroll 0 0 white;
+    border-top: 1px solid #e7eaec;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+}
+.fsi-backoffice-footer span{
+    font-weight:600;
+    line-height: 22px;
+}
