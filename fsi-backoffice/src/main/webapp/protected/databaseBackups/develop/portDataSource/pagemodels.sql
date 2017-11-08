@@ -839,23 +839,17 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-c
                             <a href="#"><i class="fa fa-user"></i></a>
                         </li>
                     </ul>
-
                 </div>
             </nav>
-
             <div id="page-wrapper" class="gray-bg dashbard-1">
                 <div class="row border-bottom">
                     <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                         <div class="navbar-header">
-
                             <div class="logo-names">
                                 <@wp.show frame=0 />
-
                                 <b>FORTRESS -</b>
                                 <span>Bank &amp; Loan</span>
-                           
                             </div>
-
                         </div>
                         <ul class="nav navbar-top-links navbar-right">
                             <li>
@@ -919,7 +913,6 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-c
                             </li>
                             <li class="dropdown">
                                 <@wp.show frame=3 />
-
                                 <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="false">
                                     <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
                                 </a>
@@ -971,91 +964,83 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-c
                     </nav>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="wrapper wrapper-content">
+                <div class="">
 
-
-                            <@wp.ifauthorized groupName="client_manager">
-                           
-                            <style>
-                                .navbar-fixed-top, .navbar-static-top {
-                                    background: #3A3E46;
-                                }
-                                .metismenu > li.active {
-                                   border-left: 4px solid #1CB295;
-                                   background: #292D35;
-                                }
-                                #wrapper {
-                                    width: 100%;
-                                    overflow-x: hidden;
-                                    background: #3A3E46;
-                                }
-                                .logo-element {
-                                    text-align: center;
-                                    font-size: 18px;
-                                    font-weight: 600;
-                                    color: white;
-                                    display: none;
-                                    padding: 9px 0;
-                                    background: #3A3E46;
-                                }
-                            </style>
-                           
-                           
-                            <div class="fsi-customer-header">
-                                <h2>Hi John William</h2>
-                                <ol class="breadcrumb">
-                                    <li>
-                                        <a href="#"><@wp.currentPage param="title" /></a>
-                                    </li>
-                                </ol>
-                            </div>
-                            </@wp.ifauthorized>
-
-                            <div class="col-md-12">
-                                <@wp.show frame=6 />
-                            </div>
-                           
+                    <div class="wrapper wrapper-content">
+                        <@wp.ifauthorized groupName="client_manager">
+                        <style>
+                            .navbar-fixed-top, .navbar-static-top {
+                                background: #3A3E46;
+                            }
+                            .metismenu > li.active {
+                                border-left: 4px solid #1CB295;
+                                background: #292D35;
+                            }
+                            #wrapper {
+                                width: 100%;
+                                overflow-x: hidden;
+                                background: #3A3E46;
+                            }
+                            .logo-element {
+                                text-align: center;
+                                font-size: 18px;
+                                font-weight: 600;
+                                color: white;
+                                display: none;
+                                padding: 9px 0;
+                                background: #3A3E46;
+                            }
+                        </style>
+                        <div class="fsi-customer-header">
+                            <h2>Hi John William</h2>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="#"><@wp.currentPage param="title" /></a>
+                                </li>
+                            </ol>
                         </div>
-                        <div class="row">
-                         <div class="col-md-4">
-                                <@wp.show frame=7 />
-                            </div>
-                            <div class="col-md-4">
-                                <@wp.show frame=8 />
-                            </div>
-                            <div class="col-md-4">
-                                <@wp.show frame=9 />
-                            </div>
+                        </@wp.ifauthorized>
+                        <div class="col-md-12">
+                            <@wp.show frame=6 />
                         </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <@wp.show frame=10 />
-                            </div>
-                            <div class="col-md-4">
-                                <@wp.show frame=11/>
-                            </div>
-                            <div class="col-md-4">
-                                <@wp.show frame=12 />
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <@wp.show frame=7 />
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <@wp.show frame=13 />
-                            </div>
+                        <div class="col-md-4">
+                            <@wp.show frame=8 />
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <@wp.show frame=14 />
-                            </div>
+                        <div class="col-md-4">
+                            <@wp.show frame=9 />
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <@wp.show frame=10 />
+                        </div>
+                        <div class="col-md-4">
+                            <@wp.show frame=11/>
+                        </div>
+                        <div class="col-md-4">
+                            <@wp.show frame=12 />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <@wp.show frame=13 />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <@wp.show frame=14 />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:3em;">
+                        <@wp.show frame=15 />
                     </div>
                 </div>
             </div>
-                <div class="row" style="margin-top:3em;">
-                  <@wp.show frame=15 />
-                </div>
         </div>
     </body>
 </html>

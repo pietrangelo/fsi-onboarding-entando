@@ -39,7 +39,7 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('ba
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('backoffice',12,'fsi-backlog',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('backoffice',13,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('backoffice',15,'generic-footer',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',6,'fsi-performance',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',6,'fsi-perfomance-bar',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',7,'fsi-customer-overview',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',8,'fsi-customer-rate',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',9,'fsi-state',NULL);

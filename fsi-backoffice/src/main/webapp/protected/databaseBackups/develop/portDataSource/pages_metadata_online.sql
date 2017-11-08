@@ -54,19 +54,6 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-11-08 15:05:59');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('client_onboarding_manager','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Client Onboarding Manager</property><property key="it">Client Onboarding Manager</property></properties>
-','fsi-client-onboarding',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="client_manager" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-08 16:34:24');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('legal_dashboard','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Compliance Manager Dashboard</property><property key="it">Compliance Manager Dashboard</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -116,3 +103,16 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-11-08 17:09:29');
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('client_onboarding_manager','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Client Onboarding Manager</property><property key="it">Client Onboarding Manager</property></properties>
+','fsi-client-onboarding',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="client_manager" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-08 17:40:32');

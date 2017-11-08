@@ -105,263 +105,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_client_on_board_mananger_tabs','fsi_client_on_board_mananger_tabs',NULL,'<div class="fsi-customer-rate">
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Customer rate</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-<div class="tabs-container">
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> Prospects count </a></li>
-        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Onboarding</a></li>
-    </ul>
-    <div class="tab-content">
-        <div id="tab-1" class="tab-pane active">
-            <div class="panel-body">
-
-
-                <div class="ibox float-e-margins">
-
-
-                    <div class="row">
-                        <div class="col-lg-9 text-align-left">
-                            <h2 style="margin-top:5px;">Prospect count</h2>
-                        </div>
-                        <div class="col-lg-3 text-align-right">
-                            <div class="input-group"><input type="text" placeholder="Search"
-                                                            class="input-sm form-control">
-                                <span class="input-group-btn">
-                                        <button type="button" class="btn btn-sm btn-success"> Go!</button> </span></div>
-                        </div>
-
-
-                        <div class="col-lg-9 text-align-left">
-                            <h4><b>COMPANY FILTER</b></h4>
-                        </div>
-                        <div class="col-lg-3 text-align-right">
-                            <h4><b>TIME FILTER</b></h4>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <select class="form-control m-b">
-                                <option>INDUSTRY TYPE</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <select class="form-control m-b">
-                                <option>CUSTOMER VALUE</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <select class="form-control m-b">
-                                <option>STATE</option>
-                            </select>
-                        </div>
-                        <div class="col-md-offset-3 col-md-3">
-                            <div class="form-group pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-w-m btn-primary active">Year</button>
-                                    <button type="button" class="btn btn-w-m btn-white">Month</button>
-                                    <button type="button" class="btn btn-w-m btn-white">Week</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-md-9">
-
-                        </div>
-                        <div class="col-md-3">
-                            <select class="form-control m-b pull-right" style="width: 15em;">
-                                <option>ALL YEAR</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div>
-
-                                <div id="lineChart" class="c3" style="max-height: 320px; position: relative;"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-
-
-        <div id="tab-2" class="tab-pane">
-            <div class="panel-body">
-
-
-                <div class="ibox float-e-margins">
-
-
-                    <div class="row">
-                        <div class="col-lg-9 text-align-left">
-                            <h2 style="margin-top:5px;">Onboarding</h2>
-                            <br><br>
-                            <h2 style="margin-top:5px;">AVERAGE TIME CONVERSIONE</h2>
-                        </div>
-                        <div class="col-lg-3 text-align-right">
-                            <div class="input-group"><input type="text" placeholder="Search"
-                                                            class="input-sm form-control">
-                                <span class="input-group-btn">
-                                        <button type="button" class="btn btn-sm btn-success"> Go!</button> </span></div>
-                        </div>
-
-
-                        <div class="col-lg-9 text-align-left">
-                            <h4><b>COMPANY FILTER</b></h4>
-                        </div>
-                        <div class="col-lg-3 text-align-right">
-                            <h4><b>TIME FILTER</b></h4>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <select class="form-control m-b">
-                                <option>INDUSTRY TYPE</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <select class="form-control m-b">
-                                <option>CUSTOMER VALUE</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <select class="form-control m-b">
-                                <option>STATE</option>
-                            </select>
-                        </div>
-                        <div class="col-md-offset-3 col-md-3">
-                            <div class="form-group pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-w-m btn-primary active">Year</button>
-                                    <button type="button" class="btn btn-w-m btn-white">Month</button>
-                                    <button type="button" class="btn btn-w-m btn-white">Week</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-md-9">
-
-                        </div>
-                        <div class="col-md-3">
-                            <select class="form-control m-b pull-right" style="width: 15em;">
-                                <option>ALL YEAR</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div>
-
-                                <div id="barChart" class="c3" style="max-height: 320px; position: relative;"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-
-    c3.generate({
-        bindto: ''#lineChart'',
-        data: {
-            columns: [
-                [''worker selected'', 30, 200, 100, 400, 150, 250,345,987,887,120,555,504],
-                [''average'', 130, 300, 200, 300, 250, 450,456,767,888,231,06,56]
-            ]
-        },
-        color: {
-            pattern : [''#18a689'',''#2f4050'']
-
-
-        },
-
-        axis: {
-        x: {
-            type: ''category'',
-                categories: [''JAN'', ''FEB'', ''MAR'', ''APR'', ''MAY'', ''JUN'', ''JUL'', ''AGO'', ''SEP'',''OCT'',''NOV'',''DIC'']
-        }
-    }
-    })
-
-
-
-    c3.generate({
-        bindto: ''#barChart'',
-        data: {
-            x : ''x'',
-            columns: [
-                [''x'', ''JAN'', ''FEB'', ''MAR'', ''APR'', ''MAY'', ''JUN'', ''JUL'', ''AGO'', ''SEP'',''OCT'',''NOV'',''DIC''],
-                [''Onboarded'', 30, 200, 100, 400, 150, 250,345,987,887,120,555,504],
-                [''Lost'', 130, 300, 200, 300, 250, 450,456,767,888,231,06,56],
-            ],
-            groups: [
-                [''Onboarded'', ''Lost'']
-            ],
-            type: ''bar''
-        },
-        bar: {
-            width: 30
-        },
-        color: {
-            pattern : [''#23c6c8'',''#1c84c6'']
-
-
-        },
-        axis: {
-            x: {
-                type: ''category'' // this needed to load string x value
-            }
-        }
-    });
-</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'
 <div class="ibox float-e-margins">
     <div class="ibox-title">
@@ -517,6 +260,276 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
 
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_client_on_board_mananger_tabs','fsi_client_on_board_mananger_tabs',NULL,'<div class="fsi-customer-rate">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Client On Board Mananger </h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="tabs-container">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> Prospects count </a>
+                    </li>
+                    <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Onboarding</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                        <div class="panel-body">
+
+
+                            <div class="ibox float-e-margins">
+
+
+                                <div class="row">
+                                    <div class="col-lg-9 text-align-left">
+                                        <h2 style="margin-top:5px;">Prospect count</h2>
+                                    </div>
+                                    <div class="col-lg-3 text-align-right">
+                                        <div class="input-group"><input type="text" placeholder="Search"
+                                                                        class="input-sm form-control">
+                                            <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-success"> Go!</button> </span></div>
+                                    </div>
+
+
+                                    <div class="col-lg-9 text-align-left">
+                                        <h4><b>COMPANY FILTER</b></h4>
+                                    </div>
+                                    <div class="col-lg-3 text-align-right">
+                                        <h4><b>TIME FILTER</b></h4>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <select class="form-control m-b">
+                                            <option>INDUSTRY TYPE</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <select class="form-control m-b">
+                                            <option>CUSTOMER VALUE</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <select class="form-control m-b">
+                                            <option>STATE</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-offset-3 col-md-3">
+                                        <div class="form-group pull-right">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-w-m btn-primary active">Year
+                                                </button>
+                                                <button type="button" class="btn btn-w-m btn-white">Month</button>
+                                                <button type="button" class="btn btn-w-m btn-white">Week</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-9">
+
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select class="form-control m-b pull-right" style="width: 15em;">
+                                            <option>ALL YEAR</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <hr/>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div>
+
+                                            <div id="lineChart" class="c3"
+                                                 style="max-height: 320px; position: relative;"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div id="tab-2" class="tab-pane">
+                        <div class="panel-body">
+
+
+                            <div class="ibox float-e-margins">
+
+
+                                <div class="row">
+                                    <div class="col-md-12 text-align-left">
+                                        <h2 style="margin-top:5px;">Average Time Convesion</h2>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" id="example_id" name="example_name" value=""/>
+                                        <script>
+                                            $("#example_id").ionRangeSlider({
+                                                grid:true,
+                                                type: "double",
+                                                from:1,
+                                                to: 5,
+                                                values: ["1h","2d", "4d","6d", "8d","12d","14d"]
+                                                });
+                                        </script>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="col-md-12 text-align-left">
+                                <h4><b>Company Filter</b></h4>
+                            </div>
+
+                        </div>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <select class="form-control m-b">
+                                    <option>Industry Type</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <select class="form-control m-b">
+                                    <option>Customer Value</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <select class="form-control m-b">
+                                    <option>State</option>
+                                </select>
+                            </div>
+                            <div class="col-md-offset-3 col-md-3">
+                                <div class="form-group pull-right">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-w-m btn-white active">All</button>
+                                        <button type="button" class="btn btn-w-m btn-white">Year</button>
+                                        <button type="button" class="btn btn-w-m btn-white">Month</button>
+                                        <button type="button" class="btn btn-w-m btn-white">Week</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4" style="text-align: center">
+                                <div style="display: inline-flex">
+                                <i class="fa fa-chevron-left" style="margin-right: 2em;"></i>
+                                    <h4 class="no-margins">2017</h4>
+                                    <i class="fa fa-chevron-right" style="margin-left: 2em;"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-4"></div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+
+                                    <div id="barChart" class="c3" style="max-height: 320px; position: relative;"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+
+    c3.generate({
+        bindto: ''#lineChart'',
+        data: {
+            columns: [
+                [''worker selected'', 30, 200, 100, 400, 150, 250, 345, 987, 887, 120, 555, 504],
+                [''average'', 130, 300, 200, 300, 250, 450, 456, 767, 888, 231, 06, 56]
+            ]
+        },
+        color: {
+            pattern: [''#18a689'', ''#2f4050'']
+
+
+        },
+
+        axis: {
+            x: {
+                type: ''category'',
+                categories: [''JAN'', ''FEB'', ''MAR'', ''APR'', ''MAY'', ''JUN'', ''JUL'', ''AGO'', ''SEP'', ''OCT'', ''NOV'', ''DIC'']
+            }
+        }
+    })
+
+
+    c3.generate({
+        bindto: ''#barChart'',
+            data: {
+            x: ''x'',
+            columns: [
+                [''x'', ''JAN'', ''FEB'', ''MAR'', ''APR'', ''MAY'', ''JUN'', ''JUL'', ''AGO'', ''SEP'', ''OCT'', ''NOV'', ''DIC''],
+                [''Onboarded'', 30, 100, 20, 40, 15, 25, 34, 97, 87, 12, 55, 50, 23, 45, 78 ,65 ,30, 78, 56,35,26,22],
+                [''Lost'', 13, 3, 20, 30, 25, 45, 45, 76, 88, 23, 06, 56,45,78,34,22,11,66,88,99,77],
+            ],
+            groups: [
+                [''Onboarded'', ''Lost'']
+            ],
+            type: ''bar''
+        },
+        legend: { position: ''inset'' },
+        bar: {
+            width: 30
+        },
+        color: {
+            pattern: [''#1ABC9C'',''#898EB4'']
+
+
+        },
+        axis: {
+            x: {
+                type: ''category'' // this needed to load string x value
+            }
+        }
+    });
+</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('dropdown_menu_responsive','dropdown_menu_responsive',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <ul class="list-unstyled menu-pos">
     <li class=" dropdown <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
@@ -582,6 +595,50 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </ul>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('generic-footer','generic-footer',NULL,'<div class="fsi-backoffice-footer">
 <span>Copyright Fortress Bank & Loan &commat; 2017</span>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-perfomance-bar','fsi-perfomance-bar',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Team Performance</h5>
+        <div class="ibox-tools">
+            <select class="m-b" style="width: 5%; background: #fff; border-width: 0px;">
+                <option>This Year</option>
+            </select>
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        <div class="row">
+            <div class="col-md-2"><small>Added</small></div>
+            <div class="col-md-2"><small><b>315</b></small></div>
+            <div class="col-md-2"><small>Customer ot these</small></div>
+            <div class="col-md-2"><small><b>5750</b></small></div>
+            <div class="col-md-2 pull-left"><small>Complete the registration</small></div>
+            <div class="col-md-2 pull-right">
+                <small>Team aim 10,000</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="progress progress-mini">
+                    <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
+                         class="progress-bar progress-bar-success"></div>
+
+                    <div style="width: 20%" class="progress-bar progress-default">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
