@@ -10181,6 +10181,13 @@ function webViewerLoad() {
   var config = getViewerConfiguration();
   window.PDFViewerApplication = pdfjsWebApp.PDFViewerApplication;
   pdfjsWebApp.PDFViewerApplication.run(config);
+
+  window.addEventListener("message", receiveMessage, false);
+    function receiveMessage(event)
+    {
+        window.PDFViewerApplication.open(event.data);
+    }
+
 }
 if (document.readyState === 'interactive' || document.readyState === 'complete') {
   webViewerLoad();

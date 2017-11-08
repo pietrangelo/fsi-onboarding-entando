@@ -6,9 +6,9 @@
 <script src="<wp:resourceURL />administration/js/inline-editing/jqueryui-editable.min.js"></script>
 <link rel="stylesheet" href="<wp:resourceURL />administration/css/jquery-ui-1.10.1.custom.css" media="screen"/>
 <link rel="stylesheet" href="<wp:resourceURL />administration/css/jqueryui-editable.css" media="screen"/>
-<%--<script src="<wp:resourceURL />static/js/jspdf/build/pdf.js"></script>
-<script src="<wp:resourceURL />static/js/jspdf/build/pdf.worker.js"></script>
-<script src="<wp:resourceURL />static/js/jspdf/web/viewer.js"></script>--%>
+<script src="<wp:resourceURL />static/js/pdf.js"></script>
+<script src="<wp:resourceURL />static/js/pdf.worker.js"></script>
+<%--<script src="<wp:resourceURL />static/js/jspdf/web/viewer.js"></script>--%>
 <script src="<wp:resourceURL />static/js/jquery.dataTables.min.js"></script>
 
 <!-----------inclusione x-editable inline------------------------>
@@ -159,21 +159,34 @@
     });
 </script>
 
+
+
 <script>
+
+    function base64ToUint8Array(base64) {
+        var raw = atob(base64);
+        var uint8Array = new Uint8Array(raw.length);
+        for (var i = 0; i < raw.length; i++) {
+            uint8Array[i] = raw.charCodeAt(i);
+        }
+        return uint8Array;
+    };
 
     $(document).ready(function () {
         console.log('load pdf viewer');
-
-        target = document.getElementById('pdf-viewer');
-        if (target != null) {
-            target.src = '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/js/jspdf/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf'
-
+        var iframe = document.getElementById('pdf-viewer');
+        if (iframe !== null ) {
+            iframe.src = '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/js/jspdf/web/viewer.html';
+            iframe.onload = function(){
+                iframe.contentWindow.postMessage("compressed.tracemonkey-pldi-09.pdf","*");
+            }
         }
 
     });
+
 </script>
 
-<%--
+
 -----------to decide whether to include it or not---------
 <script>
 
@@ -212,10 +225,10 @@
 
         // If absolute URL from the remote server is provided, configure the CORS
         // header on that server.
-        var url = '//cdn.mozilla.net/pdfjs/tracemonkey1.pdf';
+        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />resources/static/js/jspdf/web/compressed.tracemonkey-pldi-09.pdf';
 
         // The workerSrc property shall be specified.
-        PDFJS.workerSrc = '<wp:info key="systemParam" paramName="applicationBaseURL" />resources/static/js/jspdf/build/pdf.worker.js';
+        //PDFJS.workerSrc = '<wp:info key="systemParam" paramName="applicationBaseURL" />resources/static/js/pdf.worker.js';
 
         var pdfDoc = null,
             pageNum = 1,
@@ -392,4 +405,3 @@
 </script>
 
 
---%>
