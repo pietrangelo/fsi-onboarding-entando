@@ -986,16 +986,16 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-c
                            
                             <style>
                                 .navbar-fixed-top, .navbar-static-top {
-                                    background: #117cbb;
+                                    background: #3A3E46;
                                 }
                                 .metismenu > li.active {
-                                   border-left: 4px solid #91d4fb;
-                                   background: #00456d;
+                                   border-left: 4px solid #1CB295;
+                                   background: #292D35;
                                 }
                                 #wrapper {
                                     width: 100%;
                                     overflow-x: hidden;
-                                    background: #117cbb;
+                                    background: #3A3E46;
                                 }
                                 .logo-element {
                                     text-align: center;
@@ -1004,7 +1004,7 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-c
                                     color: white;
                                     display: none;
                                     padding: 9px 0;
-                                    background: #117cbb;
+                                    background: #3A3E46;
                                 }
                             </style>
                            
