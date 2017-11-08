@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- include this snippet into your struts-plugin.xml file or rename this file
+		edit also this file: /src/test/java/apsadmin/JpapplicantApsAdminBaseTestCase.java
+	-->
+
+	<include file="fsi_customer/apsadmin/applicant/applicant.xml"/>
+	<include file="fsi_customer/aps/internalservlet/applicant/applicantFront.xml"/>
+
+</struts>
