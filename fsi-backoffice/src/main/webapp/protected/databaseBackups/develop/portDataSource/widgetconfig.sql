@@ -20,6 +20,7 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_o
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('form_mobile',13,'bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="dataTypeCode">AAA</property><property key="widgetInfoId">191</property><property key="dataUxId">1</property></properties>
 ');
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('form_mobile',4,'dropdown_menu_responsive',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',9,'Login-Customer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',13,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',11,'fsi-completed',NULL);
