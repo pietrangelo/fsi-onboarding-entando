@@ -12,14 +12,6 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_customer',8,'fsi-onboarding-stages',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_customer',9,'fsi-transaction-history',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_customer',15,'generic-footer',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',5,'entando-widget-login_form_inspinia',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',6,'fsi-performance',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',7,'fsi-average-review-time',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',10,'fsi-in-progress',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',11,'fsi-completed',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',12,'fsi-backlog',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',13,'fsi-pdf-document',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',15,'generic-footer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('form_mobile',13,'bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="dataTypeCode">AAA</property><property key="widgetInfoId">191</property><property key="dataUxId">1</property></properties>
 ');
@@ -43,3 +35,11 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_o
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',15,'generic-footer',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',13,'fsi-pdf-document',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',6,'fsi-performance',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',7,'fsi-average-review-time',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',10,'fsi-in-progress',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',11,'fsi-completed',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',12,'fsi-backlog',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',15,'generic-footer',NULL);

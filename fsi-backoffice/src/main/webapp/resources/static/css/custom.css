@@ -1917,31 +1917,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 #morris-donut-chart text{
     fill:#666666;
 }
-#fsi-pdf-check .fa {
-    font-size: 20px;
-}
-
-#fsi-pdf-check .fa-check-circle-o {
-    color: #1ab394;
-}
-#fsi-pdf-check .fa-times-circle-o {
-    color: #ED5565;
-}
-#fsi-pdf-check .button-row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-#fsi-pdf-check .button-row  > * {
-    margin-left: 10px;
-}
-
-#fsi-pdf-check .review-completed-panel .buttons {
-    display: flex;
-    align-items: stretch;
-}
 
 .review-completed-panel .buttons button {
     flex-grow: 1;
