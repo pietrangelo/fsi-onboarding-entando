@@ -35,6 +35,7 @@
 				<param name="code">jpapplicant_is_front_Applicant_entry</param>
 				<param name="jspLocation">/WEB-INF/fsi_customer/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</param>
 			</result>
+            <!--<result type="dispatcher">/WEB-INF/fsi_customer/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</result>-->
 			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
         </action>
 
