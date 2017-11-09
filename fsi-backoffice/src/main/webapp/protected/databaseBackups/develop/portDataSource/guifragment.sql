@@ -3977,7 +3977,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
   align-items: center;
   width: 0px;
   transition: width 300ms;
-  background: #000000;
+  background: #FFFFFF;
   color: #FFFFFF;
   width: 0px;
   overflow: hidden;
@@ -4018,9 +4018,10 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
   right: 5px;
   font-size: 13px;
   color: #C4C4C4;
+  user-select: none;
 }
 
-.fsi-pdf-check-fields .pdf-field .pdf-field-tools .expand-btn {
+.fsi-pdf-check-fields .pdf-field .pdf-field-tools .fa {
   cursor: pointer;
 }
 
@@ -4046,7 +4047,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
   border: none;
   font-size: 16px;
   color: #FFFFFF;
-  background: #000000;
   height: 60px;
 }
 .fsi-pdf-check-fields .approve-reject-buttons .block-btn.reject-btn {
@@ -4181,7 +4181,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       </div>
       <div class="pdf-field-tools">
         <i class="expand-btn fa fa-chevron-down"></i>
-        <i class="fa fa-times"></i>
+        <i class="clear-btn fa fa-times"></i>
       </div>
     </div>
     <div class="approve-reject-buttons">
@@ -4195,8 +4195,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
 <script>
 
-
-
     $(function () {
 
       var MOCK_FIELD_DATA = [
@@ -4208,6 +4206,34 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
           { name: ''Province'', value: ''CA'' },
           { name: ''Phone'', value: ''001-02308262'' }
       ];
+
+      function updateApproveRejectForm() {
+        var nFields = $(''.pdf-field'').length,
+          nApproved = $(''.pdf-field.approved'').length,
+          nRejected = $(''.pdf-field.rejected'').length;
+
+        if (nRejected > 0) {
+          $(''.approve-form'').hide();
+          $(''.reject-form'').show();
+        } else if (nFields === nApproved) {
+          $(''.reject-form'').hide();
+          $(''.approve-form'').show();
+        } else {
+          $(''.reject-form'').hide();
+          $(''.approve-form'').hide();
+        }
+      }
+
+      function toggleFieldExpand(fieldElem) {
+        var expandBtn = $(fieldElem).find(''.expand-btn'');
+        expandBtn.removeClass(''fa-chevron-up fa-chevron-down'');
+        $(fieldElem).toggleClass(''expanded'');
+        if ($(fieldElem).hasClass(''expanded'')) {
+          expandBtn.addClass(''fa-chevron-up'');
+        } else {
+          expandBtn.addClass(''fa-chevron-down'');
+        }
+      }
 
       // creating fields
       var fieldListElem = $(''.fsi-pdf-check-fields'');
@@ -4229,19 +4255,20 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       // binding expanding fields
       $(''.pdf-field .expand-btn'').click(function() {
         var field = $(this).closest(''.pdf-field'');
-        $(this).removeClass(''fa-chevron-up fa-chevron-down'');
-        field.toggleClass(''expanded'');
-        if (field.hasClass(''expanded'')) {
-          $(this).addClass(''fa-chevron-up'');
-        } else {
-          $(this).addClass(''fa-chevron-down'');
-        }
+        toggleFieldExpand(field);
+      });
+
+      // binding clear field buttons
+      $(''.pdf-field .clear-btn'').click(function() {
+        var field = $(this).closest(''.pdf-field'');
+        field.removeClass(''marked approved rejected'');
+        updateApproveRejectForm();
       });
 
       // binding approve buttons
       $(''.pdf-field .approve-btn'').click(function() {
         var field = $(this).closest(''.pdf-field'');
-        field.removeClass(''expanded'');
+        toggleFieldExpand(field);
         field.addClass(''marked approved'');
         updateApproveRejectForm();
       });
@@ -4249,27 +4276,10 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       // binding reject buttons
       $(''.pdf-field .reject-btn'').click(function() {
         var field = $(this).closest(''.pdf-field'');
-        field.removeClass(''expanded'');
+        toggleFieldExpand(field);
         field.addClass(''marked rejected'');
         updateApproveRejectForm();
       });
-
-      function updateApproveRejectForm() {
-        var nFields = $(''.pdf-field'').length,
-          nApproved = $(''.pdf-field.approved'').length,
-          nRejected = $(''.pdf-field.rejected'').length;
-
-        if (nRejected > 0) {
-          $(''.approve-form'').hide();
-          $(''.reject-form'').show();
-        } else if (nFields === nApproved) {
-          $(''.reject-form'').hide();
-          $(''.approve-form'').show();
-        } else {
-          $(''.reject-form'').hide();
-          $(''.approve-form'').hide();
-        }
-      }
 
       // binding global approve button
       $(''.fsi-pdf-approve-reject .approve-btn'').click(function() {
@@ -4281,5 +4291,4 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       });
 
     });
-</script>
-',NULL,0);
+</script>',NULL,0);
