@@ -1,6 +1,5 @@
 ### NetBeans ###
 nbproject/private/
-build/
 nbbuild/
 dist/
 nbdist/
@@ -31,4 +30,3 @@ local.properties
 .idea
 *.iml
 .overlays
-
