@@ -1,3 +1,9 @@
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',8,'How-to-complete-instructions',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',7,'fsiApplicant_form',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',12,'fsi-footer',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',11,'Loans-3-images ',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',6,'banner-main-internal',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',11,'fsi-registration-form-advanced',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',6,'fsi-application-progress',NULL);
@@ -21,9 +27,3 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',11,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',7,'fsi-legal-check',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',18,'fsi-footer',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',5,'entando-widget-login_form_inspinia',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',12,'fsi-footer',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',11,'Loans-3-images ',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',6,'banner-main-internal',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',7,'complete-registration-BPM',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',8,'How-to-complete-instructions',NULL);

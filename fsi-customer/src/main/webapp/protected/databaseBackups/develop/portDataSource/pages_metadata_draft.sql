@@ -11,6 +11,16 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-10-31 15:19:41');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('applicant','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">applicant</property><property key="it">applicante</property></properties>
+','fsi-customer-internal-page',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-09 15:53:15');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('customer_internal','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">customer-internal</property><property key="it">cliente-interna</property></properties>
 ','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -54,13 +64,3 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-10-24 16:00:42');
-INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('applicant','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">applicant</property><property key="it">applicante</property></properties>
-','fsi-customer-internal-page',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-10-25 09:03:08');
