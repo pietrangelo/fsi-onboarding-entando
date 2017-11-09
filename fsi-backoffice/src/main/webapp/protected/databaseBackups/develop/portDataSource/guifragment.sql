@@ -1977,86 +1977,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'
-
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-
-        <div class="tabs-container">
-            <div class="tabs-left">
-                <ul class="nav nav-tabs">
-                    <li class="active">
-                        <a data-toggle="tab" href="#tab-1"><i class="fa fa-chevron-circle-down" style="color:green;"></i> Enrollment</a>
-                    </li>
-                    <li class="">
-                        <a data-toggle="tab" href="#tab-2"><i class="fa fa-circle-o" style="color:#218fd8;"></i> Verification</a>
-                    </li>
-                    <li class="">
-                        <a data-toggle="tab" href="#tab-3"><i class="fa fa-circle-o"></i> Fulfilment</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Signup Email initiation</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                    <div id="tab-2" class="tab-pane active">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Account Registration</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Application Submission</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                    <div id="tab-3" class="tab-pane">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">TBA </p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp;<strong class="text-muted">Fullfilment checks</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">TBA</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp<strong class="text-muted">Fullfilment checks</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-legal-check','fsi-legal-check',NULL,'<div class="fsi-upload-new-file">
     <div class="fsi-warning-title">Legal check</div>
     <div class="fsi-error-desc">
@@ -2153,6 +2073,82 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         });
     });
 </script>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+
+        <div class="tabs-container">
+            <div class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab-1"><i class="fa fa-chevron-circle-down" style="color:green;"></i> Enrollment</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-2"><i class="fa fa-circle-o" style="color:#218fd8;"></i> Verification</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-3"><i class="fa fa-circle-o"></i> Fulfilment</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane active">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Account Registration</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Application Submission</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">TBA </p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp;<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">TBA</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
     <div class="fsi-welcome-title">Welcome to your personal area</div>
     <div class="fsi-welcome-message">You can check the status of your request</div>

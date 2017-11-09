@@ -1,6 +1,9 @@
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('dropdown_menu_responsive','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Dropdown menu mobile</property><property key="it">Dropdown menu mobile</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-account-user','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Account user</property><property key="it">FSI Account user</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-transaction-history','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Transaction history</property><property key="it">FSI Transaction history</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
@@ -21,9 +24,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 ',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-mock-datatable-backoffice','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI mock-datatable- backoffice</property><property key="it">FSI mock-datatable- backoffice</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-account-user','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Account user</property><property key="it">FSI Account user</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-Declaration','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Declaration</property><property key="it">FSI Declaration</property></properties>
