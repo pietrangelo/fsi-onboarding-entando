@@ -1,31 +1,63 @@
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<div class="ibox float-e-margins">
     <div class="ibox-title">
-        <h5>State</h5>
+        <h5>Business details</h5>
         <div class="ibox-tools">
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>
             </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
         </div>
     </div>
     <div class="ibox-content">
-        <div id="morris-donut-chart" ></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="login-label">Company Name</label>
+                    <input id="username" type="text" name="username" placeholder="Enter First Name" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Last Name</label>
+                    <input id="password" type="text" name="password" placeholder="Enter Last Name" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Email</label>
+                    <input id="username" type="text" name="username" placeholder="Enter Email" class="form-control input-custom" />
+                </div>
+                <br>
+                <p>Additional Info</p>
+
+                <div class="form-group">
+                    <label class="login-label">ENRIC / Passport No.</label>
+                    <input id="password" type="text" name="password" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Nationality</label>
+                    <input id="password" type="text" name="password" placeholder="Enter nationality" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Job Number</label>
+                    <input id="password" type="text" name="password" placeholder="Job Number" class="form-control input-custom" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left spacers">
+                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-       Morris.Donut({
-            element: ''morris-donut-chart'',
-            data: [{label: "Pending", value: 12},
-                {label: "Complete", value: 30},
-                {label: "Suspended", value: 20}],
-            resize: true,
-            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
-        });
-    });
-</script>',NULL,0);
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -36,9 +68,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>
             </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
+            
         </div>
     </div>
     <div class="ibox-content">
@@ -128,70 +158,32 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         });
     });
 </script>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'
-<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<div class="ibox float-e-margins">
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
-        <h5>Business details</h5>
+        <h5>State</h5>
         <div class="ibox-tools">
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>
             </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
+           
         </div>
     </div>
     <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label class="login-label">Company Name</label>
-                    <input id="username" type="text" name="username" placeholder="Enter First Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Last Name</label>
-                    <input id="password" type="text" name="password" placeholder="Enter Last Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Email</label>
-                    <input id="username" type="text" name="username" placeholder="Enter Email" class="form-control input-custom" />
-                </div>
-                <br>
-                <p>Additional Info</p>
-
-                <div class="form-group">
-                    <label class="login-label">ENRIC / Passport No.</label>
-                    <input id="password" type="text" name="password" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Nationality</label>
-                    <input id="password" type="text" name="password" placeholder="Enter nationality" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Job Number</label>
-                    <input id="password" type="text" name="password" placeholder="Job Number" class="form-control input-custom" />
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-left spacers">
-                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
-                </div>
-            </div>
-        </div>
+        <div id="morris-donut-chart" ></div>
     </div>
 </div>
-',NULL,0);
+<script>
+    $(document).ready(function () {
+       Morris.Donut({
+            element: ''morris-donut-chart'',
+            data: [{label: "Pending", value: 12},
+                {label: "Complete", value: 30},
+                {label: "Suspended", value: 20}],
+            resize: true,
+            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
+        });
+    });
+</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="fsi-form-banking-services">
   <div class="ibox float-e-margins">
     <div class="ibox-title">
@@ -299,9 +291,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>
             </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
+          
         </div>
     </div>
     <div class="ibox-content">
@@ -434,34 +424,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     <div class="fsi-message"><span>Can you please upload a new document ther address to the&nbsp;</span><b>following conditions</b></div><a class="fsi-upload-new-link" href="#">
       <div class="fsi-label">Upload a new file</div><i class="fa fa-upload"></i></a>
   </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
-    <div class="fsi-welcome-title">Welcome to your personal area</div>
-    <div class="fsi-welcome-message">You can check the status of your request</div>
-    <div class="fsi-time-left"><i class="fa fa-clock-o"></i>
-      <div class="fsi-time-left-message">About 15 days left</div>
-    </div>
-  </div>
-  <div class="fsi-legal-review-wrapper">
-    <div class="fsi-legal-review-intro">
-      <h2>What''s involved in a legal review? </h2>
-      <p> 
-        <div>As anticipated, when applying for financial services, you are supposed to document the status of your business</div>
-        <div>After the completeness of the documentation has been verified, the next step is the Legal Review.</div>
-      </p>
-      <p> 
-        <div>At this stage of your application, the Legal Worker is asked to check the compliance of the submitted documentation.</div>
-        <div>This is a one time activity, that is performed once: should you apply for further services, all that you have documented is still considered valid.</div>
-      </p>
-      <p>It means then shorter approval time frame for the next services you''ll decide to request.</p>
-      <p>After the Legal Review has been completed, your account will be created.</p>
-    </div>
-    <div class="fsi-blue-banner">
-      <div class="bb-small">Now your check deposits can</div>
-      <div class="bb-big">go to the bank</div>
-      <div class="bb-big bb-big-bigger">without you</div>
-      <div class="bb-expect-it">Expect it.</div>
-    </div>
-  </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="perfomance-bar">
 <div class="ibox float-e-margins">
     <div class="ibox-title">
@@ -470,9 +432,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>
             </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
+          
         </div>
     </div>
     <div class="ibox-content">
@@ -515,34 +475,56 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
-  <div class="ibox float-e-margins">
-    <div class="ibox-title">
-      <h5>Customer Overview</h5>
-      <div class="ibox-tools"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a><a class="close-link"><i class="fa fa-times"></i></a></div>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
+    <div class="fsi-welcome-title">Welcome to your personal area</div>
+    <div class="fsi-welcome-message">You can check the status of your request</div>
+    <div class="fsi-time-left"><i class="fa fa-clock-o"></i>
+      <div class="fsi-time-left-message">About 15 days left</div>
     </div>
-    <div class="ibox-content">
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">120</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">100</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">95</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
+  </div>
+  <div class="fsi-legal-review-wrapper">
+    <div class="fsi-legal-review-intro">
+      <h2>What''s involved in a legal review? </h2>
+      <p> 
+        <div>As anticipated, when applying for financial services, you are supposed to document the status of your business</div>
+        <div>After the completeness of the documentation has been verified, the next step is the Legal Review.</div>
+      </p>
+      <p> 
+        <div>At this stage of your application, the Legal Worker is asked to check the compliance of the submitted documentation.</div>
+        <div>This is a one time activity, that is performed once: should you apply for further services, all that you have documented is still considered valid.</div>
+      </p>
+      <p>It means then shorter approval time frame for the next services you''ll decide to request.</p>
+      <p>After the Legal Review has been completed, your account will be created.</p>
+    </div>
+    <div class="fsi-blue-banner">
+      <div class="bb-small">Now your check deposits can</div>
+      <div class="bb-big">go to the bank</div>
+      <div class="bb-big bb-big-bigger">without you</div>
+      <div class="bb-expect-it">Expect it.</div>
+    </div>
+  </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'<div class="application-breadcrumbs-wrapper">
+  <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
+  <div class="application-breadcrumbs">
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">1</div>
+      <div class="application-breadcrumbs-text">Start</div>
+    </div>
+    <div class="application-breadcrumbs-item active">
+      <div class="application-breadcrumbs-number">2</div>
+      <div class="application-breadcrumbs-text">Application</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">3</div>
+      <div class="application-breadcrumbs-text">Background check</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">4</div>
+      <div class="application-breadcrumbs-text">Legal review</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">5</div>
+      <div class="application-breadcrumbs-text">Account creation</div>
     </div>
   </div>
 </div>',NULL,0);
@@ -618,6 +600,37 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h5>Customer Overview</h5>
+      <div class="ibox-tools"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a><a class="close-link"><i class="fa fa-times"></i></a></div>
+    </div>
+    <div class="ibox-content">
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">120</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">100</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">95</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <div class="middle-box loginscreen animated fadeInDown">
     <#if (Session.currentUser.username != "guest") >
@@ -2461,32 +2474,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		<input name="${formFieldNameVar}" id="${formFieldNameVar}" value="${formFieldValue}" type="text" class="input-xlarge"/>
 	</div>
 </div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'
-<div class="application-breadcrumbs-wrapper">
-  <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
-  <div class="application-breadcrumbs">
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">1</div>
-      <div class="application-breadcrumbs-text">Start</div>
-    </div>
-    <div class="application-breadcrumbs-item active">
-      <div class="application-breadcrumbs-number">2</div>
-      <div class="application-breadcrumbs-text">Application</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">3</div>
-      <div class="application-breadcrumbs-text">Background check</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">4</div>
-      <div class="application-breadcrumbs-text">Legal review</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">5</div>
-      <div class="application-breadcrumbs-text">Account creation</div>
-    </div>
-  </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list','content_viewer_list','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <@wp.headInfo type="JS_EXT" info="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" />
@@ -2640,9 +2627,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>
             </a>
-            <a class="close-link">
-                <i class="fa fa-times"></i>
-            </a>
+          
         </div>
     </div>
     <div class="ibox-content">

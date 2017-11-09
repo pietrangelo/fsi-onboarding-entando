@@ -8,5 +8,5 @@ INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('client_onboarding_man
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('legal_dashboard','homepage',10,'account_executive');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('knowledge_dashboard','homepage',9,'account_executive');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_customer','homepage',8,'account_executive');
-INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_dashboard','homepage',7,'account_executive');
 INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('backoffice','homepage',6,'free');
+INSERT INTO pages (code,parentcode,pos,groupcode) VALUES ('account_executive_dashboard','homepage',7,'account_executive');
