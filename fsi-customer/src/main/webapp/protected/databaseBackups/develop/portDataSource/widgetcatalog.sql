@@ -16,6 +16,14 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-welcome-personal-area','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI welcome personal area</property><property key="it">FSI welcome personal area</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsiApplicant_form','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Applicant Form</property>
+<property key="it">Form Applicant</property>
+</properties>',NULL,NULL,'formAction','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="actionPath">/ExtStr2/do/FrontEnd/jpapplicant/Applicant/new.action</property>
+</properties>',1,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-overview','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Customer Overview</property><property key="it">FSI Panoramica Cliente</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
