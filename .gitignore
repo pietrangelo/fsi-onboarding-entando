@@ -30,3 +30,5 @@ local.properties
 .idea
 *.iml
 .overlays
+
+sandbox

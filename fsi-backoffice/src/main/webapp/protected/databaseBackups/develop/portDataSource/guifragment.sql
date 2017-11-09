@@ -133,10 +133,45 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('generic-footer','generic-footer',NULL,'<div class="fsi-backoffice-footer">
 <span>Copyright Fortress Bank & Loan &commat; 2017</span>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer overview</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">120</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">100</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">95</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_client_on_board_mananger_tabs','fsi_client_on_board_mananger_tabs',NULL,'<div class="fsi-customer-rate">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>Client On Board Mananger </h5>
+            <h5>Customer rate</h5>
             <div class="ibox-tools">
                 <a class="collapse-link">
                     <i class="fa fa-chevron-up"></i>
@@ -153,11 +188,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                 <div class="tab-content">
                     <div id="tab-1" class="tab-pane active">
                         <div class="panel-body">
-
-
                             <div class="ibox float-e-margins">
-
-
                                 <div class="row">
                                     <div class="col-lg-9 text-align-left">
                                         <h2 style="margin-top:5px;">Prospect count</h2>
@@ -177,8 +208,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                                         <h4><b>TIME FILTER</b></h4>
                                     </div>
                                 </div>
-
-
                                 <div class="row">
                                     <div class="col-md-2">
                                         <select class="form-control m-b">
@@ -205,20 +234,15 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                                             </div>
                                         </div>
                                     </div>
-
-                                </div>
-
-
+                          </div>
                                 <div class="row">
                                     <div class="col-md-9">
-
                                     </div>
                                     <div class="col-md-3">
                                         <select class="form-control m-b pull-right" style="width: 15em;">
                                             <option>ALL YEAR</option>
                                         </select>
                                     </div>
-
                                 </div>
 
                                 <hr/>
@@ -259,12 +283,12 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                                         <input type="text" id="example_id" name="example_name" value=""/>
                                         <script>
                                             $("#example_id").ionRangeSlider({
-                                                grid:true,
+                                                grid: true,
                                                 type: "double",
-                                                from:1,
+                                                from: 1,
                                                 to: 5,
-                                                values: ["1h","2d", "4d","6d", "8d","12d","14d"]
-                                                });
+                                                values: ["1h", "2d", "4d", "6d", "8d", "12d", "14d"]
+                                            });
                                         </script>
 
                                     </div>
@@ -315,7 +339,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                             <div class="col-md-4"></div>
                             <div class="col-md-4" style="text-align: center">
                                 <div style="display: inline-flex">
-                                <i class="fa fa-chevron-left" style="margin-right: 2em;"></i>
+                                    <i class="fa fa-chevron-left" style="margin-right: 2em;"></i>
                                     <h4 class="no-margins">2017</h4>
                                     <i class="fa fa-chevron-right" style="margin-left: 2em;"></i>
                                 </div>
@@ -372,26 +396,33 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
     c3.generate({
         bindto: ''#barChart'',
-            data: {
+        data: {
             x: ''x'',
             columns: [
                 [''x'', ''JAN'', ''FEB'', ''MAR'', ''APR'', ''MAY'', ''JUN'', ''JUL'', ''AGO'', ''SEP'', ''OCT'', ''NOV'', ''DIC''],
-                [''Onboarded'', 30, 100, 20, 40, 15, 25, 34, 97, 87, 12, 55, 50, 23, 45, 78 ,65 ,30, 78, 56,35,26,22],
-                [''Lost'', 13, 3, 20, 30, 25, 45, 45, 76, 88, 23, 06, 56,45,78,34,22,11,66,88,99,77],
+                [''Onboarded'', 30, 100, 20, 40, 15, 25, 34, 97, 87, 12, 55, 50, 23, 45, 78, 65, 30, 78, 56, 35, 26, 22],
+                [''Lost'', 13, 3, 20, 30, 25, 45, 45, 76, 88, 23, 06, 56, 45, 78, 34, 22, 11, 66, 88, 99, 77],
             ],
             groups: [
                 [''Onboarded'', ''Lost'']
             ],
             type: ''bar''
         },
-        legend: { position: ''inset'' },
+        legend: {
+            position: ''inset'',
+            inset: {
+                anchor: ''top-left'',
+                x: 20,
+                y: 10,
+                step: 2
+            }
+
+        },
         bar: {
             width: 30
         },
         color: {
-            pattern: [''#1ABC9C'',''#898EB4'']
-
-
+            pattern: [''#1ABC9C'', ''#898EB4'']
         },
         axis: {
             x: {
@@ -400,41 +431,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         }
     });
 </script>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Customer overview</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">120</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">100</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">95</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
