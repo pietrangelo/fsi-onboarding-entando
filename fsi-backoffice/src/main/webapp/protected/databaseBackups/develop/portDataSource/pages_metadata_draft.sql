@@ -1,16 +1,3 @@
-INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('form_mobile','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Form Mobile</property><property key="it">Form Mobile</property></properties>
-','fsi-dashboard-responsive',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="account_executive" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-08 15:05:59');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_customer','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Account Executive Customer</property><property key="it">Account Executive Customer</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -50,6 +37,16 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-11-08 17:06:33');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('backoffice','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">backoffice</property><property key="it">backoffice</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-08 17:09:29');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('service','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="it">Pagine di Servizio</property>
@@ -106,13 +103,16 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-11-09 09:31:36');
-INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('backoffice','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">backoffice</property><property key="it">backoffice</property></properties>
-','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('form_mobile','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Form Mobile</property><property key="it">Form Mobile</property></properties>
+','fsi-dashboard-responsive',1,'<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="account_executive" />
+  </extragroups>
   <charset>utf-8</charset>
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-11-09 17:26:54');
+','2017-11-09 12:56:25');

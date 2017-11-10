@@ -152,7 +152,7 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm
 ');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataTypeDefinitions','Definition of the Type Types','<?xml version="1.0" encoding="UTF-8"?>
 <datatypes>
-	<datatype typecode="AAA" typedescr="commercial-client-onboarding.ClientOnboardingProcess_5fdf1ed1672f5358e70570bd7f50b163" viewpage="**NULL**" listmodel="2" defaultmodel="2">
+	<datatype typecode="AAA" typedescr="commercial-client-onboarding.ClientOnboardingProcess_5fdf1ed1672f5358e70570bd7f50b163" viewpage="**NULL**" listmodel="1" defaultmodel="1">
 		<attributes>
 			<attribute name="accountName" attributetype="Monotext" />
 			<attribute name="client_creditScore" attributetype="Number" />
@@ -162,6 +162,21 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataType
 			<attribute name="accountManager" attributetype="Monotext" />
 			<attribute name="client_phoneNumber" attributetype="Monotext" />
 			<attribute name="client_bic" attributetype="Monotext" />
+			<attribute name="client_email" attributetype="Monotext">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="party_name" attributetype="Monotext">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="party_surname" attributetype="Monotext">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
 		</attributes>
 	</datatype>
 </datatypes>

@@ -316,3 +316,9 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','en','L
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PFL_fullname','en','Full Name');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PFL_email','en','Email');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','it','ACCEDI');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_email','en','email (client)');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_email','it','email (client)');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_name','en','name (consultant)');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_name','it','name (consultant)');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_surname','en','surname (consultant)');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_surname','it','surname (consultant)');

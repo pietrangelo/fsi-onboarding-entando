@@ -67,13 +67,49 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </#if>
 </div>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('generic-footer','generic-footer',NULL,'<div class="fsi-backoffice-footer">
+<span>Copyright Fortress Bank & Loan &commat; 2017</span>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer overview</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">120</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">100</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">95</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('dropdown_menu_responsive','dropdown_menu_responsive',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<ul class="list-unstyled menu-pos">
     <li class=" dropdown <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
         <#if (Session.currentUser != "guest")>
-        <a class="dropdown-toggle dropdown-fsi-login" href="#" data-toggle="dropdown">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
             ${Session.currentUser}
-            <span class="caret"></span>&nbsp;
         </a>
         <ul class="dropdown-menu">
             <li>
@@ -83,9 +119,9 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             </a>
             </@wp.ifauthorized>
         </li>
-        <div class="divider"></div>
+        <li role="separator" class="divider"></li>
         <li>
-            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
                <@wp.i18n key="ESLF_SIGNOUT" />
         </a>
     </li>
@@ -128,46 +164,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </li>
 </ul>
 </#if>
-</li>
-</ul>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('generic-footer','generic-footer',NULL,'<div class="fsi-backoffice-footer">
-<span>Copyright Fortress Bank & Loan &commat; 2017</span>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Customer overview</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">120</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">100</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">95</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>',NULL,0);
+</li>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_client_on_board_mananger_tabs','fsi_client_on_board_mananger_tabs',NULL,'<div class="fsi-customer-rate">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
@@ -3682,6 +3679,157 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Documents check section</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="container-pdf">
+            <div class="row"><br></div>
+            <div class="row">
+                <div class="col-md-8 pdf-stuff">
+                    <iframe id="pdf-viewer" style="width: 100%; height: 700px;" allowfullscreen="" webkitallowfullscreen="" ></iframe>
+                </div>
+                <div class="col-md-4 form-stuff ">
+                    <div class="panel-group" id="fsi-pdf-check" role="tablist"></div>
+                    <div class="review-completed-panel">
+                        <h3>REVIEW COMPLETED</h3>
+                        <div class="buttons">
+                            <button disabled type="button" class="btn btn-outlina btn-lg btn-danger reject-btn">REJECT</button>
+                            <button disabled type="button" class="btn btn-outlina btn-lg btn-primary approve-btn">APPROVE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/template" id="accordion-panel-template">
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="###">
+    <h4 class="panel-title">
+    <a role="button" data-toggle="collapse" data-parent="#fsi-pdf-check" href="###" aria-expanded="false" aria-controls="collapseOne">
+    <h2 class="heading-title">###</h2>
+    </a>
+    </h4>
+    </div>
+    <div id="###" class="panel-collapse collapse" role="tabpanel" aria-labelledby="###">
+
+    </div>
+    </div>
+</script>
+<script type="text/template" id="fsi-pdf-field-template">
+    <div class="panel-body fsi-pdf-field">
+    <h2 class="field-name">###</h2>
+    <div><input class="value-input form-control input-custom" value="###" readonly /></div>
+    <div class="button-row">
+    <input type="radio" name="###" class="i-checks radio-approve">
+    <i class="fa fa-check-circle-o"></i>
+    <input type="radio" name="###" class="i-checks radio-reject">
+    <i class="fa fa-times-circle-o"></i>
+
+    </div>
+    </div>
+</script>
+
+<script>
+
+
+
+    $(function () {
+
+        var MOCK_FIELD_DATA = [
+            {
+                title: ''PART I GENERAL INFO'',
+                fields: [
+                    {
+                        name: ''08. Company Name'',
+                        value: ''Interstellar''
+                    },
+                    {
+                        name: ''09. Firm Name'',
+                        value: ''Interstellar Ltd''
+                    },
+                ]
+            },
+            {
+                title: ''PART II DISTRIBUTIONS'',
+                fields: [
+                    {
+                        name: ''10. Customer Name'',
+                        value: ''John Smith''
+                    },
+                    {
+                        name: ''11. Signature'',
+                        value: ''True''
+                    },
+                ]
+            }
+        ];
+
+        var $accordionElement = $(''#fsi-pdf-check'');
+        MOCK_FIELD_DATA.forEach(function (section, i) {
+            var panelElement = $($(''#accordion-panel-template'').html());
+
+            $(panelElement).find(''.heading-title'').text(section.title);
+            $(panelElement).find(''[data-toggle="collapse"]'').attr({
+                ''href'': ''#collapse-'' + i,
+                ''aria-controls'': ''#collapse-'' + i,
+                ''id'': ''toggle-'' + i
+            });
+            $(panelElement).find(''.collapse'').attr({
+                ''aria-labelledby'': ''#toggle-'' + i,
+                ''id'': ''collapse-'' + i
+            });
+
+            $accordionElement.append(panelElement);
+            var panelBody = $(panelElement).find(''.panel-collapse'');
+            section.fields.forEach(function (field, j) {
+                var fieldElement = $($(''#fsi-pdf-field-template'').html());
+                $(fieldElement).find(''.field-name'').text(field.name);
+                $(fieldElement).find(''.value-input'').attr(''value'', field.value);
+                $(fieldElement).find(''input[type="radio"]'').attr(''name'', ''section-'' + i + ''-field-'' + j);
+
+                $(panelBody).append(fieldElement);
+            });
+        });
+        var $rejectBtn = $(''.reject-btn''),
+                $approveBtn = $(''.approve-btn'');
+        function updateButtonStatus() {
+            var nFields = $accordionElement.find(''.fsi-pdf-field'').length;
+            var nRejectedFields = $accordionElement.find(''.radio-reject'').closest(''.iradio_square-green.checked'').length;
+            var nApprovedFields = $accordionElement.find(''.radio-approve'').closest(''.iradio_square-green.checked'').length;
+            if (nRejectedFields > 0) {
+                $rejectBtn.prop(''disabled'', false);
+                $approveBtn.prop(''disabled'', true);
+            } else if (nApprovedFields === nFields) {
+                $rejectBtn.prop(''disabled'', true);
+                $approveBtn.prop(''disabled'', false);
+            } else {
+                $rejectBtn.prop(''disabled'', true);
+                $approveBtn.prop(''disabled'', true);
+            }
+        }
+        setTimeout(function () {
+            $accordionElement.find(''.iradio_square-green ins'').click(function () {
+                updateButtonStatus();
+            });
+        });
+    });
+</script>
+
+
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>Business details</h5>
@@ -3883,412 +4031,3 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<style>
-.pdf-wrapper {
-  display: flex;
-  background: #404040;
-  min-height: 700px;
-}
-.pdf-stuff {
-  flex-grow: 10;
-}
-#pdf-viewer {
-  border: none;
-}
-.form-stuff {
-  flex-grow: 2;
-  width: 300;
-}
-#fsi-pdf-check {
-  padding: 0 10px;
-  font-family: "Open Sans", sans-serif;
-}
-#fsi-pdf-check-info .semibold {
-    font-weight: 600;
-}
-
-.fsi-pdf-check-info {
-  margin-top: 35px;
-}
-
-.fsi-pdf-check-info .tabs-row {
-  display: flex;
-  flex-basis: 400px;
-}
-
-.fsi-pdf-check-info .tabs-row button {
-    border: none;
-    background: transparent;
-    border-radius: 5px 5px 0 0;
-    outline: 0;
-    height: 35px;
-    flex-grow: 1;
-
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: #A7B1C1;
-}
-
-.fsi-pdf-check-info .tabs-row button.active {
-    background: #FFFFFF;
-    color: #676A6C;
-}
-
-
-.fsi-pdf-check-info .tab-content {
-    background: #FFFFFF;
-    padding: 10px;
-    color: #676A6C;
-    font-size: 13px;
-}
-
-.fsi-pdf-check-info .tab-panel {
-    display: none;
-}
-.fsi-pdf-check-info .tab-panel.active {
-    display: block;
-}
-
-.fsi-pdf-check-info .tab-panel > div {
-    margin-bottom: 5px;
-}
-
-
-.fsi-pdf-check-fields .pdf-field-row {
-  margin-top: 15px;
-  background: #FFFFFF;
-  color: #696C6E;
-  font-size: 13px;
-  height: 30px;
-  transition: height 300ms;
-
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-.fsi-pdf-check-fields .pdf-field .pdf-field-row:before {
-  content: "?";
-  font-family: "FontAwesome";
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 0px;
-  transition: width 300ms;
-  background: #FFFFFF;
-  color: #FFFFFF;
-  width: 0px;
-  overflow: hidden;
-}
-.fsi-pdf-check-fields .pdf-field.marked .pdf-field-row:before {
-  width: 30px;
-  transition: width 300ms;
-}
-.fsi-pdf-check-fields .pdf-field.approved .pdf-field-row:before {
-  content: "\f00c";
-  background: #00ab89;
-}
-.fsi-pdf-check-fields .pdf-field.rejected .pdf-field-row:before {
-  content: "\f00d";
-  background: #be0100;
-}
-
-.fsi-pdf-check-fields .pdf-field.expanded .pdf-field-row {
-  height: 60px;
-  transition: height 300ms;
-}
-
-.fsi-pdf-check-fields .pdf-field .pdf-field-labels {
-  padding: 5px 10px;
-}
-.fsi-pdf-check-fields .pdf-field .pdf-field-value {
-  display: none;
-  font-size: 20px;
-  font-weight: 300;
-}
-.fsi-pdf-check-fields .pdf-field.expanded .pdf-field-value {
-  display: block;
-}
-
-.fsi-pdf-check-fields .pdf-field .pdf-field-tools {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 13px;
-  color: #C4C4C4;
-  user-select: none;
-}
-
-.fsi-pdf-check-fields .pdf-field .pdf-field-tools .fa {
-  cursor: pointer;
-}
-
-.fsi-pdf-check-fields .pdf-field .approve-reject-buttons,
-.fsi-pdf-check-fields .pdf-field.expanded.marked .approve-reject-buttons {
-  display: flex;
-  flex-basis: 300px;
-  height: 0;
-  margin-top: 0;
-  transition: height 300ms, margin-top 300ms;
-  overflow: hidden;
-}
-
-.fsi-pdf-check-fields .pdf-field.expanded .approve-reject-buttons {
-  height: 60px;
-  margin-top: 15px;
-  transition: height 300ms, margin-top 300ms;
-}
-
-
-.fsi-pdf-check-fields .approve-reject-buttons .block-btn {
-  flex-grow: 1;
-  border: none;
-  font-size: 16px;
-  color: #FFFFFF;
-  height: 60px;
-}
-.fsi-pdf-check-fields .approve-reject-buttons .block-btn.reject-btn {
-  background: #be0100;
-}
-.fsi-pdf-check-fields .approve-reject-buttons .block-btn.approve-btn {
-  background: #00ab89;
-}
-
-.fsi-pdf-approve-reject .approve-form,
-.fsi-pdf-approve-reject .reject-form {
-  display: none;
-  margin-top: 15px;
-}
-.fsi-pdf-approve-reject .reject-form-notes {
-  background: #FFFFFF;
-}
-.fsi-pdf-approve-reject .reject-form-notes .notes-title {
-  padding: 15px 10px;
-  margin: 0;
-  border-bottom: 1px solid #C4C4C4;
-}
-.fsi-pdf-approve-reject .reject-form-notes .notes-textarea {
-  padding: 15px 10px;
-}
-
-.fsi-pdf-approve-reject .reject-form-notes .notes-textarea textarea {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.fsi-pdf-approve-reject .big-button {
-  margin: 15px 0;
-  border: none;
-  outline: 0;
-  color: #FFFFFF;
-  background: BLACK;
-  width: 100%;
-  height: 30px;
-}
-.fsi-pdf-approve-reject .big-button.approve-btn {
-  background: #00ab89;
-}
-.fsi-pdf-approve-reject .big-button.reject-btn {
-  background: #be0100;
-}
-
-</style>
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Documents check section</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="container-pdf">
-            <div class="row"><br></div>
-            <div class="pdf-wrapper">
-                <div class="pdf-stuff">
-                    <iframe id="pdf-viewer" style="width: 100%; height: 100%;" allowfullscreen="" webkitallowfullscreen="" ></iframe>
-                </div>
-                <div class="form-stuff ">
-
-                    <!-- ------------------------------------ PDF check -------------------------------------------- -->
-                    <div id="fsi-pdf-check">
-
-                      <div class="fsi-pdf-check-info">
-                        <div class="tabs-row">
-                          <button class="active" data-tab-id="userInfo">User Info</button>
-                          <button data-tab-id="businessInfo">Business Info</button>
-                        </div>
-                        <div class="tab-content">
-                            <div class="tab-panel active" data-tab-id="userInfo">
-                              <div>
-                                <div class="semibold">Name</div>
-                                <div>Kevin Smith</div>
-                              </div>
-                              <div>
-                                <div class="semibold">Phone</div>
-                                <div>005 123347573</div>
-                              </div>
-                              <div>
-                                <div class="semibold">Email</div>
-                                <div>kevinsmith@interstellar.com</div>
-                              </div>
-                            </div>
-                            <div class="tab-panel" data-tab-id="businessInfo">
-                              <div>
-                                <div class="semibold">Company Name</div>
-                                <div>Interstellar</div>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-
-                      <div class="fsi-pdf-check-fields">
-                        <!-- WILL BE POPULATED WITH FIELDS -->
-                      </div>
-
-                      <div class="fsi-pdf-approve-reject">
-                        <div class="approve-form">
-                          <button class="big-button approve-btn">APPROVE</button>
-                        </div>
-                        <div class="reject-form">
-                          <div class="reject-form-notes">
-                            <h4 class="notes-title">Notes</h4>
-                            <div class="notes-textarea">
-                              <textarea></textarea>
-                            </div>
-                          </div>
-                          <button class="big-button reject-btn">REJECT</button>
-                        </div>
-                      </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script type="text/template" id="pdf-field-template">
-  <div class="pdf-field">
-    <div class="pdf-field-row">
-      <div class="pdf-field-labels">
-        <div class="pdf-field-name">Verify company name</div>
-        <div class="pdf-field-value">Interstellar</div>
-      </div>
-      <div class="pdf-field-tools">
-        <i class="expand-btn fa fa-chevron-down"></i>
-        <i class="clear-btn fa fa-times"></i>
-      </div>
-    </div>
-    <div class="approve-reject-buttons">
-      <button class="block-btn approve-btn"><i class="fa fa-check"></i></button>
-      <button class="block-btn reject-btn"><i class="fa fa-times"></i></button>
-    </div>
-  </div>
-</script>
-
-
-
-<script>
-
-    $(function () {
-
-      var MOCK_FIELD_DATA = [
-          { name: ''Company Name'', value: ''Interstellar'' },
-          { name: ''Tax Number'', value: ''01002003004'' },
-          { name: ''Present Balance'', value: ''$120000'' },
-          { name: ''ID Number'', value: ''0000023452523'' },
-          { name: ''Address'', value: ''Good Vibes st.'' },
-          { name: ''Province'', value: ''CA'' },
-          { name: ''Phone'', value: ''001-02308262'' }
-      ];
-
-      function updateApproveRejectForm() {
-        var nFields = $(''.pdf-field'').length,
-          nApproved = $(''.pdf-field.approved'').length,
-          nRejected = $(''.pdf-field.rejected'').length;
-
-        if (nRejected > 0) {
-          $(''.approve-form'').hide();
-          $(''.reject-form'').show();
-        } else if (nFields === nApproved) {
-          $(''.reject-form'').hide();
-          $(''.approve-form'').show();
-        } else {
-          $(''.reject-form'').hide();
-          $(''.approve-form'').hide();
-        }
-      }
-
-      function toggleFieldExpand(fieldElem) {
-        var expandBtn = $(fieldElem).find(''.expand-btn'');
-        expandBtn.removeClass(''fa-chevron-up fa-chevron-down'');
-        $(fieldElem).toggleClass(''expanded'');
-        if ($(fieldElem).hasClass(''expanded'')) {
-          expandBtn.addClass(''fa-chevron-up'');
-        } else {
-          expandBtn.addClass(''fa-chevron-down'');
-        }
-      }
-
-      // creating fields
-      var fieldListElem = $(''.fsi-pdf-check-fields'');
-      MOCK_FIELD_DATA.forEach(function(field) {
-        var fieldElem = $($(''#pdf-field-template'').html());
-        fieldElem.find(''.pdf-field-name'').text(field.name);
-        fieldElem.find(''.pdf-field-value'').text(field.value);
-        fieldListElem.append(fieldElem);
-      });
-
-
-      // binding info tabs
-      $(''button[data-tab-id]'').click(function() {
-        $(''[data-tab-id]'').removeClass(''active'');
-        var tabId = $(this).attr(''data-tab-id'');
-        $(''[data-tab-id="'' + tabId + ''"]'').addClass(''active'');
-      });
-
-      // binding expanding fields
-      $(''.pdf-field .expand-btn'').click(function() {
-        var field = $(this).closest(''.pdf-field'');
-        toggleFieldExpand(field);
-      });
-
-      // binding clear field buttons
-      $(''.pdf-field .clear-btn'').click(function() {
-        var field = $(this).closest(''.pdf-field'');
-        field.removeClass(''marked approved rejected'');
-        updateApproveRejectForm();
-      });
-
-      // binding approve buttons
-      $(''.pdf-field .approve-btn'').click(function() {
-        var field = $(this).closest(''.pdf-field'');
-        toggleFieldExpand(field);
-        field.addClass(''marked approved'');
-        updateApproveRejectForm();
-      });
-
-      // binding reject buttons
-      $(''.pdf-field .reject-btn'').click(function() {
-        var field = $(this).closest(''.pdf-field'');
-        toggleFieldExpand(field);
-        field.addClass(''marked rejected'');
-        updateApproveRejectForm();
-      });
-
-      // binding global approve button
-      $(''.fsi-pdf-approve-reject .approve-btn'').click(function() {
-        alert(''Document approved.'');
-      });
-      // binding global reject button
-      $(''.fsi-pdf-approve-reject .reject-btn'').click(function() {
-        alert(''Document rejected with message: '' + $(''.fsi-pdf-approve-reject textarea'').val());
-      });
-
-    });
-</script>',NULL,0);
