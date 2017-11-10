@@ -373,175 +373,6 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
     </body>
 </html>
 ');
-INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-dashboard-responsive','FSI Dashboard responsive','<?xml version="1.0" encoding="UTF-8"?>
-<frames>
-	<frame pos="0">
-		<descr>Top bar 1</descr>
-		<sketch x1="0" y1="0" x2="1" y2="0" />
-	</frame>
-	<frame pos="1">
-		<descr>Top Bar 2</descr>
-		<sketch x1="2" y1="0" x2="3" y2="0" />
-	</frame>
-	<frame pos="2">
-		<descr>Top Bar 3</descr>
-		<sketch x1="4" y1="0" x2="5" y2="0" />
-	</frame>
-	<frame pos="3">
-		<descr>Top Bar 4</descr>
-		<sketch x1="6" y1="0" x2="7" y2="0" />
-	</frame>
-	<frame pos="4">
-		<descr>Top Bar 5</descr>
-		<sketch x1="8" y1="0" x2="9" y2="0" />
-	</frame>
-	<frame pos="5">
-		<descr>Top Bar 6</descr>
-		<sketch x1="10" y1="0" x2="11" y2="0" />
-	</frame>
-	<frame pos="6">
-		<descr>Main Bar 1</descr>
-		<sketch x1="0" y1="1" x2="7" y2="1" />
-	</frame>
-	<frame pos="7">
-		<descr>Main Bar 2</descr>
-		<sketch x1="8" y1="1" x2="11" y2="1" />
-	</frame>
-	<frame pos="8">
-		<descr>Sub Bar 1</descr>
-		<sketch x1="0" y1="2" x2="6" y2="2" />
-	</frame>
-	<frame pos="9">
-		<descr>Sub Bar 2</descr>
-		<sketch x1="7" y1="2" x2="11" y2="2" />
-	</frame>
-	<frame pos="10">
-		<descr>Content 1 left</descr>
-		<sketch x1="0" y1="3" x2="3" y2="3" />
-	</frame>
-	<frame pos="11">
-		<descr>Content 1 center</descr>
-		<sketch x1="4" y1="3" x2="7" y2="3" />
-	</frame>
-	<frame pos="12">
-		<descr>Content 1 right</descr>
-		<sketch x1="8" y1="3" x2="11" y2="3" />
-	</frame>
-	<frame pos="13">
-		<descr>Content 2</descr>
-		<sketch x1="0" y1="4" x2="11" y2="4" />
-	</frame>
-	<frame pos="14">
-		<descr>Content 3</descr>
-		<sketch x1="0" y1="5" x2="11" y2="5" />
-	</frame>
-	<frame pos="15">
-		<descr>Footer</descr>
-		<sketch x1="0" y1="6" x2="11" y2="6" />
-	</frame>
-</frames>
-
-',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>
-            <@wp.currentPage param="title" /> - <@wp.i18n key="PORTAL_TITLE" />
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <link rel="icon" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />
-              favicon.png" type="image/png" />
-              <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-
-        <@c.import url="/WEB-INF/aps/jsp/models/inc/content_inline_editing.jsp" />
-        <@c.import url="/WEB-INF/aps/jsp/models/inc/header-inclusions_1.jsp" />
-
-    </head>
-     <body class="mobile-background">
-        <nav class="navbar navbar-default fsi-navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"></a>
-                    <img class="brand-img" alt="Brand" src="/fsi-backoffice/resources/static/img/shield-logo.png">
-                    <span class="brand-company">FORTRESS - <span>Bank &amp; Loan </span></span>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav navbar-right">
-                        <@wp.show frame=0 />
-                        <@wp.show frame=1 />
-                        <@wp.show frame=2 />
-                        <@wp.show frame=4 />
-                        <@wp.show frame=5 />
-                     </div>
-                </div>
-            </div>
-        </nav>
-
- <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="">
-
-                    <div class="col-md-8">
-                        <@wp.show frame=6 />
-                    </div>
-                    <div class="col-md-4">
-                        <@wp.show frame=7 />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-7">
-                        <@wp.show frame=8 />
-                    </div>
-                    <div class="col-md-5">
-                        <@wp.show frame=9 />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <@wp.show frame=10 />
-                    </div>
-                    <div class="col-md-4">
-                        <@wp.show frame=11/>
-                    </div>
-                    <div class="col-md-4">
-                        <@wp.show frame=12 />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <@wp.show frame=13 />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <@wp.show frame=14 />
-                    </div>
-                </div>
-            </div>
-        </div>
-       </div> 
-        <div class="row">
-            <div class="col-md-12">
-                <@wp.show frame=15 />
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-</html>');
 INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-landing','FSI Landing','<?xml version="1.0" encoding="UTF-8"?>
 <frames>
 	<frame pos="0">
@@ -1045,3 +876,170 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-c
     </body>
 </html>
 ');
+INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-dashboard-responsive','FSI Dashboard responsive','<?xml version="1.0" encoding="UTF-8"?>
+<frames>
+	<frame pos="0">
+		<descr>Top bar 1</descr>
+		<sketch x1="0" y1="0" x2="1" y2="0" />
+	</frame>
+	<frame pos="1">
+		<descr>Top Bar 2</descr>
+		<sketch x1="2" y1="0" x2="3" y2="0" />
+	</frame>
+	<frame pos="2">
+		<descr>Top Bar 3</descr>
+		<sketch x1="4" y1="0" x2="5" y2="0" />
+	</frame>
+	<frame pos="3">
+		<descr>Top Bar 4</descr>
+		<sketch x1="6" y1="0" x2="7" y2="0" />
+	</frame>
+	<frame pos="4">
+		<descr>Top Bar 5</descr>
+		<sketch x1="8" y1="0" x2="9" y2="0" />
+	</frame>
+	<frame pos="5">
+		<descr>Top Bar 6</descr>
+		<sketch x1="10" y1="0" x2="11" y2="0" />
+	</frame>
+	<frame pos="6">
+		<descr>Main Bar 1</descr>
+		<sketch x1="0" y1="1" x2="7" y2="1" />
+	</frame>
+	<frame pos="7">
+		<descr>Main Bar 2</descr>
+		<sketch x1="8" y1="1" x2="11" y2="1" />
+	</frame>
+	<frame pos="8">
+		<descr>Sub Bar 1</descr>
+		<sketch x1="0" y1="2" x2="6" y2="2" />
+	</frame>
+	<frame pos="9">
+		<descr>Sub Bar 2</descr>
+		<sketch x1="7" y1="2" x2="11" y2="2" />
+	</frame>
+	<frame pos="10">
+		<descr>Content 1 left</descr>
+		<sketch x1="0" y1="3" x2="3" y2="3" />
+	</frame>
+	<frame pos="11">
+		<descr>Content 1 center</descr>
+		<sketch x1="4" y1="3" x2="7" y2="3" />
+	</frame>
+	<frame pos="12">
+		<descr>Content 1 right</descr>
+		<sketch x1="8" y1="3" x2="11" y2="3" />
+	</frame>
+	<frame pos="13">
+		<descr>Content 2</descr>
+		<sketch x1="0" y1="4" x2="11" y2="4" />
+	</frame>
+	<frame pos="14">
+		<descr>Content 3</descr>
+		<sketch x1="0" y1="5" x2="11" y2="5" />
+	</frame>
+	<frame pos="15">
+		<descr>Footer</descr>
+		<sketch x1="0" y1="6" x2="11" y2="6" />
+	</frame>
+</frames>
+
+',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            <@wp.currentPage param="title" /> - <@wp.i18n key="PORTAL_TITLE" />
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />
+              favicon.png" type="image/png" />
+              <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
+        <@c.import url="/WEB-INF/aps/jsp/models/inc/content_inline_editing.jsp" />
+        <@c.import url="/WEB-INF/aps/jsp/models/inc/header-inclusions_1.jsp" />
+
+    </head>
+     <body class="mobile-background">
+        <nav class="navbar navbar-default fsi-navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                    <img class="brand-img" alt="Brand" src="/fsi-backoffice/resources/static/img/shield-logo.png">
+                    <span class="brand-company">FORTRESS - <span>Bank &amp; Loan </span></span>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                   <ul class="nav navbar-nav navbar-right ">
+                        <@wp.show frame=0 />
+                        <@wp.show frame=1 />
+                        <@wp.show frame=2 />
+                        <@wp.show frame=4 />
+                        <@wp.show frame=5 />
+                     </div>
+                </div>
+            </div>
+        </nav>
+
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="">
+
+                    <div class="col-md-8">
+                        <@wp.show frame=6 />
+                    </div>
+                    <div class="col-md-4">
+                        <@wp.show frame=7 />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <@wp.show frame=8 />
+                    </div>
+                    <div class="col-md-5">
+                        <@wp.show frame=9 />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <@wp.show frame=10 />
+                    </div>
+                    <div class="col-md-4">
+                        <@wp.show frame=11/>
+                    </div>
+                    <div class="col-md-4">
+                        <@wp.show frame=12 />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <@wp.show frame=13 />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <@wp.show frame=14 />
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div> 
+        <div class="row">
+            <div class="col-md-12">
+                <@wp.show frame=15 />
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>');

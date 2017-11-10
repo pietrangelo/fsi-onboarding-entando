@@ -5,11 +5,6 @@
 --%>
 <%@ taglib prefix="wp" uri="/aps-core" %>
 
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"  crossorigin="anonymous">
-
-<link rel="stylesheet" href="<wp:resourceURL />static/css/inspina_overrides.css">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/custom.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/font-awesome.min.css" rel="stylesheet">
@@ -31,3 +26,7 @@
 <script src="<wp:resourceURL />static/js/datepicker.js"></script>
 <script src="<wp:resourceURL />static/js/jasny.js"></script>
 <script src="<wp:resourceURL />static/js/icheck.min.js"></script>
+
+
+
+
