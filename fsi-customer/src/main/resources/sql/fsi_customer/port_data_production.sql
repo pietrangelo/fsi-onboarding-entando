@@ -31,8 +31,14 @@ INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant
 INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_EMAIL', 'en', 'email');
 INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_EMAIL', 'it', 'email');
 
+INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_USERNAME', 'en', 'username');
+INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_USERNAME', 'it', 'username');
+
 INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_PWD', 'en', 'pwd');
 INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_PWD', 'it', 'pwd');
+
+INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_CNFPWD', 'en', 'confirm pwd');
+INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_CNFPWD', 'it', 'conferma pwd');
 
 
 INSERT INTO localstrings ( keycode, langcode, stringvalue ) VALUES ('jpapplicant_APPLICANT_ACTIONS', 'it', 'Actions');
@@ -156,12 +162,12 @@ jQuery(function($) {
 </form>
 </section>', 1);
 INSERT INTO guifragment (code, widgettypecode, plugincode, gui, defaultgui, locked) VALUES ('jpapplicant_is_front_Applicant_error', 'jpapplicantApplicant_list_form', 'jpapplicant', NULL, '<pre>
-   __   _ __   _ __   ___   _ __  
+   __   _ __   _ __   ___   _ __
  /''__`\/\`''__\/\`''__\/ __`\/\`''__\
-/\  __/\ \ \/ \ \ \//\ \L\ \ \ \/ 
-\ \____\\ \_\  \ \_\\ \____/\ \_\ 
- \/____/ \/_/   \/_/ \/___/  \/_/ 
-                                  
+/\  __/\ \ \/ \ \ \//\ \L\ \ \ \/
+\ \____\\ \_\  \ \_\\ \____/\ \_\
+ \/____/ \/_/   \/_/ \/___/  \/_/
+
 </pre>', 1);
 
 

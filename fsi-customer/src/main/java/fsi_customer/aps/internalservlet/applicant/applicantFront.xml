@@ -7,77 +7,42 @@
 
     <package name="jpapplicant_do/FrontEnd/jpapplicant/Applicant" namespace="/do/FrontEnd/jpapplicant/Applicant" extends="entando-front-default">
 
-		<global-results>
-			<result name="failure" type="guiFragment">
-				<param name="code">jpapplicant_is_front_Applicant_error</param>
-				<param name="jspLocation">/WEB-INF/plugins/jpapplicant/aps/jsp/internalservlet/applicant/frontend-applicant-error.jsp</param>
-			</result>
-    	</global-results>
-
-<!--    	<action name="list" class="jpapplicantApplicantFinderFrontEndAction">
-    		<result type="guiFragment">
-				<param name="code">jpapplicant_is_front_Applicant_list</param>
-				<param name="jspLocation">/WEB-INF/plugins/jpapplicant/aps/jsp/internalservlet/applicant/frontend-applicant-list.jsp</param>
-			</result>
-			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
-        </action>-->
-
-<!--    	<action name="search" class="jpapplicantApplicantFinderFrontEndAction">
-            <result type="guiFragment">
-				<param name="code">jpapplicant_is_front_Applicant_list</param>
-				<param name="jspLocation">/WEB-INF/plugins/jpapplicant/aps/jsp/internalservlet/applicant/frontend-applicant-list.jsp</param>
-			</result>
-			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
-        </action>-->
+        <global-results>
+            <result name="failure" type="guiFragment">
+                <param name="code">jpapplicant_is_front_Applicant_error</param>
+                <param name="jspLocation">/WEB-INF/fsi_customer/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</param>
+            </result>
+        </global-results>
 
         <action name="new" class="jpapplicantApplicantFrontEndAction" method="newApplicant">
             <result type="guiFragment">
-				<param name="code">jpapplicant_is_front_Applicant_entry</param>
-				<param name="jspLocation">/WEB-INF/fsi_customer/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</param>
-			</result>
-            <!--<result type="dispatcher">/WEB-INF/fsi_customer/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</result>-->
-			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+                <param name="code">jpapplicant_is_front_Applicant_entry</param>
+                <param name="jspLocation">/WEB-INF/fsi_customer/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeValidationStack">
+                <param name="chain.includeParameters">fieldErrors,actionErrors,actionMessages</param>
+            </interceptor-ref>
         </action>
 
         <action name="edit" class="jpapplicantApplicantFrontEndAction" method="edit">
             <result type="guiFragment">
-				<param name="code">jpapplicant_is_front_Applicant_entry</param>
-				<param name="jspLocation">/WEB-INF/fsi_customer/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</param>
-			</result>
-			<result name="input" type="frontRedirectAction">
-				<param name="actionName">list</param>
-			</result>
-        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+                <param name="code">jpapplicant_is_front_Applicant_entry</param>
+                <param name="jspLocation">/WEB-INF/fsi_customer/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</param>
+            </result>
+            <result name="input" type="frontRedirectAction">
+                <param name="actionName">list</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
         </action>
 
-<!--        <action name="save" class="jpapplicantApplicantFrontEndAction" method="save">
-        	<result name="input" type="guiFragment">
-				<param name="code">jpapplicant_is_front_Applicant_entry</param>
-				<param name="jspLocation">/WEB-INF/plugins/jpapplicant/aps/jsp/internalservlet/applicant/frontend-applicant-entry.jsp</param>
-			</result>
-			<result type="frontRedirectAction">
-				<param name="actionName">list</param>
-			</result>
-        	<interceptor-ref name="entandoFrontEndFreeValidationStack"></interceptor-ref>
-        </action>-->
-
-<!--    	<action name="trash" class="jpapplicantApplicantFrontEndAction" method="trash">
-            <result type="guiFragment">
-				<param name="code">jpapplicant_is_front_Applicant_trash</param>
-				<param name="jspLocation">/WEB-INF/plugins/jpapplicant/aps/jsp/internalservlet/applicant/frontend-applicant-trash.jsp</param>
-			</result>
-			<result name="input" type="frontRedirectAction">
-				<param name="actionName">list</param>
-			</result>
-        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
-        </action>-->
-
-<!--    	<action name="delete" class="jpapplicantApplicantFrontEndAction" method="delete">
-        	<result type="frontRedirectAction">
-				<param name="actionName">list</param>
-			</result>
-        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
-        </action>-->
+        <action name="save" class="jpapplicantApplicantFrontEndAction" method="save">
+            <result type="frontRedirectAction">
+                <param name="actionName">new</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeValidationStack">
+                <param name="chain.includeParameters">fieldErrors,actionErrors,actionMessages</param>
+            </interceptor-ref>
+        </action>
 
     </package>
 

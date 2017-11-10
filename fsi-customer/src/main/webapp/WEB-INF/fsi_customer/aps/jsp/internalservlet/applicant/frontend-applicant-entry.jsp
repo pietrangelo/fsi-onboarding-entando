@@ -32,7 +32,16 @@
                 </ul>
             </div>
         </s:if>
-
+        <s:if test="hasActionMessages()">
+            <div class="alert alert-success">
+                <h2><s:text name="message.title.ActionMessages" /></h2>
+                <ul>
+                    <s:iterator value="actionMessages">
+                        <li><s:property/></li>
+                        </s:iterator>
+                </ul>
+            </div>
+        </s:if>
         <p class="sr-only">
             <wpsf:hidden name="strutsAction" />
             <wpsf:hidden name="id" />
@@ -55,12 +64,23 @@
             <input type="text" name="email" id="applicant_email" value="<s:property value="email" />" class="form-control input-custom" />
         </div>
         <div class="form-group">
-            <label class="login-label" for="applicant_pwd"><wp:i18n key="jpapplicant_APPLICANT_PWD" /></label>
-            <input type="text" name="pwd" id="applicant_pwd" value="<s:property value="pwd" />" class="form-control input-custom" />
+            <label class="login-label" for="applicant_username">username</label>
+    <!--            <label class="login-label" for="applicant_username"><wp:i18n key="jpapplicant_APPLICANT_USERNAME" /></label>-->
+            <input type="text" name="username" id="applicant_username" value="<s:property value="username" />" class="form-control input-custom" />
         </div>
         <div class="form-group">
             <label class="login-label" for="applicant_pwd"><wp:i18n key="jpapplicant_APPLICANT_PWD" /></label>
-            <input type="text" name="pwd" id="applicant_pwd" value="<s:property value="pwd" />" class="form-control input-custom" />
+            <input type="password" name="pwd" id="applicant_pwd" value="<s:property value="pwd" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label" for="applicant_cnfpwd">confirm password</label>
+    <!--            <label class="login-label" for="applicant_cnfpwd"><wp:i18n key="jpapplicant_APPLICANT_CNFPWD" /></label>-->
+            <input type="password" name="cnfpwd" id="applicant_cnfpwd" value="<s:property value="cnfpwd" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label" for="applicant_procid">process id</label>
+    <!--<label class="login-label" for="applicant_procid"><wp:i18n key="jpapplicant_APPLICANT_CNFPWD" /></label>-->
+            <input type="text" name="procid" id="applicant_procid" value="<s:property value="procid" />" class="form-control input-custom" />
         </div>
         <div class="right-side-button">
             <wpsf:submit type="button" cssClass="btn btn-primary login-button">
