@@ -10,36 +10,46 @@
     <p class="presentation">Hi . Type your and a password to complete the registration. </p>
 
     <form action="<wp:action path="/ExtStr2/do/FrontEnd/jpapplicant/Applicant/save.action" />" method="post" class="m-t">
-        <s:if test="hasFieldErrors()">
-            <div class="alert alert-error">
-                <h2><s:text name="message.title.FieldErrors" /></h2>
-                <ul>
-                    <s:iterator value="fieldErrors">
-                        <s:iterator value="value">
-                            <li><s:property/></li>
-                            </s:iterator>
+        <s:if test="hasActionErrors()">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    <span class="pficon pficon-close"></span>
+                </button>
+                <span class="pficon pficon-error-circle-o"></span>
+                <strong><s:text name="message.title.ActionErrors" />
+                </strong>
+                <ul class="margin-base-top">
+                    <s:iterator value="actionErrors">
+                        <li><s:property escapeHtml="false" /></li>
                         </s:iterator>
                 </ul>
             </div>
         </s:if>
-        <s:if test="hasActionErrors()">
-            <div class="alert alert-error">
-                <h2><s:text name="message.title.ActionErrors" /></h2>
-                <ul>
-                    <s:iterator value="actionErrors">
-                        <li><s:property/></li>
+        <s:if test="hasFieldErrors()">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    <span class="pficon pficon-close"></span>
+                </button>
+                <span class="pficon pficon-error-circle-o"></span>
+                <strong>
+                    <s:text name="message.title.FieldErrors" />
+                </strong>
+                <ul class="margin-base-top">
+                    <s:iterator value="fieldErrors">
+                        <s:iterator value="value">
+                            <li><s:property escapeHtml="false" /></li>
+                            </s:iterator>
                         </s:iterator>
                 </ul>
             </div>
         </s:if>
         <s:if test="hasActionMessages()">
             <div class="alert alert-success">
-                <h2><s:text name="message.title.ActionMessages" /></h2>
-                <ul>
-                    <s:iterator value="actionMessages">
-                        <li><s:property/></li>
-                        </s:iterator>
-                </ul>
+                <span class="pficon pficon-ok"></span>
+                <strong><s:text name="messages.confirm" /></strong>
+                <s:iterator value="actionMessages">
+                    <li><s:property escapeHtml="false" /></li>
+                    </s:iterator>
             </div>
         </s:if>
         <p class="sr-only">

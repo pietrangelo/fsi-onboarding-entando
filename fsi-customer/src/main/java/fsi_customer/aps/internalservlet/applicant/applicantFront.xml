@@ -26,7 +26,7 @@
 
 
         <action name="save" class="jpapplicantApplicantFrontEndAction" method="save">
-            <result type="frontRedirectAction">
+            <result type="chain">
                 <param name="actionName">new</param>
             </result>
             <result type="guiFragment" name="input" >

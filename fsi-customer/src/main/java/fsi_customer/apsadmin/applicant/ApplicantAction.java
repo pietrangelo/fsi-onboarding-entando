@@ -61,6 +61,9 @@ public class ApplicantAction extends BaseAction {
                 this.getUserManager().addUser(user);
                 boolean res = this.getKieFormManager().sendSignal("5fdf1ed1672f5358e70570bd7f50b163", this.getProcid(), "account_registered", "\"" + this.getUsername() + "\"", null);
                 _logger.info("result: {}", res);
+                if (res) {
+                    this.addActionMessage("account created and signal successfully sent");
+                }
             } else if (ApsAdminSystemConstants.EDIT == strutsAction) {
 //				this.getApplicantManager().updateApplicant(applicant);
             }
