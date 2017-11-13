@@ -1765,3 +1765,14 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     margin-left: auto;
     background: #fff;
 }
+.alert-custom {
+    border-radius: 0px;
+    font-size: 14px;
+    font-family: "Open Sans";
+}
+.alert-custom strong{
+    border-radius: 0px;
+    font-size: 18px;
+    font-family: "Open Sans";
+    font-weight:300;
+}

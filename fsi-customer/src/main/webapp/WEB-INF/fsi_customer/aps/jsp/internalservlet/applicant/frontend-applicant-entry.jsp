@@ -11,7 +11,7 @@
 
     <form action="<wp:action path="/ExtStr2/do/FrontEnd/jpapplicant/Applicant/save.action" />" method="post" class="m-t">
         <s:if test="hasActionErrors()">
-            <div class="alert alert-danger alert-dismissable">
+            <div class="alert alert-danger alert-dismissable alert-custom">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                     <span class="pficon pficon-close"></span>
                 </button>
@@ -26,7 +26,7 @@
             </div>
         </s:if>
         <s:if test="hasFieldErrors()">
-            <div class="alert alert-danger alert-dismissable">
+            <div class="alert alert-danger alert-dismissable alert-custom">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                     <span class="pficon pficon-close"></span>
                 </button>
@@ -44,7 +44,7 @@
             </div>
         </s:if>
         <s:if test="hasActionMessages()">
-            <div class="alert alert-success">
+            <div class="alert alert-success alert-custom">
                 <span class="pficon pficon-ok"></span>
                 <strong><s:text name="messages.confirm" /></strong>
                 <s:iterator value="actionMessages">
