@@ -18,7 +18,7 @@
                 <span class="pficon pficon-error-circle-o"></span>
                 <strong><s:text name="message.title.ActionErrors" />
                 </strong>
-                <ul class="margin-base-top">
+                <ul class="list-unstyled">
                     <s:iterator value="actionErrors">
                         <li><s:property escapeHtml="false" /></li>
                         </s:iterator>
@@ -34,7 +34,7 @@
                 <strong>
                     <s:text name="message.title.FieldErrors" />
                 </strong>
-                <ul class="margin-base-top">
+                <ul class="list-unstyled">
                     <s:iterator value="fieldErrors">
                         <s:iterator value="value">
                             <li><s:property escapeHtml="false" /></li>
