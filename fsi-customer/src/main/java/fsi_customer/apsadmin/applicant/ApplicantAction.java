@@ -63,7 +63,10 @@ public class ApplicantAction extends BaseAction {
                 _logger.info("result: {}", res);
                 if (res) {
                     this.addActionMessage("account created and signal successfully sent");
+                } else {
+                    this.addActionError("Signal not sent");
                 }
+                
             } else if (ApsAdminSystemConstants.EDIT == strutsAction) {
 //				this.getApplicantManager().updateApplicant(applicant);
             }

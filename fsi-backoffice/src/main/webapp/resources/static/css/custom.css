@@ -63,7 +63,6 @@ html, body {
 }
 
 .loginscreen.middle-box {
-    width: 407px;
     height: 420px;
     padding: 1em;
     background: #fff;
@@ -2015,6 +2014,12 @@ a.dropdown-fsi-login {
         background:#1b6e9c !important;
         font-weight:500;
     }
+    .ui-dform-div .btn  {
+        width:100% !important;
+        font-size:1.5em;
+        text-transform:uppercase;
+        font-weight:300;
+    }
 }
 .navbar-toggle {
     position: relative;
@@ -2032,4 +2037,35 @@ a.dropdown-fsi-login {
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: #002235;
+}
+/*------------form---------------------------*/
+
+.ui-dform-div .form-control {
+    height: 50px;
+    font-size: 16px;
+    border-radius: 0;
+    border: none;
+    border: 1px solid #c1c1c1;
+}
+.ui-dform-fieldset label  {
+    color: #676A6C;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.ui-dform-fieldset legend  {
+    color: #676A6C;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+h3.control-label{
+    font-size:2em;
+    color: #676A6C;
+}
+.bpm-forms-container {
+    background:#fff;
+    padding: 3px 33px 15px 33px;
 }
