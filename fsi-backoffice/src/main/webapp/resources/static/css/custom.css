@@ -67,6 +67,7 @@ html, body {
     padding: 1em;
     background: #fff;
     width: 408px;
+    margin-top: 6em;
 }
 .middle-box {
     max-width: 342px;
@@ -1936,6 +1937,10 @@ a.dropdown-fsi-login {
 .mobile-background{
     background: #eaeaea;
 }
+.mobile-background .ibox {
+    background:#fff;
+    padding: 5px 25px 20px 25px;
+}
 
 .bpm-title{
     font-size: 22px;
@@ -2069,3 +2074,4 @@ h3.control-label{
     background:#fff;
     padding: 3px 33px 15px 33px;
 }
+
