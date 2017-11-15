@@ -167,9 +167,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 <property key="en">Search Form</property>
 <property key="it">Search Form</property>
 </properties>',NULL,NULL,NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-login_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Dropdown Sign In</property><property key="it">Dropdown Sign In</property></properties>
-',NULL,NULL,NULL,NULL,1,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-footer','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Footer</property><property key="it">FSI Footer</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
@@ -218,3 +215,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-state','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI state</property><property key="it">FSI status</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-login_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Dropdown Sign In</property><property key="it">Dropdown Sign In</property></properties>
+',NULL,NULL,NULL,NULL,1,'free');

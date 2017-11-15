@@ -2799,6 +2799,94 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     <p class="title-label-loan" >Ad interim support to "bridge the gap" before permanent financing </p>
                 </div>
             </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-club-credit-card','fsi-club-credit-card',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="middle-box-cc">
+      <div class="club-cc-wrapper">
+         <div class="label-club">CLUB</div>
+         <div class="label-credit-card">CREDIT CARD</div>
+      </div>
+      <div class="fsi-logo-name">
+	<img alt="image" class="" src="<@wp.imgURL />shield-logo.png">&nbsp;
+	<b>FORTRESS -</b>&nbsp;
+	<span>Bank &amp; Loan</span>
+      </div>
+    </div>
+
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-footer','fsi-footer',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="fsi-footer-wrapper">
+  <div class="fsi-footer">
+    <div class="col-md-2 col-md-offset-1">
+      <div class="logo-names">
+        <img alt="image" class="" src="<@wp.imgURL />shield-logo.png">&nbsp;
+        <b>FORTRESS -</b>
+        <span>Bank &amp; Loan</span></div>
+    </div>
+    <div class="col-md-2 col-md-offset-2 side-menu">
+      <div class="side-menu-item">Personal</div>
+      <div class="side-menu-item">Small Business</div>
+      <div class="side-menu-item">Commercial</div>
+      <div class="side-menu-item">Global Wealth</div>
+    </div>
+    <div class="col-md-2 contacts">
+      <div class="item">
+        <i class="fa fa-comments-o"></i>
+        <span class="labels">Start chat</span>
+      </div>
+      <div class="item">
+        <i class="fa fa-phone"></i>
+        <span class="labels">001-500-200</span>
+      </div>
+      <div class="item">
+        <i class="fa fa-envelope-o"></i>
+        <span class="labels">Write to us</span>
+      </div>
+    </div>
+    <div class="col-md-2 contacts">
+      <div class="item">
+        <i class="fa fa-credit-card"></i>
+        <span class="labels">Block your card</span>
+      </div>
+      <div class="item">
+        <i class="fa fa-users"></i>
+        <span class="labels">Set up a meeting</span>
+      </div>
+      <div class="item">
+        <i class="fa fa-home"></i>
+        <span class="labels">Find local branch</span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright row">
+    <div class="col-md-6 col-md-offset-1">Copyright Example Company &copy; 2014-2015</div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="row spacers">
+<div class="col-md-12">
+  <p class="title-welcome">
+   WELCOME IN TO THE  FORTRESS BANK & LOAN
+   </p>
+</div>
+<div class="col-md-6">
+<p class="content-welcome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
+</p>
+</div>
+
+<div class="col-md-6">
+  <p class="content-welcome">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
+</p>
+</div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <ul class="list-unstyled">
 <li class=" dropdown
@@ -2807,7 +2895,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
   
     <a class="dropdown-fsi-login dropdown-toggle" href="#" data-toggle="dropdown">
         ${Session.currentUser}
-        <span class="caret"></span>
+         &nbsp;&nbsp;<span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
         <li>
@@ -2818,7 +2906,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             </a>
             </@wp.ifauthorized>
         </li>
-        <div class="divider"></div>
         <li> 
             <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
 
@@ -2930,91 +3017,3 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-club-credit-card','fsi-club-credit-card',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="middle-box-cc">
-      <div class="club-cc-wrapper">
-         <div class="label-club">CLUB</div>
-         <div class="label-credit-card">CREDIT CARD</div>
-      </div>
-      <div class="fsi-logo-name">
-	<img alt="image" class="" src="<@wp.imgURL />shield-logo.png">&nbsp;
-	<b>FORTRESS -</b>&nbsp;
-	<span>Bank &amp; Loan</span>
-      </div>
-    </div>
-
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-footer','fsi-footer',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="fsi-footer-wrapper">
-  <div class="fsi-footer">
-    <div class="col-md-2 col-md-offset-1">
-      <div class="logo-names">
-        <img alt="image" class="" src="<@wp.imgURL />shield-logo.png">&nbsp;
-        <b>FORTRESS -</b>
-        <span>Bank &amp; Loan</span></div>
-    </div>
-    <div class="col-md-2 col-md-offset-2 side-menu">
-      <div class="side-menu-item">Personal</div>
-      <div class="side-menu-item">Small Business</div>
-      <div class="side-menu-item">Commercial</div>
-      <div class="side-menu-item">Global Wealth</div>
-    </div>
-    <div class="col-md-2 contacts">
-      <div class="item">
-        <i class="fa fa-comments-o"></i>
-        <span class="labels">Start chat</span>
-      </div>
-      <div class="item">
-        <i class="fa fa-phone"></i>
-        <span class="labels">001-500-200</span>
-      </div>
-      <div class="item">
-        <i class="fa fa-envelope-o"></i>
-        <span class="labels">Write to us</span>
-      </div>
-    </div>
-    <div class="col-md-2 contacts">
-      <div class="item">
-        <i class="fa fa-credit-card"></i>
-        <span class="labels">Block your card</span>
-      </div>
-      <div class="item">
-        <i class="fa fa-users"></i>
-        <span class="labels">Set up a meeting</span>
-      </div>
-      <div class="item">
-        <i class="fa fa-home"></i>
-        <span class="labels">Find local branch</span>
-      </div>
-    </div>
-  </div>
-  <div class="copyright row">
-    <div class="col-md-6 col-md-offset-1">Copyright Example Company &copy; 2014-2015</div>
-  </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="row spacers">
-<div class="col-md-12">
-  <p class="title-welcome">
-   WELCOME IN TO THE  FORTRESS BANK & LOAN
-   </p>
-</div>
-<div class="col-md-6">
-<p class="content-welcome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
-</p>
-</div>
-
-<div class="col-md-6">
-  <p class="content-welcome">
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
-</p>
-</div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
-<p>Improving businesses&apos; life through meaningful services.
-</p>
-<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);

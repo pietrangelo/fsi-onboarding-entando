@@ -1786,3 +1786,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     background-color: #be0100;
     border-color: #be0100;
 }
+
+.logo-menu-pages .dropdown-menu a {
+    font-size:14px !important;
+    text-transform:capitalize;
+}

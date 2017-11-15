@@ -329,14 +329,16 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','entandoC
 ');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
 <kieBpmConfig>
-   <active>false</active>
-   <username>USERNAME</username>
-   <password>PASSWORD</password>
-   <hostname>HOSTNAME</hostname>
+   <active>true</active>
+   <username>kieserver</username>
+   <password>kieserver1!</password>
+   <hostname>co-client-onboarding-developer.54.36.53.206.xip.io</hostname>
    <schema>http</schema>
-   <port>8080</port>
-   <webapp>kie</webapp>
-</kieBpmConfig>');
+   <port>80</port>
+   <webapp>kie-server</webapp>
+   <timeout>500</timeout>
+</kieBpmConfig>
+');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','langs','Definition of the system languages','<?xml version="1.0" encoding="UTF-8"?>
 <Langs>
 	<Lang>
