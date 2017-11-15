@@ -4,6 +4,22 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-pdf-document','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Fsi PDF</property><property key="it">Fsi PDF</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">BPM-Datatable Task List</property>
+<property key="it">BPM-Datatable Task List</property>
+</properties>','<config>
+	<parameter name="widgetInfoId">WidgetInfoID</parameter>
+	<action name="jpkiebpmBpmTaskListDatatableWidgetViewerConfig"/>
+</config>','jpkiebpm',NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">BPM-Process list</property>
+<property key="it">BPM-Lista processi</property>
+</properties>','<config>
+	<parameter name="widgetInfoId">WidgetInfoID</parameter>
+	<action name="jpkiebpmBpmProcessDatatableWidgetViewerConfig"/>
+</config>','jpkiebpm',NULL,NULL,1,NULL);
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-navigation_bar_inspinia','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Navigation - Bar</property>
@@ -21,14 +37,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 	<parameter name="dataUxId">Data Ux ID</parameter>
 	<parameter name="widgetInfoId">Widget Info ID</parameter>
 	<action name="jpkiebpmBpmFormWidgetViewerConfig"/>
-</config>','jpkiebpm',NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">BPM-Datatable</property>
-<property key="it">BPM-Datatable</property>
-</properties>','<config>
-	<parameter name="widgetInfoId">WidgetInfoID</parameter>
-	<action name="jpkiebpmBpmDatatableWidgetViewerConfig"/>
 </config>','jpkiebpm',NULL,NULL,1,NULL);
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-search_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
@@ -258,14 +266,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi_client_on_board_mananger_tabs','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Client On Board Mananger Tabs</property><property key="it">FSI Client On Board Mananger Tabs</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">BPM-Process list</property>
-<property key="it">BPM-Lista processi</property>
-</properties>','<config>
-	<parameter name="widgetInfoId">WidgetInfoID</parameter>
-	<action name="jpkiebpmBpmDatatableWidgetViewerConfig"/>
-</config>','jpkiebpm',NULL,NULL,1,NULL);
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('dropdown_menu_responsive','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Dropdown menu mobile</property><property key="it">Dropdown menu mobile</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
