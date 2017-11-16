@@ -1791,3 +1791,12 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     font-size:14px !important;
     text-transform:capitalize;
 }
+
+.customer-process-step {
+    display: none;
+}
+
+.customer-process-step.active {
+    display: block;
+}
+

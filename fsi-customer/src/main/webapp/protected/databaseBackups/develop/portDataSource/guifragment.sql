@@ -1,163 +1,3 @@
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label class="login-label">Company Name</label>
-                    <input id="username" type="text" name="username" placeholder="Enter First Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Last Name</label>
-                    <input id="password" type="text" name="password" placeholder="Enter Last Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Email</label>
-                    <input id="username" type="text" name="username" placeholder="Enter Email" class="form-control input-custom" />
-                </div>
-                <br>
-                <p>Additional Info</p>
-
-                <div class="form-group">
-                    <label class="login-label">ENRIC / Passport No.</label>
-                    <input id="password" type="text" name="password" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Nationality</label>
-                    <input id="password" type="text" name="password" placeholder="Enter nationality" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Job Number</label>
-                    <input id="password" type="text" name="password" placeholder="Job Number" class="form-control input-custom" />
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-left spacers">
-                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="login-label">Company Name</label>
-                    <input id="username" type="text" name="username" placeholder="Company Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">The state in which the business operates</label>
-                    <input id="password" type="text" name="password" placeholder="The state in which the business operates" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">The state in which the business was formed</label>
-                    <input id="username" type="text" name="username" placeholder="The state in which the business was formed" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Name</label>
-                    <input id="password" type="text" name="password" placeholder="Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Email</label>
-                    <input id="password" type="text" name="password" placeholder="Email" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Customer type</label>
-                    <input id="password" type="text" name="password" placeholder="Customer type" class="form-control input-custom" />
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="login-label">Address of the business</label>
-                    <input id="username" type="text" name="username" placeholder="Address of the business" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">ZIP CODE</label>
-                    <input id="username" type="text" name="username" placeholder="ZIP CODE" class="form-control input-custom" />
-                </div>
-
-                <div class="form-group" id="data_1">
-                    <label class="login-label">Simple data input format</label>
-                    <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control input-custom" value="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Surname</label>
-                    <input id="password" type="password" name="password" placeholder="Surname" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Phone Number</label>
-                    <input id="password" type="password" name="password" placeholder="Phone Number" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">I am an existing customer </label>
-                    <div class="i-checks checkbox-pos-form"><label><input type="radio" value="option1" name="a" checked> <i></i> YES</label>&nbsp;&nbsp;&nbsp;
-                        <label><input type="radio" value="option2" name="a"> <i></i> NO</label>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-left spacers">
-                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    $(document).ready(function () {
-        $(''#data_1 .input-group.date'').datepicker({
-            todayBtn: "linked",
-            keyboardNavigation: false,
-            forceParse: false,
-            calendarWeeks: true,
-            autoclose: true
-        });
-    });
-</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>State</h5>
@@ -184,7 +24,95 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         });
     });
 </script>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="fsi-form-banking-services">
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-legal-check','fsi-legal-check',NULL,'<div class="fsi-upload-new-file">
+    <div class="fsi-warning-title">Legal check</div>
+    <div class="fsi-error-desc">
+      <div class="fsi-error-desc-filename">Articles_of_corporation.pdf</div>
+      <div class="fsi-error-desc-message">Digital sign not clearly readable</div>
+    </div>
+    <div class="fsi-message"><span>Can you please upload a new document ther address to the&nbsp;</span><b>following conditions</b></div><a class="fsi-upload-new-link" href="#">
+      <div class="fsi-label">Upload a new file</div><i class="fa fa-upload"></i></a>
+  </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="perfomance-bar">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Your performance</h5>
+         <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+          
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All<span class="caret" style="margin-left: 15px;"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div style="text-align: right">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="row fsi-progess-bar-box-label ">
+            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
+            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="progress">
+                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
+                        <span class="sr-only">60% Complete (success)</span>60%
+                    </div>
+                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
+    <div class="fsi-welcome-title">Welcome to your personal area</div>
+    <div class="fsi-welcome-message">You can check the status of your request</div>
+    <div class="fsi-time-left"><i class="fa fa-clock-o"></i>
+      <div class="fsi-time-left-message">About 15 days left</div>
+    </div>
+  </div>
+  <div class="fsi-legal-review-wrapper">
+    <div class="fsi-legal-review-intro">
+      <h2>What''s involved in a legal review? </h2>
+      <p> 
+        <div>As anticipated, when applying for financial services, you are supposed to document the status of your business</div>
+        <div>After the completeness of the documentation has been verified, the next step is the Legal Review.</div>
+      </p>
+      <p> 
+        <div>At this stage of your application, the Legal Worker is asked to check the compliance of the submitted documentation.</div>
+        <div>This is a one time activity, that is performed once: should you apply for further services, all that you have documented is still considered valid.</div>
+      </p>
+      <p>It means then shorter approval time frame for the next services you''ll decide to request.</p>
+      <p>After the Legal Review has been completed, your account will be created.</p>
+    </div>
+    <div class="fsi-blue-banner">
+      <div class="bb-small">Now your check deposits can</div>
+      <div class="bb-big">go to the bank</div>
+      <div class="bb-big bb-big-bigger">without you</div>
+      <div class="bb-expect-it">Expect it.</div>
+    </div>
+  </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="customer-process-step fsi-form-banking-services">
   <div class="ibox float-e-margins">
     <div class="ibox-title">
       <h5>Selects the financial services that your company is applying for</h5>
@@ -275,127 +203,53 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       </div>
       <div>
         <button type="button" class="btn btn-w-m btn-default">Back</button>
-        <button type="button" class="btn btn-w-m btn-primary pull-right">Next</button>
-        <button type="button" class="btn btn-w-m btn-success pull-right">Save as draft</button>
+        <button type="button" class="btn btn-w-m btn-primary pull-right customer-process-next">Next</button>
+       
       </div>
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
-<div class="ibox float-e-margins">
+<div class="customer-process-step ibox float-e-margins">
     <div class="ibox-title">
         <h5>Business details</h5>
         <div class="ibox-tools">
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>
             </a>
-          
         </div>
     </div>
     <div class="ibox-content">
         <div class="row">
             <div class="col-md-12">
-                <p class="form-title">Business legal documentation</p>
-
-                <label class="login-label">Article for incorporation</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                <div class="form-group">
+                    <label class="login-label">Company Name</label>
+                    <input id="username" type="text" name="username" placeholder="Enter First Name" class="form-control input-custom" />
                 </div>
-
-                <label class="login-label">Commercial lease</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                <div class="form-group">
+                    <label class="login-label">Last Name</label>
+                    <input id="password" type="text" name="password" placeholder="Enter Last Name" class="form-control input-custom" />
                 </div>
-
-                <label class="login-label">Franchise agreement</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                <div class="form-group">
+                    <label class="login-label">Email</label>
+                    <input id="username" type="text" name="username" placeholder="Enter Email" class="form-control input-custom" />
                 </div>
+                <br>
+                <p>Additional Info</p>
 
-                <p class="form-title">Business financial documentation</p>
-
-                <label class="login-label">Profits and loss statements 1099 forms from the previuos 2 years</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                <div class="form-group">
+                    <label class="login-label">ENRIC / Passport No.</label>
+                    <input id="password" type="text" name="password" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
                 </div>
-                <label class="login-label">List of your debts such as credit cards, employess loans, car loans and real estate</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                <div class="form-group">
+                    <label class="login-label">Nationality</label>
+                    <input id="password" type="text" name="password" placeholder="Enter nationality" class="form-control input-custom" />
                 </div>
-                <label class="login-label">List of your assets including bank statements, mutaul fund statements, reak estates and automobile titles, brokerage</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <p class="form-title">Tax financial documentation</p>
-
-                <label class="login-label">Most recent federal tx return possibly the last 2 tax returns</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <p class="form-title">Other</p>
-                <label class="login-label">canceled checks for your rent or mortage</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                <div class="form-group">
+                    <label class="login-label">Job Number</label>
+                    <input id="password" type="text" name="password" placeholder="Job Number" class="form-control input-custom" />
                 </div>
             </div>
         </div>
@@ -405,104 +259,13 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
                 </div>
                 <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
+                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button customer-process-next" />
                 </div>
             </div>
         </div>
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-legal-check','fsi-legal-check',NULL,'<div class="fsi-upload-new-file">
-    <div class="fsi-warning-title">Legal check</div>
-    <div class="fsi-error-desc">
-      <div class="fsi-error-desc-filename">Articles_of_corporation.pdf</div>
-      <div class="fsi-error-desc-message">Digital sign not clearly readable</div>
-    </div>
-    <div class="fsi-message"><span>Can you please upload a new document ther address to the&nbsp;</span><b>following conditions</b></div><a class="fsi-upload-new-link" href="#">
-      <div class="fsi-label">Upload a new file</div><i class="fa fa-upload"></i></a>
-  </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="perfomance-bar">
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Your performance</h5>
-         <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-          
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-10"></div>
-            <div class="col-md-1">
-                <div class="dropdown">
-                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        All<span class="caret" style="margin-left: 15px;"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div style="text-align: right">
-                    <i class="fa fa-calendar"></i>
-                </div>
-            </div>
-
-        </div>
-        <div class="row fsi-progess-bar-box-label ">
-            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
-            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="progress">
-                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
-                        <span class="sr-only">60% Complete (success)</span>60%
-                    </div>
-                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
-                        <span class="sr-only">20% Complete (warning)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
-    <div class="fsi-welcome-title">Welcome to your personal area</div>
-    <div class="fsi-welcome-message">You can check the status of your request</div>
-    <div class="fsi-time-left"><i class="fa fa-clock-o"></i>
-      <div class="fsi-time-left-message">About 15 days left</div>
-    </div>
-  </div>
-  <div class="fsi-legal-review-wrapper">
-    <div class="fsi-legal-review-intro">
-      <h2>What''s involved in a legal review? </h2>
-      <p> 
-        <div>As anticipated, when applying for financial services, you are supposed to document the status of your business</div>
-        <div>After the completeness of the documentation has been verified, the next step is the Legal Review.</div>
-      </p>
-      <p> 
-        <div>At this stage of your application, the Legal Worker is asked to check the compliance of the submitted documentation.</div>
-        <div>This is a one time activity, that is performed once: should you apply for further services, all that you have documented is still considered valid.</div>
-      </p>
-      <p>It means then shorter approval time frame for the next services you''ll decide to request.</p>
-      <p>After the Legal Review has been completed, your account will be created.</p>
-    </div>
-    <div class="fsi-blue-banner">
-      <div class="bb-small">Now your check deposits can</div>
-      <div class="bb-big">go to the bank</div>
-      <div class="bb-big bb-big-bigger">without you</div>
-      <div class="bb-expect-it">Expect it.</div>
-    </div>
-  </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'<div class="application-breadcrumbs-wrapper">
   <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
   <div class="application-breadcrumbs">
@@ -752,6 +515,79 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	action="%{#actionName}" 
 	value="%{add_label}" 
 	title="%{i18n_attribute_name}%{'': ''}%{add_label}" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_password','userprofile_editCurrentUser_password',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+
+<h1><@wp.i18n key="userprofile_EDITPASSWORD" /></h1>
+
+<#if (Session.currentUser != "guest") >
+
+	<form action="<@wp.action path="/ExtStr2/do/Front/CurrentUser/changePassword.action" />" method="post" class="form-horizontal">
+
+	<@s.if test="hasFieldErrors()">
+		<div class="alert alert-block">
+			<p><strong><@wp.i18n key="userprofile_MESSAGE_TITLE_FIELDERRORS" /></strong></p>
+			<ul class="unstyled">
+				<@s.iterator value="fieldErrors">
+					<@s.iterator value="value">
+						<li><@s.property escapeHtml=false /></li>
+					</@s.iterator>
+				</@s.iterator>
+			</ul>
+		</div>
+	</@s.if>
+
+	<p class="noscreen">
+		<wpsf:hidden name="username" />
+	</p>
+
+	<div class="control-group">
+		<label for="userprofile-old-password" class="control-label"><@wp.i18n key="userprofile_OLDPASSWORD" /></label>
+		<div class="controls">
+			<@wpsf.password 
+				useTabindexAutoIncrement=true 
+				name="oldPassword" 
+				id="userprofile-old-password" />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label for="userprofile-new-password" class="control-label"><@wp.i18n key="userprofile_NEWPASS" /></label>
+		<div class="controls">
+			<@wpsf.password 
+				useTabindexAutoIncrement=true 
+				name="password" 
+				id="userprofile-new-password" />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label for="userprofile-new-password-confirm" class="control-label"><@wp.i18n key="userprofile_CONFIRM_NEWPASS" /></label>
+		<div class="controls">
+			<@wpsf.password 
+				useTabindexAutoIncrement=true 
+				name="passwordConfirm" 
+				id="userprofile-new-password-confirm" />
+		</div>
+	</div>
+
+	<p class="form-actions">
+		<@wp.i18n key="userprofile_SAVE_PASSWORD" var="userprofile_SAVE_PASSWORD" />
+		<@wpsf.submit 
+			useTabindexAutoIncrement=true 
+			value="%{#attr.userprofile_SAVE_PASSWORD}" 
+			cssClass="btn btn-primary" />
+	</p>
+
+	</form>
+	
+<#else>
+	<p>
+		<@wp.i18n key="userprofile_PLEASE_LOGIN_TO_EDIT_PASSWORD" />
+	</p>
+</#if>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-search_result_inspinia','entando-widget-search_result_inspinia',NULL,NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="ibox-content">
@@ -1310,79 +1146,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </p>
 <input type="submit" value="CONTACT US" class="btn btn-primary login-button">
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_password','userprofile_editCurrentUser_password',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-
-<h1><@wp.i18n key="userprofile_EDITPASSWORD" /></h1>
-
-<#if (Session.currentUser != "guest") >
-
-	<form action="<@wp.action path="/ExtStr2/do/Front/CurrentUser/changePassword.action" />" method="post" class="form-horizontal">
-
-	<@s.if test="hasFieldErrors()">
-		<div class="alert alert-block">
-			<p><strong><@wp.i18n key="userprofile_MESSAGE_TITLE_FIELDERRORS" /></strong></p>
-			<ul class="unstyled">
-				<@s.iterator value="fieldErrors">
-					<@s.iterator value="value">
-						<li><@s.property escapeHtml=false /></li>
-					</@s.iterator>
-				</@s.iterator>
-			</ul>
-		</div>
-	</@s.if>
-
-	<p class="noscreen">
-		<wpsf:hidden name="username" />
-	</p>
-
-	<div class="control-group">
-		<label for="userprofile-old-password" class="control-label"><@wp.i18n key="userprofile_OLDPASSWORD" /></label>
-		<div class="controls">
-			<@wpsf.password 
-				useTabindexAutoIncrement=true 
-				name="oldPassword" 
-				id="userprofile-old-password" />
-		</div>
-	</div>
-
-	<div class="control-group">
-		<label for="userprofile-new-password" class="control-label"><@wp.i18n key="userprofile_NEWPASS" /></label>
-		<div class="controls">
-			<@wpsf.password 
-				useTabindexAutoIncrement=true 
-				name="password" 
-				id="userprofile-new-password" />
-		</div>
-	</div>
-
-	<div class="control-group">
-		<label for="userprofile-new-password-confirm" class="control-label"><@wp.i18n key="userprofile_CONFIRM_NEWPASS" /></label>
-		<div class="controls">
-			<@wpsf.password 
-				useTabindexAutoIncrement=true 
-				name="passwordConfirm" 
-				id="userprofile-new-password-confirm" />
-		</div>
-	</div>
-
-	<p class="form-actions">
-		<@wp.i18n key="userprofile_SAVE_PASSWORD" var="userprofile_SAVE_PASSWORD" />
-		<@wpsf.submit 
-			useTabindexAutoIncrement=true 
-			value="%{#attr.userprofile_SAVE_PASSWORD}" 
-			cssClass="btn btn-primary" />
-	</p>
-
-	</form>
-	
-<#else>
-	<p>
-		<@wp.i18n key="userprofile_PLEASE_LOGIN_TO_EDIT_PASSWORD" />
-	</p>
-</#if>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-MonolistAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -3017,3 +2780,239 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<div class="customer-process-step ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+          
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="form-title">Business legal documentation</p>
+
+                <label class="login-label">Article for incorporation</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <label class="login-label">Commercial lease</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <label class="login-label">Franchise agreement</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Business financial documentation</p>
+
+                <label class="login-label">Profits and loss statements 1099 forms from the previuos 2 years</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+                <label class="login-label">List of your debts such as credit cards, employess loans, car loans and real estate</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+                <label class="login-label">List of your assets including bank statements, mutaul fund statements, reak estates and automobile titles, brokerage</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Tax financial documentation</p>
+
+                <label class="login-label">Most recent federal tx return possibly the last 2 tax returns</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Other</p>
+                <label class="login-label">canceled checks for your rent or mortage</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left spacers">
+                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
+                </div>
+                
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button  customer-process-next" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<div  class="customer-process-step ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="login-label">Company Name</label>
+                    <input type="text" name="companyName" placeholder="Company Name" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">The state in which the business operates</label>
+                    <input type="text" name="stateBusinessOperate" placeholder="The state in which the business operates" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">The state in which the business was formed</label>
+                    <input type="text" name="stateBusinessFormed" placeholder="The state in which the business was formed" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Name</label>
+                    <input type="text" name="name" placeholder="Name" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Email</label>
+                    <input type="email" name="email" placeholder="Email" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Customer type</label>
+                    <input type="text" name="customerType" placeholder="Customer type" class="form-control input-custom" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="login-label">Address of the business</label>
+                    <input  type="text" name="address" placeholder="Address of the business" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">ZIP CODE</label>
+                    <input  type="text" name="zipCode" placeholder="ZIP CODE" class="form-control input-custom" />
+                </div>
+
+                <div class="form-group" id="data_1">
+                    <label class="login-label">Simple data input format</label>
+                    <div class="input-group date">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="" class="form-control input-custom" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Surname</label>
+                    <input  type="text" name="surname" placeholder="Surname" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Phone Number</label>
+                    <input  type="text" name="phoneNumber" placeholder="Phone Number" class="form-control input-custom" />
+                </div>
+                <div class="form-group">
+                    <label class="login-label">I am an existing customer </label>
+                    <div class="i-checks checkbox-pos-form">
+                      <label>
+                          <input type="radio" name="customerExists" value="true" checked> <i></i> YES
+                      </label>
+                      &nbsp;&nbsp;&nbsp;
+                      <label>
+                          <input type="radio" name="customerExists" value="false" > <i></i> NO
+                      </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left spacers">
+                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button "  />
+                </div>
+                
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button customer-process-next" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(''#data_1 .input-group.date'').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        });
+    });
+</script>',NULL,0);
