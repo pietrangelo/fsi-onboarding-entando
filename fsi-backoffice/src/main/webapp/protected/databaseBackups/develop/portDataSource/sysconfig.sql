@@ -185,7 +185,7 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataType
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','entandoComponentsReport','The component installation report','<?xml version="1.0" encoding="UTF-8"?>
 <reports status="OK">
 	<creation>2017-11-09 07:51:35</creation>
-	<lastupdate>2017-11-09 07:51:37</lastupdate>
+	<lastupdate>2017-11-15 17:39:06</lastupdate>
 	<components>
 		<component code="entandoCore" date="2017-11-09 07:51:35" status="OK">
 			<schema status="OK">
@@ -401,6 +401,127 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','entandoC
 			<data status="OK">
 				<datasource name="portDataSource" status="RESTORE" />
 				<datasource name="servDataSource" status="RESTORE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-right_col_help_purple" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="inspinia-meter-center-page" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="inspinia-meter-left-page" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-banner_main_page_light" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-security_banner_light" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-data_report_tweets" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-meeting_list-purple" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-misc-light" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="inspinia-meter-right-page" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-left_columns_mortgage" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</data>
+			<postProcess status="NOT_AVAILABLE" />
+		</component>
+		<component code="entando-widget-banner_avarage_light" date="2017-11-15 17:39:06" status="OK">
+			<schema status="OK">
+				<datasource name="portDataSource" status="NOT_AVAILABLE" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
+			</schema>
+			<data status="OK">
+				<datasource name="portDataSource" status="OK" />
+				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>

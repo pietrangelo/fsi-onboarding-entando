@@ -1,108 +1,8 @@
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-login_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Dropdown Sign In</property><property key="it">Dropdown Sign In</property></properties>
-',NULL,NULL,NULL,NULL,1,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-pdf-document','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Fsi PDF</property><property key="it">Fsi PDF</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-right_col_help_purple','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
-<property key="en">BPM-Datatable Task List</property>
-<property key="it">BPM-Datatable Task List</property>
-</properties>','<config>
-	<parameter name="widgetInfoId">WidgetInfoID</parameter>
-	<action name="jpkiebpmBpmTaskListDatatableWidgetViewerConfig"/>
-</config>','jpkiebpm',NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">BPM-Process list</property>
-<property key="it">BPM-Lista processi</property>
-</properties>','<config>
-	<parameter name="widgetInfoId">WidgetInfoID</parameter>
-	<action name="jpkiebpmBpmProcessDatatableWidgetViewerConfig"/>
-</config>','jpkiebpm',NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-navigation_bar_inspinia','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Navigation - Bar</property>
-<property key="it">Navigazione - Barra Orizzontale</property>
-</properties>','<config>
-	<parameter name="navSpec">Rules for the Page List auto-generation</parameter>
-	<action name="navigatorConfig" />
-</config>',NULL,NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">BPM-Form by DataType</property>
-<property key="it">BPM-Form by DataType</property>
-</properties>','<config>
-	<parameter name="dataTypeCode">Data Type Code</parameter>
-	<parameter name="dataUxId">Data Ux ID</parameter>
-	<parameter name="widgetInfoId">Widget Info ID</parameter>
-	<action name="jpkiebpmBpmFormWidgetViewerConfig"/>
-</config>','jpkiebpm',NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-search_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Search Form</property>
-<property key="it">Search Form</property>
+    <property key="en">entando-widget-right_col_help_purple</property>
+    <property key="it">entando-widget-right_col_help_purple </property>
 </properties>',NULL,NULL,NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-footer','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Footer</property><property key="it">FSI Footer</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-left ','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Banner content left</property><property key="it">Contenuto banner sinistra</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Loans-3-images ','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Loans 3 images</property><property key="it">prestiti 3 iimagini</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-club-credit-card','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Credit card banner left</property><property key="it">Banner carta di credito sinistra</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Welcome-content','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Welcome content</property><property key="it">Welcome content</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES (' Credit-card-banner-right','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Credit card banner right</property><property key="it">Credit card banner right</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-internal','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Banner main internal</property><property key="it">Banner principale pagina interna</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('complete-registration-BPM','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Complete registration form BPM</property><property key="it">Form di completamento registrazione BPM</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('How-to-complete-instructions','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">How to complete instructions</property><property key="it">Registrazione how to</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-application-progress','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI-application-progress</property><property key="it">FSI- progresso applicazione</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Login-Customer','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Login Customer</property><property key="it">Login Cliente</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-state','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Customer state</property><property key="it">FSI  Customer state</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-performance','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Performance</property><property key="it">FSI Performance</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-rate','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI-customer-rate</property><property key="it">FSI-customer-rate</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-apllication-breadcrumb','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Application breadcrumb</property><property key="it">FSI Application breadcrumb</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-average-review-time','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Average Review Time</property><property key="it">FSI Average Review Time</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-backlog','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Backlog</property><property key="it">FSI Backlog</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-completed','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Completed</property><property key="it">FSI Completed</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-form-banking-services','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI form banking</property><property key="it">FSI form banking</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-legal-check','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI-legal-check</property><property key="it">FSI-legal-check</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-welcome-personal-area','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI welcome personal area</property><property key="it">FSI welcome personal area</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
@@ -232,6 +132,51 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 <properties>
 <property key="actionPath">/ExtStr2/do/Front/CurrentUser/edit.action</property>
 </properties>',1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-inspinia-meter-center-page','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">entando-inspinia-meter-center-page</property>
+<property key="it">entando-inspinia-meter-center-page</property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-inspinia-meter-left-page','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">entando-inspinia-meter-left-page</property>
+<property key="it">entando-inspinia-meter-left-page</property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-banner_main_page_light','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <property key="en">entando-widget-banner_main_page_light</property>
+    <property key="it">entando-widget-banner_main_page_light </property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-security_banner_light','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <property key="en">entando-widget-security_banner_light</property>
+    <property key="it">entando-widget-security_banner_light </property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-data_report_tweets','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">entando-widget-data_report_tweets</property>
+<property key="it">entando-widget-data_report_tweets</property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-meeting_list-purple','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <property key="en">entando-widget-meeting_list-purple</property>
+    <property key="it">entando-widget-meeting_list-purple </property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-inspinia-meter-right-page','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">entando-inspinia-meter-right-page</property>
+<property key="it">entando-inspinia-meter-right-page</property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-left_columns_mortgage','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <property key="en">entando-widget-left_columns_mortgage</property>
+    <property key="it">entando-widget-left_columns_mortgage </property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-banner_avarage_light','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">entando-widget-banner_avarage_light</property>
+<property key="it">entando-widget-banner_avarage_light</property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('row_content_viewer_list','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Contents - Publish Contents</property>
@@ -268,4 +213,109 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 ',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('dropdown_menu_responsive','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Dropdown menu mobile</property><property key="it">Dropdown menu mobile</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-login_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Dropdown Sign In</property><property key="it">Dropdown Sign In</property></properties>
+',NULL,NULL,NULL,NULL,1,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">BPM-Datatable Task List</property>
+<property key="it">BPM-Datatable Task List</property>
+</properties>','<config>
+	<parameter name="widgetInfoId">WidgetInfoID</parameter>
+	<action name="jpkiebpmBpmTaskListDatatableWidgetViewerConfig"/>
+</config>','jpkiebpm',NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">BPM-Process list</property>
+<property key="it">BPM-Lista processi</property>
+</properties>','<config>
+	<parameter name="widgetInfoId">WidgetInfoID</parameter>
+	<action name="jpkiebpmBpmProcessDatatableWidgetViewerConfig"/>
+</config>','jpkiebpm',NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-navigation_bar_inspinia','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Navigation - Bar</property>
+<property key="it">Navigazione - Barra Orizzontale</property>
+</properties>','<config>
+	<parameter name="navSpec">Rules for the Page List auto-generation</parameter>
+	<action name="navigatorConfig" />
+</config>',NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-pdf-document','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Fsi PDF</property><property key="it">Fsi PDF</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">BPM-Form by DataType</property>
+<property key="it">BPM-Form by DataType</property>
+</properties>','<config>
+	<parameter name="dataTypeCode">Data Type Code</parameter>
+	<parameter name="dataUxId">Data Ux ID</parameter>
+	<parameter name="widgetInfoId">Widget Info ID</parameter>
+	<action name="jpkiebpmBpmFormWidgetViewerConfig"/>
+</config>','jpkiebpm',NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-search_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Search Form</property>
+<property key="it">Search Form</property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-footer','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Footer</property><property key="it">FSI Footer</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-left ','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Banner content left</property><property key="it">Contenuto banner sinistra</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Loans-3-images ','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Loans 3 images</property><property key="it">prestiti 3 iimagini</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-club-credit-card','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Credit card banner left</property><property key="it">Banner carta di credito sinistra</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Welcome-content','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Welcome content</property><property key="it">Welcome content</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES (' Credit-card-banner-right','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Credit card banner right</property><property key="it">Credit card banner right</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-internal','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Banner main internal</property><property key="it">Banner principale pagina interna</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('complete-registration-BPM','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Complete registration form BPM</property><property key="it">Form di completamento registrazione BPM</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('How-to-complete-instructions','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">How to complete instructions</property><property key="it">Registrazione how to</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-application-progress','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI-application-progress</property><property key="it">FSI- progresso applicazione</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Login-Customer','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Login Customer</property><property key="it">Login Cliente</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-state','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Customer state</property><property key="it">FSI  Customer state</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-performance','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Performance</property><property key="it">FSI Performance</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-rate','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI-customer-rate</property><property key="it">FSI-customer-rate</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-apllication-breadcrumb','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Application breadcrumb</property><property key="it">FSI Application breadcrumb</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-average-review-time','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Average Review Time</property><property key="it">FSI Average Review Time</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-backlog','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Backlog</property><property key="it">FSI Backlog</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-completed','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Completed</property><property key="it">FSI Completed</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-form-banking-services','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI form banking</property><property key="it">FSI form banking</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-legal-check','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI-legal-check</property><property key="it">FSI-legal-check</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');

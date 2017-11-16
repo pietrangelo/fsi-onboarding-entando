@@ -1,3 +1,290 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-right_col_help_purple','entando-widget-right_col_help_purple',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<div class="title-box-icon">
+    <h2 class="title">Need some help?</h2>
+    <p class="margin-top"><strong>Call us on </strong></p>
+    <p class="title"><strong> 0800 123 456</strong></p>
+    <p> Open all day</p>
+    <hr>
+    <p>Write to us</p>
+    <p><strong>mortagageinfo@acmebank.com</strong></p>
+    <p>We are here to answer your mortgage questions</p>
+    <hr>
+    <p><strong> No panic mail!</p></strong>
+<p><strong>urgentedits@acmebank.com </p></strong>
+<p>We are here to change your application details before processing starts</p>
+<hr>
+<h2 class="title margin-top">Newsletter</h2>
+
+<label class="margin-top-email"> Email</label>
+<input type="text" class="form-control" placeholder="Full name" required="required">
+<div>
+    <br>
+    <button type="button" class="btn btn-primary btn-sm pull-right ">Send</button>
+</div>
+<div class="clearfix"></div>
+<hr>
+<div class="security-logos">
+    <img alt="acme-logo" class="logo-security" src="<@wp.imgURL />Loghi_Security.png">
+</div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-inspinia-meter-center-page','entando-inspinia-meter-center-page',NULL,NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <span class="label label-success pull-right">Monthly</span>
+        <h5>Mortgage requests</h5>
+    </div>
+    <div class="ibox-content">
+        <h1 class="no-margins">14,400</h1>
+    </div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-inspinia-meter-left-page','entando-inspinia-meter-left-page',NULL,NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <span class="label label-success pull-right">Monthly</span>
+        <h5>Mortgage requests</h5>
+    </div>
+    <div class="ibox-content">
+        <h1 class="no-margins">120</h1>
+    </div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-banner_main_page_light','entando-widget-banner_main_page_light',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
+<div class="home-fullscreen" id="">
+    <div class="full-screen">
+        <div class="home-wrapper home-wrapper-alt">
+            <h1 class="font-light text-white">Personal Mortgage from 9000 to 999.999$</h1>
+            <h4 class="text-light">Get feedback within 24 hours - No obligation</h4>
+            <a href="#mortgage">
+                <img alt="logo-arrow" class="logo-img" src="<@wp.imgURL />Fill_1.png">
+            </a>
+        </div>
+    </div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-security_banner_light','entando-widget-security_banner_light',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.info key="langs" var="langsVar" />
+<@wp.info key="currentLang" var="currentLangVar" />
+<div class="text-center" >
+       <img alt=""  class="logo" src="<@wp.imgURL />Loghi_Security.png">
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-data_report_tweets','entando-widget-data_report_tweets',NULL,NULL,'<div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>New data for the report</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="ibox-content ibox-heading">
+                        <h3>Stock price up
+                            <div class="stat-percent text-navy">34% <i class="fa fa-level-up"></i></div>
+                        </h3>
+                        <small><i class="fa fa-stack-exchange"></i> New economic data from the previous quarter.</small>
+                    </div>
+                        <div class="ibox-content">
+                            <div>
+
+                                <div class="pull-right text-right">
+
+                                    <span class="bar_d
+                        ashboard" style="display: none;">5,3,9,6,5,9,7,3,5,2,4,7,3,2,7,9,6,4,5,7,3,2,1,0,9,5,6,8,3,2,1</span><svg class="peity" height="16" width="100"><rect fill="#1ab394" x="0" y="7.108585781521267" width="2.2580645161290325" height="8.885732226901585"></rect><rect fill="#d7d7d7" x="3.2580645161290325" y="10.662878672281902" width="2.2580645161290325" height="5.33143933614095"></rect><rect fill="#1ab394" x="6.516129032258065" y="0" width="2.2580645161290325" height="15.994318008422852"></rect><rect fill="#d7d7d7" x="9.774193548387098" y="5.331439336140951" width="2.2580645161290325" height="10.6628786722819"></rect><rect fill="#1ab394" x="13.03225806451613" y="7.108585781521267" width="2.2580645161290325" height="8.885732226901585"></rect><rect fill="#d7d7d7" x="16.290322580645164" y="0" width="2.2580645161290325" height="15.994318008422852"></rect><rect fill="#1ab394" x="19.548387096774196" y="3.5542928907606353" width="2.2580645161290325" height="12.440025117662216"></rect><rect fill="#d7d7d7" x="22.806451612903228" y="10.662878672281902" width="2.2580645161290325" height="5.33143933614095"></rect><rect fill="#1ab394" x="26.06451612903226" y="7.108585781521267" width="2.2580645161290325" height="8.885732226901585"></rect><rect fill="#d7d7d7" x="29.322580645161292" y="12.440025117662218" width="2.2580645161290325" height="3.5542928907606335"></rect><rect fill="#1ab394" x="32.58064516129033" y="8.885732226901585" width="2.2580645161290325" height="7.108585781521267"></rect><rect fill="#d7d7d7" x="35.83870967741936" y="3.5542928907606353" width="2.2580645161290325" height="12.440025117662216"></rect><rect fill="#1ab394" x="39.09677419354839" y="10.662878672281902" width="2.2580645161290325" height="5.33143933614095"></rect><rect fill="#d7d7d7" x="42.35483870967742" y="12.440025117662218" width="2.2580645161290325" height="3.5542928907606335"></rect><rect fill="#1ab394" x="45.612903225806456" y="3.5542928907606353" width="2.2580645161290325" height="12.440025117662216"></rect><rect fill="#d7d7d7" x="48.87096774193549" y="0" width="2.2580645161290325" height="15.994318008422852"></rect><rect fill="#1ab394" x="52.12903225806452" y="5.331439336140951" width="2.2580645161290325" height="10.6628786722819"></rect><rect fill="#d7d7d7" x="55.38709677419355" y="8.885732226901585" width="2.2580645161290325" height="7.108585781521267"></rect><rect fill="#1ab394" x="58.645161290322584" y="7.108585781521267" width="2.2580645161290325" height="8.885732226901585"></rect><rect fill="#d7d7d7" x="61.903225806451616" y="3.5542928907606353" width="2.2580645161290325" height="12.440025117662216"></rect><rect fill="#1ab394" x="65.16129032258065" y="10.662878672281902" width="2.2580645161290325" height="5.33143933614095"></rect><rect fill="#d7d7d7" x="68.41935483870968" y="12.440025117662218" width="2.2580645161290325" height="3.5542928907606335"></rect><rect fill="#1ab394" x="71.67741935483872" y="14.217171563042534" width="2.2580645161290325" height="1.7771464453803167"></rect><rect fill="#d7d7d7" x="74.93548387096774" y="15.085227119035956" width="2.2580645161290325" height="0.9090908893868948"></rect><rect fill="#1ab394" x="78.19354838709678" y="0" width="2.2580645161290325" height="15.994318008422852"></rect><rect fill="#d7d7d7" x="81.45161290322581" y="7.108585781521267" width="2.2580645161290325" height="8.885732226901585"></rect><rect fill="#1ab394" x="84.70967741935485" y="5.331439336140951" width="2.2580645161290325" height="10.6628786722819"></rect><rect fill="#d7d7d7" x="87.96774193548387" y="1.7771464453803176" width="2.2580645161290325" height="14.217171563042534"></rect><rect fill="#1ab394" x="91.22580645161291" y="10.662878672281902" width="2.2580645161290325" height="5.33143933614095"></rect><rect fill="#d7d7d7" x="94.48387096774194" y="12.440025117662218" width="2.2580645161290325" height="3.5542928907606335"></rect><rect fill="#1ab394" x="97.74193548387098" y="14.217171563042534" width="2.2580645161290325" height="1.7771464453803167"></rect></svg>
+                                    <br>
+                                    <small class="font-bold">$ 20 054.43</small>
+                                </div>
+                                <h4>NYS report new data!
+                                    <br>
+                                    <small class="m-r"><a href="graph_flot.html"> Check the stock price! </a> </small>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Read below comments and tweets</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content no-padding">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is crazy! </p>
+                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a galley </p>
+                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
+                                </li>
+                                <li class="list-group-item ">
+                                    <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
+                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                </div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-meeting_list-purple','entando-widget-meeting_list-purple',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.info key="langs" var="langsVar" />
+<@wp.info key="currentLang" var="currentLangVar" />
+<div class="ibox-content inspinia-timeline">
+    <div class="timeline-item">
+        <div class="row">
+            <div class="col-xs-3 date">
+                <i class="fa fa-briefcase"></i>
+                6:00 am
+                <br>
+                <small class="text-navy">2 hour ago</small>
+            </div>
+            <div class="col-xs-7 content no-top-border">
+                <p class="m-b-xs"><strong>Meeting</strong></p>
+
+                <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="row">
+            <div class="col-xs-3 date">
+                <i class="fa fa-file-text"></i>
+                7:00 am
+                <br>
+                <small class="text-navy">3 hour ago</small>
+            </div>
+            <div class="col-xs-7 content">
+                <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since.</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="row">
+            <div class="col-xs-3 date">
+                <i class="fa fa-coffee"></i>
+                8:00 am
+                <br>
+            </div>
+            <div class="col-xs-7 content">
+                <p class="m-b-xs"><strong>Coffee Break</strong></p>
+                <p>
+                    Go to shop and find some products.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="row">
+            <div class="col-xs-3 date">
+                <i class="fa fa-phone"></i>
+                11:00 am
+                <br>
+                <small class="text-navy">21 hour ago</small>
+            </div>
+            <div class="col-xs-7 content">
+                <p class="m-b-xs"><strong>Phone with Jeronimo</strong></p>
+                <p>
+                    Lorem Ipsum has been the industry''s standard dummy text ever since.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-inspinia-meter-right-page','entando-inspinia-meter-right-page',NULL,NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <span class="label label-success pull-right">Monthly</span>
+        <h5>Mortgage requests</h5>
+    </div>
+    <div class="ibox-content">
+        <h1 class="no-margins"><span style="padding-right:5em">5</span>$400.000</h1>
+    </div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-left_columns_mortgage','entando-widget-left_columns_mortgage',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.info key="langs" var="langsVar" />
+<@wp.info key="currentLang" var="currentLangVar" />
+<div class="title-box-icon">
+    <h2 class="title">Mortgage Process</h2>
+    <div class="progress-dots">
+        <div class="row row-spacer">
+            <div  class="col-md-3 ">
+                <button type="button" class="btn btn-primary btn-circle">1</button>
+            </div>
+            <div  class="col-md-9 ">
+                <p><strong>Fill-in the form</strong></p>
+                <p>Answer some basic questions about your situation and see what you qualify for.</p>
+            </div>
+        </div>
+        <div class="row row-spacer">
+            <div  class="col-md-3 ">
+                <button type="button" class="btn btn-primary btn-circle">2</button>
+            </div>
+            <div  class="col-md-9 ">
+                <p><strong>Wait a week</strong></p>
+                <p>We make the commitment to review your mortgage application within 7 days.</p>
+            </div>
+        </div>
+        <div class="row row-spacer">
+            <div  class="col-md-3 ">
+                <button type="button" class="btn btn-primary btn-circle">3</button>
+            </div>
+            <div  class="col-md-9 ">
+                <p><strong>Get the funds</strong></p>
+                <p>You''ll receive your funds directly to your bank in as little as a week!</p>
+            </div>
+        </div>
+        <div class="row row-big-spacer text-center">
+            <div class="col-md-12 ">
+                <p class="title-mortgage"><strong>$ 40 Billion +</strong></p>
+                <p class="subtitle">Borrowed</p>
+            </div>
+            <div class="col-md-12 ">
+                <p class="title-mortgage"><strong>1.2 Million +</strong></p>
+                <p class="subtitle">Customers</p>
+            </div>
+            <div class="col-md-12 ">
+                <div class="stars"></div>
+                <p class="subtitle">Avarage Customer Rating</p>
+            </div>
+        </div>
+    </div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-banner_avarage_light','entando-widget-banner_avarage_light',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
+<div class="avarage" >
+</div>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <ul class="list-unstyled">
     <li class=" dropdown
@@ -1370,6 +1657,31 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	</div>
 </#if>
 <@jacms.content publishExtraTitle=true />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'<div class="application-breadcrumbs-wrapper">
+  <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
+  <div class="application-breadcrumbs">
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">1</div>
+      <div class="application-breadcrumbs-text">Start</div>
+    </div>
+    <div class="application-breadcrumbs-item active">
+      <div class="application-breadcrumbs-number">2</div>
+      <div class="application-breadcrumbs-text">Application</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">3</div>
+      <div class="application-breadcrumbs-text">Background check</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">4</div>
+      <div class="application-breadcrumbs-text">Legal review</div>
+    </div>
+    <div class="application-breadcrumbs-item">
+      <div class="application-breadcrumbs-number">5</div>
+      <div class="application-breadcrumbs-text">Account creation</div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2152,6 +2464,22 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		</select>
 	</div>
 </div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-average-review-time','fsi-average-review-time',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Average Review Time</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div style="text-align: center">
+            <h3>3,5</h3>
+            <small>Min.</small>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_profile','userprofile_editCurrentUser_profile',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -3768,47 +4096,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         </div>
     </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'<div class="application-breadcrumbs-wrapper">
-  <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
-  <div class="application-breadcrumbs">
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">1</div>
-      <div class="application-breadcrumbs-text">Start</div>
-    </div>
-    <div class="application-breadcrumbs-item active">
-      <div class="application-breadcrumbs-number">2</div>
-      <div class="application-breadcrumbs-text">Application</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">3</div>
-      <div class="application-breadcrumbs-text">Background check</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">4</div>
-      <div class="application-breadcrumbs-text">Legal review</div>
-    </div>
-    <div class="application-breadcrumbs-item">
-      <div class="application-breadcrumbs-number">5</div>
-      <div class="application-breadcrumbs-text">Account creation</div>
-    </div>
-  </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-average-review-time','fsi-average-review-time',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Average Review Time</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div style="text-align: center">
-            <h3>3,5</h3>
-            <small>Min.</small>
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-backlog','fsi-backlog',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>Backlog</h5>
@@ -3895,7 +4182,9 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<style>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+<style>
 .pdf-wrapper {
   display: flex;
   background: #404040;
@@ -4107,6 +4396,48 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 }
 
 </style>
+
+<script>
+ $(function(){
+
+   function getQueryVariable(variable){
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+     };
+
+   var loadUserInfo = function(continerId, taskId){
+     //http://localhost:8080/fsi-backoffice/api/rs/en/jpkiebpm/taskInputOutput.json?
+     var url = ''<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/taskInputOutput.json?containerId=''+containerId+''&taskId=''+taskId;
+     console.log(url);
+     $.get(url, function (data) {
+       var obj = data.response.result.processObj;
+       var keys = Object.keys(obj);
+       keys.forEach(function(key){
+         $(''.data-field-''+key).text(obj[key]);
+       })
+       
+      console.log(data);
+     });
+      
+   };
+   var containerId = getQueryVariable(''containerId'');
+   var taskId = getQueryVariable(''taskId'');
+   loadUserInfo(containerId,taskId);
+   
+ });
+
+</script>
+
+
+
+
+
+
 <div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>Documents check section</h5>
@@ -4137,15 +4468,15 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                             <div class="tab-panel active" data-tab-id="userInfo">
                               <div>
                                 <div class="semibold">Name</div>
-                                <div>Kevin Smith</div>
+                                <div class="data-field-cname"></div>
                               </div>
                               <div>
                                 <div class="semibold">Phone</div>
-                                <div>005 123347573</div>
+                                <div></div>
                               </div>
                               <div>
                                 <div class="semibold">Email</div>
-                                <div>kevinsmith@interstellar.com</div>
+                                <div class="data-field-pemail" ></div>
                               </div>
                             </div>
                             <div class="tab-panel" data-tab-id="businessInfo">
