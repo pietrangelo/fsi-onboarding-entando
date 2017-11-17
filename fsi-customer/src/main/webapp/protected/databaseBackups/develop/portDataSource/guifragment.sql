@@ -125,30 +125,14 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         <div class="col-md-6">
           <div>
             <label>
-              <input class="i-checks" type="checkbox"/><span>BUSINESS CHECKING</span>
+              <input class="i-checks" type="checkbox" name="financial-service" value="" name="financial-service" value="business-checking"/><span>BUSINESS CHECKING</span>
             </label>
           </div>
         </div>
         <div class="col-md-6">
           <div>
             <label>
-              <input class="i-checks" type="checkbox"/><span>BUSINESS CREDIT CARDS</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>BUSINESS LENDING AND FINANCING</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>INTERNATIONAL BANKING</span>
+              <input class="i-checks" type="checkbox" name="financial-service" value="business-credit-cards"/><span>BUSINESS CREDIT CARDS</span>
             </label>
           </div>
         </div>
@@ -157,30 +141,14 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         <div class="col-md-6">
           <div>
             <label>
-              <input class="i-checks" type="checkbox"/><span>MERCHANT SERVICES</span>
+              <input class="i-checks" type="checkbox" name="financial-service" value="business-lending-and-financing"/><span>BUSINESS LENDING AND FINANCING</span>
             </label>
           </div>
         </div>
         <div class="col-md-6">
           <div>
             <label>
-              <input class="i-checks" type="checkbox"/><span>TREASURY SERVICES</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>CASH MANAGEMENT SERVICES</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox"/><span>EMPLOYEE BENEFIT SERVICES</span>
+              <input class="i-checks" type="checkbox" name="financial-service" value="international-banking"/><span>INTERNATIONAL BANKING</span>
             </label>
           </div>
         </div>
@@ -189,14 +157,46 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         <div class="col-md-6">
           <div>
             <label>
-              <input class="i-checks" type="checkbox"/><span>CASH MANAGEMENT SERVICES</span>
+              <input class="i-checks" type="checkbox" name="financial-service" value="merchant-services"/><span>MERCHANT SERVICES</span>
             </label>
           </div>
         </div>
         <div class="col-md-6">
           <div>
             <label>
-              <input class="i-checks" type="checkbox"/><span>EMPLOYEE BENEFIT SERVICES</span>
+              <input class="i-checks" type="checkbox" name="financial-service" value="treasury-services"/><span>TREASURY SERVICES</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox" name="financial-service" value="cash-management-servcies"/><span>CASH MANAGEMENT SERVICES</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox" name="financial-service" value="employess-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox" name="financial-service" value="cash-management-services"/><span>CASH MANAGEMENT SERVICES</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <label>
+              <input class="i-checks" type="checkbox" name="financial-service" value="employee-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
             </label>
           </div>
         </div>
@@ -224,32 +224,20 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     <div class="ibox-content">
         <div class="row">
             <div class="col-md-12">
-                <div class="form-group">
-                    <label class="login-label">Company Name</label>
-                    <input id="username" type="text" name="username" placeholder="Enter First Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Last Name</label>
-                    <input id="password" type="text" name="password" placeholder="Enter Last Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Email</label>
-                    <input id="username" type="text" name="username" placeholder="Enter Email" class="form-control input-custom" />
-                </div>
-                <br>
+                
                 <p>Additional Info</p>
 
                 <div class="form-group">
                     <label class="login-label">ENRIC / Passport No.</label>
-                    <input id="password" type="text" name="password" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
+                    <input type="text" name="enric-passport" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
                 </div>
                 <div class="form-group">
                     <label class="login-label">Nationality</label>
-                    <input id="password" type="text" name="password" placeholder="Enter nationality" class="form-control input-custom" />
+                    <input type="text" name="nationality" placeholder="Enter nationality" class="form-control input-custom" />
                 </div>
                 <div class="form-group">
                     <label class="login-label">Job Number</label>
-                    <input id="password" type="text" name="password" placeholder="Job Number" class="form-control input-custom" />
+                    <input type="text" name="job-number" placeholder="Job Number" class="form-control input-custom" />
                 </div>
             </div>
         </div>

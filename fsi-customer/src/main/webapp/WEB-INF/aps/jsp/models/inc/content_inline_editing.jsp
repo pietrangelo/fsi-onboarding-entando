@@ -171,11 +171,15 @@
 
             currentStep.find('input[type="file"]').each(function(index,element){
                 var file = element.files[0];
-                var size= file.size;
-                var fileName = file.name;
-                var type = file.type;
                 if (file){
+                    var size = file.size;
+                    var fileName = file.name;
+                    var type = file.type;
                     getBase64(file, function(result) {
+                            console.log(size);
+                            console.log(fileName);
+                            console.log(type);
+                            console.log(result);
 
                     });
                 }
