@@ -21,19 +21,6 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-11-13 17:09:58');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('customer_internal','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">customer-internal</property><property key="it">cliente-interna</property></properties>
-','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="customers" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-03 15:43:57');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('service','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="it">Pagine di Servizio</property>
@@ -64,3 +51,16 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-10-24 15:21:48');
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('customer_internal','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">customer-internal</property><property key="it">cliente-interna</property></properties>
+','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="customers" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-20 16:33:51');

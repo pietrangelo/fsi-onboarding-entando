@@ -149,15 +149,21 @@
 <script>
 
     $(function () {
-        function getBase64(file, callback) {
+        function getBase64(file) {
+
+            var def = $.Deferred();
+
             var reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = function () {
-                callback(reader.result);
+                def.resolve(reader.result);
+
             };
             reader.onerror = function (error) {
-                console.log('Error: ', error);
+                def.reject(error);
             };
+
+            return def.promise();
         }
 
         var processStep = $('.customer-process-step');
@@ -165,45 +171,117 @@
 
         var stepCount = $('.customer-process-step').length;
         var currentStepIndex = 0;
-        $('.customer-process-next').click(function() {
 
-            var currentStep = $('.customer-process-step.active');
 
-            currentStep.find('input[type="file"]').each(function(index,element){
+        function buildForm(formElement, callback) {
+
+
+            var inputFields = formElement.find('input[type="text"],input[type="email"],input[type="number"],select');
+            var json = {};
+            inputFields.each(function (i, input) {
+                var key = input.getAttribute('name');
+                json[key] = input.value;
+
+            });
+            callback(json);
+        }
+
+        function uploadFiles(formElement, username, taskId, containerId) {
+            formElement.find('input[type="file"]').each(function (index, element) {
                 var file = element.files[0];
-                if (file){
-                    var size = file.size;
-                    var fileName = file.name;
-                    var type = file.type;
-                    getBase64(file, function(result) {
-                            console.log(size);
-                            console.log(fileName);
-                            console.log(type);
-                            console.log(result);
+                if (file) {
+                    getBase64(file).done( function (result) {
+                        var body = {
+                            containerId: containerId,
+                            taskId: taskId,
+                            user: username,
+                            indentifier: "",
+                            name: file.name,
+                            link: "",
+                            size: file.size,
+                            lastModified: file.lastModifiedDate,
+                            content: result
+                        };
+
+                        console.log('CALL REST ', body);
+
+                    })
+
+                }
+
+
+            });
+        }
+
+
+        function getFirstTaskId(username) {
+            var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/userTask?user=' + username;
+            console.log(url);
+
+
+            //return $.get(url);
+            var def = $.Deferred();
+
+            setTimeout(function () {
+
+                def.resolve({
+                    taskId: "1",
+                    taskContainerId: "2r23r23r32"
+                });
+
+            }, 3000);
+
+
+            return def.promise();
+
+        }
+
+
+        var username = "${currentUser.username}";
+
+        getFirstTaskId(username).done(function (taskData) {
+            console.log(taskData);
+            var taskId = taskData.taskId;
+            var containerId = taskData.taskContainerId;
+
+            $('.customer-process-next').click(function () {
+
+                var currentStep = $('.customer-process-step.active');
+
+                if (currentStepIndex < stepCount - 1) {
+                    ++currentStepIndex;
+                    currentStep.removeClass('active');
+                    processStep.eq(currentStepIndex).addClass('active');
+                    $('.bullet-progress-item').eq(currentStepIndex).addClass('active');
+                }
+
+                if (currentStepIndex < stepCount) {
+                    buildForm(currentStep, function (json) {
+                        console.log("json :", json);
+                        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/setTaskState';
+                        json.taskId = taskId;
+                        json.containerId = containerId;
+
+                        $.ajax(url, {
+                            data: {taskState: json},
+                            method: 'PUT',
+                            contentType: 'application/json',
+                            error: function (data, status, error) {
+                                console.error(error);
+                            }
+                        });
 
                     });
+                    uploadFiles(currentStep, username, taskId, containerId);
+
+                }
+                else {
+                    console.log('fine');
                 }
 
             });
 
-
-            if (currentStepIndex < stepCount - 1) {
-                ++currentStepIndex;
-                currentStep.removeClass('active');
-                processStep.eq(currentStepIndex).addClass('active');
-
-
-            }
-            else {
-                console.log('fine');
-            }
-
         });
-
-
-
-
-
 
     });
 

@@ -210,50 +210,61 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
   </div>
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
+    <#assign wp=JspTaglibs["/aps-core"]>
 
-<div class="customer-process-step ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-12">
-                
-                <p>Additional Info</p>
-
-                <div class="form-group">
-                    <label class="login-label">ENRIC / Passport No.</label>
-                    <input type="text" name="enric-passport" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Nationality</label>
-                    <input type="text" name="nationality" placeholder="Enter nationality" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Job Number</label>
-                    <input type="text" name="job-number" placeholder="Job Number" class="form-control input-custom" />
+        <div class="customer-process-step ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Account user</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-left spacers">
-                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="login-label">First Name</label>
+                            <input type="text" name="firstName" placeholder="Enter First Name" class="form-control input-custom" />
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Last Name</label>
+                            <input type="text" name="lastName" placeholder="Enter Last Name" class="form-control input-custom" />
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Email</label>
+                            <input type="email" name="emailUser" placeholder="Enter Email" class="form-control input-custom" />
+                        </div>
+                        <br>
+                        <p>Additional Info</p>
+
+                        <div class="form-group">
+                            <label class="login-label">ENRIC / Passport No.</label>
+                            <input type="text" name="idNumber" placeholder="Enter ENRIC / Passport No." class="form-control input-custom" />
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Nationality</label>
+                            <input type="text" name="nationality" placeholder="Enter nationality" class="form-control input-custom" />
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Job Number</label>
+                            <input type="text" name="jobNumber" placeholder="Job Number" class="form-control input-custom" />
+                        </div>
+                    </div>
                 </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button customer-process-next" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pull-right spacers">
+                            <input type="submit" value="<@wp.i18n key="SUBMIT" />" class="btn btn-warning login-button customer-process-next" />
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-',NULL,0);
+        </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-apllication-breadcrumb','fsi-apllication-breadcrumb',NULL,'<div class="application-breadcrumbs-wrapper">
   <div class="application-breadcrumbs-title">Sign up for a commercial account</div>
   <div class="application-breadcrumbs">
@@ -2769,238 +2780,313 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </#if>
 </li>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
+    <#assign wp=JspTaglibs["/aps-core"]>
 
-<div class="customer-process-step ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-          
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="form-title">Business legal documentation</p>
+        <div class="customer-process-step ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Business details</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
 
-                <label class="login-label">Article for incorporation</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                 </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="form-title">User ID documentation</p>
 
-                <label class="login-label">Commercial lease</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <label class="login-label">Identity card</label>
+                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                            <div class="form-control input-custom" data-trigger="fileinput">
+                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                <span class="fileinput-filename"></span>
+                            </div>
+                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
                         <span class="fileinput-exists">Change</span>
                         <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                            <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                               data-dismiss="fileinput">Remove</a>
+                        </div>
+
+                      <!--  <label class="login-label">Commercial lease</label>
+                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                            <div class="form-control input-custom" data-trigger="fileinput">
+                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                <span class="fileinput-filename"></span>
+                            </div>
+                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                            <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                               data-dismiss="fileinput">Remove</a>
+                        </div>
+
+                        <label class="login-label">Franchise agreement</label>
+                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                            <div class="form-control input-custom" data-trigger="fileinput">
+                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                <span class="fileinput-filename"></span>
+                            </div>
+                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                            <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                               data-dismiss="fileinput">Remove</a>
+                        </div>-->
+
+                       <p class="form-title">Business financial documentation</p>
+
+                        <label class="login-label">Profits and loss statements 1099 forms from the previuos 2
+                            years</label>
+                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                            <div class="form-control input-custom" data-trigger="fileinput">
+                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                <span class="fileinput-filename"></span>
+                            </div>
+                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                            <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                               data-dismiss="fileinput">Remove</a>
+                        </div>
+                        <!--<label class="login-label">List of your debts such as credit cards, employess loans, car loans
+                           and real estate</label>
+                       <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                           <div class="form-control input-custom" data-trigger="fileinput">
+                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                               <span class="fileinput-filename"></span>
+                           </div>
+                           <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                       <span class="fileinput-exists">Change</span>
+                       <input type="file" name="..."></span>
+                           <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                              data-dismiss="fileinput">Remove</a>
+                       </div>
+                       <label class="login-label">List of your assets including bank statements, mutaul fund
+                           statements, reak estates and automobile titles, brokerage</label>
+                       <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                           <div class="form-control input-custom" data-trigger="fileinput">
+                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                               <span class="fileinput-filename"></span>
+                           </div>
+                           <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                       <span class="fileinput-exists">Change</span>
+                       <input type="file" name="..."></span>
+                           <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                              data-dismiss="fileinput">Remove</a>
+                       </div>
+
+                       <p class="form-title">Tax financial documentation</p>
+
+                       <label class="login-label">Most recent federal tx return possibly the last 2 tax returns</label>
+                       <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                           <div class="form-control input-custom" data-trigger="fileinput">
+                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                               <span class="fileinput-filename"></span>
+                           </div>
+                           <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                       <span class="fileinput-exists">Change</span>
+                       <input type="file" name="..."></span>
+                           <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                              data-dismiss="fileinput">Remove</a>
+                       </div>
+
+                       <p class="form-title">Other</p>
+                       <label class="login-label">canceled checks for your rent or mortage</label>
+                       <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                           <div class="form-control input-custom" data-trigger="fileinput">
+                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                               <span class="fileinput-filename"></span>
+                           </div>
+                           <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                       <span class="fileinput-exists">Change</span>
+                       <input type="file" name="..."></span>
+                           <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                              data-dismiss="fileinput">Remove</a>
+                       </div>-->
+                        
+                    </div>
                 </div>
-
-                <label class="login-label">Franchise agreement</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pull-right spacers">
+                            <input type="submit" value="<@wp.i18n key="SUBMIT" />" class="btn btn-warning login-button
+                            customer-process-next" />
+                        </div>
                     </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <p class="form-title">Business financial documentation</p>
-
-                <label class="login-label">Profits and loss statements 1099 forms from the previuos 2 years</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-                <label class="login-label">List of your debts such as credit cards, employess loans, car loans and real estate</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-                <label class="login-label">List of your assets including bank statements, mutaul fund statements, reak estates and automobile titles, brokerage</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <p class="form-title">Tax financial documentation</p>
-
-                <label class="login-label">Most recent federal tx return possibly the last 2 tax returns</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <p class="form-title">Other</p>
-                <label class="login-label">canceled checks for your rent or mortage</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-left spacers">
-                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
-                </div>
-                
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button  customer-process-next" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 ',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
+    <#assign wp=JspTaglibs["/aps-core"]>
 
-<div  class="customer-process-step ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-            
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="login-label">Company Name</label>
-                    <input type="text" name="companyName" placeholder="Company Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">The state in which the business operates</label>
-                    <input type="text" name="stateBusinessOperate" placeholder="The state in which the business operates" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">The state in which the business was formed</label>
-                    <input type="text" name="stateBusinessFormed" placeholder="The state in which the business was formed" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Name</label>
-                    <input type="text" name="name" placeholder="Name" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Email</label>
-                    <input type="email" name="email" placeholder="Email" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Customer type</label>
-                    <input type="text" name="customerType" placeholder="Customer type" class="form-control input-custom" />
+        <div class="customer-process-step ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Business details</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="login-label">Address of the business</label>
-                    <input  type="text" name="address" placeholder="Address of the business" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">ZIP CODE</label>
-                    <input  type="text" name="zipCode" placeholder="ZIP CODE" class="form-control input-custom" />
-                </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="login-label">Company Name</label>
+                            <input type="text" name="name" placeholder="Company Name"
+                                   class="form-control input-custom"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Country</label>
+                            <input type="text" name="country"
+                                   value="US" disabled
+                                   class="form-control input-custom"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">The state in which the business was formed</label>
 
-                <div class="form-group" id="data_1">
-                    <label class="login-label">Simple data input format</label>
-                    <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="" class="form-control input-custom" value="">
+                            <select class="form-control input-custom" name="usstate">
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+
+                            
+                        </div>
+                        <!--<div class="form-group">
+                            <label class="login-label">Name</label>
+                            <input type="text" name="name" placeholder="Name" class="form-control input-custom"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Email</label>
+                            <input type="email" name="email" placeholder="Email" class="form-control input-custom"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Customer type</label>
+                            <input type="text" name="customerType" placeholder="Customer type"
+                                   class="form-control input-custom"/>
+                        </div>-->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="login-label">Address of the business</label>
+                            <input type="text" name="street" placeholder="Address of the business"
+                                   class="form-control input-custom"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">ZIP CODE</label>
+                            <input type="text" name="zipcode" placeholder="ZIP CODE" class="form-control input-custom"/>
+                        </div>
+                        <!--
+                                                <div class="form-group" id="data_1">
+                                                    <label class="login-label">Simple data input format</label>
+                                                    <div class="input-group date">
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
+                                                                                                                                    name=""
+                                                                                                                                    class="form-control input-custom"
+                                                                                                                                    value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="login-label">Surname</label>
+                                                    <input type="text" name="surname" placeholder="Surname" class="form-control input-custom"/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="login-label">Phone Number</label>
+                                                    <input type="text" name="phoneNumber" placeholder="Phone Number"
+                                                           class="form-control input-custom"/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="login-label">I am an existing customer </label>
+                                                    <div class="i-checks checkbox-pos-form">
+                                                        <label>
+                                                            <input type="radio" name="customerExists" value="true" checked> <i></i> YES
+                                                        </label>
+                                                        &nbsp;&nbsp;&nbsp;
+                                                        <label>
+                                                            <input type="radio" name="customerExists" value="false"> <i></i> NO
+                                                        </label>
+                                                    </div>
+
+                                                </div>-->
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="login-label">Surname</label>
-                    <input  type="text" name="surname" placeholder="Surname" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">Phone Number</label>
-                    <input  type="text" name="phoneNumber" placeholder="Phone Number" class="form-control input-custom" />
-                </div>
-                <div class="form-group">
-                    <label class="login-label">I am an existing customer </label>
-                    <div class="i-checks checkbox-pos-form">
-                      <label>
-                          <input type="radio" name="customerExists" value="true" checked> <i></i> YES
-                      </label>
-                      &nbsp;&nbsp;&nbsp;
-                      <label>
-                          <input type="radio" name="customerExists" value="false" > <i></i> NO
-                      </label>
-                    </div>
+                <div class="row">
+                    <div class="col-md-12">
 
+                        <div class="pull-right spacers">
+                            <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
+                            customer-process-next"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-left spacers">
-                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button "  />
-                </div>
-                
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button customer-process-next" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    $(document).ready(function () {
-        $(''#data_1 .input-group.date'').datepicker({
-            todayBtn: "linked",
-            keyboardNavigation: false,
-            forceParse: false,
-            calendarWeeks: true,
-            autoclose: true
-        });
-    });
-</script>',NULL,0);
+        <script>
+            $(document).ready(function () {
+                $(''#data_1 .input-group.date'').datepicker({
+                    todayBtn: "linked",
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    calendarWeeks: true,
+                    autoclose: true
+                })
+
+
+            });
+        </script>
+
+',NULL,0);

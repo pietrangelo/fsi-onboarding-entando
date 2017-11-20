@@ -312,3 +312,5 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTER_PASSWORD'
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTER_PASSWORD','it','Inserisci password');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','en','LOGIN');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SIGNIN','it','ACCEDI');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SUBMIT','en','Submit');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('SUBMIT','it','Conferma');

@@ -63,44 +63,6 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','contentT
 </contenttypes>
 
 ');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','params','Configuration params.','<?xml version="1.0" encoding="UTF-8"?>
-<Params>
-	<Param name="urlStyle">classic</Param>
-	<Param name="hypertextEditor">none</Param>
-	<Param name="treeStyle_page">classic</Param>
-	<Param name="treeStyle_category">classic</Param>
-	<Param name="startLangFromBrowser">false</Param>
-	<Param name="firstTimeMessages">false</Param>
-	<Param name="baseUrl">request</Param>
-	<Param name="baseUrlContext">true</Param>
-	<Param name="useJsessionId">false</Param>
-	<Param name="gravatarIntegrationEnabled">false</Param>
-	<Param name="editEmptyFragmentEnabled">false</Param>
-	<SpecialPages>
-		<Param name="notFoundPageCode">notfound</Param>
-		<Param name="homePageCode">homepage</Param>
-		<Param name="errorPageCode">errorpage</Param>
-		<Param name="loginPageCode">login</Param>
-	</SpecialPages>
-	<FeaturesOnDemand>
-		<Param name="groupsOnDemand">true</Param>
-		<Param name="categoriesOnDemand">true</Param>
-		<Param name="contentTypesOnDemand">true</Param>
-		<Param name="contentModelsOnDemand">true</Param>
-		<Param name="apisOnDemand">true</Param>
-		<Param name="resourceArchivesOnDemand">true</Param>
-	</FeaturesOnDemand>
-	<ExtendendPrivacyModule>
-		<Param name="extendedPrivacyModuleEnabled">false</Param>
-		<Param name="maxMonthsSinceLastAccess">6</Param>
-		<Param name="maxMonthsSinceLastPasswordChange">3</Param>
-	</ExtendendPrivacyModule>
-	<ExtraParams>
-		<Param name="page_preview_hash">xaHj5I2VZ1jNO6nOGOTv</Param>
-	</ExtraParams>
-</Params>
-
-');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
 <kieBpmConfig>
    <active>true</active>
@@ -375,5 +337,43 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','entandoC
 		</component>
 	</components>
 </reports>
+
+');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','params','Configuration params.','<?xml version="1.0" encoding="UTF-8"?>
+<Params>
+	<Param name="urlStyle">classic</Param>
+	<Param name="hypertextEditor">none</Param>
+	<Param name="treeStyle_page">classic</Param>
+	<Param name="treeStyle_category">classic</Param>
+	<Param name="startLangFromBrowser">false</Param>
+	<Param name="firstTimeMessages">false</Param>
+	<Param name="baseUrl">request</Param>
+	<Param name="baseUrlContext">true</Param>
+	<Param name="useJsessionId">false</Param>
+	<Param name="gravatarIntegrationEnabled">false</Param>
+	<Param name="editEmptyFragmentEnabled">false</Param>
+	<SpecialPages>
+		<Param name="notFoundPageCode">notfound</Param>
+		<Param name="homePageCode">homepage</Param>
+		<Param name="errorPageCode">errorpage</Param>
+		<Param name="loginPageCode">login</Param>
+	</SpecialPages>
+	<FeaturesOnDemand>
+		<Param name="groupsOnDemand">true</Param>
+		<Param name="categoriesOnDemand">true</Param>
+		<Param name="contentTypesOnDemand">true</Param>
+		<Param name="contentModelsOnDemand">true</Param>
+		<Param name="apisOnDemand">true</Param>
+		<Param name="resourceArchivesOnDemand">true</Param>
+	</FeaturesOnDemand>
+	<ExtendendPrivacyModule>
+		<Param name="extendedPrivacyModuleEnabled">false</Param>
+		<Param name="maxMonthsSinceLastAccess">6</Param>
+		<Param name="maxMonthsSinceLastPasswordChange">3</Param>
+	</ExtendendPrivacyModule>
+	<ExtraParams>
+		<Param name="page_preview_hash">xaHj5I2VZ1jNO6nOGOTv</Param>
+	</ExtraParams>
+</Params>
 
 ');

@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" metadata-complete="false" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd.xsd"
+         metadata-complete="false" version="3.0">
     <display-name>fsi-customer - powered by Entando</display-name>
     <description>fsi-customer - powered by Entando</description>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			classpath:spring/propertyPlaceholder.xml 
-			classpath:spring/restServerConfig.xml 
-			classpath:spring/baseSystemConfig.xml 
-			classpath*:spring/aps/**/**.xml 
-			classpath*:spring/apsadmin/**/**.xml 
-			classpath*:spring/plugins/**/aps/**/**.xml 
-			classpath*:spring/plugins/**/apsadmin/**/**.xml 
+			classpath:spring/propertyPlaceholder.xml
+			classpath:spring/restServerConfig.xml
+			classpath:spring/baseSystemConfig.xml
+			classpath*:spring/aps/**/**.xml
+			classpath*:spring/apsadmin/**/**.xml
+			classpath*:spring/plugins/**/aps/**/**.xml
+			classpath*:spring/plugins/**/apsadmin/**/**.xml
+            <!-- project extension -->
+            classpath*:spring/fsi_customer/**/aps/**/**.xml
+			classpath*:spring/fsi_customer/**/apsadmin/**/**.xml
 		</param-value>
 	</context-param>
     <context-param>
