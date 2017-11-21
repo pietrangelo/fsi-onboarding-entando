@@ -23,6 +23,9 @@
         <property name="userManager" ref="UserManager"/>
         <property name="userProfileManager" ref="UserProfileManager" />
         <property name="kieFormManager" ref="jpkiebpmsManager"/>
+        <property name="groupManager" ref="GroupManager" />
+        <property name="authorizationManager" ref="AuthorizationManager" />
+
     </bean>
 
 
@@ -39,6 +42,8 @@
         <property name="userManager" ref="UserManager"/>
         <property name="userProfileManager" ref="UserProfileManager" />
         <property name="kieFormManager" ref="jpkiebpmsManager"/>
+        <property name="groupManager" ref="GroupManager" />
+        <property name="authorizationManager" ref="AuthorizationManager" />
     </bean>
 
 

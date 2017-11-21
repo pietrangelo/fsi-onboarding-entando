@@ -5,15 +5,23 @@
  */
 package fsi_customer.apsadmin.applicant;
 
+import com.agiletec.aps.system.services.authorization.Authorization;
+import com.agiletec.aps.system.services.group.Group;
+import com.agiletec.aps.system.services.group.IGroupManager;
 import com.agiletec.aps.system.services.user.IUserManager;
 import com.agiletec.aps.system.services.user.User;
 import com.agiletec.apsadmin.system.ApsAdminSystemConstants;
 import com.agiletec.apsadmin.system.BaseAction;
 import fsi_customer.apsadmin.applicant.model.Applicant;
+import java.util.ArrayList;
+import java.util.List;
 import org.entando.entando.aps.system.services.userprofile.IUserProfileManager;
+import static org.entando.entando.apsadmin.user.UserAuthorizationAction.CURRENT_FORM_USER_AUTHS_PARAM_NAME;
+import org.entando.entando.apsadmin.user.UserAuthsFormBean;
 import org.entando.entando.plugins.jpkiebpm.aps.system.services.kie.IKieFormManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import javax.servlet.http.HttpServletRequest;
 
 public class ApplicantAction extends BaseAction {
 
@@ -59,6 +67,13 @@ public class ApplicantAction extends BaseAction {
                 user.setPassword(this.getCnfpwd());
                 user.setDisabled(false);
                 this.getUserManager().addUser(user);
+                Group group = this.getGroupManager().getGroup("customers");
+                Authorization authorization = new Authorization(group, null);
+                List<Authorization> authorizations = new ArrayList<>();
+                authorizations.add(authorization);
+                String username = this.getUsername();
+                this.getAuthorizationManager().updateUserAuthorizations(username, authorizations);
+                this.getRequest().getSession().removeAttribute(CURRENT_FORM_USER_AUTHS_PARAM_NAME);
                 boolean res = this.getKieFormManager().sendSignal("5fdf1ed1672f5358e70570bd7f50b163", this.getProcid(), "account_registered", "\"" + this.getUsername() + "\"", null);
                 _logger.info("result: {}", res);
                 if (res) {
@@ -66,12 +81,12 @@ public class ApplicantAction extends BaseAction {
                 } else {
                     this.addActionError("Signal not sent");
                 }
-                
             } else if (ApsAdminSystemConstants.EDIT == strutsAction) {
 //				this.getApplicantManager().updateApplicant(applicant);
             }
         } catch (Throwable t) {
             _logger.error("error in save", t);
+            this.addActionError("Problems with form!");
             return FAILURE;
         }
         return SUCCESS;
@@ -244,6 +259,14 @@ public class ApplicantAction extends BaseAction {
         this._kieFormManager = kieFormManager;
     }
 
+    public IGroupManager getGroupManager() {
+        return _groupManager;
+    }
+
+    public void setGroupManager(IGroupManager _groupManager) {
+        this._groupManager = _groupManager;
+    }
+
     private int _strutsAction;
     private int _id;
     private String _firstname;
@@ -258,4 +281,5 @@ public class ApplicantAction extends BaseAction {
     private IUserManager _userManager;
     private IUserProfileManager _userProfileManager;
     private IKieFormManager _kieFormManager;
+    private IGroupManager _groupManager;
 }
