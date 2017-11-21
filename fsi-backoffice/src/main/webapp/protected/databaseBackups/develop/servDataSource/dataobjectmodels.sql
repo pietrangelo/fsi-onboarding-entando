@@ -12,7 +12,7 @@ INSERT INTO dataobjectmodels (modelid,datatype,descr,model,stylesheet) VALUES (1
                 <fieldset class="ui-dform-fieldset"><legend class="control-label editLabel ui-dform-legend">$i18n.getLabel("JPKIE_FORM_commercial-client-onboarding")</legend>
                     <div class="ui-dform-div form-group">
                         <label id="JPKIE_client_address" for="jpkieformparam_client_address" class="editLabel">$i18n.getLabel("JPKIE_client_address")</label>
-                        <input type="null" id="jpkieformparam_client_address" name="$data.client_address.type:client_address" labelkey="JPKIE_client_address" class="form-control ui-widget ui-dform-number" aria-required="true" value="" >
+                        <input type="text" id="jpkieformparam_client_address" name="$data.client_address.type:client_address" labelkey="JPKIE_client_address" class="form-control ui-widget ui-dform-number" aria-required="true" value="" >
                     </div>
 
                     <div class="ui-dform-div form-group">
@@ -34,12 +34,9 @@ INSERT INTO dataobjectmodels (modelid,datatype,descr,model,stylesheet) VALUES (1
                         <input type="text" id="jpkieformparam_client_phoneNumber" name="$data.client_phoneNumber.type:client_phoneNumber" labelkey="JPKIE_client_phoneNumber" class="form-control ui-widget ui-dform-number" aria-required="true" value="$data.client_phoneNumber.text" >
                     </div>
 
-                    
-
-                    
                     <div class="ui-dform-div form-group">
                         <label id="JPKIE_client_email" for="jpkieformparam_client_email" class="editLabel">$i18n.getLabel("JPKIE_client_email")</label>
-                        <input type="text" id="jpkieformparam_client_email" name="$data.client_email.type:client_email" labelkey="JPKIE_client_email" class="form-control ui-widget ui-dform-number" aria-required="true" value="$data.client_email.text" >
+                        <input type="email" id="jpkieformparam_client_email" name="$data.client_email.type:client_email" labelkey="JPKIE_client_email" class="form-control ui-widget ui-dform-number" aria-required="true" value="$data.client_email.text" >
                     </div>
 
                     <div class="ui-dform-div form-group">
@@ -61,19 +58,24 @@ INSERT INTO dataobjectmodels (modelid,datatype,descr,model,stylesheet) VALUES (1
     </div>
 </div>
 <script>
-    
+
     var valueMap = {
+        jpkieformparam_client_address :''Raleigh, NC 27601'',
+        jpkieformparam_client_name : ''Interstellar Inc.'',
+        jpkieformparam_client_country: ''USA'',
+        jpkieformparam_client_phoneNumber: ''+23070453273'',
         jpkieformparam_party_name : ''John'',
-        jpkieformparam_party_surname : ''William''
-        
+        jpkieformparam_party_surname : ''William'',
+        jpkieformparam_accountManager: ''admin''
+
     }
-    
+
     for (var key in valueMap) {
         if (!document.getElementById(key).value){
             document.getElementById(key).value = valueMap[key];
         }
     }
-    
-    
-    
+
+
+
 </script>',NULL);
