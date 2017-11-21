@@ -3434,53 +3434,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
    <a href="#">Dashboard</a>
    </li>
 </ol>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-information','fsi-customer-information',NULL,'<div class="fsi-customer-information ibox float-e-margins">
-  <div class="ibox-title">
-    <h5>Interstellar</h5>
-    <div class="ibox-tools">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-wrench"></i>
-      </a>
-      <a class="collapse-link">
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
-  </div>
-  <div class="ibox-content">
-    <div class="row">
-      <div class="col-md-6">
-        <h4 class="fsi-subheader">Customer information</h4>
-        <p>
-          <div>Organisation full name</div>
-          <b>Kevin Smith</b>
-        </p>
-        <p>
-          <div>International application ID</div>
-          <b>001002003004</b>
-        </p>
-        <p>
-          <div>Entity Type</div>
-          <b>Corporate</b>
-        </p>
-      </div>
-      <div class="col-md-6">
-      	<h4 class="fsi-subheader">Primary contact information</h4>
-        <p>
-          <div>Point of contact</div>
-          <b>21 Forest View - London, 98104 Brittain</b>
-        </p>
-        <p>
-          <div>Phone</div>
-          <b>055 1234567890</b>
-        </p>
-        <p>
-          <div>Email</div>
-          <b>kevinsmith@interstellar.com</b>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">
@@ -4092,6 +4045,88 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-information','fsi-customer-information',NULL,'<script>
+    $(function(){
+
+        function getQueryVariable(variable){
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return pair[1];}
+            }
+            return(false);
+        };
+
+        var loadUserInfo = function(continerId, taskId){
+            //http://localhost:8080/fsi-backoffice/api/rs/en/jpkiebpm/taskInputOutput.json?
+            var url = ''<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/taskInputOutput.json?containerId=''+containerId+''&taskId=''+taskId;
+            console.log(url);
+            $.get(url, function (data) {
+                var obj = data.response.result.processObj;
+                var keys = Object.keys(obj);
+                keys.forEach(function(key){
+                    $(''.data-field-''+key).text(obj[key]);
+                })
+
+                console.log(data);
+            });
+
+        };
+        var containerId = getQueryVariable(''containerId'');
+        var taskId = getQueryVariable(''taskId'');
+        loadUserInfo(containerId,taskId);
+
+    });
+
+</script>
+<div class="fsi-customer-information ibox float-e-margins">
+    <div class="ibox-title">
+        <h5 class="data-field-companyName">-</h5>
+        <div class="ibox-tools">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="fsi-subheader">Customer information</h4>
+                <p>
+                <div>Organization full name</div>
+                <b class="data-field-fullName">-</b>
+                </p>
+                <p>
+                <div>International application ID</div>
+                <b class="data-field-applicationId">-</b>
+                </p>
+                <p>
+                <div>Entity Type</div>
+                <b class="data-field-entityType">-</b>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h4 class="fsi-subheader">Primary contact information</h4>
+                <p>
+                <div>Point of contact</div>
+                <b class="data-field-address">-</b>
+                </p>
+                <p>
+                <div>Phone</div>
+                <b class="data-field-phone">-</b>
+                </p>
+                <p>
+                <div>Email</div>
+                <b class="data-field-email">-</b>
+                </p>
             </div>
         </div>
     </div>
