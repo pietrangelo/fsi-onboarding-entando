@@ -121,9 +121,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-overview','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Customer Overview</property><property key="it">FSI Panoramica Cliente</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-information','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Customer information</property><property key="it">FSI Customer information</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('userprofile_editCurrentUser','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Edit Current User</property>
@@ -243,6 +240,9 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 </config>',NULL,NULL,NULL,1,NULL);
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-pdf-document','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Fsi PDF</property><property key="it">Fsi PDF</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-information','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Customer information</property><property key="it">FSI Customer information</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
 <properties>

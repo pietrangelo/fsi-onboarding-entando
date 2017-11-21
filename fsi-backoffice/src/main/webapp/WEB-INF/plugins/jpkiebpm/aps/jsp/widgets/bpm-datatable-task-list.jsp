@@ -100,12 +100,16 @@
         var loadDataTable = function (url, idTable) {
 
             $.get(url, function (data) {
-                var items = data.response.result.taskList.list;
-                items = items.map(function (item) {
-                    item['activated'] = new Date(item['activated']).toLocaleString();
-                    item['created'] = new Date(item['created']).toLocaleString();
-                    return item;
-                });
+                var items = data.response.result.taskList.list || [] ;
+                if (items){
+
+                    items = items.map(function (item) {
+                        item['activated'] = new Date(item['activated']).toLocaleString();
+                        item['created'] = new Date(item['created']).toLocaleString();
+                        return item;
+                    });
+                }
+
                 var extraConfig = initDatatable(data.response.result.taskList.containerId);
                 extraConfig.columnDefinition = data.response.result.taskList["datatable-field-definition"].fields;
                 org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
