@@ -26,3 +26,4 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',7,'fsi-application-progress',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-form-banking-services',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',13,'fsi-Declaration',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',14,'fsi_confirmation',NULL);

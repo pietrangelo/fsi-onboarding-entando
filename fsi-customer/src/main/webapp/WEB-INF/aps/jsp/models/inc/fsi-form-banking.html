@@ -1,3 +1,4 @@
+<#assign wp=JspTaglibs["/aps-core"]>
 <div class="customer-process-step fsi-form-banking-services">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
@@ -97,9 +98,14 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <button type="button" class="btn btn-w-m btn-primary pull-right customer-process-next">Submit</button>
+            <div class="row">
+                <div class="col-md-12">
 
+                    <div class="pull-right spacers">
+                        <input type="submit" value='<@wp.i18n key="SUBMIT" />' class="btn btn-warning login-button
+                            customer-process-next"/>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

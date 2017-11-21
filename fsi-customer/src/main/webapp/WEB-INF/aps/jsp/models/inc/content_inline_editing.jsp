@@ -190,7 +190,7 @@
             formElement.find('input[type="file"]').each(function (index, element) {
                 var file = element.files[0];
                 if (file) {
-                    getBase64(file).done( function (result) {
+                    getBase64(file).done(function (result) {
                         var body = {
                             containerId: containerId,
                             taskId: taskId,
@@ -203,7 +203,18 @@
                             content: result
                         };
 
-                        console.log('CALL REST ', body);
+                        //console.log('CALL REST ', JSON.stringify({taskDoc: body}));
+
+                        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/putTaskDoc';
+                        $.ajax(url, {
+                            data: JSON.stringify({taskDoc: body}),
+                            method: 'PUT',
+                            contentType: 'application/json',
+                            error: function (data, status, error) {
+                                console.error(error);
+                            }
+
+                        });
 
                     })
 
@@ -217,29 +228,14 @@
         function getFirstTaskId(username) {
             var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/userTask?user=' + username;
             console.log(url);
-
-
-            //return $.get(url);
-            var def = $.Deferred();
-
-            setTimeout(function () {
-
-                def.resolve({
-                    taskId: "1",
-                    taskContainerId: "2r23r23r32"
-                });
-
-            }, 3000);
-
-
-            return def.promise();
+            return $.get(url);
 
         }
 
 
         var username = "${currentUser.username}";
 
-        getFirstTaskId(username).done(function (taskData) {
+        getFirstTaskId(username).always(function (taskData) {
             console.log(taskData);
             var taskId = taskData.taskId;
             var containerId = taskData.taskContainerId;
@@ -263,7 +259,7 @@
                         json.containerId = containerId;
 
                         $.ajax(url, {
-                            data: {taskState: json},
+                            data: JSON.stringify({taskState: json}),
                             method: 'PUT',
                             contentType: 'application/json',
                             error: function (data, status, error) {

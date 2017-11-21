@@ -112,102 +112,117 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       <div class="bb-expect-it">Expect it.</div>
     </div>
   </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<div class="customer-process-step fsi-form-banking-services">
-  <div class="ibox float-e-margins">
-    <div class="ibox-title">
-      <h5>Selects the financial services that your company is applying for</h5>
-      <div class="ibox-tools"><a class="collapse-link">
-          <div class="fa fa-chevron-up"></div></a><a class="collapse-link">
-          <div class="fa fa-repeat"></div></a></div>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<div class="customer-process-step fsi-form-banking-services">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Selects the financial services that your company is applying for</h5>
+            <div class="ibox-tools"><a class="collapse-link">
+                <div class="fa fa-chevron-up"></div>
+            </a><a class="collapse-link">
+                <div class="fa fa-repeat"></div>
+            </a></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service" value=""
+                                   name="financial-service" value="business-checking"/><span>BUSINESS CHECKING</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="business-credit-cards"/><span>BUSINESS CREDIT CARDS</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="business-lending-and-financing"/><span>BUSINESS LENDING AND FINANCING</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="international-banking"/><span>INTERNATIONAL BANKING</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service" value="merchant-services"/><span>MERCHANT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service" value="treasury-services"/><span>TREASURY SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="cash-management-servcies"/><span>CASH MANAGEMENT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="employess-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="cash-management-services"/><span>CASH MANAGEMENT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="employee-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="pull-right spacers">
+                        <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
+                            customer-process-next"/>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="ibox-content">
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="" name="financial-service" value="business-checking"/><span>BUSINESS CHECKING</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="business-credit-cards"/><span>BUSINESS CREDIT CARDS</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="business-lending-and-financing"/><span>BUSINESS LENDING AND FINANCING</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="international-banking"/><span>INTERNATIONAL BANKING</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="merchant-services"/><span>MERCHANT SERVICES</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="treasury-services"/><span>TREASURY SERVICES</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="cash-management-servcies"/><span>CASH MANAGEMENT SERVICES</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="employess-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="cash-management-services"/><span>CASH MANAGEMENT SERVICES</span>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div>
-            <label>
-              <input class="i-checks" type="checkbox" name="financial-service" value="employee-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button type="button" class="btn btn-w-m btn-default">Back</button>
-        <button type="button" class="btn btn-w-m btn-primary pull-right customer-process-next">Next</button>
-       
-      </div>
-    </div>
-  </div>
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
     <#assign wp=JspTaglibs["/aps-core"]>
@@ -2472,34 +2487,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	<p class="text-right"><a class="btn btn-primary" href="<@wp.url page="${pageLinkVar}"/>">${pageLinkDescriptionVar}</a></p>
 </#if>
 <#assign contentInfoList="">',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
-  <div class="label-box">
-    <div class="label-box-title">Application</div>
-    <div class="label-box-descr">Tell us more about the business</div>
-  </div>
-  <div class="bullet-progress-container">
-    <div class="bullet-progress-item active">
-      <div class="bullet">1</div>
-      <div class="bullet-label">Business Details</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">2</div>
-      <div class="bullet-label">Account User</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">3</div>
-      <div class="bullet-label">Banking Services</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">4</div>
-      <div class="bullet-label">Declaration</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">5</div>
-      <div class="bullet-label">Confirm</div>
-    </div>
-  </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-language_choose_inspinia','entando-widget-language_choose_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <@wp.info key="langs" var="langsVar" />
 <@wp.info key="currentLang" var="currentLangVar" />
@@ -3089,4 +3076,55 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             });
         </script>
 
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
+  <div class="label-box">
+    <div class="label-box-title">Application</div>
+    <div class="label-box-descr">Tell us more about the business</div>
+  </div>
+  <div class="bullet-progress-container">
+    <div class="bullet-progress-item active">
+      <div class="bullet">1</div>
+      <div class="bullet-label">Business Details</div>
+    </div>
+<!--
+    <div class="bullet-progress-item">
+      <div class="bullet">2</div>
+      <div class="bullet-label">Account User</div>
+    </div>
+-->
+    <div class="bullet-progress-item">
+      <div class="bullet">2</div>
+      <div class="bullet-label">Banking Services</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">3</div>
+      <div class="bullet-label">Declaration</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">4</div>
+      <div class="bullet-label">Confirm</div>
+    </div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_confirmation','fsi_confirmation',NULL,'
+    <div class="customer-process-step ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Business details</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="alert alert-success">
+                    <strong>Your request has been sent.</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
 ',NULL,0);

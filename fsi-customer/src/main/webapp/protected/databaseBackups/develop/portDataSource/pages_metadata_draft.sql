@@ -63,4 +63,4 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-11-20 16:33:51');
+','2017-11-21 10:52:46');
