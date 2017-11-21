@@ -169,6 +169,7 @@
         var processStep = $('.customer-process-step');
         processStep.first().addClass('active');
 
+
         var stepCount = $('.customer-process-step').length;
         var currentStepIndex = 0;
 
@@ -186,24 +187,33 @@
             callback(json);
         }
 
-        function uploadFiles(formElement, username, taskId, containerId) {
+        function uploadFiles(formElement, username,taskList) {
             formElement.find('input[type="file"]').each(function (index, element) {
                 var file = element.files[0];
                 if (file) {
+
+
+                    var task = taskList.filter(function(el){
+                        return el.desc === element.getAttribute('data-process-file');
+                    });
+
+                    if (task.length === 0) return;
+
+
                     getBase64(file).done(function (result) {
                         var body = {
-                            containerId: containerId,
-                            taskId: taskId,
+                            containerId: task[0].containerId,
+                            taskId: task[0].id,
                             user: username,
                             indentifier: "",
                             name: file.name,
                             link: "",
                             size: file.size,
-                            lastModified: file.lastModifiedDate,
+                            lastModified: file.lastModified,
                             content: result
                         };
 
-                        //console.log('CALL REST ', JSON.stringify({taskDoc: body}));
+                        console.log('CALL REST ', JSON.stringify({taskDoc: body}));
 
                         var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/putTaskDoc';
                         $.ajax(url, {
@@ -226,7 +236,7 @@
 
 
         function getFirstTaskId(username) {
-            var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/userTask?user=' + username;
+            var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/userTask.json?user=' + username;
             console.log(url);
             return $.get(url);
 
@@ -235,40 +245,51 @@
 
         var username = "${currentUser.username}";
 
-        getFirstTaskId(username).always(function (taskData) {
+        getFirstTaskId(username).done(function (taskData) {
             console.log(taskData);
-            var taskId = taskData.taskId;
-            var containerId = taskData.taskContainerId;
+
+            var taskList = taskData.response.result.taskList.list;
+            taskList = Array.isArray(taskList) ? taskList : [taskList];
 
             $('.customer-process-next').click(function () {
 
                 var currentStep = $('.customer-process-step.active');
 
                 if (currentStepIndex < stepCount - 1) {
+
                     ++currentStepIndex;
                     currentStep.removeClass('active');
                     processStep.eq(currentStepIndex).addClass('active');
                     $('.bullet-progress-item').eq(currentStepIndex).addClass('active');
                 }
-
                 if (currentStepIndex < stepCount) {
-                    buildForm(currentStep, function (json) {
-                        console.log("json :", json);
-                        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/setTaskState';
-                        json.taskId = taskId;
-                        json.containerId = containerId;
 
-                        $.ajax(url, {
-                            data: JSON.stringify({taskState: json}),
-                            method: 'PUT',
-                            contentType: 'application/json',
-                            error: function (data, status, error) {
-                                console.error(error);
-                            }
+
+                    buildForm(currentStep, function (json) {
+
+                        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/setTaskState';
+
+                        var dataProcess = currentStep.attr('data-process-name');
+
+                        var task = taskList.filter(function(el){
+                            return el.name === dataProcess;
                         });
+                        if (task.length === 0 ) return;
+
+                        json.taskId = task[0].id;
+                        json.containerId = task[0].containerId;
+//                        console.log("json :", json);
+                            $.ajax(url, {
+                                data: JSON.stringify({taskState: json}),
+                                method: 'PUT',
+                                contentType: 'application/json',
+                                error: function (data, status, error) {
+                                    console.error(error);
+                                }
+                            });
 
                     });
-                    uploadFiles(currentStep, username, taskId, containerId);
+                    uploadFiles(currentStep, username,taskList);
 
                 }
                 else {

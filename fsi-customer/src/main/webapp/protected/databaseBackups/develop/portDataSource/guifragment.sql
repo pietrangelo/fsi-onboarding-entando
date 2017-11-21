@@ -1,6 +1,11 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-internal','banner-main-internal',NULL,'<div class=" left-banner middle-box-internal text-center">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
-    <div class="customer-process-step ibox float-e-margins">
+    <div class="customer-process-step ibox float-e-margins" data-process-name="Additional Client Details">
         <div class="ibox-title">
             <h5>Business details</h5>
             <div class="ibox-tools">
@@ -1312,11 +1317,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		</div>
 	</div>
 </@s.else>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-internal','banner-main-internal',NULL,'<div class=" left-banner middle-box-internal text-center">
-<p>Improving businesses&apos; life through meaningful services.
-</p>
-<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-MonolistAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -2909,147 +2909,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-    <#assign wp=JspTaglibs["/aps-core"]>
-
-        <div class="customer-process-step ibox float-e-margins">
-            <div class="ibox-title">
-                <h5>Business details</h5>
-                <div class="ibox-tools">
-                    <a class="collapse-link">
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-
-                </div>
-            </div>
-            <div class="ibox-content">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="form-title">User ID documentation</p>
-
-                        <label class="login-label">Identity card</label>
-                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                            <div class="form-control input-custom" data-trigger="fileinput">
-                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                                <span class="fileinput-filename"></span>
-                            </div>
-                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                            <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                               data-dismiss="fileinput">Remove</a>
-                        </div>
-
-                      <!--  <label class="login-label">Commercial lease</label>
-                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                            <div class="form-control input-custom" data-trigger="fileinput">
-                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                                <span class="fileinput-filename"></span>
-                            </div>
-                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                            <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                               data-dismiss="fileinput">Remove</a>
-                        </div>
-
-                        <label class="login-label">Franchise agreement</label>
-                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                            <div class="form-control input-custom" data-trigger="fileinput">
-                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                                <span class="fileinput-filename"></span>
-                            </div>
-                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                            <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                               data-dismiss="fileinput">Remove</a>
-                        </div>-->
-
-                       <p class="form-title">Business financial documentation</p>
-
-                        <label class="login-label">Profits and loss statements 1099 forms from the previuos 2
-                            years</label>
-                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                            <div class="form-control input-custom" data-trigger="fileinput">
-                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                                <span class="fileinput-filename"></span>
-                            </div>
-                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                            <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                               data-dismiss="fileinput">Remove</a>
-                        </div>
-                        <!--<label class="login-label">List of your debts such as credit cards, employess loans, car loans
-                           and real estate</label>
-                       <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                           <div class="form-control input-custom" data-trigger="fileinput">
-                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                               <span class="fileinput-filename"></span>
-                           </div>
-                           <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                       <span class="fileinput-exists">Change</span>
-                       <input type="file" name="..."></span>
-                           <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                              data-dismiss="fileinput">Remove</a>
-                       </div>
-                       <label class="login-label">List of your assets including bank statements, mutaul fund
-                           statements, reak estates and automobile titles, brokerage</label>
-                       <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                           <div class="form-control input-custom" data-trigger="fileinput">
-                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                               <span class="fileinput-filename"></span>
-                           </div>
-                           <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                       <span class="fileinput-exists">Change</span>
-                       <input type="file" name="..."></span>
-                           <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                              data-dismiss="fileinput">Remove</a>
-                       </div>
-
-                       <p class="form-title">Tax financial documentation</p>
-
-                       <label class="login-label">Most recent federal tx return possibly the last 2 tax returns</label>
-                       <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                           <div class="form-control input-custom" data-trigger="fileinput">
-                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                               <span class="fileinput-filename"></span>
-                           </div>
-                           <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                       <span class="fileinput-exists">Change</span>
-                       <input type="file" name="..."></span>
-                           <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                              data-dismiss="fileinput">Remove</a>
-                       </div>
-
-                       <p class="form-title">Other</p>
-                       <label class="login-label">canceled checks for your rent or mortage</label>
-                       <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                           <div class="form-control input-custom" data-trigger="fileinput">
-                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                               <span class="fileinput-filename"></span>
-                           </div>
-                           <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                       <span class="fileinput-exists">Change</span>
-                       <input type="file" name="..."></span>
-                           <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                              data-dismiss="fileinput">Remove</a>
-                       </div>-->
-                        
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="pull-right spacers">
-                            <input type="submit" value="<@wp.i18n key="SUBMIT" />" class="btn btn-warning login-button
-                            customer-process-next" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
   <div class="label-box">
     <div class="label-box-title">Application</div>
@@ -3098,6 +2957,69 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                 </div>
             </div>
 
+        </div>
+    </div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+    <div class="customer-process-step ibox float-e-margins" data-process-name="Enrichment Upload Document">
+        <div class="ibox-title">
+            <h5>Business details</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="form-title">User ID documentation</p>
+
+                    <label class="login-label">Identity card</label>
+                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                        <div class="form-control input-custom" data-trigger="fileinput">
+                            <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                            <span class="fileinput-filename"></span>
+                        </div>
+                        <span class="input-group-addon btn btn-default btn-file"><span
+                                class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" data-process-file="IdentityDocuments"></span>
+                        <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                           data-dismiss="fileinput">Remove</a>
+                    </div>
+
+
+                    <p class="form-title">Business financial documentation</p>
+
+                    <label class="login-label">Profits and loss statements 1099 forms from the previuos 2
+                        years</label>
+                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                        <div class="form-control input-custom" data-trigger="fileinput">
+                            <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                            <span class="fileinput-filename"></span>
+                        </div>
+                        <span class="input-group-addon btn btn-default btn-file"><span
+                                class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" data-process-file="CreditDocuments"></span>
+                        <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                           data-dismiss="fileinput">Remove</a>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pull-right spacers">
+                        <input type="submit" value="<@wp.i18n key="SUBMIT" />" class="btn btn-warning login-button
+                        customer-process-next" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 ',NULL,0);
