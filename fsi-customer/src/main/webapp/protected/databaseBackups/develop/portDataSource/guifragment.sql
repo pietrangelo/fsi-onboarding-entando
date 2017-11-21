@@ -1,3 +1,267 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+    <div class="customer-process-step ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Business details</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="login-label">Company Name</label>
+                        <input id="name" type="text" name="name" placeholder="Company Name"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">Country</label>
+                        <input id="country" type="text" name="country"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">The state in which the business was formed</label>
+
+                        <select class="form-control input-custom" id="usstate" name="usstate">
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="login-label">Address of the business</label>
+                        <input type="text" id="street"name="street" placeholder="Address of the business"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">ZIP CODE</label>
+                        <input type="text" id="zipcode"name="zipcode" placeholder="ZIP CODE" class="form-control input-custom"/>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="pull-right spacers">
+                        <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
+                            customer-process-next"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(''#data_1 .input-group.date'').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            })
+
+
+        });
+
+
+
+        var valueMap = {
+            name :''Mtz Inc.'',
+            country : ''U.S.A.'',
+            usstate: ''HI'',
+            street: ''Via Street'',
+            zipcode : ''35006''
+
+        }
+
+        for (var key in valueMap) {
+            if (!document.getElementById(key).value){
+                document.getElementById(key).value = valueMap[key];
+            }
+        }
+
+    </script>
+
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<div class="middle-box loginscreen animated fadeInDown">
+    <#if (Session.currentUser.username != "guest") >
+    <#if (Session.currentUser.entandoUser) >
+    <#if (!Session.currentUser.credentialsNotExpired) >
+    <div class="alert alert-block">
+        <p>
+            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
+               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
+        </p>
+    </div>
+    </#if>
+    </#if>
+    <p>
+        <script>window.location = "<@wp.url page="customer_internal" />";</script>
+    </p>
+    <#else>
+    <#if (accountExpired?? && accountExpired == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
+    </div>
+    </#if>
+    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
+    <div class="alert alert-block alert-error">
+        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
+    </div>
+    </#if>
+    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
+    <form action="<@wp.url/>" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div>
+            <label class="remember-me-label">
+                   <input type="checkbox" class="i-checks"> Remember me </label>
+        </div>
+        <div class="form-actions text-center">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+                   <p class="forget">Forgot your password or Email/Username?</p>
+        </div>
+    </form>
+    </#if>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AttributeInfo',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<@s.if test="#attribute.required">
+	<abbr class="icon icon-asterisk" title="<@wp.i18n key="userprofile_ENTITY_ATTRIBUTE_MANDATORY_FULL" />"><span class="noscreen"><@wp.i18n key="userprofile_ENTITY_ATTRIBUTE_MANDATORY_SHORT" /></span></abbr>
+</@s.if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AllList_operationModule',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+
+<@s.if test="null == #operationButtonDisabled">
+	<@s.set var="operationButtonDisabled" value="false" />
+</@s.if>
+<div class="btn-toolbar">
+	<div class="btn-group btn-group-sm">
+		<@wpsa.actionParam action="moveListElement" var="actionName" >
+			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
+			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
+			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
+			<@wpsa.actionSubParam name="movement" value="UP" />
+		</@wpsa.actionParam>
+		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default" title="%{getText(''label.moveInPositionNumber'')}: %{#elementIndex}">
+		<span class="icon fa fa-sort-desc"></span>
+		<span class="sr-only"><@s.text name="label.moveInPositionNumber" />: <@s.property value="%{#elementIndex}" /></span>
+		</@wpsf.submit>
+
+		<@wpsa.actionParam action="moveListElement" var="actionName" >
+			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
+			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
+			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
+			<@wpsa.actionSubParam name="movement" value="DOWN" />
+		</@wpsa.actionParam>
+		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default" title="%{getText(''label.moveInPositionNumber'')}: %{#elementIndex+2}">
+		<span class="icon fa fa-sort-asc"></span>
+		<span class="sr-only"><@s.text name="label.moveInPositionNumber" />: <@s.property value="%{#elementIndex}" /></span>
+		</@wpsf.submit>
+	</div>
+	<div class="btn-group btn-group-sm">
+		<@wpsa.actionParam action="removeListElement" var="actionName" >
+			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
+			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
+			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
+		</@wpsa.actionParam>
+		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default btn-warning" title="%{getText(''label.remove'')}: %{#elementIndex}">
+		<span class="icon fa fa-times-circle-o"></span>
+		<span class="sr-only"><@s.text name="label.remove" />: <@s.property value="%{#elementIndex}" /></span>
+		</@wpsf.submit>
+	</div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-AllList-addElementButton',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+
+<@s.set var="add_label"><@wp.i18n key="userprofile_ADDITEM_LIST" /></@s.set>
+
+<@wpsa.actionParam action="addListElement" var="actionName" >
+	<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
+	<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
+</@wpsa.actionParam>
+<@s.set var="iconImagePath" id="iconImagePath"><@wp.resourceURL/>administration/common/img/icons/list-add.png</@s.set> 
+<@wpsf.submit 
+	cssClass="btn"
+	useTabindexAutoIncrement=true 
+	action="%{#actionName}" 
+	value="%{add_label}" 
+	title="%{i18n_attribute_name}%{'': ''}%{add_label}" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>State</h5>
@@ -84,6 +348,13 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.select useTabindexAutoIncrement=true
+	name="%{#attributeTracer.getFormFieldName(#attribute)}"
+	id="%{attribute_id}"  
+	headerKey="" headerValue="" 
+	list="#attribute.items" value="%{#attribute.getText()}" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
     <div class="fsi-welcome-title">Welcome to your personal area</div>
     <div class="fsi-welcome-message">You can check the status of your request</div>
@@ -408,127 +679,13 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<div class="middle-box loginscreen animated fadeInDown">
-    <#if (Session.currentUser.username != "guest") >
-    <#if (Session.currentUser.entandoUser) >
-    <#if (!Session.currentUser.credentialsNotExpired) >
-    <div class="alert alert-block">
-        <p>
-            <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />:
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action">
-               <@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a>
-        </p>
-    </div>
-    </#if>
-    </#if>
-    <p>
-        <script>window.location = "<@wp.url page="customer_internal" />";</script>
-    </p>
-    <#else>
-    <#if (accountExpired?? && accountExpired == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
-    </div>
-    </#if>
-    <#if (wrongAccountCredential?? && wrongAccountCredential == true) >
-    <div class="alert alert-block alert-error">
-        <p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
-    </div>
-    </#if>
-    <p class="title-login"><@wp.i18n key="RESERVED_AREA" /></p>
-    <form action="<@wp.url/>" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="USERNAME" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="USERNAME" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="ENTER_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div>
-            <label class="remember-me-label">
-                   <input type="checkbox" class="i-checks"> Remember me </label>
-        </div>
-        <div class="form-actions text-center">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-                   <p class="forget">Forgot your password or Email/Username?</p>
-        </div>
-    </form>
-    </#if>
-</div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AttributeInfo',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<@s.if test="#attribute.required">
-	<abbr class="icon icon-asterisk" title="<@wp.i18n key="userprofile_ENTITY_ATTRIBUTE_MANDATORY_FULL" />"><span class="noscreen"><@wp.i18n key="userprofile_ENTITY_ATTRIBUTE_MANDATORY_SHORT" /></span></abbr>
-</@s.if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_AllList_operationModule',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorMapAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wpsf=JspTaglibs["/apsadmin-form"]>
-
-<@s.if test="null == #operationButtonDisabled">
-	<@s.set var="operationButtonDisabled" value="false" />
-</@s.if>
-<div class="btn-toolbar">
-	<div class="btn-group btn-group-sm">
-		<@wpsa.actionParam action="moveListElement" var="actionName" >
-			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
-			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
-			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
-			<@wpsa.actionSubParam name="movement" value="UP" />
-		</@wpsa.actionParam>
-		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default" title="%{getText(''label.moveInPositionNumber'')}: %{#elementIndex}">
-		<span class="icon fa fa-sort-desc"></span>
-		<span class="sr-only"><@s.text name="label.moveInPositionNumber" />: <@s.property value="%{#elementIndex}" /></span>
-		</@wpsf.submit>
-
-		<@wpsa.actionParam action="moveListElement" var="actionName" >
-			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
-			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
-			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
-			<@wpsa.actionSubParam name="movement" value="DOWN" />
-		</@wpsa.actionParam>
-		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default" title="%{getText(''label.moveInPositionNumber'')}: %{#elementIndex+2}">
-		<span class="icon fa fa-sort-asc"></span>
-		<span class="sr-only"><@s.text name="label.moveInPositionNumber" />: <@s.property value="%{#elementIndex}" /></span>
-		</@wpsf.submit>
-	</div>
-	<div class="btn-group btn-group-sm">
-		<@wpsa.actionParam action="removeListElement" var="actionName" >
-			<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
-			<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
-			<@wpsa.actionSubParam name="elementIndex" value="%{#elementIndex}" />
-		</@wpsa.actionParam>
-		<@wpsf.submit disabled="%{#operationButtonDisabled}" action="%{#actionName}" type="button" cssClass="btn btn-default btn-warning" title="%{getText(''label.remove'')}: %{#elementIndex}">
-		<span class="icon fa fa-times-circle-o"></span>
-		<span class="sr-only"><@s.text name="label.remove" />: <@s.property value="%{#elementIndex}" /></span>
-		</@wpsf.submit>
-	</div>
-</div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-AllList-addElementButton',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-
-<@s.set var="add_label"><@wp.i18n key="userprofile_ADDITEM_LIST" /></@s.set>
-
-<@wpsa.actionParam action="addListElement" var="actionName" >
-	<@wpsa.actionSubParam name="attributeName" value="%{#attribute.name}" />
-	<@wpsa.actionSubParam name="listLangCode" value="%{#lang.code}" />
-</@wpsa.actionParam>
-<@s.set var="iconImagePath" id="iconImagePath"><@wp.resourceURL/>administration/common/img/icons/list-add.png</@s.set> 
-<@wpsf.submit 
-	cssClass="btn"
-	useTabindexAutoIncrement=true 
-	action="%{#actionName}" 
-	value="%{add_label}" 
-	title="%{i18n_attribute_name}%{'': ''}%{add_label}" />',1);
+<@wpsf.select useTabindexAutoIncrement=true
+	name="%{#attributeTracer.getFormFieldName(#attribute)}"
+	id="%{attribute_id}"  
+	headerKey="" headerValue="" 
+	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_password','userprofile_editCurrentUser_password',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -1414,20 +1571,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 <@s.set var="attributeTracer" value="#masterCompositeAttributeTracer" />
 <@s.set var="attribute" value="#masterCompositeAttribute" />
 <@s.set var="parentAttribute" value=""></@s.set>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.select useTabindexAutoIncrement=true
-	name="%{#attributeTracer.getFormFieldName(#attribute)}"
-	id="%{attribute_id}"  
-	headerKey="" headerValue="" 
-	list="#attribute.items" value="%{#attribute.getText()}" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorMapAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.select useTabindexAutoIncrement=true
-	name="%{#attributeTracer.getFormFieldName(#attribute)}"
-	id="%{attribute_id}"  
-	headerKey="" headerValue="" 
-	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2906,176 +3049,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                 </div>
             </div>
         </div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-    <#assign wp=JspTaglibs["/aps-core"]>
-
-        <div class="customer-process-step ibox float-e-margins">
-            <div class="ibox-title">
-                <h5>Business details</h5>
-                <div class="ibox-tools">
-                    <a class="collapse-link">
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-
-                </div>
-            </div>
-            <div class="ibox-content">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="login-label">Company Name</label>
-                            <input type="text" name="name" placeholder="Company Name"
-                                   class="form-control input-custom"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="login-label">Country</label>
-                            <input type="text" name="country"
-                                   value="US" disabled
-                                   class="form-control input-custom"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="login-label">The state in which the business was formed</label>
-
-                            <select class="form-control input-custom" name="usstate">
-                                <option value="AL">Alabama</option>
-                                <option value="AK">Alaska</option>
-                                <option value="AZ">Arizona</option>
-                                <option value="AR">Arkansas</option>
-                                <option value="CA">California</option>
-                                <option value="CO">Colorado</option>
-                                <option value="CT">Connecticut</option>
-                                <option value="DE">Delaware</option>
-                                <option value="DC">District Of Columbia</option>
-                                <option value="FL">Florida</option>
-                                <option value="GA">Georgia</option>
-                                <option value="HI">Hawaii</option>
-                                <option value="ID">Idaho</option>
-                                <option value="IL">Illinois</option>
-                                <option value="IN">Indiana</option>
-                                <option value="IA">Iowa</option>
-                                <option value="KS">Kansas</option>
-                                <option value="KY">Kentucky</option>
-                                <option value="LA">Louisiana</option>
-                                <option value="ME">Maine</option>
-                                <option value="MD">Maryland</option>
-                                <option value="MA">Massachusetts</option>
-                                <option value="MI">Michigan</option>
-                                <option value="MN">Minnesota</option>
-                                <option value="MS">Mississippi</option>
-                                <option value="MO">Missouri</option>
-                                <option value="MT">Montana</option>
-                                <option value="NE">Nebraska</option>
-                                <option value="NV">Nevada</option>
-                                <option value="NH">New Hampshire</option>
-                                <option value="NJ">New Jersey</option>
-                                <option value="NM">New Mexico</option>
-                                <option value="NY">New York</option>
-                                <option value="NC">North Carolina</option>
-                                <option value="ND">North Dakota</option>
-                                <option value="OH">Ohio</option>
-                                <option value="OK">Oklahoma</option>
-                                <option value="OR">Oregon</option>
-                                <option value="PA">Pennsylvania</option>
-                                <option value="RI">Rhode Island</option>
-                                <option value="SC">South Carolina</option>
-                                <option value="SD">South Dakota</option>
-                                <option value="TN">Tennessee</option>
-                                <option value="TX">Texas</option>
-                                <option value="UT">Utah</option>
-                                <option value="VT">Vermont</option>
-                                <option value="VA">Virginia</option>
-                                <option value="WA">Washington</option>
-                                <option value="WV">West Virginia</option>
-                                <option value="WI">Wisconsin</option>
-                                <option value="WY">Wyoming</option>
-                            </select>
-
-                            
-                        </div>
-                        <!--<div class="form-group">
-                            <label class="login-label">Name</label>
-                            <input type="text" name="name" placeholder="Name" class="form-control input-custom"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="login-label">Email</label>
-                            <input type="email" name="email" placeholder="Email" class="form-control input-custom"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="login-label">Customer type</label>
-                            <input type="text" name="customerType" placeholder="Customer type"
-                                   class="form-control input-custom"/>
-                        </div>-->
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="login-label">Address of the business</label>
-                            <input type="text" name="street" placeholder="Address of the business"
-                                   class="form-control input-custom"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="login-label">ZIP CODE</label>
-                            <input type="text" name="zipcode" placeholder="ZIP CODE" class="form-control input-custom"/>
-                        </div>
-                        <!--
-                                                <div class="form-group" id="data_1">
-                                                    <label class="login-label">Simple data input format</label>
-                                                    <div class="input-group date">
-                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                                                    name=""
-                                                                                                                                    class="form-control input-custom"
-                                                                                                                                    value="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="login-label">Surname</label>
-                                                    <input type="text" name="surname" placeholder="Surname" class="form-control input-custom"/>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="login-label">Phone Number</label>
-                                                    <input type="text" name="phoneNumber" placeholder="Phone Number"
-                                                           class="form-control input-custom"/>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="login-label">I am an existing customer </label>
-                                                    <div class="i-checks checkbox-pos-form">
-                                                        <label>
-                                                            <input type="radio" name="customerExists" value="true" checked> <i></i> YES
-                                                        </label>
-                                                        &nbsp;&nbsp;&nbsp;
-                                                        <label>
-                                                            <input type="radio" name="customerExists" value="false"> <i></i> NO
-                                                        </label>
-                                                    </div>
-
-                                                </div>-->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <div class="pull-right spacers">
-                            <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
-                            customer-process-next"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
-            $(document).ready(function () {
-                $(''#data_1 .input-group.date'').datepicker({
-                    todayBtn: "linked",
-                    keyboardNavigation: false,
-                    forceParse: false,
-                    calendarWeeks: true,
-                    autoclose: true
-                })
-
-
-            });
-        </script>
-
 ',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
   <div class="label-box">
