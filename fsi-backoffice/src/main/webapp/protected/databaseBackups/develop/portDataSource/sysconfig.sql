@@ -154,14 +154,10 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataType
 <datatypes>
 	<datatype typecode="AAA" typedescr="commercial-client-onboarding.ClientOnboardingProcess_5fdf1ed1672f5358e70570bd7f50b163" viewpage="**NULL**" listmodel="1" defaultmodel="1">
 		<attributes>
-			<attribute name="accountName" attributetype="Monotext" />
-			<attribute name="client_creditScore" attributetype="Number" />
-			<attribute name="client_type" attributetype="Monotext" />
 			<attribute name="client_name" attributetype="Monotext" />
 			<attribute name="client_country" attributetype="Monotext" />
 			<attribute name="accountManager" attributetype="Monotext" />
 			<attribute name="client_phoneNumber" attributetype="Monotext" />
-			<attribute name="client_bic" attributetype="Monotext" />
 			<attribute name="client_email" attributetype="Monotext">
 				<validations>
 					<required>true</required>
