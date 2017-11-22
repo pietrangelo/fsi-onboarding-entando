@@ -124,8 +124,8 @@
 
 
     var maps = {
-        applicant_firstname: getQueryVariable("name") || "John",
-        applicant_lastname: getQueryVariable("lastname") || "Doe",
+        applicant_firstname: getQueryVariable("fname") || "John",
+        applicant_lastname: getQueryVariable("lame") || "Doe",
         applicant_company: getQueryVariable("company") || "Interstellar Inc.",
         applicant_email: getQueryVariable("email"),
         applicant_username: "",
