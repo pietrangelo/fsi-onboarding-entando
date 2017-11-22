@@ -1,3 +1,50 @@
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-search_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Search Form</property>
+<property key="it">Search Form</property>
+</properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-footer','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Footer</property><property key="it">FSI Footer</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-left ','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Banner content left</property><property key="it">Contenuto banner sinistra</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Loans-3-images ','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Loans 3 images</property><property key="it">prestiti 3 iimagini</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-club-credit-card','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Credit card banner left</property><property key="it">Banner carta di credito sinistra</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Welcome-content','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Welcome content</property><property key="it">Welcome content</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES (' Credit-card-banner-right','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Credit card banner right</property><property key="it">Credit card banner right</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-internal','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Banner main internal</property><property key="it">Banner principale pagina interna</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('complete-registration-BPM','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Complete registration form BPM</property><property key="it">Form di completamento registrazione BPM</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('How-to-complete-instructions','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">How to complete instructions</property><property key="it">Registrazione how to</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-application-progress','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI-application-progress</property><property key="it">FSI- progresso applicazione</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Login-Customer','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Login Customer</property><property key="it">Login Cliente</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-state','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Customer state</property><property key="it">FSI  Customer state</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-performance','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Performance</property><property key="it">FSI Performance</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-rate','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI-customer-rate</property><property key="it">FSI-customer-rate</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-right_col_help_purple','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
     <property key="en">entando-widget-right_col_help_purple</property>
@@ -254,53 +301,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 	<parameter name="widgetInfoId">Widget Info ID</parameter>
 	<action name="jpkiebpmBpmFormWidgetViewerConfig"/>
 </config>','jpkiebpm',NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-search_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Search Form</property>
-<property key="it">Search Form</property>
-</properties>',NULL,NULL,NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-footer','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Footer</property><property key="it">FSI Footer</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-left ','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Banner content left</property><property key="it">Contenuto banner sinistra</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Loans-3-images ','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Loans 3 images</property><property key="it">prestiti 3 iimagini</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-club-credit-card','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Credit card banner left</property><property key="it">Banner carta di credito sinistra</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Welcome-content','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Welcome content</property><property key="it">Welcome content</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES (' Credit-card-banner-right','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Credit card banner right</property><property key="it">Credit card banner right</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('banner-main-internal','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Banner main internal</property><property key="it">Banner principale pagina interna</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('complete-registration-BPM','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Complete registration form BPM</property><property key="it">Form di completamento registrazione BPM</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('How-to-complete-instructions','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">How to complete instructions</property><property key="it">Registrazione how to</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-application-progress','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI-application-progress</property><property key="it">FSI- progresso applicazione</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Login-Customer','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Login Customer</property><property key="it">Login Cliente</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-state','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Customer state</property><property key="it">FSI  Customer state</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-performance','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Performance</property><property key="it">FSI Performance</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-rate','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI-customer-rate</property><property key="it">FSI-customer-rate</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-apllication-breadcrumb','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Application breadcrumb</property><property key="it">FSI Application breadcrumb</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');

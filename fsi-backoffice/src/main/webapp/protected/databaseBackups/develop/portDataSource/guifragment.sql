@@ -1,3 +1,326 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="form-title">Business legal documentation</p>
+
+                <label class="login-label">Article for incorporation</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <label class="login-label">Commercial lease</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <label class="login-label">Franchise agreement</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Business financial documentation</p>
+
+                <label class="login-label">Profits and loss statements 1099 forms from the previuos 2 years</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+                <label class="login-label">List of your debts such as credit cards, employess loans, car loans and real estate</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+                <label class="login-label">List of your assets including bank statements, mutaul fund statements, reak estates and automobile titles, brokerage</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Tax financial documentation</p>
+
+                <label class="login-label">Most recent federal tx return possibly the last 2 tax returns</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+
+                <p class="form-title">Other</p>
+                <label class="login-label">canceled checks for your rent or mortage</label>
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control input-custom" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left spacers">
+                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
+                </div>
+                <div class="pull-right spacers">
+                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-onboarding-stages','fsi-onboarding-stages',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Onboarding stages</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="tabs-container">
+            <div class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-1"><i class="fa fa-chevron-circle-down" style="color:green;"></i> Enrollment</a>
+                    </li>
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab-2"><i class="fa fa-circle-o" style="color:#218fd8;"></i> Verification</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-3"><i class="fa fa-circle-o"></i> Fulfilment</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane active">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Account Registration</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Application Submission</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">TBA </p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp;<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">TBA</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-perfomance-bar','fsi-perfomance-bar',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Team Performance</h5>
+        <div class="ibox-tools">
+            <select class="m-b" style="width: 5%; background: #fff; border-width: 0px;">
+                <option>This Year</option>
+            </select>
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        <div class="row">
+            <div class="col-md-2"><small>Added</small></div>
+            <div class="col-md-2"><small><b>315</b></small></div>
+            <div class="col-md-2"><small>Customer ot these</small></div>
+            <div class="col-md-2"><small><b>5750</b></small></div>
+            <div class="col-md-2 pull-left"><small>Complete the registration</small></div>
+            <div class="col-md-2 pull-right">
+                <small>Team aim 10,000</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="progress progress-mini">
+                    <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
+                         class="progress-bar progress-bar-success"></div>
+
+                    <div style="width: 20%" class="progress-bar progress-default">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Business details</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="tabs-container">
+            <div class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab-1"><i class="fa fa-chevron-circle-down" style="color:green;"></i> Enrollment</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-2"><i class="fa fa-circle-o" style="color:#218fd8;"></i> Verification</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-3"><i class="fa fa-circle-o"></i> Fulfilment</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane active">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Account Registration</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">2/2/2017</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Application Submission</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                        <div class="panel-body">
+                            <p class="fsi-backoffice-date">TBA </p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp;<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                            <hr>
+                            <p class="fsi-backoffice-date">TBA</p>
+                            <label class="remember-me-label">
+                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp<strong class="text-muted">Fullfilment checks</strong>
+                            </label>
+                            <p class="fsi-backoffice-subtitle">Account Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-right_col_help_purple','entando-widget-right_col_help_purple',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <div class="title-box-icon">
     <h2 class="title">Need some help?</h2>
@@ -3726,329 +4049,6 @@ var chart = c3.generate({
 });
 </script>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="form-title">Business legal documentation</p>
-
-                <label class="login-label">Article for incorporation</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <label class="login-label">Commercial lease</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <label class="login-label">Franchise agreement</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <p class="form-title">Business financial documentation</p>
-
-                <label class="login-label">Profits and loss statements 1099 forms from the previuos 2 years</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-                <label class="login-label">List of your debts such as credit cards, employess loans, car loans and real estate</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-                <label class="login-label">List of your assets including bank statements, mutaul fund statements, reak estates and automobile titles, brokerage</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <p class="form-title">Tax financial documentation</p>
-
-                <label class="login-label">Most recent federal tx return possibly the last 2 tax returns</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-
-                <p class="form-title">Other</p>
-                <label class="login-label">canceled checks for your rent or mortage</label>
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                    <div class="form-control input-custom" data-trigger="fileinput">
-                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                        <span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" name="..."></span>
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-left spacers">
-                    <input type="submit" value="<@wp.i18n key="BACK" />" class="btn btn-primary login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="SAVE_DRAFT" />" class="btn btn-info login-button" />
-                </div>
-                <div class="pull-right spacers">
-                    <input type="submit" value="<@wp.i18n key="NEXT" />" class="btn btn-warning login-button" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-onboarding-stages','fsi-onboarding-stages',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Onboarding stages</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="tabs-container">
-            <div class="tabs-left">
-                <ul class="nav nav-tabs">
-                    <li class="">
-                        <a data-toggle="tab" href="#tab-1"><i class="fa fa-chevron-circle-down" style="color:green;"></i> Enrollment</a>
-                    </li>
-                    <li class="active">
-                        <a data-toggle="tab" href="#tab-2"><i class="fa fa-circle-o" style="color:#218fd8;"></i> Verification</a>
-                    </li>
-                    <li class="">
-                        <a data-toggle="tab" href="#tab-3"><i class="fa fa-circle-o"></i> Fulfilment</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                    <div id="tab-2" class="tab-pane active">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Account Registration</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Application Submission</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                    <div id="tab-3" class="tab-pane">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">TBA </p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp;<strong class="text-muted">Fullfilment checks</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">TBA</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp<strong class="text-muted">Fullfilment checks</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-perfomance-bar','fsi-perfomance-bar',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Team Performance</h5>
-        <div class="ibox-tools">
-            <select class="m-b" style="width: 5%; background: #fff; border-width: 0px;">
-                <option>This Year</option>
-            </select>
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="ibox-content">
-
-        <div class="row">
-            <div class="col-md-2"><small>Added</small></div>
-            <div class="col-md-2"><small><b>315</b></small></div>
-            <div class="col-md-2"><small>Customer ot these</small></div>
-            <div class="col-md-2"><small><b>5750</b></small></div>
-            <div class="col-md-2 pull-left"><small>Complete the registration</small></div>
-            <div class="col-md-2 pull-right">
-                <small>Team aim 10,000</small>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-
-                <div class="progress progress-mini">
-                    <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                         class="progress-bar progress-bar-success"></div>
-
-                    <div style="width: 20%" class="progress-bar progress-default">
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Business details</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="tabs-container">
-            <div class="tabs-left">
-                <ul class="nav nav-tabs">
-                    <li class="active">
-                        <a data-toggle="tab" href="#tab-1"><i class="fa fa-chevron-circle-down" style="color:green;"></i> Enrollment</a>
-                    </li>
-                    <li class="">
-                        <a data-toggle="tab" href="#tab-2"><i class="fa fa-circle-o" style="color:#218fd8;"></i> Verification</a>
-                    </li>
-                    <li class="">
-                        <a data-toggle="tab" href="#tab-3"><i class="fa fa-circle-o"></i> Fulfilment</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Signup Email initiation</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                    <div id="tab-2" class="tab-pane active">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Signup Email initiation</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" checked>&nbsp&nbsp<strong>Account Registration</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">2/2/2017</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks">&nbsp&nbsp<strong>Application Submission</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                    <div id="tab-3" class="tab-pane">
-                        <div class="panel-body">
-                            <p class="fsi-backoffice-date">TBA </p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp;<strong class="text-muted">Fullfilment checks</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                            <hr>
-                            <p class="fsi-backoffice-date">TBA</p>
-                            <label class="remember-me-label">
-                                <input type="checkbox" class="i-checks" disabled>&nbsp&nbsp<strong class="text-muted">Fullfilment checks</strong>
-                            </label>
-                            <p class="fsi-backoffice-subtitle">Account Manager</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-information','fsi-customer-information',NULL,'<script>
     $(function(){
 

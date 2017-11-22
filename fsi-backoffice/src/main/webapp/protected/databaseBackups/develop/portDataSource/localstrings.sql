@@ -88,6 +88,7 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTANDO_API_MET
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_NA','en','Method Not Available');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTANDO_API_NO_RESOURCES','it','Non ci sono Risorse API disponibili.');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTANDO_API_NO_RESOURCES','en','No API Resources available at the moment.');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PLEASE_LOGIN_AGAIN','it','E'' necessario riloggarsi.');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTANDO_API_TABLE_SUMMARY','it','La tabella elenaca le Risorse API disponibile nel sistema. Nome della risorsa, la sua descrizione e lo stato di ciascun metodo.');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTANDO_API_TABLE_SUMMARY','en','The table lists the API Resources available in the system. Method name, description, group and the status of each method.');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('ENTANDO_API_RESOURCE_NAME','it','Nome');
@@ -192,7 +193,6 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PAS
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PASSWORD_UPDATED','en','Your password updated successfully.');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PLEASE_LOGIN','it','E'' necessario effettuare l''accesso');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PLEASE_LOGIN','en','Please login');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PLEASE_LOGIN_AGAIN','it','E'' necessario riloggarsi.');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PLEASE_LOGIN_AGAIN','en','Please logout and login again.');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PLEASE_LOGIN_TO_EDIT_PASSWORD','it','E'' necessario effettuare l''accesso per cambiare la password');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('userprofile_PLEASE_LOGIN_TO_EDIT_PASSWORD','en','Please login in order to change your password');
