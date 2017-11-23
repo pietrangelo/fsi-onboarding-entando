@@ -148,6 +148,7 @@ html, body {
     background: #002235;
     color: #ffffff;
     min-height: 210px;
+    display: flex;
 }
 
 
@@ -303,6 +304,7 @@ input[type=checkbox]:checked~#menu {
     background: #002235;
     color: #ffffff;
     min-height: 59px;
+    display: flex;
 }
 
 .fsi-header .logo-names {
