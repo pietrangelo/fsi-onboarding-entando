@@ -159,7 +159,6 @@
 </script>
 
 
-
 <script>
 
     function base64ToUint8Array(base64) {
@@ -174,14 +173,22 @@
 
     $(document).ready(function () {
         console.log('load pdf viewer');
+
+
         var iframe = document.getElementById('pdf-viewer');
         if (iframe !== null) {
             iframe.src = '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/js/jspdf/web/viewer.html';
             iframe.onload = function () {
 
+                <wp:ifauthorized groupName="legal_worker">
+                    iframe.contentWindow.postMessage("ID_CUSTOMER.pdf", "*");
+                </wp:ifauthorized>
+                <wp:ifauthorized groupName="knowledge_worker">
+                    iframe.contentWindow.postMessage("compressed.tracemonkey-pldi-09.pdf", "*");
+                </wp:ifauthorized>
 
 
-                iframe.contentWindow.postMessage("ID_CUSTOMER.pdf", "*");
+
             }
         }
 
