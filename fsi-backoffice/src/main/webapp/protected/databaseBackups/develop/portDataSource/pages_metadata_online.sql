@@ -1,3 +1,13 @@
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('backoffice','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">backoffice</property><property key="it">backoffice</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-23 09:41:36');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_customer','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Account Executive Customer</property><property key="it">Account Executive Customer</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -54,16 +64,6 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-10-31 17:27:00');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('backoffice','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">backoffice</property><property key="it">backoffice</property></properties>
-','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-08 17:09:29');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('client_onboarding_manager','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Client Onboarding Manager</property><property key="it">Client Onboarding Manager</property></properties>
 ','fsi-client-onboarding',1,'<?xml version="1.0" encoding="UTF-8"?>
