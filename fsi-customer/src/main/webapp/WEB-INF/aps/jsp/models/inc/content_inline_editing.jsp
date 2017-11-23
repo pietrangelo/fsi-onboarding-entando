@@ -234,7 +234,6 @@
               nextStep.addClass('active');
               $('.bullet-progress-item').eq(currentStepIndex+1).addClass('active');
 
-
               getFirstTaskId().done(function (taskList) {
                 $('.customer-process-step.active').find('.customer-process-next')
                   .removeAttr('disabled')
@@ -253,6 +252,25 @@
         * Functions to handle the form submit
         */
         function sendBusinessDetailsStepData(taskList) {
+
+          // validate
+          var valid = true;
+          $('.customer-process-step.active').find('input').each(function (index, element) {
+            if(!element.value) {
+              $(element).closest('.form-group').addClass('has-error');
+              $(element).on('input', function() {
+                $(this).closest('.form-group').removeClass('has-error');
+              });
+              valid = false;
+            }
+          });
+          if (!valid) {
+            var def = $.Deferred();
+            def.reject();
+            return def.promise();
+          }
+
+
           var task = taskList.find(function(obj) {
             return obj.name = 'Additional Client Details';
           });
@@ -281,6 +299,25 @@
         * Functions to handle the files submission
         */
         function sendDeclarationStepData(taskList) {
+
+
+          // validate
+          var valid = true;
+          $('.customer-process-step.active').find('input[type="file"]').each(function (index, element) {
+            if(!element.files[0]) {
+              $(element).closest('.fileinput').addClass('has-error');
+              $(element).on('change', function() {
+                $(this).closest('.fileinput').removeClass('has-error');
+              });
+              valid = false;
+            }
+          });
+          if (!valid) {
+            var def = $.Deferred();
+            def.reject();
+            return def.promise();
+          }
+
 
           var promises = [];
 
