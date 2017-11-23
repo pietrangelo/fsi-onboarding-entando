@@ -136,7 +136,8 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             country: ''U.S.A.'',
             usstate: ''HI'',
             street: ''Via Street'',
-            zipcode: ''35006''
+            zipcode: ''35006'',
+            bic:''123654980''
 
         }
 
