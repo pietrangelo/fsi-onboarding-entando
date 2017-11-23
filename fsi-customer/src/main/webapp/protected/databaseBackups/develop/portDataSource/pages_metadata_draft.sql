@@ -8,6 +8,19 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-11-23 13:53:34');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('customer_internal','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">customer-internal</property><property key="it">cliente-interna</property></properties>
+','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="customers" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-23 15:08:44');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('dashboard_internal','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">dashboard-internal</property><property key="it">dashboard-interna</property></properties>
 ','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -51,16 +64,3 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-10-24 16:00:42');
-INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('customer_internal','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">customer-internal</property><property key="it">cliente-interna</property></properties>
-','fsi-dashboard-customer',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="customers" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-21 10:52:46');
