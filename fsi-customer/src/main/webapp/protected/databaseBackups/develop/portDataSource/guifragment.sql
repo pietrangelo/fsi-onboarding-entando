@@ -5,7 +5,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
-    <div class="customer-process-step ibox float-e-margins" data-process-name="Additional Client Details">
+    <div class="customer-process-step ibox float-e-margins" data-process-name="Additional Client Details" data-step-id="businessDetails">
         <div class="ibox-title">
             <h5>Business details</h5>
             <div class="ibox-tools">
@@ -2965,7 +2965,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 ',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
-    <div class="customer-process-step ibox float-e-margins" data-process-name="Enrichment Upload Document">
+    <div class="customer-process-step ibox float-e-margins" data-process-name="Enrichment Upload Document" data-step-id="declaration">
         <div class="ibox-title">
             <h5>Business details</h5>
             <div class="ibox-tools">

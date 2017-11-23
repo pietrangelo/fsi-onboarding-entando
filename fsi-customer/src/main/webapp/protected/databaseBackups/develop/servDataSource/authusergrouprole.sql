@@ -4,3 +4,5 @@ INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('f.locci','c
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('paddeo','customers',NULL);
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci','customers',NULL);
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('ciccio','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci1','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci2','customers',NULL);
