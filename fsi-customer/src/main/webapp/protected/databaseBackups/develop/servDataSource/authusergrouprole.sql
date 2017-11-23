@@ -6,3 +6,6 @@ INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci','cu
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('ciccio','customers',NULL);
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci1','customers',NULL);
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci2','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci3','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci4','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci6','customers',NULL);
