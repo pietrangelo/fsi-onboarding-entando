@@ -369,7 +369,7 @@
                             link: "mylink",
                             size: file.size,
                             lastModified: file.lastModified,
-                            content: result.split(',')[1]
+                            content: result.substring(result.indexOf(',')+1)
                         };
 
                         var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/putTaskDoc';
