@@ -99,8 +99,18 @@
 
         var loadDataTable = function (url, idTable) {
 
+            var urlPotwners = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/userTask?user=${currentUser.username}";
+
+            var itemsTask;
+            $.get(urlPotwners,function (data) {
+                itemsTask = data.response.result.taskList.list || [];
+            });
+
+
+
             $.get(url, function (data) {
-                var items = data.response.result.taskList.list || [] ;
+                var items = itemsTask || []; //data.response.result.taskList.list || [] ;
+
                 if (items){
 
                     items = items.map(function (item) {

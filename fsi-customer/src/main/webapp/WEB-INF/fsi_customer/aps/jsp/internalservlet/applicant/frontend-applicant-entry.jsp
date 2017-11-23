@@ -97,8 +97,8 @@
                    class="form-control input-custom"/>
         </div>
         <div class="form-group">
-            <input type="hidden" name="procid" id="applicant_procid" value="<s:property value="procid" />"
-                   class="form-control input-custom"/>
+            <input type="hidden" name="procid" id="applicant_procid" value="<s:property value="procid" />">
+            <input type="hidden" name="type" id="applicant_type" value="">
         </div>
         <div class="right-side-button">
             <wpsf:submit type="button" cssClass="btn btn-primary login-button">
@@ -131,7 +131,8 @@
         applicant_username: "",
         applicant_pwd: "",
         applicant_cnfpwd: "",
-        applicant_procid: getQueryVariable("pid")
+        applicant_procid: getQueryVariable("pid"),
+        applicant_type:"BIG_BUSINESS"
     }
 
 
