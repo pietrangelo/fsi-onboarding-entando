@@ -1,6 +1,8 @@
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (86,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (87,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (89,'free');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (90,'customers');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (90,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (63,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (63,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (64,'customers');
