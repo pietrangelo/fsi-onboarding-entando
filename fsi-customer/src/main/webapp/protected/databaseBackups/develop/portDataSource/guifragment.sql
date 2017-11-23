@@ -3,6 +3,151 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </p>
 <input type="submit" value="CONTACT US" class="btn btn-primary login-button">
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+    <div class="customer-process-step ibox float-e-margins" data-process-name="Additional Client Details">
+        <div class="ibox-title">
+            <h5>Business details</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="login-label">Company Name</label>
+                        <input id="name" type="text" name="name" placeholder="Company Name"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">Country</label>
+                        <input id="country" type="text" name="country"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">The state in which the business was formed</label>
+
+                        <select class="form-control input-custom" id="usstate" name="usstate">
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="login-label">Address of the business</label>
+                        <input type="text" id="street" name="street" placeholder="Address of the business"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">ZIP CODE</label>
+                        <input type="number" id="zipcode" name="zipcode" placeholder="ZIP CODE"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">BIC</label>
+                        <input type="number" id="bic" name="bic" placeholder="BIC" class="form-control input-custom"/>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="pull-right spacers">
+                        <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
+                            customer-process-next"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(''#data_1 .input-group.date'').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            })
+
+
+        });
+
+        var valueMap = {
+            name: ''Mtz Inc.'',
+            country: ''U.S.A.'',
+            usstate: ''HI'',
+            street: ''Via Street'',
+            zipcode: ''35006''
+
+        }
+
+        for (var key in valueMap) {
+            if (!document.getElementById(key).value) {
+                document.getElementById(key).value = valueMap[key];
+            }
+        }
+
+    </script>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <div class="middle-box loginscreen animated fadeInDown">
     <#if (Session.currentUser.username != "guest") >
@@ -245,6 +390,118 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       <div class="bb-expect-it">Expect it.</div>
     </div>
   </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<div class="customer-process-step fsi-form-banking-services">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Selects the financial services that your company is applying for</h5>
+            <div class="ibox-tools"><a class="collapse-link">
+                <div class="fa fa-chevron-up"></div>
+            </a><a class="collapse-link">
+                <div class="fa fa-repeat"></div>
+            </a></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service" value=""
+                                   name="financial-service" value="business-checking"/><span>BUSINESS CHECKING</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="business-credit-cards"/><span>BUSINESS CREDIT CARDS</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="business-lending-and-financing"/><span>BUSINESS LENDING AND FINANCING</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="international-banking"/><span>INTERNATIONAL BANKING</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service" value="merchant-services"/><span>MERCHANT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service" value="treasury-services"/><span>TREASURY SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="cash-management-servcies"/><span>CASH MANAGEMENT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="employess-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="cash-management-services"/><span>CASH MANAGEMENT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label>
+                            <input class="i-checks" type="checkbox" name="financial-service"
+                                   value="employee-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="pull-right spacers">
+                        <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
+                            customer-process-next"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-account-user','fsi-account-user',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
     <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -397,149 +654,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         </div>
     </div>
 </div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-
-    <div class="customer-process-step ibox float-e-margins" data-step-id="businessDetails">
-        <div class="ibox-title">
-            <h5>Business details</h5>
-            <div class="ibox-tools">
-                <a class="collapse-link">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-
-            </div>
-        </div>
-        <div class="ibox-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="login-label">Company Name</label>
-                        <input id="name" type="text" name="name" placeholder="Company Name"
-                               class="form-control input-custom"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="login-label">Country</label>
-                        <input id="country" type="text" name="country"
-                               class="form-control input-custom"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="login-label">The state in which the business was formed</label>
-
-                        <select class="form-control input-custom" id="usstate" name="usstate">
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="DC">District Of Columbia</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
-
-
-                    </div>
-
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="login-label">Address of the business</label>
-                        <input type="text" id="street"name="street" placeholder="Address of the business"
-                               class="form-control input-custom"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="login-label">ZIP CODE</label>
-                        <input type="text" id="zipcode"name="zipcode" placeholder="ZIP CODE" class="form-control input-custom"/>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="pull-right spacers">
-                        <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
-                            customer-process-next"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        $(document).ready(function () {
-            $(''#data_1 .input-group.date'').datepicker({
-                todayBtn: "linked",
-                keyboardNavigation: false,
-                forceParse: false,
-                calendarWeeks: true,
-                autoclose: true
-            })
-
-
-        });
-
-
-
-        var valueMap = {
-            name :''Mtz Inc.'',
-            country : ''U.S.A.'',
-            usstate: ''HI'',
-            street: ''Via Street'',
-            zipcode : ''35006''
-
-        }
-
-        for (var key in valueMap) {
-            if (!document.getElementById(key).value){
-                document.getElementById(key).value = valueMap[key];
-            }
-        }
-
-    </script>
-
 ',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
   <div class="ibox float-e-margins">
@@ -712,181 +826,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </#if>
 
 <@wp.freemarkerTemplateParameter var="previousPage" valueName="" removeOnEndTag=true />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-
-    <div class="customer-process-step ibox float-e-margins" data-step-id="declaration">
-        <div class="ibox-title">
-            <h5>Business details</h5>
-            <div class="ibox-tools">
-                <a class="collapse-link">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-
-            </div>
-        </div>
-        <div class="ibox-content">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="form-title">User ID documentation</p>
-
-                    <label class="login-label">Identity card</label>
-                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                        <div class="form-control input-custom" data-trigger="fileinput">
-                            <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                            <span class="fileinput-filename"></span>
-                        </div>
-                        <span class="input-group-addon btn btn-default btn-file"><span
-                                class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" data-process-file="IdentityDocuments"></span>
-                        <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                           data-dismiss="fileinput">Remove</a>
-                    </div>
-
-
-                    <p class="form-title">Business financial documentation</p>
-
-                    <label class="login-label">Profits and loss statements 1099 forms from the previuos 2
-                        years</label>
-                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                        <div class="form-control input-custom" data-trigger="fileinput">
-                            <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                            <span class="fileinput-filename"></span>
-                        </div>
-                        <span class="input-group-addon btn btn-default btn-file"><span
-                                class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input type="file" data-process-file="CreditDocuments"></span>
-                        <a href="#" class="input-group-addon btn btn-default fileinput-exists"
-                           data-dismiss="fileinput">Remove</a>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="pull-right spacers">
-                        <input type="submit" value="<@wp.i18n key="SUBMIT" />" class="btn btn-warning login-button
-                        customer-process-next" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<div class="customer-process-step fsi-form-banking-services" data-step-id="bankingServices">
-    <div class="ibox float-e-margins">
-        <div class="ibox-title">
-            <h5>Selects the financial services that your company is applying for</h5>
-            <div class="ibox-tools"><a class="collapse-link">
-                <div class="fa fa-chevron-up"></div>
-            </a><a class="collapse-link">
-                <div class="fa fa-repeat"></div>
-            </a></div>
-        </div>
-        <div class="ibox-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service" value=""
-                                   name="financial-service" value="business-checking"/><span>BUSINESS CHECKING</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service"
-                                   value="business-credit-cards"/><span>BUSINESS CREDIT CARDS</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service"
-                                   value="business-lending-and-financing"/><span>BUSINESS LENDING AND FINANCING</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service"
-                                   value="international-banking"/><span>INTERNATIONAL BANKING</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service" value="merchant-services"/><span>MERCHANT SERVICES</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service" value="treasury-services"/><span>TREASURY SERVICES</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service"
-                                   value="cash-management-servcies"/><span>CASH MANAGEMENT SERVICES</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service"
-                                   value="employess-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service"
-                                   value="cash-management-services"/><span>CASH MANAGEMENT SERVICES</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div>
-                        <label>
-                            <input class="i-checks" type="checkbox" name="financial-service"
-                                   value="employee-benefit-services"/><span>EMPLOYEE BENEFIT SERVICES</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="pull-right spacers">
-                        <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
-                            customer-process-next"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-navigation_bar_inspinia_include',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
 
@@ -1094,25 +1033,6 @@ jQuery(function($){
 <@wp.headInfo type="JS_EXT" info="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" />
 <@wp.headInfo type="CSS_EXT" info="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.min.css" />
 <@wp.headInfo type="JS_RAW" info="${js_for_datepicker}" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="row spacers">
-<div class="col-md-12">
-  <p class="title-welcome">
-   WELCOME IN TO THE  FORTRESS BANK & LOAN
-   </p>
-</div>
-<div class="col-md-6">
-<p class="content-welcome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
-</p>
-</div>
-
-<div class="col-md-6">
-  <p class="content-welcome">
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
-</p>
-</div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_attributeInfo-help-block',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -1492,11 +1412,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_profileChangeConfirmation',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <h1><@wp.i18n key="userprofile_EDITPROFILE_TITLE" /></h1>
 <p><@wp.i18n key="userprofile_PROFILE_UPDATED" /></p>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
-<p>Improving businesses&apos; life through meaningful services.
-</p>
-<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_detail_include',NULL,NULL,'','<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -1854,36 +1769,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
 </p>
 </section>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
-  <div class="label-box">
-    <div class="label-box-title">Application</div>
-    <div class="label-box-descr">Tell us more about the business</div>
-  </div>
-  <div class="bullet-progress-container">
-    <div class="bullet-progress-item active">
-      <div class="bullet">1</div>
-      <div class="bullet-label">Business Details</div>
-    </div>
-<!--
-    <div class="bullet-progress-item">
-      <div class="bullet">2</div>
-      <div class="bullet-label">Account User</div>
-    </div>
--->
-    <div class="bullet-progress-item">
-      <div class="bullet">2</div>
-      <div class="bullet-label">Banking Services</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">3</div>
-      <div class="bullet-label">Declaration</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">4</div>
-      <div class="bullet-label">Confirm</div>
-    </div>
-  </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2365,26 +2250,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		</select>
 	</div>
 </div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_confirmation','fsi_confirmation',NULL,'    <div class="customer-process-step ibox float-e-margins" data-step-id="confirmation">
-        <div class="ibox-title">
-            <h5>Business details</h5>
-            <div class="ibox-tools">
-                <a class="collapse-link">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-
-            </div>
-        </div>
-        <div class="ibox-content">
-            <div class="row">
-                <div class="alert alert-success">
-                    <strong>Your request has been sent.</strong>
-                </div>
-            </div>
-
-        </div>
-    </div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_EnumerMap',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -2801,6 +2666,121 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </#list>
     </@wp.freemarkerTemplateParameter>
 </ul>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
+<div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
+<div class="col-md-4 box-loan">
+                    <div class="box-img-loan">
+                    <img src="<@wp.imgURL />/Foto_Term_Loan.png" class="img-responsive">
+                     </div>
+                    <p class="title-loan">TERM LOANS</p>
+                    <p class="title-label-loan" >Lump up sum repaid over a fixed period of time</p>
+                    <p class="title-label-loan" >Best for long term growth</p>
+                </div>
+                <div class="col-md-4 box-loan">
+                    <div class="box-img-loan">
+                    <img src="<@wp.imgURL />/Foto_Micro_Loan.png" class="img-responsive">
+                  </div>
+                    <p class="title-loan" >MICRO LOANS</p>
+                    <p class="title-label-loan" >Loans typically offered for micro businesses</p>
+                    <p class="title-label-loan" >Smaller Loans of up to 35,000$</p>
+                </div>
+                <div class="col-md-4 box-loan">
+                   <div class="box-img-loan">
+                    <img src="<@wp.imgURL />/Foto_Bridge_Loan.png" class="img-responsive">
+                    </div>
+                    <p class="title-loan" >BRIDGE LOANS</p>
+                    <p class="title-label-loan" >Ideal for immediate and short term cash flows</p>
+                    <p class="title-label-loan" >Ad interim support to "bridge the gap" before permanent financing </p>
+                </div>
+            </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-club-credit-card','fsi-club-credit-card',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="middle-box-cc">
+      <div class="club-cc-wrapper">
+         <div class="label-club">CLUB</div>
+         <div class="label-credit-card">CREDIT CARD</div>
+      </div>
+      <div class="fsi-logo-name">
+	<img alt="image" class="" src="<@wp.imgURL />shield-logo.png">&nbsp;
+	<b>FORTRESS -</b>&nbsp;
+	<span>Bank &amp; Loan</span>
+      </div>
+    </div>
+
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-footer','fsi-footer',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="fsi-footer-wrapper">
+  <div class="fsi-footer">
+    <div class="col-md-2 col-md-offset-1">
+      <div class="logo-names">
+        <img alt="image" class="" src="<@wp.imgURL />shield-logo.png">&nbsp;
+        <b>FORTRESS -</b>
+        <span>Bank &amp; Loan</span></div>
+    </div>
+    <div class="col-md-2 col-md-offset-2 side-menu">
+      <div class="side-menu-item">Personal</div>
+      <div class="side-menu-item">Small Business</div>
+      <div class="side-menu-item">Commercial</div>
+      <div class="side-menu-item">Global Wealth</div>
+    </div>
+    <div class="col-md-2 contacts">
+      <div class="item">
+        <i class="fa fa-comments-o"></i>
+        <span class="labels">Start chat</span>
+      </div>
+      <div class="item">
+        <i class="fa fa-phone"></i>
+        <span class="labels">001-500-200</span>
+      </div>
+      <div class="item">
+        <i class="fa fa-envelope-o"></i>
+        <span class="labels">Write to us</span>
+      </div>
+    </div>
+    <div class="col-md-2 contacts">
+      <div class="item">
+        <i class="fa fa-credit-card"></i>
+        <span class="labels">Block your card</span>
+      </div>
+      <div class="item">
+        <i class="fa fa-users"></i>
+        <span class="labels">Set up a meeting</span>
+      </div>
+      <div class="item">
+        <i class="fa fa-home"></i>
+        <span class="labels">Find local branch</span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright row">
+    <div class="col-md-6 col-md-offset-1">Copyright Example Company &copy; 2014-2015</div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="row spacers">
+<div class="col-md-12">
+  <p class="title-welcome">
+   WELCOME IN TO THE  FORTRESS BANK & LOAN
+   </p>
+</div>
+<div class="col-md-6">
+<p class="content-welcome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
+</p>
+</div>
+
+<div class="col-md-6">
+  <p class="content-welcome">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
+</p>
+</div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <ul class="list-unstyled">
 <li class=" dropdown
@@ -2931,94 +2911,117 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
-<div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
-<div class="col-md-4 box-loan">
-                    <div class="box-img-loan">
-                    <img src="<@wp.imgURL />/Foto_Term_Loan.png" class="img-responsive">
-                     </div>
-                    <p class="title-loan">TERM LOANS</p>
-                    <p class="title-label-loan" >Lump up sum repaid over a fixed period of time</p>
-                    <p class="title-label-loan" >Best for long term growth</p>
-                </div>
-                <div class="col-md-4 box-loan">
-                    <div class="box-img-loan">
-                    <img src="<@wp.imgURL />/Foto_Micro_Loan.png" class="img-responsive">
-                  </div>
-                    <p class="title-loan" >MICRO LOANS</p>
-                    <p class="title-label-loan" >Loans typically offered for micro businesses</p>
-                    <p class="title-label-loan" >Smaller Loans of up to 35,000$</p>
-                </div>
-                <div class="col-md-4 box-loan">
-                   <div class="box-img-loan">
-                    <img src="<@wp.imgURL />/Foto_Bridge_Loan.png" class="img-responsive">
-                    </div>
-                    <p class="title-loan" >BRIDGE LOANS</p>
-                    <p class="title-label-loan" >Ideal for immediate and short term cash flows</p>
-                    <p class="title-label-loan" >Ad interim support to "bridge the gap" before permanent financing </p>
-                </div>
-            </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-club-credit-card','fsi-club-credit-card',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="middle-box-cc">
-      <div class="club-cc-wrapper">
-         <div class="label-club">CLUB</div>
-         <div class="label-credit-card">CREDIT CARD</div>
-      </div>
-      <div class="fsi-logo-name">
-	<img alt="image" class="" src="<@wp.imgURL />shield-logo.png">&nbsp;
-	<b>FORTRESS -</b>&nbsp;
-	<span>Bank &amp; Loan</span>
-      </div>
-    </div>
-
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-footer','fsi-footer',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="fsi-footer-wrapper">
-  <div class="fsi-footer">
-    <div class="col-md-2 col-md-offset-1">
-      <div class="logo-names">
-        <img alt="image" class="" src="<@wp.imgURL />shield-logo.png">&nbsp;
-        <b>FORTRESS -</b>
-        <span>Bank &amp; Loan</span></div>
-    </div>
-    <div class="col-md-2 col-md-offset-2 side-menu">
-      <div class="side-menu-item">Personal</div>
-      <div class="side-menu-item">Small Business</div>
-      <div class="side-menu-item">Commercial</div>
-      <div class="side-menu-item">Global Wealth</div>
-    </div>
-    <div class="col-md-2 contacts">
-      <div class="item">
-        <i class="fa fa-comments-o"></i>
-        <span class="labels">Start chat</span>
-      </div>
-      <div class="item">
-        <i class="fa fa-phone"></i>
-        <span class="labels">001-500-200</span>
-      </div>
-      <div class="item">
-        <i class="fa fa-envelope-o"></i>
-        <span class="labels">Write to us</span>
-      </div>
-    </div>
-    <div class="col-md-2 contacts">
-      <div class="item">
-        <i class="fa fa-credit-card"></i>
-        <span class="labels">Block your card</span>
-      </div>
-      <div class="item">
-        <i class="fa fa-users"></i>
-        <span class="labels">Set up a meeting</span>
-      </div>
-      <div class="item">
-        <i class="fa fa-home"></i>
-        <span class="labels">Find local branch</span>
-      </div>
-    </div>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
+  <div class="label-box">
+    <div class="label-box-title">Application</div>
+    <div class="label-box-descr">Tell us more about the business</div>
   </div>
-  <div class="copyright row">
-    <div class="col-md-6 col-md-offset-1">Copyright Example Company &copy; 2014-2015</div>
+  <div class="bullet-progress-container">
+    <div class="bullet-progress-item active">
+      <div class="bullet">1</div>
+      <div class="bullet-label">Business Details</div>
+    </div>
+<!--
+    <div class="bullet-progress-item">
+      <div class="bullet">2</div>
+      <div class="bullet-label">Account User</div>
+    </div>
+-->
+    <div class="bullet-progress-item">
+      <div class="bullet">2</div>
+      <div class="bullet-label">Banking Services</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">3</div>
+      <div class="bullet-label">Declaration</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">4</div>
+      <div class="bullet-label">Confirm</div>
+    </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_confirmation','fsi_confirmation',NULL,'
+    <div class="customer-process-step ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Business details</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="alert alert-success">
+                    <strong>Your request has been sent.</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+    <div class="customer-process-step ibox float-e-margins" data-process-name="Enrichment Upload Document">
+        <div class="ibox-title">
+            <h5>Business details</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="form-title">User ID documentation</p>
+
+                    <label class="login-label">Identity card</label>
+                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                        <div class="form-control input-custom" data-trigger="fileinput">
+                            <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                            <span class="fileinput-filename"></span>
+                        </div>
+                        <span class="input-group-addon btn btn-default btn-file"><span
+                                class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" data-process-file="IdentityDocuments"></span>
+                        <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                           data-dismiss="fileinput">Remove</a>
+                    </div>
+
+
+                    <p class="form-title">Business financial documentation</p>
+
+                    <label class="login-label">Profits and loss statements 1099 forms from the previuos 2
+                        years</label>
+                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                        <div class="form-control input-custom" data-trigger="fileinput">
+                            <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                            <span class="fileinput-filename"></span>
+                        </div>
+                        <span class="input-group-addon btn btn-default btn-file"><span
+                                class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" data-process-file="CreditDocuments"></span>
+                        <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                           data-dismiss="fileinput">Remove</a>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pull-right spacers">
+                        <input type="submit" value="<@wp.i18n key="SUBMIT" />" class="btn btn-warning login-button
+                        customer-process-next" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+',NULL,0);

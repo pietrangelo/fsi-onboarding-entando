@@ -26,3 +26,4 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('cu
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-form-banking-services',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',13,'fsi-Declaration',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',14,'fsi_confirmation',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',5,'entando-widget-login_form_inspinia',NULL);

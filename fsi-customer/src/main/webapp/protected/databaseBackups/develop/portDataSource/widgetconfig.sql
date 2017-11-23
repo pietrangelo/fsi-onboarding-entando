@@ -3,6 +3,7 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applican
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',12,'fsi-footer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',11,'Loans-3-images ',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',6,'banner-main-internal',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('applicant',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',6,'fsi-progress-bar',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',8,'fsi-customer-overview',NULL);

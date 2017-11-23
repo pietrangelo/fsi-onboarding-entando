@@ -7,6 +7,3 @@ INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VAL
 INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('paddeo','PFL','<?xml version="1.0" encoding="UTF-8"?>
 <profile id="paddeo" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext" /><attribute name="email" attributetype="Monotext" /></attributes></profile>
 ',0);
-INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('a.scalici','PFL','<?xml version="1.0" encoding="UTF-8"?>
-<profile id="a.scalici" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext" /><attribute name="email" attributetype="Monotext" /></attributes></profile>
-',0);
