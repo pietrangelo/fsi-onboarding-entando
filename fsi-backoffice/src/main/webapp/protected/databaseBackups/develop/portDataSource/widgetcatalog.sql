@@ -89,6 +89,15 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 <property key="en">Search - Search Result</property>
 <property key="it">Ricerca - Risultati della Ricerca</property>
 </properties>',NULL,'jacms',NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-completed','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Completed</property><property key="it">FSI Completed</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-form-banking-services','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI form banking</property><property key="it">FSI form banking</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-legal-check','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI-legal-check</property><property key="it">FSI-legal-check</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('content_viewer_list','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Contents - Publish a List of Contents</property>
@@ -309,13 +318,4 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 ',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-backlog','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Backlog</property><property key="it">FSI Backlog</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-completed','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Completed</property><property key="it">FSI Completed</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-form-banking-services','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI form banking</property><property key="it">FSI form banking</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-legal-check','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI-legal-check</property><property key="it">FSI-legal-check</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
