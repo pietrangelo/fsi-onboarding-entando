@@ -22,7 +22,7 @@
                 <ul class="list-unstyled">
                     <s:iterator value="actionErrors">
                         <li><s:property escapeHtml="false"/></li>
-                    </s:iterator>
+                        </s:iterator>
                 </ul>
             </div>
         </s:if>
@@ -39,8 +39,8 @@
                     <s:iterator value="fieldErrors">
                         <s:iterator value="value">
                             <li><s:property escapeHtml="false"/></li>
+                            </s:iterator>
                         </s:iterator>
-                    </s:iterator>
                 </ul>
             </div>
         </s:if>
@@ -48,9 +48,11 @@
             <div class="alert alert-success alert-custom">
                 <span class="pficon pficon-ok"></span>
                 <strong><s:text name="messages.confirm"/></strong>
-                <s:iterator value="actionMessages">
-                    <li><s:property escapeHtml="false"/></li>
-                </s:iterator>
+                <ul class="list-unstyled">
+                    <s:iterator value="actionMessages">
+                        <li><s:property escapeHtml="false"/></li>
+                        </s:iterator>
+                </ul>
             </div>
         </s:if>
         <p class="sr-only">
@@ -111,7 +113,6 @@
 </div>
 
 <script>
-
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
         var vars = query.split("&");
@@ -122,8 +123,8 @@
             }
         }
         return "";
-    };
-
+    }
+    ;
 
     var maps = {
         applicant_firstname: getQueryVariable("fname") || "John",
@@ -134,16 +135,13 @@
         applicant_pwd: "",
         applicant_cnfpwd: "",
         applicant_procid: getQueryVariable("pid"),
-        applicant_type:"BIG_BUSINESS"
+        applicant_type: "BIG_BUSINESS"
     }
-
 
     for (var key in maps) {
         if (document.getElementById(key).value === '') {
             document.getElementById(key).value = maps[key];
         }
     }
-
-
 </script>
 

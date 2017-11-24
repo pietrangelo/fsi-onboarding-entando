@@ -77,16 +77,16 @@ public class ApplicantAction extends BaseAction {
                 boolean res = this.getKieFormManager().sendSignal("5fdf1ed1672f5358e70570bd7f50b163", this.getProcid(), "account_registered", "\"" + this.getUsername() + "\"", null);
                 _logger.info("result: {}", res);
                 if (res) {
-                    this.addActionMessage("account created and signal successfully sent");
+                    this.addActionMessage("Account successfully created.");
                 } else {
-                    this.addActionError("Signal not sent");
+                    this.addActionError("Account has not been created.");
                 }
             } else if (ApsAdminSystemConstants.EDIT == strutsAction) {
 //				this.getApplicantManager().updateApplicant(applicant);
             }
         } catch (Throwable t) {
             _logger.error("error in save", t);
-            this.addActionError("Problems with form!");
+            this.addActionError("Problems found on form!");
             return FAILURE;
         }
         return SUCCESS;
