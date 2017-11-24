@@ -1906,13 +1906,9 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     border-color: #e7e7e7 !important;
     background: #002235 !important;
     border-radius: 0px !important;
-    /* min-height: 60px; */
-    /* line-height: 60px; */
     border: 0px solid transparent !important;
 }
-.brand-img{
 
-}
 .btn-spacer-executive{
     margin: -6px 0px 0px 30px;
 }
@@ -2024,7 +2020,7 @@ a.dropdown-fsi-login {
     .ui-dform-div .btn  {
         width:100% !important;
         font-size:1.5em;
-        text-transform:uppercase;
+        text-transform:capitalize;
         font-weight:300;
     }
 }
@@ -2062,7 +2058,7 @@ a.dropdown-fsi-login {
     margin-bottom: 20px;
 }
 .ui-dform-fieldset legend  {
-    color: #676A6C;
+    color: #1082c1;
     font-family: "Open Sans";
     font-size: 18px;
     font-weight: 600;
@@ -2077,3 +2073,134 @@ h3.control-label{
     padding: 3px 33px 15px 33px;
 }
 
+.brand-company-subtitle{
+    position: absolute;
+    top: 55px;
+    left: 91px;
+    color: #fff;
+    font-size: 10px;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.mobile-background .fsi-navbar-default {
+    border-color: #e7e7e7 !important;
+    background: #1082c1 !important;
+    border-radius: 0px !important;
+    border: 0px solid transparent !important;
+    padding: 1.2em 0 1.2em 0;
+}
+.mobile-background .brand-company {
+    margin: 31px 0 0 20px;
+    font-size: 30px;
+    color: #fff;
+    line-height: 45px;
+    font-weight: 300;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.mobile-background .navbar-nav>li>a:hover {
+    text-transform: capitalize;
+    color: #fff;
+    transition: ease-all 2s;
+    transition: all .3s ease-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.mobile-background hr {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 2px solid #907a7a;
+}
+.mobile-background .ui-dform-fieldset legend {
+    color: #1082c1;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px){
+    .mobile-background .container{
+        padding:0;
+        margin-top:-24px;
+    }
+    h3.control-label {
+        font-size: 1.3em;
+        color: #0088cc;
+    }
+    .ui-dform-fieldset legend {
+        color: #0088cc;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 600;
+        /* padding-top: 32px; */
+    }
+    .btn-override.ui-dform-div{
+        margin: 0 -25px -25px -25px;
+    }
+
+    .btn-primary {
+        background: #19e34f;
+        background-image: -webkit-linear-gradient(top, #19e34f, #678a1a);
+        background-image: -moz-linear-gradient(top, #19e34f, #678a1a);
+        background-image: -ms-linear-gradient(top, #19e34f, #678a1a);
+        background-image: -o-linear-gradient(top, #19e34f, #678a1a);
+        background-image: linear-gradient(to bottom, #19e34f, #678a1a);
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: none;
+        padding:1em;
+
+    }
+
+    .btn-primary:hover {
+        background: #0ceb39;
+        background-image: -webkit-linear-gradient(top, #0ceb39, #18c93c);
+        background-image: -moz-linear-gradient(top, #0ceb39, #18c93c);
+        background-image: -ms-linear-gradient(top, #0ceb39, #18c93c);
+        background-image: -o-linear-gradient(top, #0ceb39, #18c93c);
+        background-image: linear-gradient(to bottom, #0ceb39, #18c93c);
+        text-decoration: none;
+    }
+
+    .fsi-navbar-default {
+        border-color: #e7e7e7 !important;
+        background: #0374b3 !important;
+        border-radius: 0px !important;
+        border: 0px solid transparent !important;
+        padding: 1.3em 0 1.3em 0;
+    }
+    .brand-company-subtitle {
+        position: absolute;
+        top: 56px;
+        left: 91px;
+        color: #fff;
+        font-size: 12px;
+        font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .brand-company {
+        margin: 31px 0 0 20px;
+        font-size: 23px;
+        color: #fff;
+        line-height: 45px;
+        font-weight: 300;
+        font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: #1082c1;
+    }
+    .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+        margin-right: -15px;
+        margin-left: -15px;
+        margin-bottom: 13px;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+        font-weight: 400;
+    }
+}

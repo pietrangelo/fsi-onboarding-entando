@@ -1,5 +1,3 @@
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-client-onboarding','en','commercial-client-onboarding');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-client-onboarding','it','commercial-client-onboarding');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_accountName','en','accountName (accountName)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_accountName','it','accountName (accountName)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_creditScore','en','creditScore (client)');
@@ -312,8 +310,6 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_na
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_name','it','name (client)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_phoneNumber','en','Phone Number');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_phoneNumber','it','phoneNumber (client)');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_name','en','Consultant Name');
-INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_name','it','name (consultant)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_address','en','Address');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_address','it','address (client)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_country','en','Country');
@@ -322,3 +318,9 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_em
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_client_email','it','email (client)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_surname','en','Consultant Surname');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_surname','it','surname (consultant)');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-business-information','en','Business information');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-business-information','it','Business information');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_name','en','Consultant Name');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_name','it','name (consultant)');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-client-onboarding','en','Contact Information');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-client-onboarding','it','commercial-client-onboarding');
