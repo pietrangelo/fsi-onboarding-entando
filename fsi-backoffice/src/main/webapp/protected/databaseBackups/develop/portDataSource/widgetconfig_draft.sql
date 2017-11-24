@@ -1,3 +1,6 @@
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="widgetInfoId">257</property></properties>
+');
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('backoffice',13,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
@@ -15,7 +18,6 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('le
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',10,'fsi-in-progress',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',11,'fsi-completed',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',12,'fsi-backlog',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',14,'fsi-mock-datatable-backoffice',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',15,'generic-footer',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('knowledge_dashboard',6,'fsi-performance',NULL);

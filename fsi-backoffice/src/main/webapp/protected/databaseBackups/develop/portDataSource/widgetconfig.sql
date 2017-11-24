@@ -23,15 +23,7 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_customer',8,'fsi-onboarding-stages',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_customer',9,'fsi-transaction-history',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_customer',15,'generic-footer',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',5,'entando-widget-login_form_inspinia',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',6,'fsi-performance',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',7,'fsi-average-review-time',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',10,'fsi-in-progress',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',11,'fsi-completed',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',12,'fsi-backlog',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',14,'fsi-mock-datatable-backoffice',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',9,'Login-Customer',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',15,'generic-footer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',13,'fsi_client_on_board_mananger_tabs',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',15,'generic-footer',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',6,'fsi-perfomance-bar',NULL);
@@ -43,3 +35,13 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('form_mob
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('form_mobile',14,'bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="dataTypeCode">AAA</property><property key="widgetInfoId">225</property><property key="dataUxId">1</property></properties>
 ');
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="widgetInfoId">257</property></properties>
+');
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',6,'fsi-performance',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',7,'fsi-average-review-time',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',10,'fsi-in-progress',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',11,'fsi-completed',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',12,'fsi-backlog',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',15,'generic-footer',NULL);
