@@ -151,7 +151,7 @@
 
                     var extraConfig = initDatatable(data.response.result.taskList.containerId);
                     var username = '${currentUser.username}';
-                    if  (username === 'admin' || username === 'Manager' ) {
+                    if  (username === 'admin' || username === 'Manager') {
                         extraConfig = {};
                     }
 
