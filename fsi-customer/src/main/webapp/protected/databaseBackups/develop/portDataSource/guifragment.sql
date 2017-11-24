@@ -1,3 +1,225 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>State</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+           
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div id="morris-donut-chart" ></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+       Morris.Donut({
+            element: ''morris-donut-chart'',
+            data: [{label: "Pending", value: 12},
+                {label: "Complete", value: 30},
+                {label: "Suspended", value: 20}],
+            resize: true,
+            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
+        });
+    });
+</script>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-legal-check','fsi-legal-check',NULL,'<div class="fsi-upload-new-file">
+    <div class="fsi-warning-title">Legal check</div>
+    <div class="fsi-error-desc">
+      <div class="fsi-error-desc-filename">Articles_of_corporation.pdf</div>
+      <div class="fsi-error-desc-message">Digital sign not clearly readable</div>
+    </div>
+    <div class="fsi-message"><span>Can you please upload a new document ther address to the&nbsp;</span><b>following conditions</b></div><a class="fsi-upload-new-link" href="#">
+      <div class="fsi-label">Upload a new file</div><i class="fa fa-upload"></i></a>
+  </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="perfomance-bar">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Your performance</h5>
+         <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+          
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All<span class="caret" style="margin-left: 15px;"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div style="text-align: right">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="row fsi-progess-bar-box-label ">
+            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
+            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
+            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="progress">
+                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
+                        <span class="sr-only">60% Complete (success)</span>60%
+                    </div>
+                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.select useTabindexAutoIncrement=true
+	name="%{#attributeTracer.getFormFieldName(#attribute)}"
+	id="%{attribute_id}"  
+	headerKey="" headerValue="" 
+	list="#attribute.items" value="%{#attribute.getText()}" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer','content_viewer','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<@jacms.contentInfo param="authToEdit" var="canEditThis" />
+<@jacms.contentInfo param="contentId" var="myContentId" />
+<#if (canEditThis?? && canEditThis)>
+	<div class="bar-content-edit">
+		<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/jacms/Content/edit.action?contentId=<@jacms.contentInfo param="contentId" />" class="btn btn-info">
+		<@wp.i18n key="EDIT_THIS_CONTENT" /> <i class="icon-edit icon-white"></i></a>
+	</div>
+</#if>
+<@jacms.content publishExtraTitle=true />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorMapAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.select useTabindexAutoIncrement=true
+	name="%{#attributeTracer.getFormFieldName(#attribute)}"
+	id="%{attribute_id}"  
+	headerKey="" headerValue="" 
+	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_password','userprofile_editCurrentUser_password',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+
+<h1><@wp.i18n key="userprofile_EDITPASSWORD" /></h1>
+
+<#if (Session.currentUser != "guest") >
+
+	<form action="<@wp.action path="/ExtStr2/do/Front/CurrentUser/changePassword.action" />" method="post" class="form-horizontal">
+
+	<@s.if test="hasFieldErrors()">
+		<div class="alert alert-block">
+			<p><strong><@wp.i18n key="userprofile_MESSAGE_TITLE_FIELDERRORS" /></strong></p>
+			<ul class="unstyled">
+				<@s.iterator value="fieldErrors">
+					<@s.iterator value="value">
+						<li><@s.property escapeHtml=false /></li>
+					</@s.iterator>
+				</@s.iterator>
+			</ul>
+		</div>
+	</@s.if>
+
+	<p class="noscreen">
+		<wpsf:hidden name="username" />
+	</p>
+
+	<div class="control-group">
+		<label for="userprofile-old-password" class="control-label"><@wp.i18n key="userprofile_OLDPASSWORD" /></label>
+		<div class="controls">
+			<@wpsf.password 
+				useTabindexAutoIncrement=true 
+				name="oldPassword" 
+				id="userprofile-old-password" />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label for="userprofile-new-password" class="control-label"><@wp.i18n key="userprofile_NEWPASS" /></label>
+		<div class="controls">
+			<@wpsf.password 
+				useTabindexAutoIncrement=true 
+				name="password" 
+				id="userprofile-new-password" />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label for="userprofile-new-password-confirm" class="control-label"><@wp.i18n key="userprofile_CONFIRM_NEWPASS" /></label>
+		<div class="controls">
+			<@wpsf.password 
+				useTabindexAutoIncrement=true 
+				name="passwordConfirm" 
+				id="userprofile-new-password-confirm" />
+		</div>
+	</div>
+
+	<p class="form-actions">
+		<@wp.i18n key="userprofile_SAVE_PASSWORD" var="userprofile_SAVE_PASSWORD" />
+		<@wpsf.submit 
+			useTabindexAutoIncrement=true 
+			value="%{#attr.userprofile_SAVE_PASSWORD}" 
+			cssClass="btn btn-primary" />
+	</p>
+
+	</form>
+	
+<#else>
+	<p>
+		<@wp.i18n key="userprofile_PLEASE_LOGIN_TO_EDIT_PASSWORD" />
+	</p>
+</#if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerBlock',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+<#if (group.size > group.max)>
+	<div class="pagination pagination-centered">
+		<ul>
+		<#if (1 != group.currItem)>
+			<#if (group.advanced)>
+				<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >1</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_FIRST" />"><i class="icon-fast-backward"></i></a></li>
+				<#if (1 != group.beginItemAnchor)>
+					<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.currItem - group.offset}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_STEP_BACKWARD" />&#32;${group.offset}"><i class="icon-step-backward"></i></a></li>
+				</#if>
+			</#if>
+			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.prevItem}</@wp.parameter></@wp.url>"><@wp.i18n key="PAGER_PREV" /></a></li>
+		</#if>
+		<#list group.items as item>
+		<#if (item_index >= (group.beginItemAnchor-1)) && (item_index <= (group.endItemAnchor-1))>
+			<#if (item == group.currItem)>
+			<li class="active"><a href="#">${item}</a></li>
+			<#else>
+			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${item}</@wp.parameter></@wp.url>">${item}</a></li>
+			</#if>
+		</#if>
+		</#list>
+		<#if (group.maxItem != group.currItem)>
+			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.nextItem}</@wp.parameter></@wp.url>"><@wp.i18n key="PAGER_NEXT" /></a></li>
+			<#if (group.advanced)>
+				<#if (group.maxItem != group.endItemAnchor)>
+					<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.currItem + group.offset}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_STEP_FORWARD" />&#32;${group.offset}"><i class="icon-step-forward"></i></a></li>
+				</#if>
+				<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.maxItem}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_LAST" />"><i class="icon-fast-forward"></i></a></li>
+			</#if>
+		</#if>
+		</ul>
+	</div>
+</#if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerInfo_is',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<p><@s.text name="note.searchIntro" />&#32;<@s.property value="#group.size" />&#32;<@s.text name="note.searchOutro" />.<br />
+<@s.text name="label.page" />: [<@s.property value="#group.currItem" />/<@s.property value="#group.maxItem" />].</p>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="welcome-content">
@@ -316,99 +538,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	action="%{#actionName}" 
 	value="%{add_label}" 
 	title="%{i18n_attribute_name}%{'': ''}%{add_label}" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>State</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-           
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div id="morris-donut-chart" ></div>
-    </div>
-</div>
-<script>
-    $(document).ready(function () {
-       Morris.Donut({
-            element: ''morris-donut-chart'',
-            data: [{label: "Pending", value: 12},
-                {label: "Complete", value: 30},
-                {label: "Suspended", value: 20}],
-            resize: true,
-            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
-        });
-    });
-</script>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-legal-check','fsi-legal-check',NULL,'<div class="fsi-upload-new-file">
-    <div class="fsi-warning-title">Legal check</div>
-    <div class="fsi-error-desc">
-      <div class="fsi-error-desc-filename">Articles_of_corporation.pdf</div>
-      <div class="fsi-error-desc-message">Digital sign not clearly readable</div>
-    </div>
-    <div class="fsi-message"><span>Can you please upload a new document ther address to the&nbsp;</span><b>following conditions</b></div><a class="fsi-upload-new-link" href="#">
-      <div class="fsi-label">Upload a new file</div><i class="fa fa-upload"></i></a>
-  </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-progress-bar','fsi-progress-bar',NULL,'<div class="perfomance-bar">
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Your performance</h5>
-         <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-          
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-10"></div>
-            <div class="col-md-1">
-                <div class="dropdown">
-                    <button class="btn btn-default btn-xs dropdown-toggle fsi-progess-bar-dropdown" type="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        All<span class="caret" style="margin-left: 15px;"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div style="text-align: right">
-                    <i class="fa fa-calendar"></i>
-                </div>
-            </div>
-
-        </div>
-        <div class="row fsi-progess-bar-box-label ">
-            <div class="col-md-3 fsi-progess-bar-label ">You added &nbsp;&nbsp; <b>315 </b></div>
-            <div class="col-md-3 fsi-progess-bar-label ">Customers, of these &nbsp;&nbsp;<b>215</b></div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Complete registration</div>
-            <div class="col-md-3 fsi-progess-bar-label " style="text-align:right;">Your aim is &nbsp;&nbsp;<b>400</b>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="progress">
-                    <div class="progress-bar fsi-progess-bar-default" style="width: 60%">
-                        <span class="sr-only">60% Complete (success)</span>60%
-                    </div>
-                    <div class="progress-bar progress-bar-success fsi-progess-bar-success" style="width: 20%">
-                        <span class="sr-only">20% Complete (warning)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.select useTabindexAutoIncrement=true
-	name="%{#attributeTracer.getFormFieldName(#attribute)}"
-	id="%{attribute_id}"  
-	headerKey="" headerValue="" 
-	list="#attribute.items" value="%{#attribute.getText()}" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-welcome-personal-area','fsi-welcome-personal-area',NULL,'<div class="fsi-welcome-personal-area">
     <div class="fsi-welcome-title">Welcome to your personal area</div>
     <div class="fsi-welcome-message">You can check the status of your request</div>
@@ -746,86 +875,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorMapAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.select useTabindexAutoIncrement=true
-	name="%{#attributeTracer.getFormFieldName(#attribute)}"
-	id="%{attribute_id}"  
-	headerKey="" headerValue="" 
-	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_password','userprofile_editCurrentUser_password',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-
-<h1><@wp.i18n key="userprofile_EDITPASSWORD" /></h1>
-
-<#if (Session.currentUser != "guest") >
-
-	<form action="<@wp.action path="/ExtStr2/do/Front/CurrentUser/changePassword.action" />" method="post" class="form-horizontal">
-
-	<@s.if test="hasFieldErrors()">
-		<div class="alert alert-block">
-			<p><strong><@wp.i18n key="userprofile_MESSAGE_TITLE_FIELDERRORS" /></strong></p>
-			<ul class="unstyled">
-				<@s.iterator value="fieldErrors">
-					<@s.iterator value="value">
-						<li><@s.property escapeHtml=false /></li>
-					</@s.iterator>
-				</@s.iterator>
-			</ul>
-		</div>
-	</@s.if>
-
-	<p class="noscreen">
-		<wpsf:hidden name="username" />
-	</p>
-
-	<div class="control-group">
-		<label for="userprofile-old-password" class="control-label"><@wp.i18n key="userprofile_OLDPASSWORD" /></label>
-		<div class="controls">
-			<@wpsf.password 
-				useTabindexAutoIncrement=true 
-				name="oldPassword" 
-				id="userprofile-old-password" />
-		</div>
-	</div>
-
-	<div class="control-group">
-		<label for="userprofile-new-password" class="control-label"><@wp.i18n key="userprofile_NEWPASS" /></label>
-		<div class="controls">
-			<@wpsf.password 
-				useTabindexAutoIncrement=true 
-				name="password" 
-				id="userprofile-new-password" />
-		</div>
-	</div>
-
-	<div class="control-group">
-		<label for="userprofile-new-password-confirm" class="control-label"><@wp.i18n key="userprofile_CONFIRM_NEWPASS" /></label>
-		<div class="controls">
-			<@wpsf.password 
-				useTabindexAutoIncrement=true 
-				name="passwordConfirm" 
-				id="userprofile-new-password-confirm" />
-		</div>
-	</div>
-
-	<p class="form-actions">
-		<@wp.i18n key="userprofile_SAVE_PASSWORD" var="userprofile_SAVE_PASSWORD" />
-		<@wpsf.submit 
-			useTabindexAutoIncrement=true 
-			value="%{#attr.userprofile_SAVE_PASSWORD}" 
-			cssClass="btn btn-primary" />
-	</p>
-
-	</form>
-	
-<#else>
-	<p>
-		<@wp.i18n key="userprofile_PLEASE_LOGIN_TO_EDIT_PASSWORD" />
-	</p>
-</#if>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-search_result_inspinia','entando-widget-search_result_inspinia',NULL,NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="ibox-content">
@@ -1792,6 +1841,63 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	<a href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
 </p>
 </section>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerFormBlock_is',NULL,NULL,NULL,'<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<#assign s=JspTaglibs["/struts-tags"]>
+<@s.if test="#group.size > #group.max">
+<ul class="pagination">
+	<@s.if test="null != #group.pagerId">
+		<@s.set var="pagerIdMarker" value="#group.pagerId" />
+	</@s.if>
+	<@s.else>
+		<@s.set var="pagerIdMarker">pagerItem</@s.set>
+	</@s.else>
+	<@s.if test="#group.advanced">
+	<li>
+		<@wpsf.submit name="%{#pagerIdMarker + ''_1''}" type="button" disabled="%{1 == #group.currItem}" title="%{getText(''label.goToFirst'')}">
+			<span class="icon fa fa-step-backward"></span>
+		</@wpsf.submit>
+	</li>
+	<li>
+		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + (#group.currItem - #group.offset) }" type="button" disabled="%{1 == #group.beginItemAnchor}" title="%{getText(''label.jump'') + '' '' + #group.offset + '' '' + getText(''label.backward'')}">
+			<span class="icon fa fa-fast-backward"></span>
+		</@wpsf.submit>
+	</li>
+	</@s.if>
+	<li>
+		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + #group.prevItem}" type="button" title="%{getText(''label.prev.full'')}" disabled="%{1 == #group.currItem}">
+			<span class="icon fa fa-long-arrow-left"></span>
+		</@wpsf.submit>
+	</li>
+	<@s.subset source="#group.items" count="#group.endItemAnchor-#group.beginItemAnchor+1" start="#group.beginItemAnchor-1">
+		<@s.iterator id="item">
+			<li>
+				<@wpsf.submit name="%{#pagerIdMarker + ''_'' + #item}" type="button" disabled="%{#item == #group.currItem}">
+					<@s.property value="%{#item}" />
+				</@wpsf.submit>
+			</li>
+		</@s.iterator>
+	</@s.subset>
+	<li>
+		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + #group.nextItem}" type="button" title="%{getText(''label.next.full'')}" disabled="%{#group.maxItem == #group.currItem}">
+			<span class="icon fa fa-long-arrow-right"></span>
+		</@wpsf.submit>
+	</li>
+	<@s.if test="#group.advanced">
+	<@s.set var="jumpForwardStep" value="#group.currItem + #group.offset"></@s.set>
+	<li>
+		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + (#jumpForwardStep)}" type="button" disabled="%{#group.maxItem == #group.endItemAnchor}" title="%{getText(''label.jump'') + '' '' + #group.offset + '' '' + getText(''label.forward'')}">
+			<span class="icon fa fa-fast-forward"></span>
+		</@wpsf.submit>
+	</li>
+	<li>
+		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + #group.size}" type="button" disabled="%{#group.maxItem == #group.currItem}" title="%{getText(''label.goToLast'')}">
+			<span class="icon fa fa-step-forward"></span>
+		</@wpsf.submit>
+	</li>
+	</@s.if>
+	<@s.set var="pagerIdMarker" value="null" />
+</ul>
+</@s.if>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2152,112 +2258,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	<h1 class="alert-heading"><@wp.i18n key="GENERIC_ERROR" escapeXml=false /></h1>
 </div>
 </#if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerBlock',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-
-<#if (group.size > group.max)>
-	<div class="pagination pagination-centered">
-		<ul>
-		<#if (1 != group.currItem)>
-			<#if (group.advanced)>
-				<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >1</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_FIRST" />"><i class="icon-fast-backward"></i></a></li>
-				<#if (1 != group.beginItemAnchor)>
-					<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.currItem - group.offset}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_STEP_BACKWARD" />&#32;${group.offset}"><i class="icon-step-backward"></i></a></li>
-				</#if>
-			</#if>
-			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.prevItem}</@wp.parameter></@wp.url>"><@wp.i18n key="PAGER_PREV" /></a></li>
-		</#if>
-		<#list group.items as item>
-		<#if (item_index >= (group.beginItemAnchor-1)) && (item_index <= (group.endItemAnchor-1))>
-			<#if (item == group.currItem)>
-			<li class="active"><a href="#">${item}</a></li>
-			<#else>
-			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${item}</@wp.parameter></@wp.url>">${item}</a></li>
-			</#if>
-		</#if>
-		</#list>
-		<#if (group.maxItem != group.currItem)>
-			<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.nextItem}</@wp.parameter></@wp.url>"><@wp.i18n key="PAGER_NEXT" /></a></li>
-			<#if (group.advanced)>
-				<#if (group.maxItem != group.endItemAnchor)>
-					<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.currItem + group.offset}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_STEP_FORWARD" />&#32;${group.offset}"><i class="icon-step-forward"></i></a></li>
-				</#if>
-				<li><a href="<@wp.url paramRepeat=true ><@wp.parameter name="${group.paramItemName}" >${group.maxItem}</@wp.parameter></@wp.url>" title="<@wp.i18n key="PAGER_LAST" />"><i class="icon-fast-forward"></i></a></li>
-			</#if>
-		</#if>
-		</ul>
-	</div>
-</#if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerInfo_is',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<p><@s.text name="note.searchIntro" />&#32;<@s.property value="#group.size" />&#32;<@s.text name="note.searchOutro" />.<br />
-<@s.text name="label.page" />: [<@s.property value="#group.currItem" />/<@s.property value="#group.maxItem" />].</p>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerFormBlock_is',NULL,NULL,NULL,'<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<#assign s=JspTaglibs["/struts-tags"]>
-<@s.if test="#group.size > #group.max">
-<ul class="pagination">
-	<@s.if test="null != #group.pagerId">
-		<@s.set var="pagerIdMarker" value="#group.pagerId" />
-	</@s.if>
-	<@s.else>
-		<@s.set var="pagerIdMarker">pagerItem</@s.set>
-	</@s.else>
-	<@s.if test="#group.advanced">
-	<li>
-		<@wpsf.submit name="%{#pagerIdMarker + ''_1''}" type="button" disabled="%{1 == #group.currItem}" title="%{getText(''label.goToFirst'')}">
-			<span class="icon fa fa-step-backward"></span>
-		</@wpsf.submit>
-	</li>
-	<li>
-		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + (#group.currItem - #group.offset) }" type="button" disabled="%{1 == #group.beginItemAnchor}" title="%{getText(''label.jump'') + '' '' + #group.offset + '' '' + getText(''label.backward'')}">
-			<span class="icon fa fa-fast-backward"></span>
-		</@wpsf.submit>
-	</li>
-	</@s.if>
-	<li>
-		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + #group.prevItem}" type="button" title="%{getText(''label.prev.full'')}" disabled="%{1 == #group.currItem}">
-			<span class="icon fa fa-long-arrow-left"></span>
-		</@wpsf.submit>
-	</li>
-	<@s.subset source="#group.items" count="#group.endItemAnchor-#group.beginItemAnchor+1" start="#group.beginItemAnchor-1">
-		<@s.iterator id="item">
-			<li>
-				<@wpsf.submit name="%{#pagerIdMarker + ''_'' + #item}" type="button" disabled="%{#item == #group.currItem}">
-					<@s.property value="%{#item}" />
-				</@wpsf.submit>
-			</li>
-		</@s.iterator>
-	</@s.subset>
-	<li>
-		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + #group.nextItem}" type="button" title="%{getText(''label.next.full'')}" disabled="%{#group.maxItem == #group.currItem}">
-			<span class="icon fa fa-long-arrow-right"></span>
-		</@wpsf.submit>
-	</li>
-	<@s.if test="#group.advanced">
-	<@s.set var="jumpForwardStep" value="#group.currItem + #group.offset"></@s.set>
-	<li>
-		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + (#jumpForwardStep)}" type="button" disabled="%{#group.maxItem == #group.endItemAnchor}" title="%{getText(''label.jump'') + '' '' + #group.offset + '' '' + getText(''label.forward'')}">
-			<span class="icon fa fa-fast-forward"></span>
-		</@wpsf.submit>
-	</li>
-	<li>
-		<@wpsf.submit name="%{#pagerIdMarker + ''_'' + #group.size}" type="button" disabled="%{#group.maxItem == #group.currItem}" title="%{getText(''label.goToLast'')}">
-			<span class="icon fa fa-step-forward"></span>
-		</@wpsf.submit>
-	</li>
-	</@s.if>
-	<@s.set var="pagerIdMarker" value="null" />
-</ul>
-</@s.if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer','content_viewer','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<@jacms.contentInfo param="authToEdit" var="canEditThis" />
-<@jacms.contentInfo param="contentId" var="myContentId" />
-<#if (canEditThis?? && canEditThis)>
-	<div class="bar-content-edit">
-		<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/jacms/Content/edit.action?contentId=<@jacms.contentInfo param="contentId" />" class="btn btn-info">
-		<@wp.i18n key="EDIT_THIS_CONTENT" /> <i class="icon-edit icon-white"></i></a>
-	</div>
-</#if>
-<@jacms.content publishExtraTitle=true />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Enumer',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -2419,6 +2419,31 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		<input name="${formFieldNameVar}" id="${formFieldNameVar}" value="${formFieldValue}" type="text" class="input-xlarge"/>
 	</div>
 </div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('search_result','search_result','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<h1><@wp.i18n key="SEARCH_RESULTS" /></h1>
+<#if (RequestParameters.search?? && RequestParameters.search!='''')>
+<@jacms.searcher listName="contentListResult" />
+</#if>
+<p><@wp.i18n key="SEARCHED_FOR" />: <em><strong><#if (RequestParameters.search??)>${RequestParameters.search}</#if></strong></em></p>
+<#if (contentListResult??) && (contentListResult?has_content) && (contentListResult?size > 0)>
+<@wp.pager listName="contentListResult" objectName="groupContent" max=10 pagerIdFromFrame=true advanced=true offset=5>
+	<@wp.freemarkerTemplateParameter var="group" valueName="groupContent" removeOnEndTag=true >
+	<p><em><@wp.i18n key="SEARCH_RESULTS_INTRO" /> <!-- infamous whitespace hack -->
+	${groupContent.size}
+	<@wp.i18n key="SEARCH_RESULTS_OUTRO" /> [${groupContent.begin + 1} &ndash; ${groupContent.end + 1}]:</em></p>
+	<@wp.fragment code="default_pagerBlock" escapeXml=false />
+	<#list contentListResult as contentId>
+	<#if (contentId_index >= groupContent.begin) && (contentId_index <= groupContent.end)>
+		<@jacms.content contentId="${contentId}" modelId="list" />
+	</#if>
+	</#list>
+	<@wp.fragment code="default_pagerBlock" escapeXml=false />
+	</@wp.freemarkerTemplateParameter>
+</@wp.pager>
+<#else>
+<p class="alert alert-info"><@wp.i18n key="SEARCH_NOTHING_FOUND" /></p>
+</#if>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list','content_viewer_list','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <@wp.headInfo type="JS_EXT" info="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" />
@@ -2586,31 +2611,11 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	</div>
 </div>
 </fieldset>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('search_result','search_result','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<h1><@wp.i18n key="SEARCH_RESULTS" /></h1>
-<#if (RequestParameters.search?? && RequestParameters.search!='''')>
-<@jacms.searcher listName="contentListResult" />
-</#if>
-<p><@wp.i18n key="SEARCHED_FOR" />: <em><strong><#if (RequestParameters.search??)>${RequestParameters.search}</#if></strong></em></p>
-<#if (contentListResult??) && (contentListResult?has_content) && (contentListResult?size > 0)>
-<@wp.pager listName="contentListResult" objectName="groupContent" max=10 pagerIdFromFrame=true advanced=true offset=5>
-	<@wp.freemarkerTemplateParameter var="group" valueName="groupContent" removeOnEndTag=true >
-	<p><em><@wp.i18n key="SEARCH_RESULTS_INTRO" /> <!-- infamous whitespace hack -->
-	${groupContent.size}
-	<@wp.i18n key="SEARCH_RESULTS_OUTRO" /> [${groupContent.begin + 1} &ndash; ${groupContent.end + 1}]:</em></p>
-	<@wp.fragment code="default_pagerBlock" escapeXml=false />
-	<#list contentListResult as contentId>
-	<#if (contentId_index >= groupContent.begin) && (contentId_index <= groupContent.end)>
-		<@jacms.content contentId="${contentId}" modelId="list" />
-	</#if>
-	</#list>
-	<@wp.fragment code="default_pagerBlock" escapeXml=false />
-	</@wp.freemarkerTemplateParameter>
-</@wp.pager>
-<#else>
-<p class="alert alert-info"><@wp.i18n key="SEARCH_NOTHING_FOUND" /></p>
-</#if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_row_content_viewer_list','row_content_viewer_list','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <@jacms.rowContentList listName="contentInfoList" titleVar="titleVar"
@@ -2812,11 +2817,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
-<p>Improving businesses&apos; life through meaningful services.
-</p>
-<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <ul class="list-unstyled">
 <li class=" dropdown
@@ -3011,7 +3011,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
                     <p class="form-title">Business financial documentation</p>
 
-                    <label class="login-label">Profits and loss statements 1099 forms from the previuos 2
+                    <label class="login-label">Profits and loss statements 1099 forms from the previous 2
                         years</label>
                     <div class="fileinput fileinput-new input-group" data-provides="fileinput">
                         <div class="form-control input-custom" data-trigger="fileinput">

@@ -195,10 +195,10 @@
             iframe.src = '<wp:info key="systemParam" paramName="applicationBaseURL"/>resources/static/js/jspdf/web/viewer.html';
             iframe.onload = function () {
 
-                <wp:ifauthorized groupName="legal_worker">
+                <wp:ifauthorized groupName="knowledge_worker">
                     iframe.contentWindow.postMessage("ID_CUSTOMER.pdf", "*");
                 </wp:ifauthorized>
-                <wp:ifauthorized groupName="knowledge_worker">
+                <wp:ifauthorized groupName="legal_worker">
                     iframe.contentWindow.postMessage("compressed.tracemonkey-pldi-09.pdf", "*");
                 </wp:ifauthorized>
 
