@@ -76,155 +76,106 @@
     }
 
 
-    var optModal = {
-        //appendTo: "#data-table-active",
-        minWidth: 500,
-        modal: true,
-        show: {effect: "fadego", duration: 800},
-        resizable: true,
-        position: {my: "center top", at: "center top+10%"}
-    }
-
-
-    /* Modal Form*/
-    function openModalForm(event, rowData, context) {
-
-        var url = context + "taskForm.json?containerId=" + rowData.containerId + "&taskId=" + rowData.id;
-
-        $.get(url, function (data) {
-            $('#bpm-task-list-modal-form').empty();
-            var jsonKie = data.response.result;
-            jsonKie.mainForm.method = "post";
-            org.entando.form.dynamicForm = new org.entando.form.DynamicForm(jsonKie);
-            //org.entando.form.dynamicForm.json.html[0].value = processId;
-            $("#bpm-task-list-modal-form").dform(org.entando.form.dynamicForm.json);
-            optModal.title = "BPM Form Data";
-            $('#bpm-task-list-modal-form').dialog(optModal);
-
-            $('form.ui-dform-form').submit(function (event1) {
-                event1.preventDefault();
-                var postData = {
-                    task: {
-                        fields: []
-                    }
-                };
-                $('form.ui-dform-form').serializeArray().forEach(function (el) {
-                    var entry = {name: el.name, value: el.value};
-                    postData.task.fields.push(entry);
-                });
-                var action = context + "taskForm.json";
-                //console.log(postData);
-
-                $('form.ui-dform-form checkbox')
-
-                $.ajax({
-                    url: action,
-                    type: 'post',
-                    contentType: 'application/json',
-                    data: JSON.stringify(postData),
-                    dataType: 'json'
-                }).done(function (result) {
-                    if (result.response.result = "SUCCESS") {
-                        $("#bpm-task-list-modal-form").dialog("close");
-                        $('#bpm-task-list-modal-form').empty();
-                        //row.remove().draw(false);
-                        var url = context + "tasks.json?configId=" + configId;
-                        $.get(url, function (data) {
-                            json.data = getJsonData(data.response.result);
-                            table.clear();
-                            table.rows.add(json.data);
-                            table.draw();
-                        });
-
-                    }
-                });
-
-            })
-        });
-
-    }
-
-
     $(document).ready(function () {
 
+        function initDatatable(containerId) {
+            var extraBtns = [
+                {
+                    html: '<button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">REVIEW</button>',
+                    onClick: function (ev, data) {
+                        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/backoffice.page?containerId=' + containerId + '&taskId=' + data.id;
+                        window.location = url;
+                    }
+                }
+            ];
+            var extraConfig = {
+                buttonsColumnTitle: "Actions",
+                buttons: extraBtns,
+                onClickRow: function (ev, rowData) {
+                }
+            };
+            return extraConfig;
+        }
 
-        var loadDataTable = function (url, idTable, extraConfig) {
 
-            $.get(url, function (data) {
-                var items = data.response.result.taskList.list || [];
-                items = items.map(function (item) {
-                    item['activated'] = new Date(item['activated']).toLocaleString();
-                    item['created'] = new Date(item['created']).toLocaleString();
-                    return item;
-                });
-                extraConfig.columnDefinition = data.response.result.taskList["datatable-field-definition"].fields;
-                org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
+
+        function getTaskList(context) {
+
+            var username = '${currentUser.username}';
+
+            var url = "";
+            if (username === 'legal' || username === 'admin')
+                url = context + "legalWorkerTasks.json";
+            else if (username === 'knowledge') {
+                url = context + "knwoledgeWorkerTasks.json";
+            }
+
+            var def = $.Deferred();
+            $.get(url).then(function (taskData) {
+                var taskList = getDeep(taskData, 'response.result.taskList.list');
+                def.resolve(Array.isArray(taskList) ? taskList : [taskList]);
+            }, function (error) {
+                console.log(error, arguments);
+                var message = getDeep(error, "responseJSON.response.errors.error.message");
+                if (message && message.match(/^Tasks for user .+ does not exist$/))  {
+                    def.resolve([]);
+                }
+                else
+                    def.reject(error);
+
+
             });
-        };
 
-        var configId = "${id}";
+            return def.promise();
+        }
+
+
+        var loadDataTable = function (context,url, idTable) {
+
+
+            getTaskList(context).done(function (legalTask) {
+
+
+                $.get(url, function (data) {
+                    //console.log("data: ", data);
+                    var items = legalTask || []; //data.response.result.taskList.list || [] ;
+                    //console.log("items: ", items);
+                    if (items) {
+
+                        items = items.map(function (item) {
+                            item['activated'] = new Date(item['activated']).toLocaleString();
+                            item['created'] = new Date(item['created']).toLocaleString();
+                            return item;
+                        });
+                    }
+
+                    var extraConfig = initDatatable(data.response.result.taskList.containerId);
+                    var username = '${currentUser.username}';
+                    if  (username === 'admin') {
+                        extraConfig = {};
+                    }
+
+                    extraConfig.columnDefinition = data.response.result.taskList["datatable-field-definition"].fields;
+                    org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
+
+
+                });
+
+            });
+
+
+        };
 
         var context = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/";
         var url = context + "tasks.json?configId=${id}";
-        //console.log(url);
-        //org.entando.datatable.loadDataTable(url, '#data-table-active', context,${id});
 
-
-        var extraBtns = [
-            {
-                html: '<button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">Complete</button>',
-                onClick: function (ev, data) {
-
-                    openModalForm(ev, data, context);
-                }
-            },
-            {
-                html: '<button type="button" class=" class-open-bpm-task-list-modal-diagram-details btn btn-info btn-sm ">Diagram</button>',
-                onClick: function (event, rowData) {
-
-                    var url = context + "diagram.json?configId=" + configId + "&processInstanceId=" + rowData.processInstanceId;
-                    $('#bpm-task-list-modal-diagram-data').empty();
-                    $.get(url, function (data) {
-                        $('#bpm-task-list-modal-diagram-data').attr("src", "data:image/svg+xml;utf8," + data.response.result);
-                        optModal.title = "BPM Process Diagram";
-                        optModal.show.effect = "fold";
-                        optModal.position = {my: "center", at: "center"};
-                        $('#bpm-task-list-modal-diagram').dialog(optModal);
-                    });
-
-                }
-            }
-        ];
-
-        var extraConfig = {
-            buttons: extraBtns,
-            onClickRow: function (ev, rowData) {
-                $('#bpm-task-list-modal-data-table-tbody').empty();
-                var url = context + "taskDetail.json?containerId=" + rowData.containerId + "&taskId=" + rowData.id;
-                //console.log(url);
-                $.get(url, function (data) {
-                    $('#bpm-task-list-modal-data-table-tbody').append(getTemplateTaskDetail(data.response.result.mainForm));
-                    optModal.title = "BPM Data";
-                    $('#bpm-task-list-modal-data').dialog(optModal);
-                });
-            }
-        };
-
-
-        loadDataTable(url, '#data-table-task-list', extraConfig);
+        loadDataTable(context,url, '#data-table-task-list');
     });
 </script>
 
 <table id="data-table-task-list" class="display nowrap" cellspacing="0" width="100%"></table>
 
-<div id="bpm-task-list-modal-data">
-    <table id="bpm-task-list-modal-data-table" class="table table-hover no-margins">
-        <tbody id="bpm-task-list-modal-data-table-tbody"></tbody>
-    </table>
-</div>
 
-<div id="bpm-task-list-modal-form"/>
 
-<div id="bpm-task-list-modal-diagram">
-    <img id="bpm-task-list-modal-diagram-data" class="img-responsive"/>
-</div>
+
+

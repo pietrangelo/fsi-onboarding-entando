@@ -1,3 +1,29 @@
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('client_onboarding_manager','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Client Onboarding Manager</property><property key="it">Client Onboarding Manager</property></properties>
+','fsi-client-onboarding',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="client_manager" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-24 15:34:44');
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('legal_dashboard','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Compliance Manager Dashboard</property><property key="it">Compliance Manager Dashboard</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="legal_worker" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-24 15:54:12');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('errorpage','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Error page</property>
@@ -13,19 +39,6 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-10-31 17:27:00');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('client_onboarding_manager','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Client Onboarding Manager</property><property key="it">Client Onboarding Manager</property></properties>
-','fsi-client-onboarding',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="client_manager" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-09 08:18:39');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('form_mobile','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Form Mobile</property><property key="it">Form Mobile</property></properties>
 ','fsi-dashboard-responsive',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -65,19 +78,6 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-11-16 10:53:19');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('legal_dashboard','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Compliance Manager Dashboard</property><property key="it">Compliance Manager Dashboard</property></properties>
-','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="legal_worker" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-24 08:58:34');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('backoffice','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">backoffice</property><property key="it">backoffice</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
