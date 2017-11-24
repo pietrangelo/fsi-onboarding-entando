@@ -104,7 +104,7 @@
             var username = '${currentUser.username}';
 
             var url = "";
-            if (username === 'legal' || username === 'admin')
+            if (username === 'legal' || username === 'admin' || username === 'Manager' )
                 url = context + "legalWorkerTasks.json";
             else if (username === 'knowledge') {
                 url = context + "knwoledgeWorkerTasks.json";
@@ -151,7 +151,7 @@
 
                     var extraConfig = initDatatable(data.response.result.taskList.containerId);
                     var username = '${currentUser.username}';
-                    if  (username === 'admin') {
+                    if  (username === 'admin' || username === 'Manager' ) {
                         extraConfig = {};
                     }
 
