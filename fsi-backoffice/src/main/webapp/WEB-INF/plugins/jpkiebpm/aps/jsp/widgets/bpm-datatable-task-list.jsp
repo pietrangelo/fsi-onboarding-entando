@@ -97,31 +97,47 @@
             return extraConfig;
         }
 
-        var loadDataTable = function (url, idTable) {
+
+
+        function getTaskList(context) {
 
             var username = '${currentUser.username}';
-
-            var urlPotOwners = "";
-
+            var url = "";
             if (username === 'legal')
-                urlPotOwners = context + "legalWorkerTasks.json";
+                url = context + "legalWorkerTasks.json";
             else if (username === 'knowledge') {
-                urlPotOwners = context + "knwoledgeWorkerTasks.json";
+                url = context + "knwoledgeWorkerTasks.json";
             }
 
-
-            $.get(urlPotOwners).then(function (data) {
-                return data.response.result.taskList.list || [];
-
+            var def = $.Deferred();
+            $.get(url).then(function (taskData) {
+                var taskList = getDeep(taskData, 'response.result.taskList.list');
+                def.resolve(Array.isArray(taskList) ? taskList : [taskList]);
             }, function (error) {
-                return [];
+                console.log(error, arguments);
+                var message = getDeep(error, "responseJSON.response.errors.error.message");
+                if (message && message.match(/^Tasks for user .+ does not exist$/))  {
+                    def.resolve([]);
+                }
+                else
+                    def.reject(error);
 
-            }).always(function (tasks) {
-                console.log('tasks  ', tasks);
+
+            });
+
+            return def.promise();
+        }
+
+
+        var loadDataTable = function (context,url, idTable) {
+
+
+            getTaskList(context).done(function (legalTask) {
+
 
                 $.get(url, function (data) {
                     //console.log("data: ", data);
-                    var items = tasks || []; //data.response.result.taskList.list || [] ;
+                    var items = legalTask || []; //data.response.result.taskList.list || [] ;
                     //console.log("items: ", items);
                     if (items) {
 
@@ -147,7 +163,7 @@
         var context = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/";
         var url = context + "tasks.json?configId=${id}";
 
-        loadDataTable(url, '#data-table-task-list');
+        loadDataTable(context,url, '#data-table-task-list');
     });
 </script>
 

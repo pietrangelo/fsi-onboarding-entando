@@ -168,8 +168,23 @@
             uint8Array[i] = raw.charCodeAt(i);
         }
         return uint8Array;
+    };
+
+    /**
+     * Gets an object at a given path, or undefined if it does not exist
+     * Usage:  getDeep(object, 'propertyA.propertyB')
+     *         returns object.propertyA.propertyB or undefined
+     */
+    function getDeep(obj, path) {
+        var arr = path.split('.'),
+            pointer = obj,
+            i = 0;
+        while (i < arr.length && pointer) {
+            pointer = pointer[arr[i++]];
+        }
+        return pointer;
     }
-    ;
+
 
     $(document).ready(function () {
         console.log('load pdf viewer');
