@@ -1,68 +1,3 @@
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataobjectsubdir','Name of the sub-directory containing dataobject indexing files','index');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpmail_config','Configurazione del servizio di invio eMail','<?xml version="1.0" encoding="UTF-8"?>
-<mailConfig>
-	<senders>
-		<sender code="CODE1">EMAIL1@EMAIL.COM</sender>
-		<sender code="CODE2">EMAIL2@EMAIL.COM</sender>
-	</senders>
-	<smtp debug="false">
-		<host>localhost</host>
-		<port>25000</port>
-		<user></user>
-		<password></password>
-		<security>std</security>
-	</smtp>
-</mailConfig>');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','imageDimensions','Definition of the resized image dimensions','<Dimensions>
-	<Dimension>
-		<id>1</id>
-		<dimx>90</dimx>
-		<dimy>90</dimy>
-	</Dimension>
-	<Dimension>
-		<id>2</id>
-		<dimx>130</dimx>
-		<dimy>130</dimy>
-	</Dimension>
-	<Dimension>
-		<id>3</id>
-		<dimx>150</dimx>
-		<dimy>150</dimy>
-	</Dimension>
-</Dimensions>
-');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','subIndexDir','Name of the sub-directory containing content indexing files','index');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','contentTypes','Definition of the Content Types','<?xml version="1.0" encoding="UTF-8"?>
-<contenttypes>
-	<contenttype typecode="CNG" typedescr="Generic Content" viewpage="**NULL**" listmodel="10011" defaultmodel="10001">
-		<attributes>
-			<attribute name="Title" attributetype="Text" searchable="true" indexingtype="TEXT">
-				<validations>
-					<required>true</required>
-				</validations>
-				<roles>
-					<role>jacms:title</role>
-				</roles>
-			</attribute>
-			<attribute name="Abstract" attributetype="Hypertext" indexingtype="TEXT" />
-			<attribute name="MainBody" attributetype="Hypertext" description="Main Body" indexingtype="TEXT" />
-			<attribute name="Picture" attributetype="Image" />
-			<attribute name="Caption" attributetype="Text" indexingtype="TEXT" />
-			<list name="Links" attributetype="Monolist">
-				<nestedtype>
-					<attribute name="Links" attributetype="Link" indexingtype="TEXT" />
-				</nestedtype>
-			</list>
-			<list name="Attaches" attributetype="Monolist">
-				<nestedtype>
-					<attribute name="Attaches" attributetype="Attach" indexingtype="TEXT" />
-				</nestedtype>
-			</list>
-		</attributes>
-	</contenttype>
-</contenttypes>
-
-');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
 <kieBpmConfig>
    <active>true</active>
@@ -375,5 +310,70 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','params',
 		<Param name="page_preview_hash">xaHj5I2VZ1jNO6nOGOTv</Param>
 	</ExtraParams>
 </Params>
+
+');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataobjectsubdir','Name of the sub-directory containing dataobject indexing files','index');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpmail_config','Configurazione del servizio di invio eMail','<?xml version="1.0" encoding="UTF-8"?>
+<mailConfig>
+	<senders>
+		<sender code="CODE1">EMAIL1@EMAIL.COM</sender>
+		<sender code="CODE2">EMAIL2@EMAIL.COM</sender>
+	</senders>
+	<smtp debug="false">
+		<host>localhost</host>
+		<port>25000</port>
+		<user></user>
+		<password></password>
+		<security>std</security>
+	</smtp>
+</mailConfig>');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','imageDimensions','Definition of the resized image dimensions','<Dimensions>
+	<Dimension>
+		<id>1</id>
+		<dimx>90</dimx>
+		<dimy>90</dimy>
+	</Dimension>
+	<Dimension>
+		<id>2</id>
+		<dimx>130</dimx>
+		<dimy>130</dimy>
+	</Dimension>
+	<Dimension>
+		<id>3</id>
+		<dimx>150</dimx>
+		<dimy>150</dimy>
+	</Dimension>
+</Dimensions>
+');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','subIndexDir','Name of the sub-directory containing content indexing files','index');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','contentTypes','Definition of the Content Types','<?xml version="1.0" encoding="UTF-8"?>
+<contenttypes>
+	<contenttype typecode="CNG" typedescr="Generic Content" viewpage="**NULL**" listmodel="10011" defaultmodel="10001">
+		<attributes>
+			<attribute name="Title" attributetype="Text" searchable="true" indexingtype="TEXT">
+				<validations>
+					<required>true</required>
+				</validations>
+				<roles>
+					<role>jacms:title</role>
+				</roles>
+			</attribute>
+			<attribute name="Abstract" attributetype="Hypertext" indexingtype="TEXT" />
+			<attribute name="MainBody" attributetype="Hypertext" description="Main Body" indexingtype="TEXT" />
+			<attribute name="Picture" attributetype="Image" />
+			<attribute name="Caption" attributetype="Text" indexingtype="TEXT" />
+			<list name="Links" attributetype="Monolist">
+				<nestedtype>
+					<attribute name="Links" attributetype="Link" indexingtype="TEXT" />
+				</nestedtype>
+			</list>
+			<list name="Attaches" attributetype="Monolist">
+				<nestedtype>
+					<attribute name="Attaches" attributetype="Attach" indexingtype="TEXT" />
+				</nestedtype>
+			</list>
+		</attributes>
+	</contenttype>
+</contenttypes>
 
 ');
