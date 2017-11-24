@@ -2942,27 +2942,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_confirmation','fsi_confirmation',NULL,'
-    <div class="customer-process-step ibox float-e-margins">
-        <div class="ibox-title">
-            <h5>Business details</h5>
-            <div class="ibox-tools">
-                <a class="collapse-link">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-
-            </div>
-        </div>
-        <div class="ibox-content">
-            <div class="row">
-                <div class="alert alert-success">
-                    <strong>Your request has been sent.</strong>
-                </div>
-            </div>
-
-        </div>
-    </div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
     <div class="customer-process-step ibox float-e-margins" data-process-name="Enrichment Upload Document" data-step-id="declaration">
@@ -3023,6 +3002,26 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_confirmation','fsi_confirmation',NULL,'    <div class="customer-process-step ibox float-e-margins" data-step-id="confirmation">
+        <div class="ibox-title">
+            <h5>Business details</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="alert alert-success">
+                    <strong>Your request has been sent.</strong>
+                </div>
+            </div>
+
         </div>
     </div>
 ',NULL,0);

@@ -99,7 +99,7 @@
 
         var loadDataTable = function (url, idTable) {
 
-            var urlPotwners = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/legalWorkerTasks.json";
+            var urlPotwners = context+"legalWorkerTasks.json";
 
             $.get(urlPotwners).then(function (data) {
                 return data.response.result.taskList.list || [];
