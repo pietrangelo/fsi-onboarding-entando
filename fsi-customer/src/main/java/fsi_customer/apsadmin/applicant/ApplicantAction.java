@@ -13,15 +13,15 @@ import com.agiletec.aps.system.services.user.User;
 import com.agiletec.apsadmin.system.ApsAdminSystemConstants;
 import com.agiletec.apsadmin.system.BaseAction;
 import fsi_customer.apsadmin.applicant.model.Applicant;
-import java.util.ArrayList;
-import java.util.List;
 import org.entando.entando.aps.system.services.userprofile.IUserProfileManager;
-import static org.entando.entando.apsadmin.user.UserAuthorizationAction.CURRENT_FORM_USER_AUTHS_PARAM_NAME;
-import org.entando.entando.apsadmin.user.UserAuthsFormBean;
 import org.entando.entando.plugins.jpkiebpm.aps.system.services.kie.IKieFormManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javax.servlet.http.HttpServletRequest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.entando.entando.apsadmin.user.UserAuthorizationAction.CURRENT_FORM_USER_AUTHS_PARAM_NAME;
 
 public class ApplicantAction extends BaseAction {
 

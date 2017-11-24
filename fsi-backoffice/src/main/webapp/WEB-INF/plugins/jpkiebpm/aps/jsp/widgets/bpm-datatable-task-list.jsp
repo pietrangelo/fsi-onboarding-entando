@@ -99,33 +99,37 @@
 
         var loadDataTable = function (url, idTable) {
 
-            var urlPotwners = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/userTask?user=${currentUser.username}";
+            var urlPotwners = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/legalWorkerTasks.json";
 
-            var itemsTask;
-            $.get(urlPotwners,function (data) {
-                itemsTask = data.response.result.taskList.list || [];
+            $.get(urlPotwners).then(function (data) {
+                return data.response.result.taskList.list || [];
+            }).done(function (legalTask) {
+               console.log('legalTask ',legalTask);
+
+                $.get(url, function (data) {
+                    console.log("data: ", data);
+                    var items = legalTask || []; //data.response.result.taskList.list || [] ;
+                    console.log("items: ", items);
+                    if (items) {
+
+                        items = items.map(function (item) {
+                            item['activated'] = new Date(item['activated']).toLocaleString();
+                            item['created'] = new Date(item['created']).toLocaleString();
+                            return item;
+                        });
+                    }
+
+                    var extraConfig = initDatatable(data.response.result.taskList.containerId);
+                    extraConfig.columnDefinition = data.response.result.taskList["datatable-field-definition"].fields;
+                    org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
+
+
+                });
+
             });
 
 
 
-            $.get(url, function (data) {
-                var items = itemsTask || []; //data.response.result.taskList.list || [] ;
-
-                if (items){
-
-                    items = items.map(function (item) {
-                        item['activated'] = new Date(item['activated']).toLocaleString();
-                        item['created'] = new Date(item['created']).toLocaleString();
-                        return item;
-                    });
-                }
-
-                var extraConfig = initDatatable(data.response.result.taskList.containerId);
-                extraConfig.columnDefinition = data.response.result.taskList["datatable-field-definition"].fields;
-                org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
-
-
-            });
         };
 
         var context = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/";
