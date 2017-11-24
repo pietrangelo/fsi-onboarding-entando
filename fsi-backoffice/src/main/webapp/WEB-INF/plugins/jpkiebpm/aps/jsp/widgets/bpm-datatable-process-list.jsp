@@ -51,22 +51,8 @@
 
         var context = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/";
         var url = context + "processInstanceList.json?configId=${id}";
-
-        var extraBtns = [
-            {
-                html: '<button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">VIEW</button>',
-                onClick: function (ev, data) {
-
-                    var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/account_executive_customer.page?';
-                    window.location = url;
-                }
-            }
-        ];
-
-
         var extraConfig = {
-            buttonsColumnTitle :"Actions",
-            buttons: extraBtns,
+            //buttons: extraBtns,
             onClickRow: function (ev, rowData) {
 
             }

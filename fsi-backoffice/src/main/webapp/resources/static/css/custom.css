@@ -2117,6 +2117,14 @@ h3.control-label{
     font-weight: 600;
     margin-bottom: 20px;
 }
+.alert-success-bpm{
+    color: #ffffff;
+    background-color: #1ab394;
+    border-color: #1ab394;
+    border-radius: 0px;
+    font-size: 17px;
+    font-family: "Open Sans";
+}
 
 @media (max-width: 767px){
     .mobile-background .container{
