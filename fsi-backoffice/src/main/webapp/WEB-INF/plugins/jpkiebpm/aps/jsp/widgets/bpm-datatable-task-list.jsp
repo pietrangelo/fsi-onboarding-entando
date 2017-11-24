@@ -99,17 +99,30 @@
 
         var loadDataTable = function (url, idTable) {
 
-            var urlPotwners = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/legalWorkerTasks.json";
+            var username = '${currentUser.username}';
 
-            $.get(urlPotwners).then(function (data) {
+            var urlPotOwners = "";
+
+            if (username === 'legal')
+                urlPotOwners = context + "legalWorkerTasks.json";
+            else if (username === 'knowledge') {
+                urlPotOwners = context + "knwoledgeWorkerTasks.json";
+            }
+
+
+            $.get(urlPotOwners).then(function (data) {
                 return data.response.result.taskList.list || [];
-            }).done(function (legalTask) {
-               console.log('legalTask ',legalTask);
+
+            }, function (error) {
+                return [];
+
+            }).always(function (tasks) {
+                console.log('tasks  ', tasks);
 
                 $.get(url, function (data) {
-                    console.log("data: ", data);
-                    var items = legalTask || []; //data.response.result.taskList.list || [] ;
-                    console.log("items: ", items);
+                    //console.log("data: ", data);
+                    var items = tasks || []; //data.response.result.taskList.list || [] ;
+                    //console.log("items: ", items);
                     if (items) {
 
                         items = items.map(function (item) {
@@ -127,7 +140,6 @@
                 });
 
             });
-
 
 
         };

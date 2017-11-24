@@ -179,8 +179,6 @@
         }
 
 
-
-
         function getBase64(file) {
 
             var def = $.Deferred();
@@ -212,13 +210,27 @@
 
         function getFirstTaskId() {
             var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/userTask.json?user=' + "${currentUser.username}";
-            return $.get(url).then(function (taskData) {
+            var def = $.Deferred();
+            $.get(url).then(function (taskData) {
                 var taskList = getDeep(taskData, 'response.result.taskList.list');
-                return Array.isArray(taskList) ? taskList : [taskList];
+                def.resolve(Array.isArray(taskList) ? taskList : [taskList]);
+            }, function (error) {
+                console.log(error, arguments);
+                var message = getDeep(error, "responseJSON.response.errors.error.message");
+                if (message && message === 'Tasks for user \'${currentUser.username}\' does not exist') {
+                    def.resolve([]);
+                }
+                else
+                    def.reject(error);
+
+
             });
+
+            return def.promise();
         }
 
         function getStepIndex(taskList) {
+            if (taskList.length === 0) return 3;
             var firstTask = taskList.find(function (task) {
                 return task.name === "Additional Client Details";
             });
@@ -230,7 +242,6 @@
         }
 
 
-
         function gotoNextStep() {
 
             var steps = $('.customer-process-step'),
@@ -240,7 +251,6 @@
                 nextStepSubmitBtn = nextStep.find('.customer-process-next');
 
 
-
             if (currentStepIndex < steps.length - 1) {
                 currentStep.removeClass('active');
                 nextStep.addClass('active');
@@ -248,15 +258,32 @@
 
                 getFirstTaskId().done(function (taskList) {
 
-                    if (currentStepIndex === -1 ) {
+                    if (currentStepIndex === -1) {
                         if (getStepIndex(taskList) === 2) {
                             nextStep.removeClass('active');
                             nextStep = $('.customer-process-step[data-step-id="declaration"]');
                             nextStep.addClass('active');
-                            for (var i = 0; i< 3; i++){
+                            for (var i = 0; i < 3; i++) {
                                 $('.bullet-progress-item').eq(i).addClass('active');
                             }
                         }
+                        else if (getStepIndex(taskList) === 3) {
+                            nextStep.removeClass('active');
+                            nextStep = $('.customer-process-step[data-step-id="confirmation"]');
+                            nextStep.addClass('active');
+                            for (var i = 0; i < 4; i++) {
+                                $('.bullet-progress-item').eq(i).addClass('active');
+                            }
+                        }
+
+
+                    }
+
+                    if (nextStep.attr('data-step-id') === 'confirmation') {
+                        $('.application-breadcrumbs-item').removeClass('active');
+
+                        $('.application-breadcrumbs-item').eq(2).addClass('active');
+
                     }
 
                     $('.customer-process-step.active').find('.customer-process-next')
@@ -268,7 +295,10 @@
                                 });
                         });
                 });
+
+
             }
+
         }
 
 
@@ -369,7 +399,7 @@
                             link: "mylink",
                             size: file.size,
                             lastModified: file.lastModified,
-                            content: result.substring(result.indexOf(',')+1)
+                            content: result.substring(result.indexOf(',') + 1)
                         };
 
                         var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/putTaskDoc';
@@ -418,3 +448,5 @@
 
 
 </script>
+
+

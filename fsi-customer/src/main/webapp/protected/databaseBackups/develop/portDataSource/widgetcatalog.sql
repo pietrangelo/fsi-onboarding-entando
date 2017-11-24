@@ -1,3 +1,36 @@
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi_confirmation','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Confirmation</property><property key="it">FSI Conferma</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-navigation_bar_inspinia','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Navigation - Bar</property>
+<property key="it">Navigazione - Barra Orizzontale</property>
+</properties>','<config>
+	<parameter name="navSpec">Rules for the Page List auto-generation</parameter>
+	<action name="navigatorConfig" />
+</config>',NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-account-user','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Account user</property><property key="it">FSI Account user</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-form-banking-services','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI form banking</property><property key="it">FSI form banking</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">BPM-Form by DataType</property>
+<property key="it">BPM-Form by DataType</property>
+</properties>','<config>
+	<parameter name="dataTypeCode">Data Type Code</parameter>
+	<parameter name="dataUxId">Data Ux ID</parameter>
+	<parameter name="widgetInfoId">Widget Info ID</parameter>
+	<action name="jpkiebpmBpmFormWidgetViewerConfig"/>
+</config>','jpkiebpm',NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-registration-form-advanced','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI registration advanced</property><property key="it">FSI registrazione avanzata</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-Declaration','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Declaration</property><property key="it">FSI Declaration</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('How-to-complete-instructions','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">How to complete instructions</property><property key="it">Registrazione how to</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
@@ -61,9 +94,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 ',NULL,NULL,NULL,NULL,1,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-application-progress','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI-application-progress</property><property key="it">FSI- progresso applicazione</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi_confirmation','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Confirmation</property><property key="it">FSI Conferma</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-legal-check','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI-legal-check</property><property key="it">FSI-legal-check</property></properties>
@@ -191,33 +221,3 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 <property key="en">Search Result</property>
 <property key="it">Search Result</property>
 </properties>',NULL,NULL,NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-navigation_bar_inspinia','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Navigation - Bar</property>
-<property key="it">Navigazione - Barra Orizzontale</property>
-</properties>','<config>
-	<parameter name="navSpec">Rules for the Page List auto-generation</parameter>
-	<action name="navigatorConfig" />
-</config>',NULL,NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-account-user','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Account user</property><property key="it">FSI Account user</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-form-banking-services','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI form banking</property><property key="it">FSI form banking</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">BPM-Form by DataType</property>
-<property key="it">BPM-Form by DataType</property>
-</properties>','<config>
-	<parameter name="dataTypeCode">Data Type Code</parameter>
-	<parameter name="dataUxId">Data Ux ID</parameter>
-	<parameter name="widgetInfoId">Widget Info ID</parameter>
-	<action name="jpkiebpmBpmFormWidgetViewerConfig"/>
-</config>','jpkiebpm',NULL,NULL,1,NULL);
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-registration-form-advanced','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI registration advanced</property><property key="it">FSI registrazione avanzata</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-Declaration','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Declaration</property><property key="it">FSI Declaration</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');

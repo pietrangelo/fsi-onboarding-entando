@@ -2758,6 +2758,39 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     <div class="col-md-6 col-md-offset-1">Copyright Example Company &copy; 2014-2015</div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_confirmation','fsi_confirmation',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<style>
+.fa.big-confirmation-icon {
+  font-size: 120px;
+  color: #6EC664;
+}
+.check-email-label {
+  font-weight: bold;
+  margin-top: 50px;
+}
+</style>
+<div class="customer-process-step ibox float-e-margins" data-step-id="confirmation">
+    <div class="ibox-title">
+        <h5>Confirmation</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+      <div class="jumbotron text-center">
+        <i class="fa fa-check-circle-o big-confirmation-icon" aria-hidden="true"></i>
+        <h1>
+          Procedure completed successfully
+        </h1>
+        <p class="check-email-label">
+          Please check your registered email for verification
+        </p>
+      </div>
+    </div>
+</div>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="row spacers">
@@ -2942,27 +2975,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_confirmation','fsi_confirmation',NULL,'
-    <div class="customer-process-step ibox float-e-margins">
-        <div class="ibox-title">
-            <h5>Business details</h5>
-            <div class="ibox-tools">
-                <a class="collapse-link">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-
-            </div>
-        </div>
-        <div class="ibox-content">
-            <div class="row">
-                <div class="alert alert-success">
-                    <strong>Your request has been sent.</strong>
-                </div>
-            </div>
-
-        </div>
-    </div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
     <div class="customer-process-step ibox float-e-margins" data-process-name="Enrichment Upload Document" data-step-id="declaration">
