@@ -99,7 +99,6 @@
     transition: all .3s ease-out;
 }
 .login-button:hover{
-
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -466,7 +465,14 @@ input[type=checkbox]:checked~#menu {
     width: 130px;
     height: 40px;
     font-size: 14px;
+    transition: all .3s ease-out;
 }
+
+.fsi-blue-button:hover{
+    background: #44dbff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 .title-welcome{
     width: 349px;color: #00659C;
     font-family: "Open Sans";
@@ -1807,17 +1813,19 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     background-color: #be0100;
     border-color: #be0100;
 }
-
 .logo-menu-pages .dropdown-menu a {
     font-size:14px !important;
     text-transform:capitalize;
 }
-
 .customer-process-step {
     display: none;
 }
-
 .customer-process-step.active {
     display: block;
 }
-
+.welcome-content{
+    margin: 4em 0 4em 0;
+}
+.credit-banner-right .fsi-cc-text {
+    font-size:1.2em;
+}

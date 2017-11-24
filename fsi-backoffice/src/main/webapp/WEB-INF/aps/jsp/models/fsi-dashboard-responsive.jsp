@@ -44,59 +44,56 @@
                         <wp:show frame="5"/>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="">
 
-                    <div class="col-md-8">
-                        <wp:show frame="6" />
+                        <div class="col-md-8">
+                            <wp:show frame="6" />
+                        </div>
+                        <div class="col-md-4">
+                            <wp:show frame="7" />
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <wp:show frame="7" />
+                    <div class="row">
+                        <div class="col-md-7">
+                            <wp:show frame="8" />
+                        </div>
+                        <div class="col-md-5">
+                            <wp:show frame="9" />
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-7">
-                        <wp:show frame="8" />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <wp:show frame="10" />
+                        </div>
+                        <div class="col-md-4">
+                            <wp:show frame="11"/>
+                        </div>
+                        <div class="col-md-4">
+                            <wp:show frame="12" />
+                        </div>
                     </div>
-                    <div class="col-md-5">
-                        <wp:show frame="9" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <wp:show frame="13" />
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <wp:show frame="10" />
-                    </div>
-                    <div class="col-md-4">
-                        <wp:show frame="11"/>
-                    </div>
-                    <div class="col-md-4">
-                        <wp:show frame="12" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <wp:show frame="13" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <wp:show frame="14" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <wp:show frame="14" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <wp:show frame="15" />
+        <div class="row">
+            <div class="col-md-12">
+                <wp:show frame="15" />
+            </div>
         </div>
-    </div>
-</div>
-</div>
-</body>
+    </body>
 </html>

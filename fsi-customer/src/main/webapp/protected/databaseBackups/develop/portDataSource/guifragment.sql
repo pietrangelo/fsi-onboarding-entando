@@ -1,3 +1,49 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="welcome-content">
+    <div class="row spacers">
+        <div class="col-md-12">
+            <p class="title-welcome">
+                WELCOME IN TO THE  FORTRESS BANK & LOAN
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p class="content-welcome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <p class="content-welcome">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
+            </p>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-BooleanAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-true''}" />">
+	<@wpsf.radio 
+		useTabindexAutoIncrement=true 
+		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
+		id="%{#attribute_id + ''-true''}" 
+		value="true"
+		checked="%{#attribute.value == true}" 
+		cssClass="radio" />
+		<@wp.i18n key="userprofile_YES" />
+</label>
+&#32;
+<label class="radio inline" for="<@s.property value="%{#attribute_id+''-false''}" />">
+	<@wpsf.radio 
+		useTabindexAutoIncrement=true 
+		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
+		id="%{#attribute_id + ''-false''}" 
+		value="false" 
+		checked="%{#attribute.value == false}" 
+		cssClass="radio" />
+		<@wp.i18n key="userprofile_NO" />
+</label>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-internal','banner-main-internal',NULL,'<div class=" left-banner middle-box-internal text-center">
 <p>Improving businesses&apos; life through meaningful services.
 </p>
@@ -391,6 +437,19 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       <div class="bb-expect-it">Expect it.</div>
     </div>
   </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES (' Credit-card-banner-right',' Credit-card-banner-right',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+ <div class="credit-banner-right"> 
+<div class="middle-box-cc">
+      <div class="fsi-cc-text">True! The Club Credit Card boasts a huge signup bonus, worth $1k when you redeem for $10k business expenses through Fortress Reward network. But that&apos;s not all. With this card, you&apos;ll earn 3X points in popular categories like travel, shipping, and advertising, on up to $150k/year. High-rate rewards and flexible redemption make the Club Credit Card our customers&apos; top peak for 2017.
+      </div>
+      <div class="fsi-cc-button-row">
+        <button class="fsi-blue-button">LEARN MORE</button>
+        <button class="fsi-blue-button">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <div class="customer-process-step fsi-form-banking-services">
     <div class="ibox float-e-margins">
@@ -1099,43 +1158,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
 		value="%{#numberAttributeValue}"
 		maxlength="254" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-BooleanAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-true''}" />">
-	<@wpsf.radio 
-		useTabindexAutoIncrement=true 
-		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
-		id="%{#attribute_id + ''-true''}" 
-		value="true"
-		checked="%{#attribute.value == true}" 
-		cssClass="radio" />
-		<@wp.i18n key="userprofile_YES" />
-</label>
-&#32;
-<label class="radio inline" for="<@s.property value="%{#attribute_id+''-false''}" />">
-	<@wpsf.radio 
-		useTabindexAutoIncrement=true 
-		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
-		id="%{#attribute_id + ''-false''}" 
-		value="false" 
-		checked="%{#attribute.value == false}" 
-		cssClass="radio" />
-		<@wp.i18n key="userprofile_NO" />
-</label>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES (' Credit-card-banner-right',' Credit-card-banner-right',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
- <div class="middle-box-cc">
-
-      <div class="fsi-cc-text">True! The Club Credit Card boasts a huge signup bonus, worth $1k when you redeem for $10k business expenses through Fortress Reward network. But that&apos;s not all. With this card, you&apos;ll earn 3X points in popular categories like travel, shipping, and advertising, on up to $150k/year. High-rate rewards and flexible redemption make the Club Credit Card our customers&apos; top peak for 2017.
-      </div>
-      <div class="fsi-cc-button-row">
-        <button class="fsi-blue-button">LEARN MORE</button>
-        <button class="fsi-blue-button">BOOK NOW</button>
-      </div>
-    </div>
-  </div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_IteratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -2791,25 +2813,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="row spacers">
-<div class="col-md-12">
-  <p class="title-welcome">
-   WELCOME IN TO THE  FORTRESS BANK & LOAN
-   </p>
-</div>
-<div class="col-md-6">
-<p class="content-welcome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
-</p>
-</div>
-
-<div class="col-md-6">
-  <p class="content-welcome">
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
-</p>
-</div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
 <p>Improving businesses&apos; life through meaningful services.
 </p>
