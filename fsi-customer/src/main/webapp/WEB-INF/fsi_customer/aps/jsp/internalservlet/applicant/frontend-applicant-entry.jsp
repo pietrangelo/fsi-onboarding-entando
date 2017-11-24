@@ -59,6 +59,24 @@
         </p>
 
         <div class="form-group">
+            <label class="login-label" for="applicant_username">username</label>
+            <!--            <label class="login-label" for="applicant_username"><wp:i18n key="jpapplicant_APPLICANT_USERNAME" /></label>-->
+            <input type="text" name="username" id="applicant_username" value="<s:property value="username" />"
+                   class="form-control input-custom"/>
+        </div>
+        <div class="form-group">
+            <label class="login-label" for="applicant_pwd"><wp:i18n key="jpapplicant_APPLICANT_PWD"/></label>
+            <input type="password" name="pwd" id="applicant_pwd" value="<s:property value="pwd" />"
+                   class="form-control input-custom"/>
+        </div>
+        <div class="form-group">
+            <label class="login-label" for="applicant_cnfpwd">confirm password</label>
+            <!--            <label class="login-label" for="applicant_cnfpwd"><wp:i18n key="jpapplicant_APPLICANT_CNFPWD" /></label>-->
+            <input type="password" name="cnfpwd" id="applicant_cnfpwd" value="<s:property value="cnfpwd" />"
+                   class="form-control input-custom"/>
+        </div>
+
+        <div class="form-group">
             <label class="login-label" for="applicant_firstname"><wp:i18n
                     key="jpapplicant_APPLICANT_FIRSTNAME"/></label>
             <input type="text" name="firstname" id="applicant_firstname" value="<s:property value="firstname" />"
@@ -79,23 +97,7 @@
             <input type="text" name="email" id="applicant_email" value="<s:property value="email" />"
                    class="form-control input-custom"/>
         </div>
-        <div class="form-group">
-            <label class="login-label" for="applicant_username">username</label>
-            <!--            <label class="login-label" for="applicant_username"><wp:i18n key="jpapplicant_APPLICANT_USERNAME" /></label>-->
-            <input type="text" name="username" id="applicant_username" value="<s:property value="username" />"
-                   class="form-control input-custom"/>
-        </div>
-        <div class="form-group">
-            <label class="login-label" for="applicant_pwd"><wp:i18n key="jpapplicant_APPLICANT_PWD"/></label>
-            <input type="password" name="pwd" id="applicant_pwd" value="<s:property value="pwd" />"
-                   class="form-control input-custom"/>
-        </div>
-        <div class="form-group">
-            <label class="login-label" for="applicant_cnfpwd">confirm password</label>
-            <!--            <label class="login-label" for="applicant_cnfpwd"><wp:i18n key="jpapplicant_APPLICANT_CNFPWD" /></label>-->
-            <input type="password" name="cnfpwd" id="applicant_cnfpwd" value="<s:property value="cnfpwd" />"
-                   class="form-control input-custom"/>
-        </div>
+
         <div class="form-group">
             <input type="hidden" name="procid" id="applicant_procid" value="<s:property value="procid" />">
             <input type="hidden" name="type" id="applicant_type" value="">
