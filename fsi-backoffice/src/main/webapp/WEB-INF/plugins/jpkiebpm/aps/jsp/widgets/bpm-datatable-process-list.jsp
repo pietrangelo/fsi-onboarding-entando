@@ -50,7 +50,7 @@
         var configId = "${id}";
 
         var context = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/";
-        var url = context + "processInstanceList.json?configId=${id}";
+        var url = context + "processInstanceListPlus.json?configId=${id}";
         var extraConfig = {
             //buttons: extraBtns,
             onClickRow: function (ev, rowData) {
