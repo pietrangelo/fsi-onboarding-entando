@@ -1,16 +1,3 @@
-INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('legal_dashboard','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Compliance Manager Dashboard</property><property key="it">Compliance Manager Dashboard</property></properties>
-','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="legal_worker" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-24 08:58:34');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_customer','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Account Executive Customer</property><property key="it">Account Executive Customer</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -64,19 +51,6 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-10-31 17:27:00');
-INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('client_onboarding_manager','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Client Onboarding Manager</property><property key="it">Client Onboarding Manager</property></properties>
-','fsi-client-onboarding',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="client_manager" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-09 08:18:39');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('form_mobile','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Form Mobile</property><property key="it">Form Mobile</property></properties>
 ','fsi-dashboard-responsive',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -116,3 +90,29 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-11-16 15:15:53');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('client_onboarding_manager','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Client Onboarding Manager</property><property key="it">Client Onboarding Manager</property></properties>
+','fsi-client-onboarding',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="client_manager" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-24 15:34:44');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('legal_dashboard','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Compliance Manager Dashboard</property><property key="it">Compliance Manager Dashboard</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="legal_worker" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-24 15:54:12');
