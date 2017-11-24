@@ -1147,6 +1147,23 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         }
     });
 </script>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="fsi-customer-rate">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer rate</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div>
+            <div id="torta"></div>
+        </div>
+    </div>
+</div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Boolean',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -1428,23 +1445,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_profileChangeConfirmation',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <h1><@wp.i18n key="userprofile_EDITPROFILE_TITLE" /></h1>
 <p><@wp.i18n key="userprofile_PROFILE_UPDATED" /></p>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="fsi-customer-rate">
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Customer rate</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div>
-            <div id="torta"></div>
-        </div>
-    </div>
-</div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_detail_include',NULL,NULL,'','<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -1655,6 +1655,40 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	id="%{attribute_id}"  
 	headerKey="" headerValue="" 
 	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-verification','fsi-customer-verification',NULL,'<div class="fsi-customer-information ibox float-e-margins">
+  <div class="ibox-title">
+    <h5>Stage</h5>
+    <div class="ibox-tools">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="fa fa-wrench"></i>
+      </a>
+      <a class="collapse-link">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+  </div>
+  <div class="ibox-content">
+    <div class="fsi-verification-header-row">
+      <h2 style="display: inline-block">Verification</h2>
+      <span class="label label-primary pull-right">ON TRACK</span>
+    </div>
+    <div class="progressbar-label">40%</div>
+    <div class="progress progress-bar-default">
+      <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
+    
+      </div>
+    </div>
+    <p>
+      <b>Expected Delivery Date: </b>2/16/2017
+    </p>
+    <p>
+      <b>Signup Date: </b>2/2/2017
+    </p>
+    <div style="text-align: right">
+      <button class="btn btn-w-m btn-success">CONTACT CUSTOMER</button>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2033,6 +2067,30 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       <div class="application-breadcrumbs-text">Account creation</div>
     </div>
   </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-performance','fsi-performance',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Performance</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        <div>
+            <div style="text-align: right">
+                <small>Last update 3 min ago</small>
+            </div>
+            <div class="progress progress-mini">
+                <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90"
+                     class="progress-bar progress-bar-success"></div>
+            </div>
+            <small>Well Done!You completed 2360 task. You have 140 tasks to complete activities.</small>
+        </div>
+    </div>
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
@@ -2643,6 +2701,12 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </#if>
 
 <@wp.freemarkerTemplateParameter var="previousPage" valueName="" removeOnEndTag=true />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-chandler-hi-dashboard','fsi-chandler-hi-dashboard',NULL,'<h2>Hi Chandler</h2> 
+  <ol class="breadcrumb">
+    <li>
+   <a href="#">Dashboard</a>
+   </li>
+</ol>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_attributeInfo-help-block',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -3722,70 +3786,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-verification','fsi-customer-verification',NULL,'<div class="fsi-customer-information ibox float-e-margins">
-  <div class="ibox-title">
-    <h5>Stage</h5>
-    <div class="ibox-tools">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-wrench"></i>
-      </a>
-      <a class="collapse-link">
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
-  </div>
-  <div class="ibox-content">
-    <div class="fsi-verification-header-row">
-      <h2 style="display: inline-block">Verification</h2>
-      <span class="label label-primary pull-right">ON TRACK</span>
-    </div>
-    <div class="progressbar-label">40%</div>
-    <div class="progress progress-bar-default">
-      <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
-    
-      </div>
-    </div>
-    <p>
-      <b>Expected Delivery Date: </b>2/16/2017
-    </p>
-    <p>
-      <b>Signup Date: </b>2/2/2017
-    </p>
-    <div style="text-align: right">
-      <button class="btn btn-w-m btn-success">CONTACT CUSTOMER</button>
-    </div>
-  </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-performance','fsi-performance',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Performance</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="ibox-content">
-
-        <div>
-            <div style="text-align: right">
-                <small>Last update 3 min ago</small>
-            </div>
-            <div class="progress progress-mini">
-                <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90"
-                     class="progress-bar progress-bar-success"></div>
-            </div>
-            <small>Well Done!You completed 2360 task. You have 140 tasks to complete activities.</small>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-chandler-hi-dashboard','fsi-chandler-hi-dashboard',NULL,'<h2>Hi Chandler</h2> 
-  <ol class="breadcrumb">
-    <li>
-   <a href="#">Dashboard</a>
-   </li>
-</ol>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">
