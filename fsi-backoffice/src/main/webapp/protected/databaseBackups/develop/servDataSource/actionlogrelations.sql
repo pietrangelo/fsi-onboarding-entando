@@ -131,6 +131,8 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (263,'client_manager')
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (263,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (267,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (267,'legal_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (272,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (274,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (167,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (167,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (83,'free');
@@ -284,6 +286,8 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (3,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (4,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (265,'client_manager');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (265,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (276,'account_executive');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (270,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (5,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (6,'free');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (7,'free');

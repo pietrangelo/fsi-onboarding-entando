@@ -24,6 +24,19 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-11-24 15:54:12');
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_dashboard','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Account Executive Dashboard</property><property key="it">Account Executive Dashboard</property></properties>
+','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <extragroups>
+    <group name="account_executive" />
+  </extragroups>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-11-24 17:41:03');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('errorpage','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Error page</property>
@@ -65,19 +78,6 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 </config>
 
 ','2017-11-16 15:15:53');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_dashboard','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Account Executive Dashboard</property><property key="it">Account Executive Dashboard</property></properties>
-','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-  <extragroups>
-    <group name="account_executive" />
-  </extragroups>
-  <charset>utf-8</charset>
-  <mimeType>text/html</mimeType>
-</config>
-
-','2017-11-16 10:53:19');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('backoffice','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">backoffice</property><property key="it">backoffice</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>

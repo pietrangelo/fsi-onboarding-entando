@@ -2,9 +2,6 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('cl
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('backoffice',13,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="widgetInfoId">231</property></properties>
-');
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',15,'generic-footer',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('homepage',9,'Login-Customer',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('form_mobile',4,'dropdown_menu_responsive',NULL);
@@ -47,4 +44,7 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('cl
 ');
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="widgetInfoId">266</property></properties>
+');
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="widgetInfoId">275</property></properties>
 ');
