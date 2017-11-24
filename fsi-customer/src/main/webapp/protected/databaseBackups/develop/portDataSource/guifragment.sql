@@ -220,57 +220,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('default_pagerInfo_is',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <p><@s.text name="note.searchIntro" />&#32;<@s.property value="#group.size" />&#32;<@s.text name="note.searchOutro" />.<br />
 <@s.text name="label.page" />: [<@s.property value="#group.currItem" />/<@s.property value="#group.maxItem" />].</p>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="welcome-content">
-    <div class="row spacers">
-        <div class="col-md-12">
-            <p class="title-welcome">
-                WELCOME IN TO THE  FORTRESS BANK & LOAN
-            </p>
-        </div>
-        <div class="col-md-6">
-            <p class="content-welcome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
-            </p>
-        </div>
-
-        <div class="col-md-6">
-            <p class="content-welcome">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
-            </p>
-        </div>
-    </div>
-</div>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-BooleanAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-true''}" />">
-	<@wpsf.radio 
-		useTabindexAutoIncrement=true 
-		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
-		id="%{#attribute_id + ''-true''}" 
-		value="true"
-		checked="%{#attribute.value == true}" 
-		cssClass="radio" />
-		<@wp.i18n key="userprofile_YES" />
-</label>
-&#32;
-<label class="radio inline" for="<@s.property value="%{#attribute_id+''-false''}" />">
-	<@wpsf.radio 
-		useTabindexAutoIncrement=true 
-		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
-		id="%{#attribute_id + ''-false''}" 
-		value="false" 
-		checked="%{#attribute.value == false}" 
-		cssClass="radio" />
-		<@wp.i18n key="userprofile_NO" />
-</label>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-internal','banner-main-internal',NULL,'<div class=" left-banner middle-box-internal text-center">
-<p>Improving businesses&apos; life through meaningful services.
-</p>
-<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
     <div class="customer-process-step ibox float-e-margins" data-process-name="Additional Client Details" data-step-id="businessDetails">
@@ -370,7 +319,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                     </div>
                     <div class="form-group">
                         <label class="login-label">BIC</label>
-                        <input type="number" id="bic" name="bic" placeholder="BIC" class="form-control input-custom"/>
+                        <input type="text" id="bic" name="bic" placeholder="BIC" class="form-control input-custom"/>
                     </div>
 
                 </div>
@@ -417,6 +366,57 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
     </script>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Welcome-content','Welcome-content',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="welcome-content">
+    <div class="row spacers">
+        <div class="col-md-12">
+            <p class="title-welcome">
+                WELCOME IN TO THE  FORTRESS BANK & LOAN
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p class="content-welcome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <p class="content-welcome">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci justo, aliquam id tempor sit amet, feugiat pharetra quam. Suspendisse quis vulputate quam, sed ultricies lectus. Etiam in pulvinar mauris. Vivamus et tellus nunc. Cras id erat ut nulla interdum posuere vel vel nisl. Aenean sit amet arcu rhoncus arcu cursus volutpat ut posuere ligula. Nulla vel auctor diam. Cras quis condimentum lacus. Nullam et urna vehicula, porttitor tortor ut, tincidunt tortor.
+            </p>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-BooleanAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<label class="radio inline" for="<@s.property value="%{#attribute_id + ''-true''}" />">
+	<@wpsf.radio 
+		useTabindexAutoIncrement=true 
+		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
+		id="%{#attribute_id + ''-true''}" 
+		value="true"
+		checked="%{#attribute.value == true}" 
+		cssClass="radio" />
+		<@wp.i18n key="userprofile_YES" />
+</label>
+&#32;
+<label class="radio inline" for="<@s.property value="%{#attribute_id+''-false''}" />">
+	<@wpsf.radio 
+		useTabindexAutoIncrement=true 
+		name="%{#attributeTracer.getFormFieldName(#attribute)}" 
+		id="%{#attribute_id + ''-false''}" 
+		value="false" 
+		checked="%{#attribute.value == false}" 
+		cssClass="radio" />
+		<@wp.i18n key="userprofile_NO" />
+</label>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-internal','banner-main-internal',NULL,'<div class=" left-banner middle-box-internal text-center">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <div class="middle-box loginscreen animated fadeInDown">
     <#if (Session.currentUser.username != "guest") >
