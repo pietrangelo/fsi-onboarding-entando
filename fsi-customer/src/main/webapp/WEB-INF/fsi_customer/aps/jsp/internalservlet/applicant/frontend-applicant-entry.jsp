@@ -59,7 +59,7 @@
         </p>
 
         <div class="form-group">
-            <label class="login-label" for="applicant_username">username</label>
+            <label class="login-label" for="applicant_username">Username</label>
             <!--            <label class="login-label" for="applicant_username"><wp:i18n key="jpapplicant_APPLICANT_USERNAME" /></label>-->
             <input type="text" name="username" id="applicant_username" value="<s:property value="username" />"
                    class="form-control input-custom"/>
@@ -70,7 +70,7 @@
                    class="form-control input-custom"/>
         </div>
         <div class="form-group">
-            <label class="login-label" for="applicant_cnfpwd">confirm password</label>
+            <label class="login-label" for="applicant_cnfpwd">Confirm password</label>
             <!--            <label class="login-label" for="applicant_cnfpwd"><wp:i18n key="jpapplicant_APPLICANT_CNFPWD" /></label>-->
             <input type="password" name="cnfpwd" id="applicant_cnfpwd" value="<s:property value="cnfpwd" />"
                    class="form-control input-custom"/>
