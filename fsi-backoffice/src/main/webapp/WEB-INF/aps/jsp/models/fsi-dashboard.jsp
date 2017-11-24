@@ -16,83 +16,276 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 
         <c:import url="/WEB-INF/aps/jsp/models/inc/content_inline_editing.jsp" />
-        <c:import url="/WEB-INF/aps/jsp/models/inc/header-inclusions_1.jsp" />
+        <c:import url="/WEB-INF/aps/jsp/models/inc/header-inclusions.jsp" />
 
     </head>
-    <body class="mobile-background">
-        <nav class="navbar navbar-default fsi-navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-                    </button>
-                    <a class="navbar-brand" href="#"></a>
-                    <img class="brand-img" alt="Brand" src="/fsi-backoffice/resources/static/img/shield-logo.png">
-                    <span class="brand-company">SIGN UP</span>
-                    <p class="brand-company-subtitle">Register a new business</p>
+    <body class="pace-done mini-navbar">
+        <div id="wrapper">
+
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="side-menu">
+                        <li class="nav-header">
+                            <div class="dropdown profile-element">
+                                <span>
+                                    <img alt="image" class="" src="/fsi-backoffice/resources/static/img/shield-logo.png">
+                                </span>
+                            </div>
+                            <div class="logo-element">
+                                <img alt="image" class="" src="/fsi-backoffice/resources/static/img/shield-logo.png">
+                            </div>
+                        </li>
+                        <li class="active">
+                            <!--<a href="<wp:url page="customer_internal" />" ><i class="fa fa-th-large"></i></a>-->
+                            <a href="#" ><i class="fa fa-tachometer"></i></a>
+                        </li>
+                        <li>
+                            <!--<a href="<wp:url page="customer_internal" />" ><i class="fa fa-diamond"></i></a>-->
+                            <a href="#"><i class="fa fa-user"></i></a>
+                        </li>
+                    </ul>
 
                 </div>
+            </nav>
 
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right ">
-                        <wp:show frame="0" />
-                        <wp:show frame="1" />
-                        <wp:show frame="2"/>
-                        <wp:show frame="4" />
-                        <wp:show frame="5"/>
+            <div id="page-wrapper" class="gray-bg dashbard-1">
+                <div class="row border-bottom">
+                    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                        <div class="navbar-header">
+                            <div class="logo-names">
+                                <wp:show frame="0" />
+                                <b>FORTRESS -</b>
+                                <span>Bank &amp; Loan</span>
+
+
+                            </div>
+                        </div>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <wp:show frame="1" />
+                                <span class="m-r-sm  welcome-message"></span>
+                            </li>
+                            <li class="dropdown">
+                                <wp:show frame="2" />
+
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-envelope-o"></i>  <span class="label label-warning">16</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-messages">
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <img alt="image" class="img-circle" src="img/a7.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <small class="pull-right">46h ago</small>
+                                                <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                                <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <img alt="image" class="img-circle" src="img/a4.jpg">
+                                            </a>
+                                            <div class="media-body ">
+                                                <small class="pull-right text-navy">5h ago</small>
+                                                <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                                <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="dropdown-messages-box">
+                                            <a href="profile.html" class="pull-left">
+                                                <img alt="image" class="img-circle" src="img/profile.jpg">
+                                            </a>
+                                            <div class="media-body ">
+                                                <small class="pull-right">23h ago</small>
+                                                <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                                <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a href="#">
+                                                <i class="fa fa-envelope-o"></i> <strong>Read All Messages</strong>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <wp:show frame="3" />
+
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="false">
+                                    <i class="fa fa-bell-o"></i>  <span class="label label-primary">8</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-alerts">
+                                    <li>
+                                        <a href="mailbox.html">
+                                            <div>
+                                                <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="profile.html">
+                                            <div>
+                                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                                <span class="pull-right text-muted small">12 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="grid_options.html">
+                                            <div>
+                                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a href="notifications.html">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <wp:show frame="4" />
+                            </li>
+                            <li>
+                                <wp:show frame="5" />
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-        </nav>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="wrapper wrapper-content">
 
-                        <div class="col-md-8">
-                            <wp:show frame="6" />
+
+                            <wp:ifauthorized groupName="knowledge_worker">
+                                <div class="fsi-customer-header">
+                                    <h2>Hi Chandler Bing</h2>
+                                    <ol class="breadcrumb">
+                                        <li>
+                                            <a href="#"><wp:currentPage param="title" /></a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </wp:ifauthorized>
+
+                            <wp:ifauthorized groupName="legal_worker">
+
+                                <style>
+                                    .navbar-fixed-top, .navbar-static-top {
+                                        background: #2A125A;
+                                    }
+                                    .metismenu > li.active {
+                                        border-left: 4px solid #8959E9;
+                                        background: #1B083F;
+                                    }
+                                    #wrapper {
+                                        width: 100%;
+                                        overflow-x: hidden;
+                                        background: #2a125a;
+                                    }
+                                    .logo-element {
+                                        text-align: center;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        color: white;
+                                        display: none;
+                                        padding: 9px 0;
+                                        background: #2a125a;
+                                    }
+                                </style>
+
+
+                                <div class="fsi-customer-header">
+                                    <h2>Hi Monica Brown </h2>
+                                    <ol class="breadcrumb">
+                                        <li>
+                                            <a href="#"><wp:currentPage param="title" /></a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </wp:ifauthorized>
+                            <wp:ifauthorized groupName="account_executive">
+                                <div class="fsi-customer-header">
+                                    <h2>Hi John Williams </h2>
+                                    <ol class="breadcrumb">
+                                        <li>
+                                            <a href="#"><wp:currentPage param="title" /></a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </wp:ifauthorized>
+
+
+                            <div class="col-md-12">
+                                <wp:ifauthorized groupName="account_executive">
+                                    <a class="btn btn-success pull-right" href="<wp:url page="form_mobile" />" ><i class="fa fa-plus" aria-hidden="true"></i> &nbsp;Add Customer</a>
+                                </wp:ifauthorized>
+                            </div>
+
+                            <div class="col-md-8">
+                                <wp:show frame="6" />
+                            </div>
+                            <div class="col-md-4">
+                                <wp:show frame="7"/>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <wp:show frame="7" />
+                        <div class="row">
+                            <div class="col-md-7">
+                                <wp:show frame="8"/>
+                            </div>
+                            <div class="col-md-5">
+                                <wp:show frame="9"/>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7">
-                            <wp:show frame="8" />
+                        <div class="row">
+                            <div class="col-md-4">
+                                <wp:show frame="10" />
+                            </div>
+                            <div class="col-md-4">
+                                <wp:show frame="11"/>
+                            </div>
+                            <div class="col-md-4">
+                                <wp:show frame="12"/>
+                            </div>
                         </div>
-                        <div class="col-md-5">
-                            <wp:show frame="9" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <wp:show frame="13"/>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <wp:show frame="10" />
-                        </div>
-                        <div class="col-md-4">
-                            <wp:show frame="11"/>
-                        </div>
-                        <div class="col-md-4">
-                            <wp:show frame="12" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <wp:show frame="13" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <wp:show frame="14" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <wp:show frame="14"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <wp:show frame="15" />
+
+                <div class="row" style="margin-top:3em;">
+                    <wp:show frame="15"/>
+                </div>
             </div>
         </div>
     </body>
