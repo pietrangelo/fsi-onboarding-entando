@@ -94,11 +94,16 @@
     margin-bottom: 33px;
 }
 .login-button{
-    /* background:#35CAED !important; */
     border-radius: 0 !important;
-    /* border: 1px solid #36caed; */
     margin: 11px 0 0 0;
+    transition: all .3s ease-out;
 }
+.login-button:hover{
+
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
 .login-label{
     color: #676A6C;
     font-family: "Open Sans";
@@ -361,6 +366,10 @@ input[type=checkbox]:checked~#menu {
     height: 530px;
     max-width: 365px;
     margin-bottom: 50px;
+    transition: all .3s ease-out;
+}
+.box-loan:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .box-title-loan {
@@ -513,6 +522,9 @@ input[type=checkbox]:checked~#menu {
 .bpm-wrapper-background{
     padding: 1em;
     background-color: #FAFAFA;
+    margin: 44px 0 0 0;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .right-side-button{
     text-align: right;
@@ -716,6 +728,13 @@ a.dropdown-fsi-login{
     line-height: 22px;
     text-transform: uppercase;
     color:#fff;
+    transition: all .7s ease;
+}
+.logo-menu-pages a:hover{
+    padding:1em 0 1em 0 ;
+    background:#0e5075;
+    color:#fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .fsi-customer-overview {
