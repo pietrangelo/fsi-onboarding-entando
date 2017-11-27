@@ -4479,10 +4479,10 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
 
             var MOCK_FIELD_DATA = [
-                {name: ''Company Name'', value: ''-''},
-                {name: ''Name'', value: ''-''},
-                {name: ''Phone'', value: ''-''},
-                {name: ''Email'', value: ''-''}
+                {name: ''Company Name'', value: ''Interstellar Inc.''},
+                {name: ''Name'', value: ''Mickey Mouse''},
+                {name: ''Phone'', value: ''7605551212''},
+                {name: ''Email'', value: ''info@interstellar.com''}
             ];
 
             function updateApproveRejectForm() {
