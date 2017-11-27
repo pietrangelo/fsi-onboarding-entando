@@ -34,6 +34,9 @@
             $.get(url, function (data) {
 
                 var items = data.response.result.processInstanceList.list || [];
+                if (!Array.isArray(items)) {
+                    items = [items]
+                }
                 items = items.map(function (item) {
                     item['start-date'] = new Date(item['start-date']).toLocaleString();
                     item['dueDate'] = new Date(item['dueDate']).toLocaleString();
