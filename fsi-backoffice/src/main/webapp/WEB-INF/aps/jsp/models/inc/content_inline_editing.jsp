@@ -199,7 +199,7 @@
                     iframe.contentWindow.postMessage("ID_CUSTOMER.pdf", "*");
                 </wp:ifauthorized>
                 <wp:ifauthorized groupName="legal_worker">
-                    iframe.contentWindow.postMessage("compressed.tracemonkey-pldi-09.pdf", "*");
+                    iframe.contentWindow.postMessage("f941.pdf", "*");
                 </wp:ifauthorized>
 
 
