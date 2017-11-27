@@ -29,7 +29,7 @@
 
     $(document).ready(function () {
 
-        var loadDataTable = function (url, idTable, extraConfig) {
+        var loadDataTable = function (url, idTable) {
 
             $.get(url, function (data) {
 
@@ -44,42 +44,33 @@
                         case 3 : item['status'] ='Completed'; break;
                     }
                     delete item['@xsi.type'];
+                    var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/account_executive_customer.page?configId=${id}&processInstanceId='+item['process-instance-id'];
+
+                    item['viewLink'] = '<a href ="'+url+'"><button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">VIEW</button></a>';
 
                     return item;
                 });
 
+                var extraConfig= {};
 
                 extraConfig.columnDefinition = data.response.result.processInstanceList["datatable-field-definition"].fields;
+                extraConfig.columnDefinition.push({
+                    "title": "Actions",
+                    "data": "viewLink",
+                    "visible": true,
+                    "position": -1
+
+                });
                 org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
 
             });
         }
 
-        console.log('processlist');
-        var configId = "${id}";
 
         var context = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/";
         var url = context + "processInstanceListPlus.json?configId=${id}";
 
-        var extraBtns = [
-            {
-                html: '<button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">VIEW</button>',
-                onClick: function (ev, data) {
-                    var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/account_executive_customer.page';
-                    window.location = url;
-                }
-            }
-        ];
-
-
-        var extraConfig = {
-            buttonsColumnTitle: "Actions",
-            buttons: extraBtns,
-            onClickRow: function (ev, rowData) {
-
-            }
-        };
-        loadDataTable(url, '#data-table-process-list',extraConfig);
+        loadDataTable(url, '#data-table-process-list');
 
     });
 </script>

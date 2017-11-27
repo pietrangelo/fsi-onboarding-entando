@@ -6,20 +6,25 @@
             background: #404040;
             min-height: 700px;
         }
+
         .pdf-stuff {
             flex-grow: 10;
         }
+
         #pdf-viewer {
             border: none;
         }
+
         .form-stuff {
             flex-grow: 2;
             width: 300;
         }
+
         #fsi-pdf-check {
             padding: 0 10px;
             font-family: "Open Sans", sans-serif;
         }
+
         #fsi-pdf-check-info .semibold {
             font-weight: 600;
         }
@@ -52,7 +57,6 @@
             color: #676A6C;
         }
 
-
         .fsi-pdf-check-info .tab-content {
             background: #FFFFFF;
             padding: 10px;
@@ -63,6 +67,7 @@
         .fsi-pdf-check-info .tab-panel {
             display: none;
         }
+
         .fsi-pdf-check-info .tab-panel.active {
             display: block;
         }
@@ -70,7 +75,6 @@
         .fsi-pdf-check-info .tab-panel > div {
             margin-bottom: 5px;
         }
-
 
         .fsi-pdf-check-fields .pdf-field-row {
             margin-top: 15px;
@@ -99,14 +103,17 @@
             width: 0px;
             overflow: hidden;
         }
+
         .fsi-pdf-check-fields .pdf-field.marked .pdf-field-row:before {
             width: 30px;
             transition: width 300ms;
         }
+
         .fsi-pdf-check-fields .pdf-field.approved .pdf-field-row:before {
             content: "\f00c";
             background: #00ab89;
         }
+
         .fsi-pdf-check-fields .pdf-field.rejected .pdf-field-row:before {
             content: "\f00d";
             background: #be0100;
@@ -120,11 +127,13 @@
         .fsi-pdf-check-fields .pdf-field .pdf-field-labels {
             padding: 5px 10px;
         }
+
         .fsi-pdf-check-fields .pdf-field .pdf-field-value {
             display: none;
             font-size: 20px;
             font-weight: 300;
         }
+
         .fsi-pdf-check-fields .pdf-field.expanded .pdf-field-value {
             display: block;
         }
@@ -158,7 +167,6 @@
             transition: height 300ms, margin-top 300ms;
         }
 
-
         .fsi-pdf-check-fields .approve-reject-buttons .block-btn {
             flex-grow: 1;
             border: none;
@@ -166,9 +174,11 @@
             color: #FFFFFF;
             height: 60px;
         }
+
         .fsi-pdf-check-fields .approve-reject-buttons .block-btn.reject-btn {
             background: #be0100;
         }
+
         .fsi-pdf-check-fields .approve-reject-buttons .block-btn.approve-btn {
             background: #00ab89;
         }
@@ -178,14 +188,17 @@
             display: none;
             margin-top: 15px;
         }
+
         .fsi-pdf-approve-reject .reject-form-notes {
             background: #FFFFFF;
         }
+
         .fsi-pdf-approve-reject .reject-form-notes .notes-title {
             padding: 15px 10px;
             margin: 0;
             border-bottom: 1px solid #C4C4C4;
         }
+
         .fsi-pdf-approve-reject .reject-form-notes .notes-textarea {
             padding: 15px 10px;
         }
@@ -204,54 +217,16 @@
             width: 100%;
             height: 30px;
         }
+
         .fsi-pdf-approve-reject .big-button.approve-btn {
             background: #00ab89;
         }
+
         .fsi-pdf-approve-reject .big-button.reject-btn {
             background: #be0100;
         }
 
     </style>
-
-    <script>
-        $(function(){
-
-            function getQueryVariable(variable){
-                var query = window.location.search.substring(1);
-                var vars = query.split("&");
-                for (var i=0;i<vars.length;i++) {
-                    var pair = vars[i].split("=");
-                    if(pair[0] == variable){return pair[1];}
-                }
-                return(false);
-            };
-
-            var loadUserInfo = function(continerId, taskId){
-                //http://localhost:8080/fsi-backoffice/api/rs/en/jpkiebpm/taskInputOutput.json?
-                var url = '<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/taskInputOutput.json?containerId='+containerId+'&taskId='+taskId;
-                console.log(url);
-                $.get(url, function (data) {
-                    var obj = data.response.result.processObj;
-                    var keys = Object.keys(obj);
-                    keys.forEach(function(key){
-                        $('.data-field-'+key).text(obj[key]);
-                    })
-
-                    console.log(data);
-                });
-
-            };
-            var containerId = getQueryVariable('containerId');
-            var taskId = getQueryVariable('taskId');
-            loadUserInfo(containerId,taskId);
-
-        });
-
-    </script>
-
-
-
-
 
 
     <div class="ibox float-e-margins">
@@ -268,41 +243,13 @@
                 <div class="row"><br></div>
                 <div class="pdf-wrapper">
                     <div class="pdf-stuff">
-                        <iframe id="pdf-viewer" style="width: 100%; height: 100%;" allowfullscreen="" webkitallowfullscreen="" ></iframe>
+                        <iframe id="pdf-viewer" style="width: 100%; height: 100%;" allowfullscreen=""
+                                webkitallowfullscreen=""></iframe>
                     </div>
                     <div class="form-stuff ">
 
                         <!-- ------------------------------------ PDF check -------------------------------------------- -->
                         <div id="fsi-pdf-check">
-
-                            <div class="fsi-pdf-check-info">
-                                <div class="tabs-row">
-                                    <button class="active" data-tab-id="userInfo">User Info</button>
-                                    <button data-tab-id="businessInfo">Business Info</button>
-                                </div>
-                                <div class="tab-content">
-                                    <div class="tab-panel active" data-tab-id="userInfo">
-                                        <div>
-                                            <div class="semibold">Name</div>
-                                            <div class="data-field-cname"></div>
-                                        </div>
-                                        <div>
-                                            <div class="semibold">Phone</div>
-                                            <div class="data-field-phone">-</div>
-                                        </div>
-                                        <div>
-                                            <div class="semibold">Email</div>
-                                            <div class="data-field-pemail">-</div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-panel" data-tab-id="businessInfo">
-                                        <div>
-                                            <div class="semibold">Company Name</div>
-                                            <div class="data-field-company-name">-</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="fsi-pdf-check-fields">
                                 <!-- WILL BE POPULATED WITH FIELDS -->
@@ -336,7 +283,7 @@
             <div class="pdf-field-row">
                 <div class="pdf-field-labels">
                     <div class="pdf-field-name">Verify company name</div>
-                    <div class="pdf-field-value">Interstellar</div>
+                    <div class="pdf-field-value">-</div>
                 </div>
                 <div class="pdf-field-tools">
                     <i class="expand-btn fa fa-chevron-down"></i>
@@ -351,20 +298,11 @@
     </script>
 
 
-
     <script>
 
         $(function () {
 
-            var MOCK_FIELD_DATA = [
-                { name: 'Company Name', value: 'Interstellar' },
-                { name: 'Tax Number', value: '01002003004' },
-                { name: 'Present Balance', value: '$120000' },
-                { name: 'ID Number', value: '0000023452523' },
-                { name: 'Address', value: 'Good Vibes st.' },
-                { name: 'Province', value: 'CA' },
-                { name: 'Phone', value: '001-02308262' }
-            ];
+
 
             function updateApproveRejectForm() {
                 var nFields = $('.pdf-field').length,
@@ -394,60 +332,114 @@
                 }
             }
 
-            // creating fields
-            var fieldListElem = $('.fsi-pdf-check-fields');
-            MOCK_FIELD_DATA.forEach(function(field) {
-                var fieldElem = $($('#pdf-field-template').html());
-                fieldElem.find('.pdf-field-name').text(field.name);
-                fieldElem.find('.pdf-field-value').text(field.value);
-                fieldListElem.append(fieldElem);
-            });
+
+            function bindFieldButtons() {
+                // binding info tabs
+                $('button[data-tab-id]').click(function () {
+                    $('[data-tab-id]').removeClass('active');
+                    var tabId = $(this).attr('data-tab-id');
+                    $('[data-tab-id="' + tabId + '"]').addClass('active');
+                });
+
+                // binding expanding fields
+                $('.pdf-field .expand-btn').click(function () {
+                    var field = $(this).closest('.pdf-field');
+                    toggleFieldExpand(field);
+                });
+
+                // binding clear field buttons
+                $('.pdf-field .clear-btn').click(function () {
+                    var field = $(this).closest('.pdf-field');
+                    field.removeClass('marked approved rejected');
+                    updateApproveRejectForm();
+                });
+
+                // binding approve buttons
+                $('.pdf-field .approve-btn').click(function () {
+                    var field = $(this).closest('.pdf-field');
+                    toggleFieldExpand(field);
+                    field.addClass('marked approved');
+                    updateApproveRejectForm();
+                });
+
+                // binding reject buttons
+                $('.pdf-field .reject-btn').click(function () {
+                    var field = $(this).closest('.pdf-field');
+                    toggleFieldExpand(field);
+                    field.addClass('marked rejected');
+                    updateApproveRejectForm();
+                });
+
+                // binding global approve button
+                $('.fsi-pdf-approve-reject .approve-btn').click(function () {
+                    alert('Document approved.');
+                });
+                // binding global reject button
+                $('.fsi-pdf-approve-reject .reject-btn').click(function () {
+                    alert('Document rejected with message: ' + $('.fsi-pdf-approve-reject textarea').val());
+                });
+            }
 
 
-            // binding info tabs
-            $('button[data-tab-id]').click(function() {
-                $('[data-tab-id]').removeClass('active');
-                var tabId = $(this).attr('data-tab-id');
-                $('[data-tab-id="' + tabId + '"]').addClass('active');
-            });
 
-            // binding expanding fields
-            $('.pdf-field .expand-btn').click(function() {
-                var field = $(this).closest('.pdf-field');
-                toggleFieldExpand(field);
-            });
 
-            // binding clear field buttons
-            $('.pdf-field .clear-btn').click(function() {
-                var field = $(this).closest('.pdf-field');
-                field.removeClass('marked approved rejected');
-                updateApproveRejectForm();
-            });
+            function getQueryVariable(variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split("=");
+                    if (pair[0] == variable) {
+                        return pair[1];
+                    }
+                }
+                return (false);
+            };
 
-            // binding approve buttons
-            $('.pdf-field .approve-btn').click(function() {
-                var field = $(this).closest('.pdf-field');
-                toggleFieldExpand(field);
-                field.addClass('marked approved');
-                updateApproveRejectForm();
-            });
+            var loadUserInfo = function (configId, processInstanceId) {
+                var url = '<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/processInstanceListPlus.json?configId='+configId+'&processInstanceId='+processInstanceId;
+                $.get(url, function (data) {
+                    var obj = data.response.result.processInstanceList.list;
 
-            // binding reject buttons
-            $('.pdf-field .reject-btn').click(function() {
-                var field = $(this).closest('.pdf-field');
-                toggleFieldExpand(field);
-                field.addClass('marked rejected');
-                updateApproveRejectForm();
-            });
+                    obj['dateofbirth'] = new Date(obj['dateofbirth']).toLocaleString();
 
-            // binding global approve button
-            $('.fsi-pdf-approve-reject .approve-btn').click(function() {
-                alert('Document approved.');
-            });
-            // binding global reject button
-            $('.fsi-pdf-approve-reject .reject-btn').click(function() {
-                alert('Document rejected with message: ' + $('.fsi-pdf-approve-reject textarea').val());
-            });
+                    var keys = Object.keys(obj);
+
+                    var nameMap = {
+                        company: 'Company',
+                        email:'Email',
+                        dateofbirth:'Date of Birth',
+                        bic:'BIC',
+                        partyName:'Customer Name',
+                        ssn: 'SSN',
+                        type: 'Type'
+                    };
+                    var fields = keys
+                        .filter(function(key){
+                            return ['company','email','dateofbirth','bic','partyName','ssn','type'].indexOf(key) !== -1;
+                        })
+                        .map(function(key){
+                            return {
+                                name: nameMap[key],
+                                value: obj[key]
+                            }
+                        });
+
+
+                    var fieldListElem = $('.fsi-pdf-check-fields');
+                    fields.forEach(function (field) {
+                        var fieldElem = $($('#pdf-field-template').html());
+                        fieldElem.find('.pdf-field-name').text(field.name);
+                        fieldElem.find('.pdf-field-value').text(field.value);
+                        fieldListElem.append(fieldElem);
+                    });
+                    bindFieldButtons();
+                    console.log(data);
+                });
+
+            };
+            var configId = getQueryVariable('configId');
+            var processInstanceId = getQueryVariable('processInstanceId');
+            loadUserInfo(configId, processInstanceId);
 
         });
     </script>

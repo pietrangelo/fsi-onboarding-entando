@@ -78,26 +78,6 @@
 
     $(document).ready(function () {
 
-        function initDatatable(containerId) {
-            var extraBtns = [
-                {
-                    html: '<button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">REVIEW</button>',
-                    onClick: function (ev, data) {
-                        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/backoffice.page?containerId=' + containerId + '&taskId=' + data.id;
-                        window.location = url;
-                    }
-                }
-            ];
-            var extraConfig = {
-                buttonsColumnTitle: "Actions",
-                buttons: extraBtns,
-                onClickRow: function (ev, rowData) {
-                }
-            };
-            return extraConfig;
-        }
-
-
 
         function getTaskList(context) {
 
@@ -107,7 +87,7 @@
             if (username === 'legal' || username === 'admin' || username === 'Manager' )
                 url = context + "legalWorkerTasks.json";
             else if (username === 'knowledge') {
-                url = context + "knwoledgeWorkerTasks.json";
+                url = context + "knowledgeWorkerTasks.json";
             }
 
             var def = $.Deferred();
@@ -141,21 +121,38 @@
                     var items = legalTask || []; //data.response.result.taskList.list || [] ;
                     //console.log("items: ", items);
                     if (items) {
-
                         items = items.map(function (item) {
                             item['activated'] = new Date(item['activated']).toLocaleString();
                             item['created'] = new Date(item['created']).toLocaleString();
+
+                            var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/backoffice.page?configId=${id}&processInstanceId='+item['processInstanceId'];
+
+                            item['viewLink'] = '<a href ="'+url+'"><button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">REVIEW</button></a>';
+
+
+
                             return item;
                         });
                     }
 
-                    var extraConfig = initDatatable(data.response.result.taskList.containerId);
+                    var extraConfig = {};
                     var username = '${currentUser.username}';
                     if  (username === 'admin' || username === 'Manager') {
                         extraConfig = {};
                     }
 
+
+
+
+
                     extraConfig.columnDefinition = data.response.result.taskList["datatable-field-definition"].fields;
+                    extraConfig.columnDefinition.push({
+                        "title": "Actions",
+                        "data": "viewLink",
+                        "visible": true,
+                        "position": -1
+
+                    });
                     org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
 
 

@@ -4135,6 +4135,87 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-information','fsi-customer-information',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+    <script>
+        $(function(){
+
+            function getQueryVariable(variable){
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                    var pair = vars[i].split("=");
+                    if(pair[0] == variable){return pair[1];}
+                }
+                return(false);
+            };
+
+            var loadUserInfo = function(configId, processInstanceId){
+                var url = ''<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/processInstanceListPlus.json?configId=''+configId+''&processInstanceId=''+processInstanceId;
+                console.log(url);
+                $.get(url, function (data) {
+                    var obj = data.response.result.processInstanceList.list;
+                    var keys = Object.keys(obj);
+                    keys.forEach(function(key){
+                        $(''.data-field-''+key).text(obj[key]);
+                    })
+                    console.log(data);
+                });
+
+            };
+            var configId = getQueryVariable(''configId'');
+            var processInstanceId = getQueryVariable(''processInstanceId'');
+            loadUserInfo(configId, processInstanceId);
+
+        });
+
+    </script>
+    <div class="fsi-customer-information ibox float-e-margins">
+        <div class="ibox-title">
+            <h5 class="data-field-company">-</h5>
+            <div class="ibox-tools">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="fsi-subheader">Customer information</h4>
+                    <p>
+                    <div>Organization full name</div>
+                    <b class="data-field-company">-</b>
+                    </p>
+                    <p>
+                    <div>International application ID</div>
+                    <b class="data-field-ssn">-</b>
+                    </p>
+                    <p>
+                    <div>Entity Type</div>
+                    <b class="data-field-type">-</b>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="fsi-subheader">Primary contact information</h4>
+                    <p>
+                    <div>Point of contact</div>
+                    <b class="data-field-address">-</b>
+                    </p>
+                    <p>
+                    <div>Phone</div>
+                    <b class="data-field-phone">-</b>
+                    </p>
+                    <p>
+                    <div>Email</div>
+                    <b class="data-field-email">-</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-pdf-document','fsi-pdf-document',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
     <style>
@@ -4365,44 +4446,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
     </style>
 
-    <script>
-        $(function () {
-
-            function getQueryVariable(variable) {
-                var query = window.location.search.substring(1);
-                var vars = query.split("&");
-                for (var i = 0; i < vars.length; i++) {
-                    var pair = vars[i].split("=");
-                    if (pair[0] == variable) {
-                        return pair[1];
-                    }
-                }
-                return (false);
-            };
-
-            var loadUserInfo = function (continerId, taskId) {
-                //http://localhost:8080/fsi-backoffice/api/rs/en/jpkiebpm/taskInputOutput.json?
-                var url = ''<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/taskInputOutput.json?containerId='' + containerId + ''&taskId='' + taskId;
-                console.log(url);
-                $.get(url, function (data) {
-                    var obj = data.response.result.processObj;
-                    var keys = Object.keys(obj);
-                    keys.forEach(function (key) {
-                        $(''.data-field-'' + key).text(obj[key]);
-                    })
-
-                    console.log(data);
-                });
-
-            };
-            var containerId = getQueryVariable(''containerId'');
-            var taskId = getQueryVariable(''taskId'');
-            loadUserInfo(containerId, taskId);
-
-        });
-
-    </script>
-
 
     <div class="ibox float-e-margins">
         <div class="ibox-title">
@@ -4478,12 +4521,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         $(function () {
 
 
-            var MOCK_FIELD_DATA = [
-                {name: ''Company Name'', value: ''Interstellar Inc.''},
-                {name: ''Name'', value: ''Mickey Mouse''},
-                {name: ''Phone'', value: ''7605551212''},
-                {name: ''Email'', value: ''info@interstellar.com''}
-            ];
 
             function updateApproveRejectForm() {
                 var nFields = $(''.pdf-field'').length,
@@ -4513,143 +4550,114 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                 }
             }
 
-            // creating fields
-            var fieldListElem = $(''.fsi-pdf-check-fields'');
-            MOCK_FIELD_DATA.forEach(function (field) {
-                var fieldElem = $($(''#pdf-field-template'').html());
-                fieldElem.find(''.pdf-field-name'').text(field.name);
-                fieldElem.find(''.pdf-field-value'').text(field.value);
-                fieldListElem.append(fieldElem);
-            });
+
+            function bindFieldButtons() {
+                // binding info tabs
+                $(''button[data-tab-id]'').click(function () {
+                    $(''[data-tab-id]'').removeClass(''active'');
+                    var tabId = $(this).attr(''data-tab-id'');
+                    $(''[data-tab-id="'' + tabId + ''"]'').addClass(''active'');
+                });
+
+                // binding expanding fields
+                $(''.pdf-field .expand-btn'').click(function () {
+                    var field = $(this).closest(''.pdf-field'');
+                    toggleFieldExpand(field);
+                });
+
+                // binding clear field buttons
+                $(''.pdf-field .clear-btn'').click(function () {
+                    var field = $(this).closest(''.pdf-field'');
+                    field.removeClass(''marked approved rejected'');
+                    updateApproveRejectForm();
+                });
+
+                // binding approve buttons
+                $(''.pdf-field .approve-btn'').click(function () {
+                    var field = $(this).closest(''.pdf-field'');
+                    toggleFieldExpand(field);
+                    field.addClass(''marked approved'');
+                    updateApproveRejectForm();
+                });
+
+                // binding reject buttons
+                $(''.pdf-field .reject-btn'').click(function () {
+                    var field = $(this).closest(''.pdf-field'');
+                    toggleFieldExpand(field);
+                    field.addClass(''marked rejected'');
+                    updateApproveRejectForm();
+                });
+
+                // binding global approve button
+                $(''.fsi-pdf-approve-reject .approve-btn'').click(function () {
+                    alert(''Document approved.'');
+                });
+                // binding global reject button
+                $(''.fsi-pdf-approve-reject .reject-btn'').click(function () {
+                    alert(''Document rejected with message: '' + $(''.fsi-pdf-approve-reject textarea'').val());
+                });
+            }
+            
 
 
-            // binding info tabs
-            $(''button[data-tab-id]'').click(function () {
-                $(''[data-tab-id]'').removeClass(''active'');
-                var tabId = $(this).attr(''data-tab-id'');
-                $(''[data-tab-id="'' + tabId + ''"]'').addClass(''active'');
-            });
 
-            // binding expanding fields
-            $(''.pdf-field .expand-btn'').click(function () {
-                var field = $(this).closest(''.pdf-field'');
-                toggleFieldExpand(field);
-            });
+            function getQueryVariable(variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split("=");
+                    if (pair[0] == variable) {
+                        return pair[1];
+                    }
+                }
+                return (false);
+            };
 
-            // binding clear field buttons
-            $(''.pdf-field .clear-btn'').click(function () {
-                var field = $(this).closest(''.pdf-field'');
-                field.removeClass(''marked approved rejected'');
-                updateApproveRejectForm();
-            });
+            var loadUserInfo = function (configId, processInstanceId) {
+                var url = ''<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/processInstanceListPlus.json?configId=''+configId+''&processInstanceId=''+processInstanceId;
+                $.get(url, function (data) {
+                    var obj = data.response.result.processInstanceList.list;
 
-            // binding approve buttons
-            $(''.pdf-field .approve-btn'').click(function () {
-                var field = $(this).closest(''.pdf-field'');
-                toggleFieldExpand(field);
-                field.addClass(''marked approved'');
-                updateApproveRejectForm();
-            });
+                    obj[''dateofbirth''] = new Date(obj[''dateofbirth'']).toLocaleString();
 
-            // binding reject buttons
-            $(''.pdf-field .reject-btn'').click(function () {
-                var field = $(this).closest(''.pdf-field'');
-                toggleFieldExpand(field);
-                field.addClass(''marked rejected'');
-                updateApproveRejectForm();
-            });
+                    var keys = Object.keys(obj);
 
-            // binding global approve button
-            $(''.fsi-pdf-approve-reject .approve-btn'').click(function () {
-                alert(''Document approved.'');
-            });
-            // binding global reject button
-            $(''.fsi-pdf-approve-reject .reject-btn'').click(function () {
-                alert(''Document rejected with message: '' + $(''.fsi-pdf-approve-reject textarea'').val());
-            });
+                    var nameMap = {
+                        company: ''Company'',
+                        email:''Email'',
+                        dateofbirth:''Date of Birth'',
+                        bic:''BIC'',
+                        partyName:''Customer Name'',
+                        ssn: ''SSN'',
+                        type: ''Type''
+                    };
+                    var fields = keys
+                        .filter(function(key){
+                            return [''company'',''email'',''dateofbirth'',''bic'',''partyName'',''ssn'',''type''].indexOf(key) !== -1;
+                        })
+                        .map(function(key){
+                            return {
+                                name: nameMap[key],
+                                value: obj[key]
+                            }
+                        });
+
+
+                    var fieldListElem = $(''.fsi-pdf-check-fields'');
+                    fields.forEach(function (field) {
+                        var fieldElem = $($(''#pdf-field-template'').html());
+                        fieldElem.find(''.pdf-field-name'').text(field.name);
+                        fieldElem.find(''.pdf-field-value'').text(field.value);
+                        fieldListElem.append(fieldElem);
+                    });
+                    bindFieldButtons();
+                    console.log(data);
+                });
+
+            };
+            var configId = getQueryVariable(''configId'');
+            var processInstanceId = getQueryVariable(''processInstanceId'');
+            loadUserInfo(configId, processInstanceId);
 
         });
     </script>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-information','fsi-customer-information',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<script>
-    $(function(){
-
-        function getQueryVariable(variable){
-            var query = window.location.search.substring(1);
-            var vars = query.split("&");
-            for (var i=0;i<vars.length;i++) {
-                var pair = vars[i].split("=");
-                if(pair[0] == variable){return pair[1];}
-            }
-            return(false);
-        };
-
-        var loadUserInfo = function(continerId, taskId){
-            //http://localhost:8080/fsi-backoffice/api/rs/en/jpkiebpm/taskInputOutput.json?
-            var url = ''<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/taskInputOutput.json?containerId=''+containerId+''&taskId=''+taskId;
-            console.log(url);
-            $.get(url, function (data) {
-                var obj = data.response.result.processObj;
-                var keys = Object.keys(obj);
-                keys.forEach(function(key){
-                    $(''.data-field-''+key).text(obj[key]);
-                })
-
-                console.log(data);
-            });
-
-        };
-        var containerId = getQueryVariable(''containerId'');
-        var taskId = getQueryVariable(''taskId'');
-        loadUserInfo(containerId,taskId);
-
-    });
-
-</script>
-<div class="fsi-customer-information ibox float-e-margins">
-    <div class="ibox-title">
-        <h5 class="data-field-companyName">-</h5>
-        <div class="ibox-tools">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-wrench"></i>
-            </a>
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-6">
-                <h4 class="fsi-subheader">Customer information</h4>
-                <p>
-                <div>Organization full name</div>
-                <b class="data-field-fullName">-</b>
-                </p>
-                <p>
-                <div>International application ID</div>
-                <b class="data-field-applicationId">-</b>
-                </p>
-                <p>
-                <div>Entity Type</div>
-                <b class="data-field-entityType">-</b>
-                </p>
-            </div>
-            <div class="col-md-6">
-                <h4 class="fsi-subheader">Primary contact information</h4>
-                <p>
-                <div>Point of contact</div>
-                <b class="data-field-address">-</b>
-                </p>
-                <p>
-                <div>Phone</div>
-                <b class="data-field-phone">-</b>
-                </p>
-                <p>
-                <div>Email</div>
-                <b class="data-field-email">-</b>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>',NULL,0);
