@@ -138,18 +138,6 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','userProf
 		</attributes>
 	</profiletype>
 </profiletypes>');
-INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
-<kieBpmConfig>
-   <active>true</active>
-   <username>kieserver</username>
-   <password>kieserver1!</password>
-   <hostname>co-client-onboarding-developer.54.36.53.206.xip.io</hostname>
-   <schema>http</schema>
-   <port>80</port>
-   <webapp>kie-server</webapp>
-   <timeout>500</timeout>
-</kieBpmConfig>
-');
 INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','dataTypeDefinitions','Definition of the Type Types','<?xml version="1.0" encoding="UTF-8"?>
 <datatypes>
 	<datatype typecode="AAA" typedescr="commercial-client-onboarding.ClientOnboardingProcess_5fdf1ed1672f5358e70570bd7f50b163" viewpage="**NULL**" listmodel="1" defaultmodel="1">
@@ -525,4 +513,16 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','entandoC
 	</components>
 </reports>
 
+');
+INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm_config','KIE-BPM service configuration','<?xml version="1.0" encoding="UTF-8"?>
+<kieBpmConfig>
+   <active>true</active>
+   <username>kieserver</username>
+   <password>kieserver1!</password>
+   <hostname>co-client-onboarding-developer.127.0.0.1.xip.io</hostname>
+   <schema>http</schema>
+   <port>80</port>
+   <webapp>kie-server</webapp>
+   <timeout>500</timeout>
+</kieBpmConfig>
 ');
