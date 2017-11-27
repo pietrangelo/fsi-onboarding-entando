@@ -93,7 +93,11 @@
             var def = $.Deferred();
             $.get(url).then(function (taskData) {
                 var taskList = getDeep(taskData, 'response.result.taskList.list');
-                def.resolve(Array.isArray(taskList) ? taskList : [taskList]);
+                if (taskList){
+                    def.resolve(Array.isArray(taskList) ? taskList : [taskList]);
+                }
+                else def.resolve([]);
+
             }, function (error) {
                 console.log(error, arguments);
                 var message = getDeep(error, "responseJSON.response.errors.error.message");
@@ -154,6 +158,15 @@
 
                     });
                     org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
+                    if (items.length){
+
+                        var table = $(idTable).DataTable();
+                        table.order([
+                            extraConfig.columnDefinition.find(function(item){  return item.data === 'created'  }).position - 1,
+                            'desc'
+                        ]);
+                        table.draw();
+                    }
 
 
                 });

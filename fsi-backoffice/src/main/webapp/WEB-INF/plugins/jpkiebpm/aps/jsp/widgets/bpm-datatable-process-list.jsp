@@ -65,6 +65,16 @@
 
                 });
                 org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
+                if (items.length){
+
+                    var table = $(idTable).DataTable();
+                    table.order([
+                        extraConfig.columnDefinition.find(function(item){  return item.data === 'start-date'  }).position - 1,
+                        'desc'
+                    ]);
+                    table.draw();
+                }
+
 
             });
         }
