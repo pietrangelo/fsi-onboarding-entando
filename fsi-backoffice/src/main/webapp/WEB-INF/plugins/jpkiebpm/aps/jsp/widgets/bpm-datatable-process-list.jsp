@@ -36,6 +36,13 @@
                 var items = data.response.result.processInstanceList.list || [];
                 items = items.map(function (item) {
                     item['start-date'] = new Date(item['start-date']).toLocaleString();
+                    item['dueDate'] = new Date(item['dueDate']).toLocaleString();
+                    item['dateofbirth'] = new Date(item['dateofbirth']).toLocaleString();
+                    switch (item['status']) {
+                        case 1 : item['status'] ='Started'; break;
+                        case 2 : item['status'] ='In Progress'; break;
+                        case 3 : item['status'] ='Completed'; break;
+                    }
                     delete item['@xsi.type'];
 
                     return item;
