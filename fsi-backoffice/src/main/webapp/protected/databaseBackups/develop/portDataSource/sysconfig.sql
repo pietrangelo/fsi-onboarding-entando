@@ -519,7 +519,7 @@ INSERT INTO sysconfig (version,item,descr,config) VALUES ('production','jpkiebpm
    <active>true</active>
    <username>kieserver</username>
    <password>kieserver1!</password>
-   <hostname>co-client-onboarding-developer.127.0.0.1.xip.io</hostname>
+   <hostname>co-client-onboarding-developer.54.36.53.206.xip.io</hostname>
    <schema>http</schema>
    <port>80</port>
    <webapp>kie-server</webapp>

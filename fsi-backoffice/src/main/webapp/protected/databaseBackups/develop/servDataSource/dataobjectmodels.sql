@@ -1,5 +1,4 @@
-INSERT INTO dataobjectmodels (modelid,datatype,descr,model,stylesheet) VALUES (1,'AAA','Model for 5fdf1ed1672f5358e70570bd7f50b163','
-<div class="ibox ibox-padding">
+INSERT INTO dataobjectmodels (modelid,datatype,descr,model,stylesheet) VALUES (1,'AAA','Model for 5fdf1ed1672f5358e70570bd7f50b163','<div class="ibox ibox-padding">
     <div class="ibox-title">
 
     </div>
@@ -79,7 +78,6 @@ INSERT INTO dataobjectmodels (modelid,datatype,descr,model,stylesheet) VALUES (1
             document.getElementById(key).value = valueMap[key];
         }
     }
-
 
 
 </script>
