@@ -352,3 +352,4 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (43,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (44,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (44,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (45,'customers');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (297,'account_executive');

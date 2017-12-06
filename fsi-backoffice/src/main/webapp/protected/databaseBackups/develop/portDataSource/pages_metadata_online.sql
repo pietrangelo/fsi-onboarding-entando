@@ -98,6 +98,11 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
 <property key="it">Pagina di login</property>
 <property key="en">Login</property>
 </properties>','service',1,NULL,'2017-02-17 15:32:34');
+INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('notfound','<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Page not found</property>
+<property key="it">Pagina non trovata</property>
+</properties>','service',1,NULL,'2017-02-17 16:37:10');
 INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('account_executive_dashboard','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Account Executive Dashboard</property><property key="it">Account Executive Dashboard</property></properties>
 ','fsi-dashboard',1,'<?xml version="1.0" encoding="UTF-8"?>
@@ -110,9 +115,4 @@ INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-11-27 10:21:45');
-INSERT INTO pages_metadata_online (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('notfound','<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Page not found</property>
-<property key="it">Pagina non trovata</property>
-</properties>','service',1,NULL,'2017-02-17 16:37:10');
+','2017-12-06 17:41:54');

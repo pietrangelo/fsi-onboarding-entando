@@ -45,6 +45,3 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('cl
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="widgetInfoId">266</property></properties>
 ');
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="widgetInfoId">295</property></properties>
-');

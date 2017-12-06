@@ -17,6 +17,7 @@
 
         <c:import url="/WEB-INF/aps/jsp/models/inc/content_inline_editing.jsp" />
         <c:import url="/WEB-INF/aps/jsp/models/inc/header-inclusions.jsp" />
+        <c:import url="/WEB-INF/aps/jsp/models/inc/fsi-dashboard-style.jsp" />
 
     </head>
     <body class="pace-done mini-navbar">
@@ -50,17 +51,29 @@
 
             <div id="page-wrapper" class="gray-bg dashbard-1">
                 <div class="row border-bottom">
-                    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                      <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                          <a class="navbar-brand" href="#">
                             <div class="logo-names">
-                                <wp:show frame="0" />
-                                <b>FORTRESS -</b>
-                                <span>Bank &amp; Loan</span>
-
-
+                              <b>FORTRESS - </b>
+                              <span>Bank &amp; Loan</span>
                             </div>
+                          </a>
                         </div>
-                        <ul class="nav navbar-top-links navbar-right">
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                          <ul class="nav navbar-nav navbar-top-links navbar-right">
+
                             <li>
                                 <wp:show frame="1" />
                                 <span class="m-r-sm  welcome-message"></span>
@@ -170,7 +183,9 @@
                             <li>
                                 <wp:show frame="5" />
                             </li>
-                        </ul>
+                          </ul><!-- /.navbar-right -->
+                        </div><!-- /.navbar-collapse -->
+                      </div><!-- /.container-fluid -->
                     </nav>
                 </div>
 
@@ -240,7 +255,7 @@
 
                             <div class="col-md-12">
                                 <wp:ifauthorized groupName="account_executive">
-                                    <a class="btn btn-success pull-right" href="<wp:url page="form_mobile" />" ><i class="fa fa-plus" aria-hidden="true"></i> &nbsp;Add Customer</a>
+                                    <a class="btn btn-success" href="<wp:url page="form_mobile" />" ><i class="fa fa-plus" aria-hidden="true"></i> &nbsp;Add Customer</a>
                                 </wp:ifauthorized>
                             </div>
 

@@ -28,12 +28,6 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_o
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('client_onboarding_manager',13,'bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="widgetInfoId">264</property></properties>
 ');
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',15,'generic-footer',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="widgetInfoId">295</property></properties>
-');
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('form_mobile',4,'dropdown_menu_responsive',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('form_mobile',14,'bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="dataTypeCode">AAA</property><property key="widgetInfoId">225</property><property key="dataUxId">1</property></properties>
@@ -48,3 +42,6 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_da
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="widgetInfoId">266</property></properties>
 ');
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',15,'generic-footer',NULL);
