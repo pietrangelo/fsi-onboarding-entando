@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="<wp:resourceURL />static/css/jasny.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/ion.rangeSlider.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/toastr.min.css" rel="stylesheet">
 
 
 <script src="<wp:resourceURL />static/js/bootstrap.min.js"></script>
@@ -31,3 +32,4 @@
 <!--<script src="<wp:resourceURL />static/js/Chart.min.js"></script>-->
 <script src="<wp:resourceURL />static/js/icheck.min.js"></script>
 <script src="<wp:resourceURL />static/js/ion.rangeSlider.js"></script>
+<script src="<wp:resourceURL />static/js/toastr.min.js"></script>
