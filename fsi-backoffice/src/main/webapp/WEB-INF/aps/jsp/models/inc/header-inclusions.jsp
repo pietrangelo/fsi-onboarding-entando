@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="<wp:resourceURL />static/css/c3.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/morris-0.4.3.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/jasny.css" rel="stylesheet">
-<link rel="stylesheet" href="<wp:resourceURL />static/css/jquery.dataTables.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/ion.rangeSlider.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
 
@@ -32,4 +31,3 @@
 <!--<script src="<wp:resourceURL />static/js/Chart.min.js"></script>-->
 <script src="<wp:resourceURL />static/js/icheck.min.js"></script>
 <script src="<wp:resourceURL />static/js/ion.rangeSlider.js"></script>
-

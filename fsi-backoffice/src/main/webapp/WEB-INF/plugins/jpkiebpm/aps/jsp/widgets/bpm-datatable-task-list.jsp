@@ -21,9 +21,12 @@
 <link rel="stylesheet" href="<wp:resourceURL />plugins/jpkiebpm/static/css/jquery-ui.css" media="screen"/>
 <link rel="stylesheet" href="<wp:resourceURL />plugins/jpkiebpm/static/css/buttons.dataTables.min.css" media="screen"/>
 <link rel="stylesheet" href="<wp:resourceURL />plugins/jpkiebpm/static/css/jquery.dataTables.min.css" media="screen"/>
-<link rel="stylesheet" href="<wp:resourceURL />plugins/jpkiebpm/static/css/responsive.dataTables.min.css"
-      media="screen"/>
 
+<style>
+.dataTables_wrapper {
+  margin: 0;
+}
+</style>
 <script>
 
     function addRow(data, label, index) {
@@ -99,7 +102,7 @@
                 else def.resolve([]);
 
             }, function (error) {
-                console.log(error, arguments);
+                console.error(error, arguments);
                 var message = getDeep(error, "responseJSON.response.errors.error.message");
                 if (message && message.match(/^Tasks for user .+ does not exist$/))  {
                     def.resolve([]);
@@ -121,9 +124,9 @@
 
 
                 $.get(url, function (data) {
-                    //console.log("data: ", data);
+
                     var items = legalTask || []; //data.response.result.taskList.list || [] ;
-                    //console.log("items: ", items);
+
                     if (items) {
                         items = items.map(function (item) {
                             item['activated'] = new Date(item['activated']).toLocaleString();
@@ -184,8 +187,3 @@
 </script>
 
 <table id="data-table-task-list" class="display nowrap" cellspacing="0" width="100%"></table>
-
-
-
-
-
