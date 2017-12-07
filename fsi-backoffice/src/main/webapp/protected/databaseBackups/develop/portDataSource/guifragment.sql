@@ -1627,40 +1627,9 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	maxlength="254" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-LongtextAttribute',NULL,NULL,NULL,'<#assign wpsf=JspTaglibs["/apsadmin-form"]>
 <@wpsf.textarea useTabindexAutoIncrement=true cols="30" rows="5" id="%{attribute_id}" name="%{#attributeTracer.getFormFieldName(#attribute)}" value="%{#attribute.getTextForLang(#lang.code)}" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-CompositeAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<#assign wpsa=JspTaglibs["/apsadmin-core"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@s.set var="i18n_parent_attribute_name" value="#attribute.name" />
-<@s.set var="masterCompositeAttributeTracer" value="#attributeTracer" />
-<@s.set var="masterCompositeAttribute" value="#attribute" />
-<@s.iterator value="#attribute.attributes" var="attribute">
-	<@s.set var="attributeTracer" value="#masterCompositeAttributeTracer.getCompositeTracer(#masterCompositeAttribute)"></@s.set>
-	<@s.set var="parentAttribute" value="#masterCompositeAttribute"></@s.set>
-	<@s.set var="i18n_attribute_name">userprofile_ATTR<@s.property value="%{i18n_parent_attribute_name}" /><@s.property value="#attribute.name" /></@s.set>
-	<@s.set var="attribute_id">userprofile_<@s.property value="%{i18n_parent_attribute_name}" /><@s.property value="#attribute.name" />_<@s.property value="#elementIndex" /></@s.set>
-	<@wp.fragment code="userprofile_is_IteratorAttribute" escapeXml=false />
-</@s.iterator>
-<@s.set var="attributeTracer" value="#masterCompositeAttributeTracer" />
-<@s.set var="attribute" value="#masterCompositeAttribute" />
-<@s.set var="parentAttribute" value=""></@s.set>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.select useTabindexAutoIncrement=true
-	name="%{#attributeTracer.getFormFieldName(#attribute)}"
-	id="%{attribute_id}"  
-	headerKey="" headerValue="" 
-	list="#attribute.items" value="%{#attribute.getText()}" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorMapAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wpsf=JspTaglibs["/apsadmin-form"]>
-<@wpsf.select useTabindexAutoIncrement=true
-	name="%{#attributeTracer.getFormFieldName(#attribute)}"
-	id="%{attribute_id}"  
-	headerKey="" headerValue="" 
-	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-verification','fsi-customer-verification',NULL,'<div class="fsi-customer-information ibox float-e-margins">
   <div class="ibox-title">
-    <h5>Stage</h5>
+    <h5>Progress</h5>
     <div class="ibox-tools">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
         <i class="fa fa-wrench"></i>
@@ -1692,6 +1661,37 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-CompositeAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<#assign wpsa=JspTaglibs["/apsadmin-core"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@s.set var="i18n_parent_attribute_name" value="#attribute.name" />
+<@s.set var="masterCompositeAttributeTracer" value="#attributeTracer" />
+<@s.set var="masterCompositeAttribute" value="#attribute" />
+<@s.iterator value="#attribute.attributes" var="attribute">
+	<@s.set var="attributeTracer" value="#masterCompositeAttributeTracer.getCompositeTracer(#masterCompositeAttribute)"></@s.set>
+	<@s.set var="parentAttribute" value="#masterCompositeAttribute"></@s.set>
+	<@s.set var="i18n_attribute_name">userprofile_ATTR<@s.property value="%{i18n_parent_attribute_name}" /><@s.property value="#attribute.name" /></@s.set>
+	<@s.set var="attribute_id">userprofile_<@s.property value="%{i18n_parent_attribute_name}" /><@s.property value="#attribute.name" />_<@s.property value="#elementIndex" /></@s.set>
+	<@wp.fragment code="userprofile_is_IteratorAttribute" escapeXml=false />
+</@s.iterator>
+<@s.set var="attributeTracer" value="#masterCompositeAttributeTracer" />
+<@s.set var="attribute" value="#masterCompositeAttribute" />
+<@s.set var="parentAttribute" value=""></@s.set>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.select useTabindexAutoIncrement=true
+	name="%{#attributeTracer.getFormFieldName(#attribute)}"
+	id="%{attribute_id}"  
+	headerKey="" headerValue="" 
+	list="#attribute.items" value="%{#attribute.getText()}" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-EnumeratorMapAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wpsf=JspTaglibs["/apsadmin-form"]>
+<@wpsf.select useTabindexAutoIncrement=true
+	name="%{#attributeTracer.getFormFieldName(#attribute)}"
+	id="%{attribute_id}"  
+	headerKey="" headerValue="" 
+	list="#attribute.mapItems" value="%{#attribute.getText()}" listKey="key" listValue="value" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 

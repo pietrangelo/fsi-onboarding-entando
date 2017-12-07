@@ -147,9 +147,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 <property key="actionPath">/ExtStr2/do/Front/Api/Resource/list.action</property>
 </properties>
 ',1,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-verification','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI Customer verification</property><property key="it">FSI Customer verification</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-Declaration','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Declaration</property><property key="it">FSI Declaration</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
@@ -322,3 +319,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-am-add-customer-btn','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI AM Add Customer Button</property><property key="it">FSI AM Bottone Aggiungi Cliente</property></properties>
 ',NULL,NULL,NULL,NULL,0,'account_executive');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-verification','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Customer verification</property><property key="it">FSI Customer verification</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
