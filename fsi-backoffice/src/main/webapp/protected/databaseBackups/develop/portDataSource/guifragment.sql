@@ -160,6 +160,9 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-am-add-customer-btn','fsi-am-add-customer-btn',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<a class="fsi-add-customer-btn btn btn-success" href="<@wp.url page="form_mobile" />" ><i class="fa fa-plus" aria-hidden="true"></i> &nbsp;Add Customer</a>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-onboarding-stages','fsi-onboarding-stages',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>Onboarding stages</h5>

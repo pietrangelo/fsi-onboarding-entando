@@ -74,4 +74,8 @@
   margin-bottom: 10px;
 }
 
+.fsi-add-customer-btn {
+  margin-bottom: 8px;
+}
+
 </style>

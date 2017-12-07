@@ -252,13 +252,6 @@
                                 </div>
                             </wp:ifauthorized>
 
-
-                            <div class="col-md-12">
-                                <wp:ifauthorized groupName="account_executive">
-                                    <a class="btn btn-success" href="<wp:url page="form_mobile" />" ><i class="fa fa-plus" aria-hidden="true"></i> &nbsp;Add Customer</a>
-                                </wp:ifauthorized>
-                            </div>
-
                             <div class="col-md-8">
                                 <wp:show frame="6" />
                             </div>

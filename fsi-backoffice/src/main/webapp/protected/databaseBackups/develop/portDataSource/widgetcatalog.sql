@@ -319,3 +319,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-backlog','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Backlog</property><property key="it">FSI Backlog</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-am-add-customer-btn','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI AM Add Customer Button</property><property key="it">FSI AM Bottone Aggiungi Cliente</property></properties>
+',NULL,NULL,NULL,NULL,0,'account_executive');

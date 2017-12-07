@@ -1,3 +1,4 @@
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (298,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (45,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (46,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (46,'administrators');

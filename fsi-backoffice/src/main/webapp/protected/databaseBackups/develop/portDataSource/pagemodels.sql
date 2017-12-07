@@ -1,72 +1,3 @@
-INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-dashboard','FSI Dashboard','<?xml version="1.0" encoding="UTF-8"?>
-<frames>
-	<frame pos="0">
-		<descr>Top bar 1</descr>
-		<sketch x1="0" y1="0" x2="1" y2="0" />
-	</frame>
-	<frame pos="1">
-		<descr>Top Bar 2</descr>
-		<sketch x1="2" y1="0" x2="3" y2="0" />
-	</frame>
-	<frame pos="2">
-		<descr>Top Bar 3</descr>
-		<sketch x1="4" y1="0" x2="5" y2="0" />
-	</frame>
-	<frame pos="3">
-		<descr>Top Bar 4</descr>
-		<sketch x1="6" y1="0" x2="7" y2="0" />
-	</frame>
-	<frame pos="4">
-		<descr>Top Bar 5</descr>
-		<sketch x1="8" y1="0" x2="9" y2="0" />
-	</frame>
-	<frame pos="5">
-		<descr>Top Bar 6</descr>
-		<sketch x1="10" y1="0" x2="11" y2="0" />
-	</frame>
-	<frame pos="6">
-		<descr>Main Bar 1</descr>
-		<sketch x1="0" y1="1" x2="7" y2="1" />
-	</frame>
-	<frame pos="7">
-		<descr>Main Bar 2</descr>
-		<sketch x1="8" y1="1" x2="11" y2="1" />
-	</frame>
-	<frame pos="8">
-		<descr>Sub Bar 1</descr>
-		<sketch x1="0" y1="2" x2="6" y2="2" />
-	</frame>
-	<frame pos="9">
-		<descr>Sub Bar 2</descr>
-		<sketch x1="7" y1="2" x2="11" y2="2" />
-	</frame>
-	<frame pos="10">
-		<descr>Content 1 left</descr>
-		<sketch x1="0" y1="3" x2="3" y2="3" />
-	</frame>
-	<frame pos="11">
-		<descr>Content 1 center</descr>
-		<sketch x1="4" y1="3" x2="7" y2="3" />
-	</frame>
-	<frame pos="12">
-		<descr>Content 1 right</descr>
-		<sketch x1="8" y1="3" x2="11" y2="3" />
-	</frame>
-	<frame pos="13">
-		<descr>Content 2</descr>
-		<sketch x1="0" y1="4" x2="11" y2="4" />
-	</frame>
-	<frame pos="14">
-		<descr>Content 3</descr>
-		<sketch x1="0" y1="5" x2="11" y2="5" />
-	</frame>
-	<frame pos="15">
-		<descr>Footer</descr>
-		<sketch x1="0" y1="6" x2="11" y2="6" />
-	</frame>
-</frames>
-
-',NULL,NULL);
 INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-client-onboarding','FSI Client Onboarding','<?xml version="1.0" encoding="UTF-8"?>
 <frames>
 	<frame pos="0">
@@ -659,3 +590,72 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
             </div>
     </body>
 </html>');
+INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-dashboard','FSI Dashboard','<?xml version="1.0" encoding="UTF-8"?>
+<frames>
+	<frame pos="0">
+		<descr>Top bar 1</descr>
+		<sketch x1="0" y1="0" x2="1" y2="0" />
+	</frame>
+	<frame pos="1">
+		<descr>Top Bar 2</descr>
+		<sketch x1="2" y1="0" x2="3" y2="0" />
+	</frame>
+	<frame pos="2">
+		<descr>Top Bar 3</descr>
+		<sketch x1="4" y1="0" x2="5" y2="0" />
+	</frame>
+	<frame pos="3">
+		<descr>Top Bar 4</descr>
+		<sketch x1="6" y1="0" x2="7" y2="0" />
+	</frame>
+	<frame pos="4">
+		<descr>Top Bar 5</descr>
+		<sketch x1="8" y1="0" x2="9" y2="0" />
+	</frame>
+	<frame pos="5">
+		<descr>Top Bar 6</descr>
+		<sketch x1="10" y1="0" x2="11" y2="0" />
+	</frame>
+	<frame pos="6">
+		<descr>Main Bar 1</descr>
+		<sketch x1="0" y1="1" x2="7" y2="1" />
+	</frame>
+	<frame pos="7">
+		<descr>Main Bar 2</descr>
+		<sketch x1="8" y1="1" x2="11" y2="1" />
+	</frame>
+	<frame pos="8">
+		<descr>Sub Bar 1</descr>
+		<sketch x1="0" y1="2" x2="6" y2="2" />
+	</frame>
+	<frame pos="9">
+		<descr>Sub Bar 2</descr>
+		<sketch x1="7" y1="2" x2="11" y2="2" />
+	</frame>
+	<frame pos="10">
+		<descr>Content 1 left</descr>
+		<sketch x1="0" y1="3" x2="3" y2="3" />
+	</frame>
+	<frame pos="11">
+		<descr>Content 1 center</descr>
+		<sketch x1="4" y1="3" x2="7" y2="3" />
+	</frame>
+	<frame pos="12">
+		<descr>Content 1 right</descr>
+		<sketch x1="8" y1="3" x2="11" y2="3" />
+	</frame>
+	<frame pos="13">
+		<descr>Content 2</descr>
+		<sketch x1="0" y1="4" x2="11" y2="4" />
+	</frame>
+	<frame pos="14">
+		<descr>Content 3</descr>
+		<sketch x1="0" y1="5" x2="11" y2="5" />
+	</frame>
+	<frame pos="15">
+		<descr>Footer</descr>
+		<sketch x1="0" y1="6" x2="11" y2="6" />
+	</frame>
+</frames>
+
+',NULL,NULL);

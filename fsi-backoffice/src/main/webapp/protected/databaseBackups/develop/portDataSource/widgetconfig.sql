@@ -1,3 +1,7 @@
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',15,'generic-footer',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',6,'fsi-am-add-customer-btn',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',13,'fsi-pdf-document',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',5,'entando-widget-login_form_inspinia',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('backoffice',15,'generic-footer',NULL);
@@ -42,6 +46,3 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_da
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('legal_dashboard',13,'bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="widgetInfoId">266</property></properties>
 ');
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',5,'entando-widget-login_form_inspinia',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',13,'fsi-customer-overview-big',NULL);
-INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',15,'generic-footer',NULL);
