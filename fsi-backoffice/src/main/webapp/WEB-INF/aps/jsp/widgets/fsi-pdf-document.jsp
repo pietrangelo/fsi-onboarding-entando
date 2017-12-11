@@ -336,13 +336,23 @@
                 updateApproveRejectForm();
             });
 
+            <wp:ifauthorized groupName="knowledge_worker">
+            var dashboardUrl = '<wp:url page="account_executive_dashboard" />';
+            </wp:ifauthorized>
+            <wp:ifauthorized groupName="legal_worker">
+            var dashboardUrl = '<wp:url page="legal_dashboard" />';
+            </wp:ifauthorized>
             // binding global approve button
             $('.fsi-pdf-approve-reject .approve-btn').click(function () {
-                alert('Document approved.');
+                window.location = dashboardUrl + '#flashToast=success|Document approved.';
             });
             // binding global reject button
             $('.fsi-pdf-approve-reject .reject-btn').click(function () {
-                alert('Document rejected with message: ' + $('.fsi-pdf-approve-reject textarea').val());
+              var rejectMsg = $('.fsi-pdf-approve-reject textarea').val(),
+                toastMsg = rejectMsg
+                  ? 'Document rejected with message: ' + rejectMsg
+                  : 'Document rejected.';
+              window.location = dashboardUrl + '#flashToast=error|' + toastMsg;
             });
         }
 

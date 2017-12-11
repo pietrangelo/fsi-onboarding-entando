@@ -5,6 +5,7 @@
 --%>
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <link rel="stylesheet" href="<wp:resourceURL />static/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/toastr.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/inspina_overrides.css">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/animate.css" rel="stylesheet">
@@ -15,7 +16,6 @@
 <link rel="stylesheet" href="<wp:resourceURL />static/css/jasny.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/ion.rangeSlider.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
-<link rel="stylesheet" href="<wp:resourceURL />static/css/toastr.min.css" rel="stylesheet">
 
 
 <script src="<wp:resourceURL />static/js/bootstrap.min.js"></script>
