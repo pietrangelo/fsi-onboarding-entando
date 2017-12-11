@@ -201,7 +201,7 @@
                         <div class="logo-names">
                             <@wp.show frame=0 />
                             <img alt="image" class="" src="/fsi-backoffice/resources/static/img/shield-logo.png">&nbsp;
-                            <b>FORTRESS -</b>
+                            <b>FORTRESS -</b>&nbsp;
                             <span>Bank &amp; Loan</span>
                         </div>
                     </div>

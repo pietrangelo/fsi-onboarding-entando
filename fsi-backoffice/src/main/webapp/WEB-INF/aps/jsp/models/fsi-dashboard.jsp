@@ -63,7 +63,7 @@
                           </button>
                           <a class="navbar-brand" href="#">
                             <div class="logo-names">
-                              <b>FORTRESS - </b>
+                              <b>FORTRESS -</b>&nbsp;
                               <span>Bank &amp; Loan</span>
                             </div>
                           </a>

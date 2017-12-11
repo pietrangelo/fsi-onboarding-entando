@@ -317,6 +317,26 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-c
     </body>
 </html>
 ');
+INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('service','Service Page','<?xml version="1.0" encoding="UTF-8"?>
+<frames>
+	<frame pos="0">
+		<descr>Sample Frame</descr>
+		<sketch x1="0" y1="0" x2="11" y2="0" />
+	</frame>
+</frames>
+
+',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title><@wp.currentPage param="title" /></title>
+</head>
+<body>
+<h1><@wp.currentPage param="title" /></h1>
+<a href="<@wp.url page="homepage" />" >Home</a><br>
+<div><@wp.show frame=0 /></div>
+</body>
+</html>');
 INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-dashboard-responsive','FSI Dashboard responsive','<?xml version="1.0" encoding="UTF-8"?>
 <frames>
 	<frame pos="0">
@@ -386,26 +406,6 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-d
 </frames>
 
 ',NULL,NULL);
-INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('service','Service Page','<?xml version="1.0" encoding="UTF-8"?>
-<frames>
-	<frame pos="0">
-		<descr>Sample Frame</descr>
-		<sketch x1="0" y1="0" x2="11" y2="0" />
-	</frame>
-</frames>
-
-',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-	<title><@wp.currentPage param="title" /></title>
-</head>
-<body>
-<h1><@wp.currentPage param="title" /></h1>
-<a href="<@wp.url page="homepage" />" >Home</a><br>
-<div><@wp.show frame=0 /></div>
-</body>
-</html>');
 INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-landing','FSI Landing','<?xml version="1.0" encoding="UTF-8"?>
 <frames>
 	<frame pos="0">
@@ -518,7 +518,7 @@ INSERT INTO pagemodels (code,descr,frames,plugincode,templategui) VALUES ('fsi-l
                         <div class="logo-names">
                             <@wp.show frame=0 />
                             <img alt="image" class="" src="/fsi-backoffice/resources/static/img/shield-logo.png">&nbsp;
-                            <b>FORTRESS -</b>
+                            <b>FORTRESS -</b>&nbsp;
                             <span>Bank &amp; Loan</span>
                         </div>
                     </div>
