@@ -20,8 +20,9 @@
 
         <jsp:include page="inc/content_inline_editing.jsp" />
         <jsp:include page="inc/header-inclusions.jsp" />
+        <jsp:include page="inc/flash_toast.jsp" />
     </head>
-    <body class="pace-done">
+    <body class="pace-done">NENNOLELLO
         <div class="pace  pace-inactive">
             <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
                 <div class="pace-progress-inner"></div>
@@ -33,7 +34,7 @@
                 <div class="sidebar-collapse">
                     <ul class="nav metismenu" id="side-menu">
                         <li class="nav-header">
-                            <div class="dropdown profile-element"> 
+                            <div class="dropdown profile-element">
                                 <c:choose>
                                     <c:when test="${sessionScope.currentUser != 'guest'}">
                                         <span>
@@ -162,6 +163,6 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </body>
 </html>

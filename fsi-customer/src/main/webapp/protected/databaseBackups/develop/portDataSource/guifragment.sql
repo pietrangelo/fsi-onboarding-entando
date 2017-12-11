@@ -1045,6 +1045,25 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		cssClass="radio" />
 		<@wp.i18n key="userprofile_NO" />
 </label>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
+<br>
+<p class="title-paragraph"> What you''ll need to complete the application</p>
+<ul class="list">
+    <li>Business documentation such as company profile information, business certifications (eg.articles of incorporation), lists of assets</li>
+    <li>Business Tax documentation, from tax ID from tax Declarations</li>
+    <li>Personal information of the people in the company that will be eligible for financial services (eg. names, contact information, SSN ID)</li>
+    <li>List of services you may want to apply for</li>
+</ul>
+<br>
+<br>
+<p class="title-welcome"> What to expect after sign up</p>
+<ul class="list">
+    <li>When your sign up is done, you will have to complete the application form</li>
+    <li>After you send in the business documentation requested for your business type, the bank team will validate it</li>
+    <li>After your account is approved, you can fund your account while applying by using a debit card, transferring money from another account or writing a check.</li>
+    <li>Once your account is open, you may access Online Banking and you will receive your checks, debit cards and service activation in approximately 7 to 10 business days.</li>
+</ul>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_editCurrentUser_profile','userprofile_editCurrentUser_profile',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -1645,6 +1664,71 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 <@s.set var="attributeTracer" value="#masterCompositeAttributeTracer" />
 <@s.set var="attribute" value="#masterCompositeAttribute" />
 <@s.set var="parentAttribute" value=""></@s.set>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('login_form','login_form',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<h1><@wp.i18n key="RESERVED_AREA" /></h1>
+<#if (Session.currentUser.username != "guest") >
+	<p><@wp.i18n key="WELCOME" />, <em>${Session.currentUser}</em>!</p>
+	<#if (Session.currentUser.entandoUser) >
+	<table class="table table-condensed">
+		<tr>
+			<th><@wp.i18n key="USER_DATE_CREATION" /></th>
+			<th><@wp.i18n key="USER_DATE_ACCESS_LAST" /></th>
+			<th><@wp.i18n key="USER_DATE_PASSWORD_CHANGE_LAST" /></th>
+		</tr>
+		<tr>
+			<td>${Session.currentUser.creationDate?default("-")}</td>
+			<td>${Session.currentUser.lastAccess?default("-")}</td>
+			<td>${Session.currentUser.lastPasswordChange?default("-")}</td>
+		</tr>
+	</table>
+		<#if (!Session.currentUser.credentialsNotExpired) >
+		<div class="alert alert-block">
+			<p><@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />: <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action"><@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a></p>
+		</div>
+		</#if>
+	</#if>
+	<@wp.ifauthorized permission="enterBackend">
+	<div class="btn-group">
+		<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />" class="btn"><@wp.i18n key="ADMINISTRATION" /></a>
+	</div>
+	</@wp.ifauthorized>
+	<p class="pull-right"><a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action" class="btn"><@wp.i18n key="LOGOUT" /></a></p>
+	<@wp.pageWithWidget widgetTypeCode="userprofile_editCurrentUser" var="userprofileEditingPageVar" listResult=false />
+	<#if (userprofileEditingPageVar??) >
+	<p><a href="<@wp.url page="${userprofileEditingPageVar.code}" />" ><@wp.i18n key="userprofile_CONFIGURATION" /></a></p>
+	</#if>
+<#else>
+	<#if (accountExpired?? && accountExpired == true) >
+	<div class="alert alert-block alert-error">
+		<p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
+	</div>
+	</#if>
+	<#if (wrongAccountCredential?? && wrongAccountCredential == true) >
+	<div class="alert alert-block alert-error">
+		<p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
+	</div>
+	</#if>
+	<form action="<@wp.url/>" method="post" class="form-horizontal margin-medium-top">
+		<#if (RequestParameters.returnUrl??) >
+		<input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+		</#if>
+		<div class="control-group">
+			<label for="username" class="control-label"><@wp.i18n key="USERNAME" /></label>
+			<div class="controls">
+				<input id="username" type="text" name="username" class="input-xlarge" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="password" class="control-label"><@wp.i18n key="PASSWORD" /></label>
+			<div class="controls">
+				<input id="password" type="password" name="password" class="input-xlarge" />
+			</div>
+		</div>
+		<div class="form-actions">
+			<input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary" />
+		</div>
+	</form>
+</#if>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -1898,6 +1982,10 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	<@s.set var="pagerIdMarker" value="null" />
 </ul>
 </@s.if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('internal_servlet_generic_error',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.i18n key="GENERIC_ERROR" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('internal_servlet_user_not_allowed',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.i18n key="USER_NOT_ALLOWED" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2004,246 +2092,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </p>
 
 </section>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('complete-registration-BPM','complete-registration-BPM',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<div class="bpm-wrapper-background">
-<p class="title-welcome"> Complete registration </p>
-<p class="subtitle">Sign in </p>
-<p class="presentation">Hi . Type your and a password to complete the registration. </p>
-
- <form action="#" method="post" class="m-t">
-        <#if (RequestParameters.returnUrl??) >
-        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-        </#if>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="first_name" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="first_name" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="last_name" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="last_name" />" class="form-control input-custom" />
-        </div>
-       <div class="form-group">
-            <label class="login-label"><@wp.i18n key="company_name" /></label>
-            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="company_name" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="Email" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="Email" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
-            <p class="pass-hint">5 or more characters</p>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div class="form-group">
-            <label class="login-label"><@wp.i18n key="CONFIRM_PASSWORD" /></label>
-            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="CONFIRM_PASSWORD" />" class="form-control input-custom" />
-        </div>
-        <div class="right-side-button">
-            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
-        </div>
-    </form>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-
-<@wp.headInfo type="CSS" info="widgets/api.css"/>
-<@s.set var="apiServiceVar" value="%{getApiService(serviceKey)}" />
-<div class="entando-api api-resource-detail">
-<h2><@wp.i18n key="ENTANDO_API_SERVICE" />&#32;<@s.property value="serviceKey" /></h2>
-<@s.if test="hasActionMessages()">
-	<div class="message message_confirm">
-		<h3><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
-		<ul>
-			<@s.iterator value="actionMessages">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-<@s.if test="hasActionErrors()">
-	<div class="message message_error">
-		<h3><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
-		<ul>
-			<@s.iterator value="actionErrors">
-				<li><@s.property escapeHtml=false /></li>
-			</@s.iterator>
-		</ul>
-	</div>
-</@s.if>
-
-<p class="description"><@s.property value="getTitle(serviceKey, #apiServiceVar.description)" /></p>
-
-<@s.set var="masterMethodVar" value="#apiServiceVar.master" />
-
-<dl class="dl-horizontal">
-	<dt><@wp.i18n key="ENTANDO_API_SERVICE_KEY" /></dt>
-		<dd><@s.property value="serviceKey" /></dd>
-	<dt><@wp.i18n key="ENTANDO_API_SERVICE_PARENT_API" /></dt>
-		<dd><@s.property value="#masterMethodVar.description" />&#32;(/<@s.if test="#masterMethodVar.namespace!=null && #masterMethodVar.namespace.length()>0"><@s.property value="#masterMethodVar.namespace" />/</@s.if><@s.property value="#masterMethodVar.resourceName" />)</dd>
-	<dt>
-		<@wp.i18n key="ENTANDO_API_SERVICE_AUTHORIZATION" />
-	</dt>
-		<dd>
-			<@s.if test="%{!#apiServiceVar.requiredAuth}" >
-				<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_FREE" />
-			</@s.if>
-			<@s.elseif test="%{null == #apiServiceVar.requiredPermission && null == #apiServiceVar.requiredGroup}">
-				<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_SIMPLE" />
-			</@s.elseif>
-			<@s.else>
-				<@s.set var="serviceAuthGroupVar" value="%{getGroup(#apiServiceVar.requiredGroup)}" />
-				<@s.set var="serviceAuthPermissionVar" value="%{getPermission(#apiServiceVar.requiredPermission)}" />
-				<@s.if test="%{null != #serviceAuthPermissionVar}">
-					<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_WITH_PERM" />&#32;<@s.property value="#serviceAuthPermissionVar.description" />
-				</@s.if>
-				<@s.if test="%{null != #serviceAuthGroupVar}">
-					<@s.if test="%{null != #serviceAuthPermissionVar}"><br /></@s.if>
-					<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_WITH_GROUP" />&#32;<@s.property value="#serviceAuthGroupVar.descr" />
-				</@s.if>
-			</@s.else>
-		</dd>
-	<dt><@wp.i18n key="ENTANDO_API_SERVICE_URI" /></dt>
-		<dd>
-			<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" />/getService?key=<@s.property value="serviceKey" />"><@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" />/getService?key=<@s.property value="serviceKey" /></a>
-		</dd>
-	<dt>
-		<@wp.i18n key="ENTANDO_API_EXTENSION" />
-	</dt>
-		<dd>
-			<@wp.i18n key="ENTANDO_API_EXTENSION_NOTE" />
-		</dd>
-	<dt>
-		<@wp.i18n key="ENTANDO_API_SERVICE_SCHEMAS" />
-	</dt>
-		<dd class="schemas">
-			<@wp.action path="/ExtStr2/do/Front/Api/Service/responseSchema.action" var="responseSchemaURLVar" >
-				<@wp.parameter name="serviceKey"><@s.property value="serviceKey" /></@wp.parameter>
-			</@wp.action>
-			<a href="${responseSchemaURLVar}" >
-				<@wp.i18n key="ENTANDO_API_SERVICE_SCHEMA_RESP" />
-			</a>
-		</dd>
-</dl>
-
-<@s.if test="%{null != #apiServiceVar.freeParameters && #apiServiceVar.freeParameters.length > 0}" >
-<table class="table table-striped table-bordered table-condensed" summary="<@wp.i18n key="ENTANDO_API_SERVICE_PARAMETERS_SUMMARY" />">
-	<caption><span><@wp.i18n key="ENTANDO_API_SERVICE_PARAMETERS" /></span></caption>
-	<tr>
-		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_NAME" /></th>
-		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_DESCRIPTION" /></th>
-		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_REQUIRED" /></th>
-		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_DEFAULT_VALUE" /></th>
-	</tr>
-	<@s.iterator value="#apiServiceVar.freeParameters" var="apiParameterNameVar" >
-		<@s.set var="apiParameterValueVar" value="%{#apiServiceVar.parameters[#apiParameterNameVar]}" />
-		<@s.set var="apiParameterVar" value="%{#apiServiceVar.master.getParameter(#apiParameterNameVar)}" />
-		<@s.set var="apiParameterRequiredVar" value="%{#apiParameterVar.required && null == #apiParameterValueVar}" />
-		<tr>
-			<td><label for="<@s.property value="#apiParameterNameVar" />"><@s.property value="#apiParameterNameVar" /></label></td>
-			<td><@s.property value="%{#apiParameterVar.description}" /></td>
-			<td class="icon required_<@s.property value="#apiParameterRequiredVar" />">
-				<@s.if test="#apiParameterRequiredVar" ><@wp.i18n key="YES" /></@s.if>
-				<@s.else><@wp.i18n key="NO" /></@s.else>
-			</td>
-			<td><@s.if test="null != #apiParameterValueVar"><@s.property value="#apiParameterValueVar" /></@s.if><@s.else>-</@s.else></td>
-		</tr>
-	</@s.iterator>
-</table>
-</@s.if>
-<p class="api-back">
-	<a class="btn btn-primary" href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />"><span class="icon-arrow-left icon-white"></span>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
-</p>
-</div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
-<br>
-<p class="title-paragraph"> What you''ll need to complete the application</p>
-<ul class="list">
-    <li>Business documentation such as company profile information, business certifications (eg.articles of incorporation), lists of assets</li>
-    <li>Business Tax documentation, from tax ID from tax Declarations</li>
-    <li>Personal information of the people in the company that will be eligible for financial services (eg. names, contact information, SSN ID)</li>
-    <li>List of services you may want to apply for</li>
-</ul>
-<br>
-<br>
-<p class="title-welcome"> What to expect after sign up</p>
-<ul class="list">
-    <li>When your sign up is done, you will have to complete the application form</li>
-    <li>After you send in the business documentation requested for your business type, the bank team will validate it</li>
-    <li>After your account is approved, you can fund your account while applying by using a debit card, transferring money from another account or writing a check.</li>
-    <li>Once your account is open, you may access Online Banking and you will receive your checks, debit cards and service activation in approximately 7 to 10 business days.</li>
-</ul>
-',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('login_form','login_form',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<h1><@wp.i18n key="RESERVED_AREA" /></h1>
-<#if (Session.currentUser.username != "guest") >
-	<p><@wp.i18n key="WELCOME" />, <em>${Session.currentUser}</em>!</p>
-	<#if (Session.currentUser.entandoUser) >
-	<table class="table table-condensed">
-		<tr>
-			<th><@wp.i18n key="USER_DATE_CREATION" /></th>
-			<th><@wp.i18n key="USER_DATE_ACCESS_LAST" /></th>
-			<th><@wp.i18n key="USER_DATE_PASSWORD_CHANGE_LAST" /></th>
-		</tr>
-		<tr>
-			<td>${Session.currentUser.creationDate?default("-")}</td>
-			<td>${Session.currentUser.lastAccess?default("-")}</td>
-			<td>${Session.currentUser.lastPasswordChange?default("-")}</td>
-		</tr>
-	</table>
-		<#if (!Session.currentUser.credentialsNotExpired) >
-		<div class="alert alert-block">
-			<p><@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD" />: <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/editPassword.action"><@wp.i18n key="USER_STATUS_EXPIRED_PASSWORD_CHANGE" /></a></p>
-		</div>
-		</#if>
-	</#if>
-	<@wp.ifauthorized permission="enterBackend">
-	<div class="btn-group">
-		<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />" class="btn"><@wp.i18n key="ADMINISTRATION" /></a>
-	</div>
-	</@wp.ifauthorized>
-	<p class="pull-right"><a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action" class="btn"><@wp.i18n key="LOGOUT" /></a></p>
-	<@wp.pageWithWidget widgetTypeCode="userprofile_editCurrentUser" var="userprofileEditingPageVar" listResult=false />
-	<#if (userprofileEditingPageVar??) >
-	<p><a href="<@wp.url page="${userprofileEditingPageVar.code}" />" ><@wp.i18n key="userprofile_CONFIGURATION" /></a></p>
-	</#if>
-<#else>
-	<#if (accountExpired?? && accountExpired == true) >
-	<div class="alert alert-block alert-error">
-		<p><@wp.i18n key="USER_STATUS_EXPIRED" /></p>
-	</div>
-	</#if>
-	<#if (wrongAccountCredential?? && wrongAccountCredential == true) >
-	<div class="alert alert-block alert-error">
-		<p><@wp.i18n key="USER_STATUS_CREDENTIALS_INVALID" /></p>
-	</div>
-	</#if>
-	<form action="<@wp.url/>" method="post" class="form-horizontal margin-medium-top">
-		<#if (RequestParameters.returnUrl??) >
-		<input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
-		</#if>
-		<div class="control-group">
-			<label for="username" class="control-label"><@wp.i18n key="USERNAME" /></label>
-			<div class="controls">
-				<input id="username" type="text" name="username" class="input-xlarge" />
-			</div>
-		</div>
-		<div class="control-group">
-			<label for="password" class="control-label"><@wp.i18n key="PASSWORD" /></label>
-			<div class="controls">
-				<input id="password" type="password" name="password" class="input-xlarge" />
-			</div>
-		</div>
-		<div class="form-actions">
-			<input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary" />
-		</div>
-	</form>
-</#if>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('internal_servlet_generic_error',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<@wp.i18n key="GENERIC_ERROR" />',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('internal_servlet_user_not_allowed',NULL,NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<@wp.i18n key="USER_NOT_ALLOWED" />',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('messages_system','messages_system',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
 <#assign currentPageCode><@wp.currentPage param="code" /></#assign>
@@ -2418,6 +2266,158 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	<div class="controls">
 		<input name="${formFieldNameVar}" id="${formFieldNameVar}" value="${formFieldValue}" type="text" class="input-xlarge"/>
 	</div>
+</div>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('complete-registration-BPM','complete-registration-BPM',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<div class="bpm-wrapper-background">
+<p class="title-welcome"> Complete registration </p>
+<p class="subtitle">Sign in </p>
+<p class="presentation">Hi . Type your and a password to complete the registration. </p>
+
+ <form action="#" method="post" class="m-t">
+        <#if (RequestParameters.returnUrl??) >
+        <input type="hidden" name="returnUrl" value="${RequestParameters.returnUrl}" />
+        </#if>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="first_name" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="first_name" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="last_name" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="last_name" />" class="form-control input-custom" />
+        </div>
+       <div class="form-group">
+            <label class="login-label"><@wp.i18n key="company_name" /></label>
+            <input id="username" type="text" name="username" placeholder="<@wp.i18n key="company_name" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="Email" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="Email" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="PASSWORD" /></label>
+            <p class="pass-hint">5 or more characters</p>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div class="form-group">
+            <label class="login-label"><@wp.i18n key="CONFIRM_PASSWORD" /></label>
+            <input id="password" type="password" name="password" placeholder="<@wp.i18n key="CONFIRM_PASSWORD" />" class="form-control input-custom" />
+        </div>
+        <div class="right-side-button">
+            <input type="submit" value="<@wp.i18n key="SIGNIN" />" class="btn btn-primary login-button" />
+        </div>
+    </form>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+
+<@wp.headInfo type="CSS" info="widgets/api.css"/>
+<@s.set var="apiServiceVar" value="%{getApiService(serviceKey)}" />
+<div class="entando-api api-resource-detail">
+<h2><@wp.i18n key="ENTANDO_API_SERVICE" />&#32;<@s.property value="serviceKey" /></h2>
+<@s.if test="hasActionMessages()">
+	<div class="message message_confirm">
+		<h3><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
+		<ul>
+			<@s.iterator value="actionMessages">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+<@s.if test="hasActionErrors()">
+	<div class="message message_error">
+		<h3><@wp.i18n key="ENTANDO_API_ERROR" /></h3>
+		<ul>
+			<@s.iterator value="actionErrors">
+				<li><@s.property escapeHtml=false /></li>
+			</@s.iterator>
+		</ul>
+	</div>
+</@s.if>
+
+<p class="description"><@s.property value="getTitle(serviceKey, #apiServiceVar.description)" /></p>
+
+<@s.set var="masterMethodVar" value="#apiServiceVar.master" />
+
+<dl class="dl-horizontal">
+	<dt><@wp.i18n key="ENTANDO_API_SERVICE_KEY" /></dt>
+		<dd><@s.property value="serviceKey" /></dd>
+	<dt><@wp.i18n key="ENTANDO_API_SERVICE_PARENT_API" /></dt>
+		<dd><@s.property value="#masterMethodVar.description" />&#32;(/<@s.if test="#masterMethodVar.namespace!=null && #masterMethodVar.namespace.length()>0"><@s.property value="#masterMethodVar.namespace" />/</@s.if><@s.property value="#masterMethodVar.resourceName" />)</dd>
+	<dt>
+		<@wp.i18n key="ENTANDO_API_SERVICE_AUTHORIZATION" />
+	</dt>
+		<dd>
+			<@s.if test="%{!#apiServiceVar.requiredAuth}" >
+				<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_FREE" />
+			</@s.if>
+			<@s.elseif test="%{null == #apiServiceVar.requiredPermission && null == #apiServiceVar.requiredGroup}">
+				<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_SIMPLE" />
+			</@s.elseif>
+			<@s.else>
+				<@s.set var="serviceAuthGroupVar" value="%{getGroup(#apiServiceVar.requiredGroup)}" />
+				<@s.set var="serviceAuthPermissionVar" value="%{getPermission(#apiServiceVar.requiredPermission)}" />
+				<@s.if test="%{null != #serviceAuthPermissionVar}">
+					<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_WITH_PERM" />&#32;<@s.property value="#serviceAuthPermissionVar.description" />
+				</@s.if>
+				<@s.if test="%{null != #serviceAuthGroupVar}">
+					<@s.if test="%{null != #serviceAuthPermissionVar}"><br /></@s.if>
+					<@wp.i18n key="ENTANDO_API_SERVICE_AUTH_WITH_GROUP" />&#32;<@s.property value="#serviceAuthGroupVar.descr" />
+				</@s.if>
+			</@s.else>
+		</dd>
+	<dt><@wp.i18n key="ENTANDO_API_SERVICE_URI" /></dt>
+		<dd>
+			<a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" />/getService?key=<@s.property value="serviceKey" />"><@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang" />/getService?key=<@s.property value="serviceKey" /></a>
+		</dd>
+	<dt>
+		<@wp.i18n key="ENTANDO_API_EXTENSION" />
+	</dt>
+		<dd>
+			<@wp.i18n key="ENTANDO_API_EXTENSION_NOTE" />
+		</dd>
+	<dt>
+		<@wp.i18n key="ENTANDO_API_SERVICE_SCHEMAS" />
+	</dt>
+		<dd class="schemas">
+			<@wp.action path="/ExtStr2/do/Front/Api/Service/responseSchema.action" var="responseSchemaURLVar" >
+				<@wp.parameter name="serviceKey"><@s.property value="serviceKey" /></@wp.parameter>
+			</@wp.action>
+			<a href="${responseSchemaURLVar}" >
+				<@wp.i18n key="ENTANDO_API_SERVICE_SCHEMA_RESP" />
+			</a>
+		</dd>
+</dl>
+
+<@s.if test="%{null != #apiServiceVar.freeParameters && #apiServiceVar.freeParameters.length > 0}" >
+<table class="table table-striped table-bordered table-condensed" summary="<@wp.i18n key="ENTANDO_API_SERVICE_PARAMETERS_SUMMARY" />">
+	<caption><span><@wp.i18n key="ENTANDO_API_SERVICE_PARAMETERS" /></span></caption>
+	<tr>
+		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_NAME" /></th>
+		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_DESCRIPTION" /></th>
+		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_REQUIRED" /></th>
+		<th><@wp.i18n key="ENTANDO_API_SERVICE_PARAM_DEFAULT_VALUE" /></th>
+	</tr>
+	<@s.iterator value="#apiServiceVar.freeParameters" var="apiParameterNameVar" >
+		<@s.set var="apiParameterValueVar" value="%{#apiServiceVar.parameters[#apiParameterNameVar]}" />
+		<@s.set var="apiParameterVar" value="%{#apiServiceVar.master.getParameter(#apiParameterNameVar)}" />
+		<@s.set var="apiParameterRequiredVar" value="%{#apiParameterVar.required && null == #apiParameterValueVar}" />
+		<tr>
+			<td><label for="<@s.property value="#apiParameterNameVar" />"><@s.property value="#apiParameterNameVar" /></label></td>
+			<td><@s.property value="%{#apiParameterVar.description}" /></td>
+			<td class="icon required_<@s.property value="#apiParameterRequiredVar" />">
+				<@s.if test="#apiParameterRequiredVar" ><@wp.i18n key="YES" /></@s.if>
+				<@s.else><@wp.i18n key="NO" /></@s.else>
+			</td>
+			<td><@s.if test="null != #apiParameterValueVar"><@s.property value="#apiParameterValueVar" /></@s.if><@s.else>-</@s.else></td>
+		</tr>
+	</@s.iterator>
+</table>
+</@s.if>
+<p class="api-back">
+	<a class="btn btn-primary" href="<@wp.action path="/ExtStr2/do/Front/Api/Resource/list.action" />"><span class="icon-arrow-left icon-white"></span>&#32;<@wp.i18n key="ENTANDO_API_GOTO_LIST" /></a>
+</p>
 </div>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('search_result','search_result','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>

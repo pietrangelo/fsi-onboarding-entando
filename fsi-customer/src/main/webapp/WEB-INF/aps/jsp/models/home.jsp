@@ -13,6 +13,7 @@
         <!--JS inclusions-->
         <script src="<wp:resourceURL />administration/js/jquery-2.2.4.min.js"></script>
         <script src="<wp:resourceURL />administration/bootstrap/js/bootstrap.min.js"></script>
+        <jsp:include page="inc/flash_toast.jsp" />
     </head>
     <body id="background-full-landing">
 

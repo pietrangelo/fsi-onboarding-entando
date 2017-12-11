@@ -1,3 +1,10 @@
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('nennolello2','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('nennolello3','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('nennolello4','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('nennolello5','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('nennolello6','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('nennolello7','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('nennolello8','customers',NULL);
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('admin','administrators','admin');
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('customer','customers',NULL);
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('f.locci','customers',NULL);

@@ -1845,3 +1845,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
         font-size: 44px;
     }
 }
+
+
+#toast-container > div {
+    opacity: 1 !important;
+}

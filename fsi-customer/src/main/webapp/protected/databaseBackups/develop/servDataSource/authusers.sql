@@ -13,4 +13,11 @@ INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordc
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('flocci6','M6a/uY1I0JDGWU/XU+dWTA==','2017-11-23 00:00:00','2017-11-24 00:00:00',NULL,1);
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('ciccio','ZVzjxTZrEa4=','2017-11-23 00:00:00','2017-11-23 00:00:00',NULL,1);
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('flocci','M6a/uY1I0JDGWU/XU+dWTA==','2017-11-22 00:00:00','2017-11-24 00:00:00',NULL,1);
-INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('admin','adminadmin','2008-10-10 00:00:00','2017-11-27 00:00:00',NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello2','WZBjxhQANu4y27avpBokNg==','2017-12-11 00:00:00',NULL,NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello3','WZBjxhQANu7J2Uu94qYVeg==','2017-12-11 00:00:00',NULL,NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello4','WZBjxhQANu7UwGDD8jtxsQ==','2017-12-11 00:00:00',NULL,NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('admin','adminadmin','2008-10-10 00:00:00','2017-12-11 00:00:00',NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello5','WZBjxhQANu7GpRLDncSXpg==','2017-12-11 00:00:00',NULL,NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello6','WZBjxhQANu4SwQ4aGePXFg==','2017-12-11 00:00:00',NULL,NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello7','WZBjxhQANu5BdKl7L06D5A==','2017-12-11 00:00:00',NULL,NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello8','WZBjxhQANu45eJMLFI5uAQ==','2017-12-11 00:00:00','2017-12-11 00:00:00',NULL,1);

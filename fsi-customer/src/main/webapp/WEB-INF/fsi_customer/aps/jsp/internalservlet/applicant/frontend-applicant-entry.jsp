@@ -112,6 +112,14 @@
     </form>
 </div>
 
+<s:if test="hasActionMessages()">
+<script>
+// redirect to login page showing the toastr
+var url = '<wp:url page="homepage" />';
+url += '#flashToast=success|Please login to continue your application';
+window.location = url;
+</script>
+</s:if>
 <script>
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
@@ -123,13 +131,12 @@
             }
         }
         return "";
-    }
-    ;
+    };
 
     var maps = {
-        applicant_firstname: getQueryVariable("fname") || "John",
-        applicant_lastname: getQueryVariable("lame") || "Doe",
-        applicant_company: getQueryVariable("company") || "Interstellar Inc.",
+        applicant_firstname: getQueryVariable("fname"),
+        applicant_lastname: getQueryVariable("lame"),
+        applicant_company: getQueryVariable("company"),
         applicant_email: getQueryVariable("email"),
         applicant_username: "",
         applicant_pwd: "",
@@ -144,4 +151,3 @@
         }
     }
 </script>
-

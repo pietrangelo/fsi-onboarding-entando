@@ -5,14 +5,16 @@
 --%>
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <link rel="stylesheet" href="<wp:resourceURL />static/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<wp:resourceURL />static/css/toastr.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/inspina_overrides.css">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/animate.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/awesome-bootstrap-checkbox.css" rel="stylesheet">
-<link rel="stylesheet" href="<wp:resourceURL />static/css/custom.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/c3.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/morris-0.4.3.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<wp:resourceURL />static/css/jasny.css" rel="stylesheet">
+
+<link rel="stylesheet" href="<wp:resourceURL />static/css/custom.css" rel="stylesheet">
 
 
 <script src="<wp:resourceURL />static/js/bootstrap.min.js"></script>
@@ -30,4 +32,4 @@
 
 <!--<script src="<wp:resourceURL />static/js/Chart.min.js"></script>-->
 <script src="<wp:resourceURL />static/js/icheck.min.js"></script>
-
+<script src="<wp:resourceURL />static/js/toastr.min.js"></script>

@@ -2455,8 +2455,13 @@ label.error {
     border-right: none;
 }
 /* Toastr custom style */
-#toast-container > .toast {
+#toast-container > .toast,
+#toast-container > .toast-success,
+#toast-container > .toast.info,
+#toast-container > .toast-warning,
+#toast-container > .toast-error {
     background-image: none !important;
+    opacity: 1 !important;
 }
 #toast-container > .toast:before {
     position: fixed;
