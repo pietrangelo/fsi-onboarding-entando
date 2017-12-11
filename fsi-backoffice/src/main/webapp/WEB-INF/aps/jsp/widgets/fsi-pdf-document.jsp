@@ -24,6 +24,10 @@
         font-family: "Open Sans", sans-serif;
     }
 
+    .fsi-pdf-document .fsi-pdf-check-fields .pdf-field {
+        position: relative;
+    }
+
     .fsi-pdf-document .fsi-pdf-check-fields .pdf-field-row {
         margin-top: 15px;
         background: #FFFFFF;
@@ -107,12 +111,21 @@
         margin-top: 0;
         transition: height 300ms, margin-top 300ms;
         overflow: hidden;
+        visibility: hidden;
     }
 
     .fsi-pdf-document .fsi-pdf-check-fields .pdf-field.expanded .approve-reject-buttons {
+        position: absolute;
+        width: 100%;
+        top: 100%;
         height: 60px;
-        margin-top: 15px;
+        z-index: 10;
+        opacity: .9;
         transition: height 300ms, margin-top 300ms;
+        visibility: hidden;
+    }
+    .fsi-pdf-document .fsi-pdf-check-fields .pdf-field.expanded:hover .approve-reject-buttons {
+        visibility: visible;
     }
 
     .fsi-pdf-document .fsi-pdf-check-fields .approve-reject-buttons .block-btn {
@@ -231,7 +244,7 @@
 </div>
 
 <script type="text/template" id="pdf-field-template">
-    <div class="pdf-field">
+    <div class="pdf-field expanded">
         <div class="pdf-field-row">
             <div class="pdf-field-labels">
                 <div class="pdf-field-name">Verify company name</div>
@@ -273,14 +286,20 @@
             }
         }
 
-        function toggleFieldExpand(fieldElem) {
+        function toggleFieldExpand(fieldElem, forceExpand) {
+            var mustExpand = (forceExpand === true)
+              ? true
+              : (forceExpand === false)
+                ? false
+                : !$(fieldElem).hasClass('expanded');
             var expandBtn = $(fieldElem).find('.expand-btn');
             expandBtn.removeClass('fa-chevron-up fa-chevron-down');
-            $(fieldElem).toggleClass('expanded');
-            if ($(fieldElem).hasClass('expanded')) {
-                expandBtn.addClass('fa-chevron-up');
+            if (mustExpand) {
+              $(fieldElem).addClass('expanded');
+              expandBtn.addClass('fa-chevron-up');
             } else {
-                expandBtn.addClass('fa-chevron-down');
+              $(fieldElem).removeClass('expanded');
+              expandBtn.addClass('fa-chevron-down');
             }
         }
 
@@ -296,6 +315,7 @@
             // binding clear field buttons
             $('.pdf-field .clear-btn').click(function () {
                 var field = $(this).closest('.pdf-field');
+                toggleFieldExpand(field, true);
                 field.removeClass('marked approved rejected');
                 updateApproveRejectForm();
             });
