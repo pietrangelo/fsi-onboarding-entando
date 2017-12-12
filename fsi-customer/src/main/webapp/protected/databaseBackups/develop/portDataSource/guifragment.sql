@@ -1,3 +1,8 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-logout','fsi-toplink-logout',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<!--#if (Session.currentUser != "guest")-->
+    <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">Logout</a>
+<!--/#if-->
+                        ',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>State</h5>
@@ -388,6 +393,13 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
     </script>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-dashboard','fsi-toplink-dashboard',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<a href="<@wp.url page="dashboard_internal" />" >dashboard</a>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-customer-internal','fsi-toplink-customer-internal',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<a href="<@wp.url page="customer_internal" />" >personal</a>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-enterprise-placeholder','fsi-toplink-enterprise-placeholder',NULL,'<b>enterprise</b>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-small-business-placeholder','fsi-toplink-small-business-placeholder',NULL,'<b>small business</b>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front-BooleanAttribute',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsf=JspTaglibs["/apsadmin-form"]>
@@ -566,6 +578,8 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       <div class="bb-expect-it">Expect it.</div>
     </div>
   </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-applicant','fsi-toplink-applicant',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<a href="<@wp.url page="applicant" />" >small business</a>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES (' Credit-card-banner-right',' Credit-card-banner-right',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
  <div class="credit-banner-right"> 
@@ -579,6 +593,9 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-personal-placeholder','fsi-toplink-personal-placeholder',NULL,'<b>personal</b>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-commercial-placeholder','fsi-toplink-commercial-placeholder',NULL,'<b>commercial</b>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-account-placeholder','fsi-toplink-account-placeholder',NULL,'<b>account</b>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-form-banking-services','fsi-form-banking-services',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <div class="customer-process-step fsi-form-banking-services">
     <div class="ibox float-e-margins">

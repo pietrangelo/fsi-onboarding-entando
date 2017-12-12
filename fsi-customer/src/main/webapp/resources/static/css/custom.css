@@ -298,43 +298,7 @@ input[type=checkbox]:checked~#menu {
     }
 }
 
-.fsi-header {
-    font-family: "Open Sans", sans-serif;
-    font-size: 24px;
-    background: #002235;
-    color: #ffffff;
-    min-height: 102px;
-    display: flex;
-}
 
-.fsi-header .logo-names {
-    margin-top: 26px;
-    width: 400px;
-    margin-left: -15px;
-    display: flex;
-    align-items: center;
-}
-
-.fsi-header .fa.fa-shield {
-    font-size: 40px;
-}
-
-.fsi-header.logo-names b {
-    font-weight: 600;
-}
-.fsi-header.logo-names span {
-    font-weight: 300;
-}
-.logo-menu-pages{
-    float:left;
-    height: 22px;
-    margin: 37px 5px 0 40px;
-    font-size: 16px;
-    font-weight: 300;
-    font-family: "Open Sans", sans-serif;
-    line-height: 22px;
-    text-transform: uppercase;
-}
 .input-custom{
     height:50px;
     font-size: 16px;
