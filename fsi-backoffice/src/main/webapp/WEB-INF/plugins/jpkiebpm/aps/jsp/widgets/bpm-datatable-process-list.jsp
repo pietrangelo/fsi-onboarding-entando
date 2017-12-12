@@ -36,7 +36,7 @@
         function getProcessList(url) {
             var def = $.Deferred();
             $.get(url).then(function (processListData) {
-                var processList = getDeep(processListData, 'data.response.result.processInstanceList.list');
+                var processList = getDeep(processListData, 'response.result.processInstanceList.list');
                 if (processList) {
                     processList = processList.map(function (item) {
                         item['start-date'] = new Date(item['start-date']).toLocaleString();
@@ -61,7 +61,10 @@
                         return item;
                     });
 
-                    def.resolve(Array.isArray(processList) ? processList : [processList])
+                    var result = {};
+                    result['processList'] = processList;
+                    result['datatable-field-definition'] = processListData.response.result.processInstanceList['datatable-field-definition'];
+                    def.resolve(result)
                 }
 
                 else def.resolve([]);
@@ -85,12 +88,13 @@
 
         var loadDataTable = function (url, idTable) {
 
-            getProcessList(url).done(function(data){
+            getProcessList(url).done(function (data) {
 
+                var items = data['processList'] || [];
 
                 var extraConfig = {};
 
-                extraConfig.columnDefinition = data.response.result.processInstanceList["datatable-field-definition"].fields;
+                extraConfig.columnDefinition = data["datatable-field-definition"].fields;
                 extraConfig.columnDefinition.push({
                     "title": "Actions",
                     "data": "viewLink",
@@ -105,7 +109,7 @@
                     table.order([
                         extraConfig.columnDefinition.find(function (item, index) {
 
-                            if (item.data === 'id') {
+                            if (item.data === 'dueDate') {
                                 item.position = index;
                                 return item;
                             }
@@ -117,11 +121,11 @@
 
                 setInterval(function () {
 
-                    getTaskList(context).done(function (data) {
+                    getProcessList(url).done(function (data) {
 
                         var table = $(idTable).DataTable();
                         table.clear();
-                        table.rows.add(data);
+                        table.rows.add(data['processList'] || []);
                         table.draw();
                     })
                 }, 5000);

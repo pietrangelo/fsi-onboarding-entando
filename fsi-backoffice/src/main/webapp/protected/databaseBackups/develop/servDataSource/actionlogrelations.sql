@@ -1,3 +1,4 @@
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (300,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (298,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (45,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (46,'customers');
@@ -285,6 +286,7 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (62,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (66,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (66,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (50,'customers');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (304,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (50,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (49,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (49,'administrators');
