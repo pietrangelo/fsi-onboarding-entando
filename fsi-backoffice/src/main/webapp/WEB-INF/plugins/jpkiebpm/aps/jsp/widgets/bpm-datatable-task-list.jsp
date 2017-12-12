@@ -23,63 +23,23 @@
 <link rel="stylesheet" href="<wp:resourceURL />plugins/jpkiebpm/static/css/jquery.dataTables.min.css" media="screen"/>
 
 <style>
-.dataTables_wrapper {
-  margin: 0;
-}
+    .dataTables_wrapper {
+        margin: 0;
+    }
 </style>
 <script>
 
-    function addRow(data, label, index) {
-        var html = "<tr><td>" + label + "</td><td>" + data[index] + "</td></tr>"
-        return data[index] === undefined ? "" : html;
-    }
-
-    function getHtmlListFragment(src, label) {
-        if (!src) {
-            return '';
-        }
-        var html = "<ul>";
-        if (Array.isArray(src)) {
-            src.forEach(function (value) {
-                html += "<li>" + value + "</li>";
-            });
-        }
-        else if (Array.isArray(src[label])) {
-            src[label].forEach(function (value) {
-                html += "<li>" + value + "</li>";
-            });
-        }
-        else {
-            html += "<li>" + (src[label] === undefined ? "" : src[label]) + "</li>";
-        }
-        html += "</ul>"
-        return html;
-    }
-
-    function getTemplateTaskDetail(data) {
-        var template =
-            "<tr><td>Task id</td><td>" + data['task-id'] + "</td></tr>\n" +
-            "<tr><td>Task name</td><td>" + data['task-name'] + "</td></tr>\n" +
-            "<tr><td>Task form</td><td>" + data['task-form'] + "</td></tr>\n" +
-            "<tr><td>Task priority</td><td>" + data['task-priority'] + "</td></tr>\n" +
-            "<tr><td>Task status</td><td>" + data['task-status'] + "</td></tr>\n" +
-            "<tr><td>Actual Owner</td><td>" + data['task-actual-owner'] + "</td></tr>\n" +
-            "<tr><td>Created by</td><td>" + data['task-created-by'] + "</td></tr>\n" +
-            "<tr><td>Created On</td><td>" + data['task-created-on'] + "</td></tr>\n" +
-            "<tr><td>Expiration Time</td>" + data['task-expiration-time'] + "<td></td></tr>\n" +
-            "<tr><td>Skippable</td><td>" + data['task-skippable'] + "</td></tr>\n" +
-            "<tr><td>Workitem Id</td><td>" + data['task-workitem-id'] + "</td></tr>\n" +
-            "<tr><td>Process Instance</td>" + data['task-process-instance-id'] + "<td></td></tr>\n" +
-            "<tr><td>Parent Id</td><td>" + data['task-parent-id'] + "</td></tr>\n" +
-            "<tr><td>Container Id</td><td>" + data['task-container-id'] + "</td></tr>\n" +
-            "<tr><td>Potential Owners</td><td>" + getHtmlListFragment(data['potential-owners'], 'task-pot-owners') + "</td></tr>\n" +
-            "<tr><td>Excluded Owner</td><td>" + getHtmlListFragment(data['excluded-owners'], 'task-exc-owners') + "</td></tr>\n" +
-            "<tr><td>Business Admin</td><td>" + getHtmlListFragment(data['business-admins'], 'task-business-admins') + "</td></tr>";
-        return template;
-    }
-
-
     $(document).ready(function () {
+
+
+        var optModal = {
+            //appendTo: "#data-table-active",
+            minWidth: 500,
+            modal: true,
+            show: {effect: "fadego", duration: 800},
+            resizable: true,
+            position: {my: "center top", at: "center top+10%"}
+        };
 
 
         function getTaskList(context) {
@@ -87,7 +47,7 @@
             var username = '${currentUser.username}';
 
             var url = "";
-            if (username === 'legal' || username === 'admin' || username === 'Manager' )
+            if (username === 'legal' || username === 'admin' || username === 'Manager')
                 url = context + "legalWorkerTasks.json";
             else if (username === 'knowledge') {
                 url = context + "knowledgeWorkerTasks.json";
@@ -96,7 +56,7 @@
             var def = $.Deferred();
             $.get(url).then(function (taskData) {
                 var taskList = getDeep(taskData, 'response.result.taskList.list');
-                if (taskList){
+                if (taskList) {
                     def.resolve(Array.isArray(taskList) ? taskList : [taskList]);
                 }
                 else def.resolve([]);
@@ -104,7 +64,7 @@
             }, function (error) {
                 console.error(error, arguments);
                 var message = getDeep(error, "responseJSON.response.errors.error.message");
-                if (message && message.match(/^Tasks for user .+ does not exist$/))  {
+                if (message && message.match(/^Tasks for user .+ does not exist$/)) {
                     def.resolve([]);
                 }
                 else
@@ -116,40 +76,66 @@
             return def.promise();
         }
 
+        function getDiagram(url) {
+            var def = $.Deferred();
+            $.get(url).then(function (data) {
+                var diagram = getDeep(data, 'response.result');
+                if (diagram) {
+                    def.resolve(data.response.result)
+                }
+                else def.reject("no diagram found");
 
-        var loadDataTable = function (context,url, idTable) {
+            }, function (error) {
+                console.error(error);
+                def.reject(error);
+            })
+            return def.promise();
+        }
+
+        var loadDataTable = function (context, url, idTable) {
 
 
-            getTaskList(context).done(function (legalTask) {
+            getTaskList(context).done(function (task) {
 
 
                 $.get(url, function (data) {
 
-                    var items = legalTask || []; //data.response.result.taskList.list || [] ;
+                    var items = task || []; //data.response.result.taskList.list || [] ;
 
                     if (items) {
                         items = items.map(function (item) {
                             item['activated'] = new Date(item['activated']).toLocaleString();
                             item['created'] = new Date(item['created']).toLocaleString();
-
-                            var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/backoffice.page?configId=${id}&processInstanceId='+item['processInstanceId'];
-
-                            item['viewLink'] = '<a href ="'+url+'"><button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">REVIEW</button></a>';
-
-
-
+                            var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/backoffice.page?configId=${id}&processInstanceId=' + item['processInstanceId'];
+                            item['viewLink'] = '<a href ="' + url + '"><button type="button" class="btn btn-success btn-sm">REVIEW</button></a>';
                             return item;
                         });
                     }
 
-                    var extraConfig = {};
+                    var extraConfig = {
+                        buttons: [{
+                            html: '<button type="button" class="btn btn-success btn-sm">DIAGRAM</button>',
+                            onClick: function (ev, data) {
+                                var url = context + "diagram.json?configId=${id}&processInstanceId=" + data['processInstanceId'];
+                                getDiagram(url)
+                                    .done(function (diagram) {
+                                        $('#bpm-task-list-modal-diagram-data').attr("src", "data:image/svg+xml;utf8," + diagram);
+                                        optModal.title = "BPM Process Diagram";
+                                        optModal.show.effect = "fold";
+                                        optModal.position = {my: "center", at: "center"};
+                                        $('#bpm-task-list-modal-diagram').dialog(optModal);
+                                    })
+                                    .fail(function (error) {
+                                        console.log(error);
+                                    })
+
+                            }
+                        }]
+                    };
                     var username = '${currentUser.username}';
-                    if  (username === 'admin' || username === 'Manager') {
+                    if (username === 'admin' || username === 'Manager') {
                         extraConfig = {};
                     }
-
-
-
 
 
                     extraConfig.columnDefinition = data.response.result.taskList["datatable-field-definition"].fields;
@@ -160,14 +146,19 @@
                         "position": -1
 
                     });
+
+
                     org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
-                    if (items.length){
+                    if (items.length) {
 
                         var table = $(idTable).DataTable();
-                        table.order([
-                            extraConfig.columnDefinition.find(function(item){  return item.data === 'created'  }).position - 1,
-                            'desc'
-                        ]);
+
+                        table.order([extraConfig.columnDefinition.find(function (item, index) {
+                            if (item.data === 'id') {
+                                item.position = index  ;
+                                return item;
+                            }
+                        }).position, 'desc']);
                         table.draw();
                     }
 
@@ -182,8 +173,12 @@
         var context = "<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/";
         var url = context + "tasks.json?configId=${id}";
 
-        loadDataTable(context,url, '#data-table-task-list');
+        loadDataTable(context, url, '#data-table-task-list');
     });
 </script>
 
 <table id="data-table-task-list" class="display nowrap" cellspacing="0" width="100%"></table>
+
+<div id="bpm-task-list-modal-diagram">
+    <img id="bpm-task-list-modal-diagram-data" class="img-responsive"/>
+</div>
