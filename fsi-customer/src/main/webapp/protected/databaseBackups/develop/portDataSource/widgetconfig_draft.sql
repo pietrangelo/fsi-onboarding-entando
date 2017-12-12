@@ -1,3 +1,17 @@
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',5,'fsi-toplink-logout',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',5,'fsi-toplink-logout',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',4,'fsi-toplink-dashboard',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',3,'fsi-toplink-small-business-placeholder',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',2,'fsi-toplink-enterprise-placeholder',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',1,'fsi-toplink-customer-internal',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('homepage',4,'fsi-toplink-commercial-placeholder',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('homepage',3,'fsi-toplink-applicant',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('homepage',2,'fsi-toplink-enterprise-placeholder',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('homepage',1,'fsi-toplink-personal-placeholder',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',4,'fsi-toplink-customer-internal',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',2,'fsi-toplink-small-business-placeholder',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',1,'fsi-toplink-personal-placeholder',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',3,'fsi-toplink-account-placeholder',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',11,'fsi-registration-form-advanced',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',6,'fsi-progress-bar',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('dashboard_internal',8,'fsi-customer-overview',NULL);

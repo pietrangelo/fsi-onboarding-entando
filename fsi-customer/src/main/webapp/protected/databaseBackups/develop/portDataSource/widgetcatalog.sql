@@ -1,3 +1,6 @@
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-logout','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Logout</property><property key="it">FSI Toplink Logout</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('Login-Customer','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Login Customer</property><property key="it">Login Cliente</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
@@ -6,6 +9,30 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 ',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-progress-bar','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI progress bar</property><property key="it">FSI progress bar</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-dashboard','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Dashboard</property><property key="it">FSI Toplink Dashboard</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-customer-internal','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Customer Internal</property><property key="it">FSI Toplink Customer Internal</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-enterprise-placeholder','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Enterprise Placeholder</property><property key="it">FSI Toplink Enterprise Placeholder</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-small-business-placeholder','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Small Business Placeholder</property><property key="it">FSI Toplink Small Business Placeholder</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-applicant','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Applicant</property><property key="it">FSI Toplink Applicant</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-personal-placeholder','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Personal Placeholder</property><property key="it">FSI Toplink Personal Placeholder</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-commercial-placeholder','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Commercial Placeholder</property><property key="it">FSI Toplink Commercial Placeholder</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-toplink-account-placeholder','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI Toplink Account Placeholder</property><property key="it">FSI Toplink Account Placeholder</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-state','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI state</property><property key="it">FSI status</property></properties>
