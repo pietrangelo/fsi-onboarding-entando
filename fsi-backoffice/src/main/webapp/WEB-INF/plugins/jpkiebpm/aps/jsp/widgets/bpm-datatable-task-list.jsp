@@ -154,8 +154,8 @@
                         var table = $(idTable).DataTable();
 
                         table.order([extraConfig.columnDefinition.find(function (item, index) {
-                            if (item.data === 'created') {
-                                item.position = index + 1;
+                            if (item.data === 'id') {
+                                item.position = index  ;
                                 return item;
                             }
                         }).position, 'desc']);

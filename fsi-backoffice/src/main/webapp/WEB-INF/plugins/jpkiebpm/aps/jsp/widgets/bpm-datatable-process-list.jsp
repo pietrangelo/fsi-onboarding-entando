@@ -80,8 +80,8 @@
                     table.order([
                         extraConfig.columnDefinition.find(function (item) {
 
-                            if (item.data === 'start-date') {
-                                item.position = index + 1;
+                            if (item.data === 'id') {
+                                item.position = index;
                                 return item;
                             }
                         }).position,
