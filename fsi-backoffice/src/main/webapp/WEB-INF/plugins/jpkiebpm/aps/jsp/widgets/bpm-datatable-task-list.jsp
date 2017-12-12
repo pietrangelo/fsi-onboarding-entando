@@ -57,6 +57,17 @@
             $.get(url).then(function (taskData) {
                 var taskList = getDeep(taskData, 'response.result.taskList.list');
                 if (taskList) {
+
+
+                    taskList = taskList.map(function (item) {
+                        item['activated'] = new Date(item['activated']).toLocaleString();
+                        item['created'] = new Date(item['created']).toLocaleString();
+                        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/backoffice.page?configId=${id}&processInstanceId=' + item['processInstanceId'];
+                        item['viewLink'] = '<a href ="' + url + '"><button type="button" class="btn btn-success btn-sm">REVIEW</button></a>';
+                        return item;
+                    });
+
+
                     def.resolve(Array.isArray(taskList) ? taskList : [taskList]);
                 }
                 else def.resolve([]);
@@ -102,15 +113,6 @@
 
                     var items = task || []; //data.response.result.taskList.list || [] ;
 
-                    if (items) {
-                        items = items.map(function (item) {
-                            item['activated'] = new Date(item['activated']).toLocaleString();
-                            item['created'] = new Date(item['created']).toLocaleString();
-                            var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/backoffice.page?configId=${id}&processInstanceId=' + item['processInstanceId'];
-                            item['viewLink'] = '<a href ="' + url + '"><button type="button" class="btn btn-success btn-sm">REVIEW</button></a>';
-                            return item;
-                        });
-                    }
 
                     var extraConfig = {
                         buttons: [{
@@ -155,13 +157,23 @@
 
                         table.order([extraConfig.columnDefinition.find(function (item, index) {
                             if (item.data === 'id') {
-                                item.position = index  ;
+                                item.position = index;
                                 return item;
                             }
                         }).position, 'desc']);
                         table.draw();
                     }
 
+                    setInterval(function () {
+                        console.log('reload');
+                        getTaskList(context).done(function (data) {
+                            console.log('reload1');
+                            var table = $(idTable).DataTable();
+                            table.clear();
+                            table.rows.add(data);
+                            table.draw();
+                        })
+                    }, 5000);
 
                 });
 

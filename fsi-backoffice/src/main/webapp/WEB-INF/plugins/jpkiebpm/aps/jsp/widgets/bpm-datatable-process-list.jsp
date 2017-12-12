@@ -32,36 +32,61 @@
 
     $(document).ready(function () {
 
+
+        function getProcessList(url) {
+            var def = $.Deferred();
+            $.get(url).then(function (processListData) {
+                var processList = getDeep(processListData, 'data.response.result.processInstanceList.list');
+                if (processList) {
+                    processList = processList.map(function (item) {
+                        item['start-date'] = new Date(item['start-date']).toLocaleString();
+                        item['dueDate'] = new Date(item['dueDate']).toLocaleString();
+                        item['dateofbirth'] = new Date(item['dateofbirth']).toLocaleString();
+                        switch (item['status']) {
+                            case 1 :
+                                item['status'] = 'Started';
+                                break;
+                            case 2 :
+                                item['status'] = 'In Progress';
+                                break;
+                            case 3 :
+                                item['status'] = 'Completed';
+                                break;
+                        }
+                        delete item['@xsi.type'];
+                        var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/account_executive_customer.page?configId=${id}&processInstanceId=' + item['process-instance-id'];
+
+                        item['viewLink'] = '<a href ="' + url + '"><button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">VIEW</button></a>';
+
+                        return item;
+                    });
+
+                    def.resolve(Array.isArray(processList) ? processList : [processList])
+                }
+
+                else def.resolve([]);
+
+
+            }, function (error) {
+                console.error(error, arguments);
+                var message = getDeep(error, "responseJSON.response.errors.error.message");
+                if (message && message.match(/^.+$/)) {
+                    def.resolve([]);
+                }
+                else
+                    def.reject(error);
+
+
+            });
+
+            return def.promise();
+
+        }
+
         var loadDataTable = function (url, idTable) {
 
-            $.get(url, function (data) {
+            getProcessList(url).done(function(data){
 
-                var items = data.response.result.processInstanceList.list || [];
-                if (!Array.isArray(items)) {
-                    items = [items]
-                }
-                items = items.map(function (item) {
-                    item['start-date'] = new Date(item['start-date']).toLocaleString();
-                    item['dueDate'] = new Date(item['dueDate']).toLocaleString();
-                    item['dateofbirth'] = new Date(item['dateofbirth']).toLocaleString();
-                    switch (item['status']) {
-                        case 1 :
-                            item['status'] = 'Started';
-                            break;
-                        case 2 :
-                            item['status'] = 'In Progress';
-                            break;
-                        case 3 :
-                            item['status'] = 'Completed';
-                            break;
-                    }
-                    delete item['@xsi.type'];
-                    var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/account_executive_customer.page?configId=${id}&processInstanceId=' + item['process-instance-id'];
-
-                    item['viewLink'] = '<a href ="' + url + '"><button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">VIEW</button></a>';
-
-                    return item;
-                });
 
                 var extraConfig = {};
 
@@ -78,7 +103,7 @@
 
                     var table = $(idTable).DataTable();
                     table.order([
-                        extraConfig.columnDefinition.find(function (item) {
+                        extraConfig.columnDefinition.find(function (item, index) {
 
                             if (item.data === 'id') {
                                 item.position = index;
@@ -89,6 +114,17 @@
                     ]);
                     table.draw();
                 }
+
+                setInterval(function () {
+
+                    getTaskList(context).done(function (data) {
+
+                        var table = $(idTable).DataTable();
+                        table.clear();
+                        table.rows.add(data);
+                        table.draw();
+                    })
+                }, 5000);
 
 
             });
