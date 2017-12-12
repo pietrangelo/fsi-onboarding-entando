@@ -23,9 +23,9 @@
 <link rel="stylesheet" href="<wp:resourceURL />plugins/jpkiebpm/static/css/jquery.dataTables.min.css" media="screen"/>
 
 <style>
-.dataTables_wrapper {
-  margin: 0;
-}
+    .dataTables_wrapper {
+        margin: 0;
+    }
 </style>
 <script>
 
@@ -45,19 +45,25 @@
                     item['dueDate'] = new Date(item['dueDate']).toLocaleString();
                     item['dateofbirth'] = new Date(item['dateofbirth']).toLocaleString();
                     switch (item['status']) {
-                        case 1 : item['status'] ='Started'; break;
-                        case 2 : item['status'] ='In Progress'; break;
-                        case 3 : item['status'] ='Completed'; break;
+                        case 1 :
+                            item['status'] = 'Started';
+                            break;
+                        case 2 :
+                            item['status'] = 'In Progress';
+                            break;
+                        case 3 :
+                            item['status'] = 'Completed';
+                            break;
                     }
                     delete item['@xsi.type'];
-                    var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/account_executive_customer.page?configId=${id}&processInstanceId='+item['process-instance-id'];
+                    var url = '<wp:info key="systemParam" paramName="applicationBaseURL" /><wp:info key="currentLang"/>/account_executive_customer.page?configId=${id}&processInstanceId=' + item['process-instance-id'];
 
-                    item['viewLink'] = '<a href ="'+url+'"><button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">VIEW</button></a>';
+                    item['viewLink'] = '<a href ="' + url + '"><button type="button" class="class-open-bpm-task-list-modal-form-details btn btn-success btn-sm" style="margin-right:10px;">VIEW</button></a>';
 
                     return item;
                 });
 
-                var extraConfig= {};
+                var extraConfig = {};
 
                 extraConfig.columnDefinition = data.response.result.processInstanceList["datatable-field-definition"].fields;
                 extraConfig.columnDefinition.push({
@@ -68,11 +74,17 @@
 
                 });
                 org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
-                if (items.length){
+                if (items.length) {
 
                     var table = $(idTable).DataTable();
                     table.order([
-                        extraConfig.columnDefinition.find(function(item){  return item.data === 'start-date'  }).position - 1,
+                        extraConfig.columnDefinition.find(function (item) {
+
+                            if (item.data === 'start-date') {
+                                item.position = index + 1;
+                                return item;
+                            }
+                        }).position,
                         'desc'
                     ]);
                     table.draw();
@@ -91,4 +103,5 @@
     });
 </script>
 
-<table id="data-table-process-list" class="display nowrap" cellspacing="0" width="100%"></table>process
+<table id="data-table-process-list" class="display nowrap" cellspacing="0" width="100%"></table>
+process
