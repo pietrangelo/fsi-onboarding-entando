@@ -92,16 +92,22 @@
 
                 var items = data['processList'] || [];
 
-                var extraConfig = {};
+                var extraConfig = {
+                    columnDefinition: data["datatable-field-definition"].fields
+                }
+              
+                var username = '${currentUser.username}';
+                if (username !== 'admin' && username !== 'Manager') {
+                    extraConfig.columnDefinition.push({
+                        "title": "Actions",
+                        "data": "viewLink",
+                        "visible": true,
+                        "position": -1
 
-                extraConfig.columnDefinition = data["datatable-field-definition"].fields;
-                extraConfig.columnDefinition.push({
-                    "title": "Actions",
-                    "data": "viewLink",
-                    "visible": true,
-                    "position": -1
+                    });
+                }
 
-                });
+
                 org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
                 if (items.length) {
 

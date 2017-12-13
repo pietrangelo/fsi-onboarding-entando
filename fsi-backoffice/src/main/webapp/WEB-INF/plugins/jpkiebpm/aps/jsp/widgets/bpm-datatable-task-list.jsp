@@ -115,7 +115,19 @@
 
 
                     var extraConfig = {
-                        buttons: [{
+                        columnDefinition: data.response.result.taskList["datatable-field-definition"].fields
+                    }
+                    var username = '${currentUser.username}';
+                    if (username !== 'admin' && username !== 'Manager') {
+
+                        extraConfig.columnDefinition.push({
+                            "title": "Actions",
+                            "data": "viewLink",
+                            "visible": true,
+                            "position": -1
+
+                        });
+                        extraConfig.buttons = [{
                             html: '<button type="button" class="btn btn-success btn-sm">DIAGRAM</button>',
                             onClick: function (ev, data) {
                                 var url = context + "diagram.json?configId=${id}&processInstanceId=" + data['processInstanceId'];
@@ -132,23 +144,10 @@
                                     })
 
                             }
-                        }]
-                    };
-                    var username = '${currentUser.username}';
-                    if (username === 'admin' || username === 'Manager') {
-                        extraConfig = {};
+                        }];
+
+
                     }
-
-
-                    extraConfig.columnDefinition = data.response.result.taskList["datatable-field-definition"].fields;
-                    extraConfig.columnDefinition.push({
-                        "title": "Actions",
-                        "data": "viewLink",
-                        "visible": true,
-                        "position": -1
-
-                    });
-
 
                     org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
                     if (items.length) {
@@ -165,9 +164,7 @@
                     }
 
                     setInterval(function () {
-                        console.log('reload');
                         getTaskList(context).done(function (data) {
-                            console.log('reload1');
                             var table = $(idTable).DataTable();
                             table.clear();
                             table.rows.add(data);

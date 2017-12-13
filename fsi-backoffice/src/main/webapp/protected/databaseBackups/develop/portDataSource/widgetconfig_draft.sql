@@ -47,5 +47,5 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('le
 ');
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',6,'fsi-am-add-customer-btn',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('account_executive_dashboard',14,'bpm-datatable-process-list','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="widgetInfoId">303</property></properties>
+<properties><property key="widgetInfoId">305</property></properties>
 ');
