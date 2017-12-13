@@ -1,3 +1,5 @@
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (308,'knowledge_worker');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (308,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (300,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (306,'account_executive');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (298,'account_executive');
