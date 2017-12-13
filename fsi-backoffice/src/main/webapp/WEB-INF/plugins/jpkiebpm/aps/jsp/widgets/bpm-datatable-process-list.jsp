@@ -99,8 +99,6 @@
                 //process-list
 
 
-
-
                 <wp:ifauthorized groupName="customers">
 
                 extraConfig.columnDefinition.push({
@@ -131,7 +129,7 @@
                     table.draw();
                 }
 
-                /*setInterval(function () {
+                setInterval(function () {
 
                     getProcessList(url).done(function (data) {
 
@@ -140,7 +138,7 @@
                         table.rows.add(data['processList'] || []);
                         table.draw();
                     })
-                }, 30000);*/
+                }, 30000);
 
 
             });
@@ -156,4 +154,4 @@
 </script>
 
 <table id="data-table-process-list" class="display nowrap" cellspacing="0" width="100%"></table>
-process
+

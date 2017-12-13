@@ -173,7 +173,7 @@
                             table.rows.add(data);
                             table.draw();
                         })
-                    }, 5000);
+                    }, 30000);
 
                 });
 
