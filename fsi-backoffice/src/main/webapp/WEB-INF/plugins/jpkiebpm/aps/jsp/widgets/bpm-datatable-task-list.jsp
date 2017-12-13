@@ -116,38 +116,41 @@
 
                     var extraConfig = {
                         columnDefinition: data.response.result.taskList["datatable-field-definition"].fields
-                    }
-                    var username = '${currentUser.username}';
-                    if (username !== 'admin' && username !== 'Manager') {
+                    };
 
-                        extraConfig.columnDefinition.push({
-                            "title": "Actions",
-                            "data": "viewLink",
-                            "visible": true,
-                            "position": -1
+                    debugger;
+                    //task-list
 
-                        });
-                        extraConfig.buttons = [{
-                            html: '<button type="button" class="btn btn-success btn-sm">DIAGRAM</button>',
-                            onClick: function (ev, data) {
-                                var url = context + "diagram.json?configId=${id}&processInstanceId=" + data['processInstanceId'];
-                                getDiagram(url)
-                                    .done(function (diagram) {
-                                        $('#bpm-task-list-modal-diagram-data').attr("src", "data:image/svg+xml;utf8," + diagram);
-                                        optModal.title = "BPM Process Diagram";
-                                        optModal.show.effect = "fold";
-                                        optModal.position = {my: "center", at: "center"};
-                                        $('#bpm-task-list-modal-diagram').dialog(optModal);
-                                    })
-                                    .fail(function (error) {
-                                        console.log(error);
-                                    })
+                    <wp:ifauthorized groupName="customers">
 
-                            }
-                        }];
+                    extraConfig.buttons = [{
+                        html: '<button type="button" class="btn btn-success btn-sm">DIAGRAM</button>',
+                        onClick: function (ev, data) {
+                            var url = context + "diagram.json?configId=${id}&processInstanceId=" + data['processInstanceId'];
+                            getDiagram(url)
+                                .done(function (diagram) {
+                                    $('#bpm-task-list-modal-diagram-data').attr("src", "data:image/svg+xml;utf8," + diagram);
+                                    optModal.title = "BPM Process Diagram";
+                                    optModal.show.effect = "fold";
+                                    optModal.position = {my: "center", at: "center"};
+                                    $('#bpm-task-list-modal-diagram').dialog(optModal);
+                                })
+                                .fail(function (error) {
+                                    console.log(error);
+                                })
 
+                        }
+                    }];
 
-                    }
+                    extraConfig.columnDefinition.push({
+                        "title": "Actions",
+                        "data": "viewLink",
+                        "visible": true,
+                        "position": -1
+
+                    });
+                    </wp:ifauthorized>
+
 
                     org.entando.datatable.CustomDatatable(items, idTable, extraConfig);
                     if (items.length) {
