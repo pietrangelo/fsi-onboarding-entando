@@ -118,7 +118,6 @@
                         columnDefinition: data.response.result.taskList["datatable-field-definition"].fields
                     };
 
-                    debugger;
                     //task-list
 
                     <wp:ifauthorized groupName="customers">

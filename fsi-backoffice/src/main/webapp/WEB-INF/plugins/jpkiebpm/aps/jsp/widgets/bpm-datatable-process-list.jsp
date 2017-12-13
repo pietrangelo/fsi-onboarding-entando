@@ -98,7 +98,6 @@
 
                 //process-list
 
-
                 <wp:ifauthorized groupName="customers">
 
                 extraConfig.columnDefinition.push({
