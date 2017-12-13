@@ -13,6 +13,6 @@ INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VAL
 INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('knowledge','PFL','<?xml version="1.0" encoding="UTF-8"?>
 <profile id="knowledge" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext"><monotext>Chandler Bing</monotext></attribute><attribute name="email" attributetype="Monotext"><monotext>chandler.bing@fortress.com</monotext></attribute></attributes></profile>
 ',0);
-INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('Manager','PFL','<?xml version="1.0" encoding="UTF-8"?>
-<profile id="Manager" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext"><monotext>Jack Wlliams</monotext></attribute><attribute name="email" attributetype="Monotext"><monotext>jack.williams@gmail.com</monotext></attribute></attributes></profile>
+INSERT INTO authuserprofiles (username,profiletype,profilexml,publicprofile) VALUES ('manager','PFL','<?xml version="1.0" encoding="UTF-8"?>
+<profile id="manager" typecode="PFL" typedescr="Default user profile"><descr /><groups /><categories /><attributes><attribute name="fullname" attributetype="Monotext"><monotext>Jack Wlliams</monotext></attribute><attribute name="email" attributetype="Monotext"><monotext>jack.williams@gmail.com</monotext></attribute></attributes></profile>
 ',0);

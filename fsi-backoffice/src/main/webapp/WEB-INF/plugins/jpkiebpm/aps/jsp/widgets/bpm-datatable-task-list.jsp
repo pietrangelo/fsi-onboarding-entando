@@ -44,14 +44,24 @@
 
         function getTaskList(context) {
 
-            var username = '${currentUser.username}';
-
             var url = "";
-            if (username === 'legal' || username === 'admin' || username === 'Manager')
-                url = context + "legalWorkerTasks.json";
-            else if (username === 'knowledge') {
-                url = context + "knowledgeWorkerTasks.json";
-            }
+
+            <wp:ifauthorized groupName="knowledge_worker">
+            url = context + "knowledgeWorkerTasks.json";
+            </wp:ifauthorized>
+
+            <wp:ifauthorized groupName="client_manager">
+            url = context + "legalWorkerTasks.json";
+            </wp:ifauthorized>
+
+            <wp:ifauthorized permission="superuser">
+            url = context + "knowledgeWorkerTasks.json";
+            </wp:ifauthorized>
+
+            <wp:ifauthorized groupName="legal_worker">
+            url = context + "legalWorkerTasks.json";
+            </wp:ifauthorized>
+
 
             var def = $.Deferred();
             $.get(url).then(function (taskData) {

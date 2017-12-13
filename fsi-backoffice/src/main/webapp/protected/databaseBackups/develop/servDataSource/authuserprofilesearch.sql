@@ -6,5 +6,5 @@ INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalu
 INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('legal','email','monica.brown@fortress.com',NULL,NULL,NULL);
 INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('knowledge','fullname','Chandler Bing',NULL,NULL,NULL);
 INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('knowledge','email','chandler.bing@fortress.com',NULL,NULL,NULL);
-INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('Manager','fullname','Jack Wlliams',NULL,NULL,NULL);
-INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('Manager','email','jack.williams@gmail.com',NULL,NULL,NULL);
+INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('manager','fullname','Jack Wlliams',NULL,NULL,NULL);
+INSERT INTO authuserprofilesearch (username,attrname,textvalue,datevalue,numvalue,langcode) VALUES ('manager','email','jack.williams@gmail.com',NULL,NULL,NULL);

@@ -6,5 +6,5 @@ INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('legal
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('legal','email','userprofile:email');
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('knowledge','fullname','userprofile:fullname');
 INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('knowledge','email','userprofile:email');
-INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('Manager','fullname','userprofile:fullname');
-INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('Manager','email','userprofile:email');
+INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('manager','fullname','userprofile:fullname');
+INSERT INTO authuserprofileattrroles (username,attrname,rolename) VALUES ('manager','email','userprofile:email');
