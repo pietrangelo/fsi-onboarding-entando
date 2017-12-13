@@ -1,3 +1,170 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-performance','fsi-performance',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Performance</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        <div>
+            <div style="text-align: right">
+                <small>Last update 3 min ago</small>
+            </div>
+            <div class="progress progress-mini">
+                <div style="width: 43%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90"
+                     class="progress-bar progress-bar-success"></div>
+            </div>
+            <small>Well Done!You completed 93 task. You have 217 tasks to complete activities.</small>
+        </div>
+    </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-information','fsi-customer-information',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+    <script>
+        $(function(){
+
+            function getQueryVariable(variable){
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                    var pair = vars[i].split("=");
+                    if(pair[0] == variable){return pair[1];}
+                }
+                return(false);
+            };
+
+            var loadUserInfo = function(configId, processInstanceId){
+                var url = ''<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/processInstanceListPlus.json?configId=''+configId+''&processInstanceId=''+processInstanceId;
+                console.log(url);
+                $.get(url, function (data) {
+                    var obj = data.response.result.processInstanceList.list;
+                    var keys = Object.keys(obj);
+                    keys.forEach(function(key){
+                        $(''.data-field-''+key).text(obj[key]);
+                    })
+                    console.log(data);
+                });
+
+            };
+            var configId = getQueryVariable(''configId'');
+            var processInstanceId = getQueryVariable(''processInstanceId'');
+            loadUserInfo(configId, processInstanceId);
+
+        });
+
+    </script>
+    <div class="fsi-customer-information ibox float-e-margins">
+        <div class="ibox-title">
+            <h5 class="data-field-company">-</h5>
+            <div class="ibox-tools">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="fsi-subheader">Customer information</h4>
+                    <p>
+                    <div>Organization full name</div>
+                    <b class="data-field-company">-</b>
+                    </p>
+                    <p>
+                    <div>International application ID</div>
+                    <b class="data-field-ssn">-</b>
+                    </p>
+                    <p>
+                    <div>Entity Type</div>
+                    <b class="data-field-type">-</b>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="fsi-subheader">Primary contact information</h4>
+                    <p>
+                    <div>Point of contact</div>
+                    <b class="data-field-address">-</b>
+                    </p>
+                    <p>
+                    <div>Phone</div>
+                    <b class="data-field-phone">-</b>
+                    </p>
+                    <p>
+                    <div>Email</div>
+                    <b class="data-field-email">-</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer overview</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">75</div>
+        <div class="label-text">Today Total Signed Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">24</div>
+        <div class="label-text">Today Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
+        </div>
+      </div>
+      <div class="fsi-customer-overview-item">
+        <div class="label-number">132</div>
+        <div class="label-text">Last Week Total Sign Up</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="fsi-customer-state">
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer state</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div id="morris-donut-chart" ></div>
+    </div>
+</div>
+</div>
+<script>
+    $(document).ready(function () {
+       Morris.Donut({
+            element: ''morris-donut-chart'',
+            data: [{label: "In Progress", value: 42},
+                {label: "Started", value: 37},
+                {label: "Completed", value: 21}],
+            resize: true,
+            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
+        });
+    });
+</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-backlog','fsi-backlog',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>Backlog</h5>
@@ -12,17 +179,17 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     <div class="ibox-content">
         <div class="row">
             <div class="col-md-4">
-                <h1 class="no-margins">350</h1>
+                <h1 class="no-margins">217</h1>
             </div>
             <div class="col-md-8">
                 <div class="progress progress-mini margin-top-15">
-                    <div style="width: 38%;" class="progress-bar progress-bar-danger"></div>
+                    <div style="width: 62%;" class="progress-bar progress-bar-danger"></div>
                 </div>
             </div>
 
         </div>
         <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
-        <small>Total tast 2500</small>
+        <small>Total last 350</small>
 
     </div>
 
@@ -851,41 +1018,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 ',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('generic-footer','generic-footer',NULL,'<div class="fsi-backoffice-footer">
 <span>Copyright Fortress Bank & Loan &commat; 2017</span>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Customer overview</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">120</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">100</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
-        </div>
-      </div>
-      <div class="fsi-customer-overview-item">
-        <div class="label-number">95</div>
-        <div class="label-text">Today Total Sign Up</div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi_client_on_board_mananger_tabs','fsi_client_on_board_mananger_tabs',NULL,'<div class="fsi-customer-rate">
     <div class="ibox float-e-margins">
@@ -2071,30 +2203,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-performance','fsi-performance',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Performance</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="ibox-content">
-
-        <div>
-            <div style="text-align: right">
-                <small>Last update 3 min ago</small>
-            </div>
-            <div class="progress progress-mini">
-                <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90"
-                     class="progress-bar progress-bar-success"></div>
-            </div>
-            <small>Well Done!You completed 2360 task. You have 140 tasks to complete activities.</small>
-        </div>
-    </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_service_detail','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2407,33 +2515,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-state','fsi-state',NULL,'<div class="fsi-customer-state">
-<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Customer state</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div id="morris-donut-chart" ></div>
-    </div>
-</div>
-</div>
-<script>
-    $(document).ready(function () {
-       Morris.Donut({
-            element: ''morris-donut-chart'',
-            data: [{label: "Pending", value: 12},
-                {label: "Complete", value: 30},
-                {label: "Suspended", value: 20}],
-            resize: true,
-            colors: [''#F1C40F'', ''#2ECC71'', ''#E74C3C''],
-        });
-    });
-</script>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_Enumer',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
 <#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
@@ -3961,23 +4042,23 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
       <div class="col-md-3">
 
 <div class="fsi-customer-overview-item">
-        <h2>120</h2>
-        <div class="label-text">Today Total Sign Up <h3>48% <i class="fa fa-level-up"></i></h3></div>
+        <h2>75</h2>
+        <div class="label-text">Today Total Signed Up <h3>48% <i class="fa fa-level-up"></i></h3></div>
         
         <div class="progress">
           <div class="progress-bar progress-bar-today" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
         </div>
       </div>
       <div class="fsi-customer-overview-item">
-        <h2>100</h2>
-        <div class="label-text">Today Total Sign Up <h3>60% <i class="fa fa-level-down"></i></h3></div>
+        <h2>24</h2>
+        <div class="label-text">Today Total Sign Up <h3>40% <i class="fa fa-level-down"></i></h3></div>
         <div class="progress">
           <div class="progress-bar progress-bar-yesterday" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="0" style="width:45%"></div>
         </div>
       </div>
       <div class="fsi-customer-overview-item">
-        <h2>95</h2>
-        <div class="label-text">Today Total Sign Up <h3>22% <i class="fa fa-bolt"></i></h3></div>
+        <h2>132</h2>
+        <div class="label-text">Last Week Total Sign Up <h3>22% <i class="fa fa-bolt"></i></h3></div>
         <div class="progress">
           <div class="progress-bar progress-bar-lastyear" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="0" style="width:65%"></div>
         </div>
@@ -4003,8 +4084,8 @@ var chart = c3.generate({
         x: ''x'',
         columns: [
             [''x'', ''2013-01-01'', ''2013-01-02'', ''2013-01-03'', ''2013-01-04'', ''2013-01-05'', ''2013-01-06'', ''2013-01-07'', ''2013-01-08'', ''2013-01-09'', ''2013-01-10'', ''2013-01-11'', ''2013-01-12'', ''2013-01-13'', ''2013-01-14'', ''2013-01-15'', ''2013-01-16'', ''2013-01-17'', ''2013-01-18''],
-            [''data1'', 760, 500, 600, 700, 500, 450, 520, 750, 760, 430, 600, 370, 390, 790, 780, 600, 400, 750],
-            [''data2'', 13, 15, 4, 7, 12, 13, 7, 4, 5, 9, 12, 3, 4, 14, 13, 13, 8, 14],
+            [''data1'', 76, 50, 60, 70, 50, 45, 52, 75, 76, 43, 60, 37, 39, 79, 78, 60, 40, 75],
+            [''data2'', 23, 15, 24, 27, 22, 23, 17, 14, 15, 19, 22, 23, 24, 14, 13, 18, 25, 15],
         ],
         axes: {
             data1: ''y'',
@@ -4026,16 +4107,16 @@ var chart = c3.generate({
     axis: {
       y: { 
         min: 0, 
-        max: 1000,
+        max: 100,
         padding: {top: 0, bottom: 0 },
         tick: { count: 5 }
       },
       
       y2: { 
         min: 0, 
-        max: 30,
+        max: 100,
         padding: {top: 0, bottom: 0 },
-        tick: { count: 7 },
+        tick: { count: 11 },
         show: true
       },
       
@@ -4060,14 +4141,14 @@ var chart = c3.generate({
     bindto: ''#donut-chart'',
     data: {
         columns: [
-            [''Suspended'', 25],
-            [''Pending'', 25],
-            [''Completed'', 50],
+            [''In Progress'', 42],
+            [''Started'', 37],
+            [''Completed'', 21],
         ],
         type : ''donut'',
         colors: {
-          Suspended: ''#7dc3e7'',
-          Pending: ''#0088ce'',
+          ''In Progress'': ''#7dc3e7'',
+          Started: ''#0088ce'',
           Completed: ''#dff2ff''
         }
     },
@@ -4081,34 +4162,6 @@ var chart = c3.generate({
 });
 </script>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Completed</h5>
-        <div class="pull-right">
-            <div class="btn-group">
-                <button type="button" class="btn btn-xs btn-white active">Today</button>
-                <button type="button" class="btn btn-xs btn-white">Monthly</button>
-                <button type="button" class="btn btn-xs btn-white">Annual</button>
-            </div>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="no-margins">1800</h1>
-            </div>
-            <div class="col-md-8">
-                <div class="progress progress-mini margin-top-15">
-                    <div style="width: 44%;" class="progress-bar"></div>
-                </div>
-            </div>
-        </div>
-        <div class="stat-percent font-bold text-info">44% <i class="fa fa-level-up"></i></div>
-        <small>Total tast 2500</small>
-
-    </div>
-
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-in-progress','fsi-in-progress',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>In progress</h5>
@@ -4123,99 +4176,46 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     <div class="ibox-content">
         <div class="row">
             <div class="col-md-4">
-                <h1 class="no-margins">350</h1>
+                <h1 class="no-margins">53</h1>
             </div>
             <div class="col-md-8">
                 <div class="progress progress-mini margin-top-15">
-                    <div style="width: 98%;" class="progress-bar progress-bar-success"></div>
+                    <div style="width: 89%;" class="progress-bar progress-bar-success"></div>
                 </div>
             </div>
 
         </div>
-        <div class="stat-percent font-bold text-success">98% <i class="fa fa-level-down"></i></div>
-        <small>Total tast 2500</small>
+        <div class="stat-percent font-bold text-success">11% <i class="fa fa-level-down"></i></div>
+        <small>Total last 59</small>
 
     </div>
 
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-information','fsi-customer-information',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-    <script>
-        $(function(){
-
-            function getQueryVariable(variable){
-                var query = window.location.search.substring(1);
-                var vars = query.split("&");
-                for (var i=0;i<vars.length;i++) {
-                    var pair = vars[i].split("=");
-                    if(pair[0] == variable){return pair[1];}
-                }
-                return(false);
-            };
-
-            var loadUserInfo = function(configId, processInstanceId){
-                var url = ''<@wp.info key="systemParam" paramName="applicationBaseURL" />api/rs/<@wp.info key="currentLang"/>/jpkiebpm/processInstanceListPlus.json?configId=''+configId+''&processInstanceId=''+processInstanceId;
-                console.log(url);
-                $.get(url, function (data) {
-                    var obj = data.response.result.processInstanceList.list;
-                    var keys = Object.keys(obj);
-                    keys.forEach(function(key){
-                        $(''.data-field-''+key).text(obj[key]);
-                    })
-                    console.log(data);
-                });
-
-            };
-            var configId = getQueryVariable(''configId'');
-            var processInstanceId = getQueryVariable(''processInstanceId'');
-            loadUserInfo(configId, processInstanceId);
-
-        });
-
-    </script>
-    <div class="fsi-customer-information ibox float-e-margins">
-        <div class="ibox-title">
-            <h5 class="data-field-company">-</h5>
-            <div class="ibox-tools">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-wrench"></i>
-                </a>
-                <a class="collapse-link">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-completed','fsi-completed',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Completed</h5>
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-white active">Today</button>
+                <button type="button" class="btn btn-xs btn-white">Monthly</button>
+                <button type="button" class="btn btn-xs btn-white">Annual</button>
             </div>
         </div>
-        <div class="ibox-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4 class="fsi-subheader">Customer information</h4>
-                    <p>
-                    <div>Organization full name</div>
-                    <b class="data-field-company">-</b>
-                    </p>
-                    <p>
-                    <div>International application ID</div>
-                    <b class="data-field-ssn">-</b>
-                    </p>
-                    <p>
-                    <div>Entity Type</div>
-                    <b class="data-field-type">-</b>
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="fsi-subheader">Primary contact information</h4>
-                    <p>
-                    <div>Point of contact</div>
-                    <b class="data-field-address">-</b>
-                    </p>
-                    <p>
-                    <div>Phone</div>
-                    <b class="data-field-phone">-</b>
-                    </p>
-                    <p>
-                    <div>Email</div>
-                    <b class="data-field-email">-</b>
-                    </p>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="no-margins">92</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="progress progress-mini margin-top-15">
+                    <div style="width: 100%;" class="progress-bar"></div>
                 </div>
             </div>
         </div>
-    </div>',NULL,0);
+        <div class="stat-percent font-bold text-info">11% <i class="fa fa-level-up"></i></div>
+        <small>Total last 83</small>
+
+    </div>
+
+</div>',NULL,0);
