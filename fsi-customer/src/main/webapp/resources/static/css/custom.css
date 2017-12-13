@@ -647,7 +647,7 @@ a.dropdown-fsi-login{
     font-size: 30px;
     font-weight: 300;
     color: #00659C;
-    padding: 50px 20px;
+    padding: 50px 0;
 }
 
 .application-breadcrumbs {
@@ -1739,10 +1739,12 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     overflow: auto;
     width: auto;
 }
+/*
 .application-breadcrumbs-wrapper{
     margin: 10px 0 10px 0;
     background:#fff;
 }
+*/
 .perfomance-bar{
     margin:  10px 0 10px 0;
 }
