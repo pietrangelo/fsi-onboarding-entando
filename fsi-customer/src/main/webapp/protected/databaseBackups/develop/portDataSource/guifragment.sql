@@ -2814,7 +2814,7 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 </style>
 <div class="customer-process-step ibox float-e-margins" data-step-id="confirmation">
     <div class="ibox-title">
-        <h5>Confirmation</h5>
+
         <div class="ibox-tools">
             <a class="collapse-link">
                 <i class="fa fa-chevron-up"></i>
