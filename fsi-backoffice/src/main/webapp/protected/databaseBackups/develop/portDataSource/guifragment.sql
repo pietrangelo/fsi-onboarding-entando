@@ -1,3 +1,132 @@
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<ul class="list-unstyled">
+    <li class=" dropdown
+        <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+        <#if (Session.currentUser != "guest")>
+
+        <a class="dropdown-fsi-login dropdown-toggle" href="#" data-toggle="dropdown">
+           <@wp.currentUserProfileAttribute attributeName="fullname" />
+        &nbsp; <span class="caret"></span>&nbsp;
+        </a>
+        <ul class="dropdown-menu dropdown-menu-custom dropdown-messages">
+            <li>
+                <@wp.ifauthorized permission="enterBackend">
+                <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+                   <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+               <@wp.i18n key="ESLF_SIGNOUT" />
+        </a>
+    </li>
+    <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+    <#if (editProfilePageVar??) >
+    <li>
+        <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+    </li>
+    </#if>
+</ul>
+<#else>
+
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <@wp.i18n key="ESLF_SIGNIN" />
+    <span class="caret"></span>&nbsp;
+</a>
+<ul class=" dropdown-messages">
+    <li>
+        <form class="m-t" style="padding:10px;" method="POST">
+            <#if (accountExpired?? && accountExpired == true)>
+            <div class="alert alert-error">
+                <button class="close" data-dismiss="alert">x</button>
+                <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+            </div>
+            </#if>
+            <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+            <div class="alert alert-error">
+                <button class="close" data-dismiss="alert">x</button>
+                <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+            </div>
+            </#if>
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+            </div>
+            <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+        </form>
+    </li>
+</ul>
+</#if>
+</li>
+</ul>','<#assign wp=JspTaglibs["/aps-core"]>
+<li class=" dropdown
+    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
+    <#if (Session.currentUser != "guest")>
+  
+    <a class="btn  text-left dropdown-toggle" href="#" data-toggle="dropdown">
+        ${Session.currentUser}
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <@wp.ifauthorized permission="enterBackend">
+            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
+               <i class="fa fa-cube"></i>      
+                <@wp.i18n key="ESLF_ADMINISTRATION" />
+            </a>
+            </@wp.ifauthorized>
+        </li>
+        <div class="divider"></div>
+        <li> 
+            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
+               <i class="fa fa-sign-out"></i>           
+                <@wp.i18n key="ESLF_SIGNOUT" />
+            </a>
+        </li>
+        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
+        <#if (editProfilePageVar??) >
+        <li>
+            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
+        </li>
+        </#if>
+    </ul>
+    <#else>
+ 
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <@wp.i18n key="ESLF_SIGNIN" />
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <form class="m-t" style="padding:10px;" method="POST">
+                <#if (accountExpired?? && accountExpired == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
+                </div>
+                </#if>
+                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">x</button>
+                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
+                </div>
+                </#if>
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
+                </div>
+                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
+            </form>
+        </li>
+    </ul>
+    </#if>
+</li>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-performance','fsi-performance',NULL,'<div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>Performance</h5>
@@ -103,6 +232,40 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
             </div>
         </div>
     </div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-language_choose_inspinia','entando-widget-language_choose_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.info key="langs" var="langsVar" />
+<@wp.info key="currentLang" var="currentLangVar" />
+<a data-toggle="dropdown" class="dropdown-toggle" href="#"  title="<@wp.i18n key="ESLC_LANGUAGE" />">     
+   <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if>
+   <#if (Session.currentUser != "guest")>
+   <span class="block m-t-xs"> 
+        <strong class="font-bold">
+            ${Session.currentUser}
+        </strong>
+    </span>
+    <#else>
+    <span class="block m-t-xs"> 
+        <strong class="font-bold">
+            <@wp.i18n key="ESLF_SIGNIN" />
+        </strong>
+    </span>
+    </#if>
+    <span class="text-muted text-xs block">
+        <@wp.i18n key="ESLC_LANGUAGE" />
+        <b class="caret"></b>
+    </span>
+</a>
+<ul class="dropdown-menu animated fadeInRight m-t-xs">
+    <@wp.freemarkerTemplateParameter var="langsListVar" valueName="langsVar" removeOnEndTag=true >
+    <#list langsListVar as curLangVar>
+    <li <#if (curLangVar.code == currentLangVar)>class="active" </#if>>
+        <a href="<@wp.url lang="${curLangVar.code}" paramRepeat=true />">
+        <@wp.i18n key="ESLC_LANG_${curLangVar.code}" />
+        </a>
+    </li>
+    </#list>
+    </@wp.freemarkerTemplateParameter>
+</ul>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-overview','fsi-customer-overview',NULL,'<div class="fsi-customer-overview">
 <div class="ibox float-e-margins">
     <div class="ibox-title">
@@ -193,6 +356,11 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 
     </div>
 
+</div>',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
 </div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
@@ -399,6 +567,68 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
                             <p class="fsi-backoffice-subtitle">Account Manager</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-transaction-history','fsi-transaction-history',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Transaction history</h5>
+        <span class="label label-primary">Timeline</span>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content inspinia-timeline">
+
+        <div class="timeline-item">
+            <div class="row">
+                <div class="col-xs-3 date">
+                    <i class="fa fa-briefcase"></i>
+                    9:00 am
+                    <br>
+                    <small class="text-navy">2 hour ago</small>
+                </div>
+                <div class="col-xs-7 content no-top-border">
+                    <p class="m-b-xs"><strong>Initiate Signup mail</strong></p>
+
+                    <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="row">
+                <div class="col-xs-3 date">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    9:21 am
+                    <br>
+                    <small class="text-navy">3 hour ago</small>
+                </div>
+                <div class="col-xs-7 content">
+                    <p class="m-b-xs"><strong>Send payments to Mike</strong></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since.</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="row">
+                <div class="col-xs-3 date">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    10:00 am
+                    <br>
+                </div>
+                <div class="col-xs-7 content">
+                    <p class="m-b-xs"><strong>Application Submitted</strong></p>
+                    <p>
+                        Go to shop and find some products.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s.
+                    </p>
                 </div>
             </div>
         </div>
@@ -807,146 +1037,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 <#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]>
 <div class="avarage" >
 </div>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-login_form_inspinia','entando-widget-login_form_inspinia',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<ul class="list-unstyled">
-    <li class=" dropdown
-        <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
-        <#if (Session.currentUser != "guest")>
-
-        <a class="dropdown-fsi-login dropdown-toggle" href="#" data-toggle="dropdown">
-           <!--  ${Session.currentUser} -->
-            
-         <@wp.ifauthorized groupName="account_executive">
-         John W.
-        </@wp.ifauthorized>
-        <@wp.ifauthorized groupName="legal_worker">
-       Monica B.
-        </@wp.ifauthorized>
-        <@wp.ifauthorized groupName="knowledge_worker">
-       Chandler B.
-        </@wp.ifauthorized>
-     
-        &nbsp; <span class="caret"></span>&nbsp;
-        </a>
-        <ul class="dropdown-menu dropdown-menu-custom dropdown-messages">
-            <li>
-                <@wp.ifauthorized permission="enterBackend">
-                <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
-                   <@wp.i18n key="ESLF_ADMINISTRATION" />
-            </a>
-            </@wp.ifauthorized>
-        </li>
-        <div class="divider"></div>
-        <li>
-            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
-               <@wp.i18n key="ESLF_SIGNOUT" />
-        </a>
-    </li>
-    <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
-    <#if (editProfilePageVar??) >
-    <li>
-        <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
-    </li>
-    </#if>
-</ul>
-<#else>
-
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-    <@wp.i18n key="ESLF_SIGNIN" />
-    <span class="caret"></span>&nbsp;
-</a>
-<ul class=" dropdown-messages">
-    <li>
-        <form class="m-t" style="padding:10px;" method="POST">
-            <#if (accountExpired?? && accountExpired == true)>
-            <div class="alert alert-error">
-                <button class="close" data-dismiss="alert">x</button>
-                <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
-            </div>
-            </#if>
-            <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
-            <div class="alert alert-error">
-                <button class="close" data-dismiss="alert">x</button>
-                <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
-            </div>
-            </#if>
-            <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
-            </div>
-            <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
-        </form>
-    </li>
-</ul>
-</#if>
-</li>
-</ul>','<#assign wp=JspTaglibs["/aps-core"]>
-<li class=" dropdown
-    <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if> ">
-    <#if (Session.currentUser != "guest")>
-  
-    <a class="btn  text-left dropdown-toggle" href="#" data-toggle="dropdown">
-        ${Session.currentUser}
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li>
-            <@wp.ifauthorized permission="enterBackend">
-            <a href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/main.action?request_locale=<@wp.info key="currentLang" />">
-               <i class="fa fa-cube"></i>      
-                <@wp.i18n key="ESLF_ADMINISTRATION" />
-            </a>
-            </@wp.ifauthorized>
-        </li>
-        <div class="divider"></div>
-        <li> 
-            <a class="btn" href="<@wp.info key="systemParam" paramName="applicationBaseURL" />do/logout.action">
-               <i class="fa fa-sign-out"></i>           
-                <@wp.i18n key="ESLF_SIGNOUT" />
-            </a>
-        </li>
-        <@wp.pageWithWidget var="editProfilePageVar" widgetTypeCode="userprofile_editCurrentUser" />
-        <#if (editProfilePageVar??) >
-        <li>
-            <a href="<@wp.url page="${editProfilePageVar.code}" />" ><@wp.i18n key="ESLF_PROFILE_CONFIGURATION" /></a>
-        </li>
-        </#if>
-    </ul>
-    <#else>
- 
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <@wp.i18n key="ESLF_SIGNIN" />
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li>
-            <form class="m-t" style="padding:10px;" method="POST">
-                <#if (accountExpired?? && accountExpired == true)>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert">x</button>
-                    <@wp.i18n key="ESLF_USER_STATUS_EXPIRED" />
-                </div>
-                </#if>
-                <#if (wrongAccountCredential?? && wrongAccountCredential == true)>
-                <div class="alert alert-error">
-                    <button class="close" data-dismiss="alert">x</button>
-                    <@wp.i18n key="ESLF_USER_STATUS_CREDENTIALS_INVALID" />
-                </div>
-                </#if>
-                <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="<@wp.i18n key="ESLF_USERNAME" />">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control"  placeholder="<@wp.i18n key="ESLF_PASSWORD" />">
-                </div>
-                <input type="submit" class="btn btn-primary block full-width m-b" value="<@wp.i18n key="ESLF_SIGNIN" />" />
-            </form>
-        </li>
-    </ul>
-    </#if>
-</li>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Login-Customer','Login-Customer',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <div class="middle-box loginscreen animated fadeInDown">
@@ -3769,107 +3859,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
   </div>
 </div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-language_choose_inspinia','entando-widget-language_choose_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<@wp.info key="langs" var="langsVar" />
-<@wp.info key="currentLang" var="currentLangVar" />
-<a data-toggle="dropdown" class="dropdown-toggle" href="#"  title="<@wp.i18n key="ESLC_LANGUAGE" />">     
-   <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if>
-   <#if (Session.currentUser != "guest")>
-   <span class="block m-t-xs"> 
-        <strong class="font-bold">
-            ${Session.currentUser}
-        </strong>
-    </span>
-    <#else>
-    <span class="block m-t-xs"> 
-        <strong class="font-bold">
-            <@wp.i18n key="ESLF_SIGNIN" />
-        </strong>
-    </span>
-    </#if>
-    <span class="text-muted text-xs block">
-        <@wp.i18n key="ESLC_LANGUAGE" />
-        <b class="caret"></b>
-    </span>
-</a>
-<ul class="dropdown-menu animated fadeInRight m-t-xs">
-    <@wp.freemarkerTemplateParameter var="langsListVar" valueName="langsVar" removeOnEndTag=true >
-    <#list langsListVar as curLangVar>
-    <li <#if (curLangVar.code == currentLangVar)>class="active" </#if>>
-        <a href="<@wp.url lang="${curLangVar.code}" paramRepeat=true />">
-        <@wp.i18n key="ESLC_LANG_${curLangVar.code}" />
-        </a>
-    </li>
-    </#list>
-    </@wp.freemarkerTemplateParameter>
-</ul>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
-<p>Improving businesses&apos; life through meaningful services.
-</p>
-<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-transaction-history','fsi-transaction-history',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Transaction history</h5>
-        <span class="label label-primary">Timeline</span>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="ibox-content inspinia-timeline">
-
-        <div class="timeline-item">
-            <div class="row">
-                <div class="col-xs-3 date">
-                    <i class="fa fa-briefcase"></i>
-                    9:00 am
-                    <br>
-                    <small class="text-navy">2 hour ago</small>
-                </div>
-                <div class="col-xs-7 content no-top-border">
-                    <p class="m-b-xs"><strong>Initiate Signup mail</strong></p>
-
-                    <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products.</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="row">
-                <div class="col-xs-3 date">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                    9:21 am
-                    <br>
-                    <small class="text-navy">3 hour ago</small>
-                </div>
-                <div class="col-xs-7 content">
-                    <p class="m-b-xs"><strong>Send payments to Mike</strong></p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since.</p>
-                </div>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="row">
-                <div class="col-xs-3 date">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                    10:00 am
-                    <br>
-                </div>
-                <div class="col-xs-7 content">
-                    <p class="m-b-xs"><strong>Application Submitted</strong></p>
-                    <p>
-                        Go to shop and find some products.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">

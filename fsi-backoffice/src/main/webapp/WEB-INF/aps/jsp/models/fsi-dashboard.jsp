@@ -193,20 +193,7 @@
                     <div class="col-lg-12">
                         <div class="wrapper wrapper-content">
 
-
-                            <wp:ifauthorized groupName="knowledge_worker">
-                                <div class="fsi-customer-header">
-                                    <h2>Hi Chandler Bing</h2>
-                                    <ol class="breadcrumb">
-                                        <li>
-                                            <a href="#"><wp:currentPage param="title" /></a>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </wp:ifauthorized>
-
                             <wp:ifauthorized groupName="legal_worker">
-
                                 <style>
                                     .navbar-fixed-top, .navbar-static-top {
                                         background: #2A125A;
@@ -230,27 +217,16 @@
                                         background: #2a125a;
                                     }
                                 </style>
-
-
-                                <div class="fsi-customer-header">
-                                    <h2>Hi Monica Brown </h2>
-                                    <ol class="breadcrumb">
-                                        <li>
-                                            <a href="#"><wp:currentPage param="title" /></a>
-                                        </li>
-                                    </ol>
-                                </div>
                             </wp:ifauthorized>
-                            <wp:ifauthorized groupName="account_executive">
-                                <div class="fsi-customer-header">
-                                    <h2>Hi John Williams </h2>
-                                    <ol class="breadcrumb">
-                                        <li>
-                                            <a href="#"><wp:currentPage param="title" /></a>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </wp:ifauthorized>
+
+                            <div class="fsi-customer-header">
+                                <h2>Hi <wp:currentUserProfileAttribute attributeName="fullname" /></h2>
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="#"><wp:currentPage param="title" /></a>
+                                    </li>
+                                </ol>
+                            </div>
 
                             <div class="col-md-8">
                                 <wp:show frame="6" />

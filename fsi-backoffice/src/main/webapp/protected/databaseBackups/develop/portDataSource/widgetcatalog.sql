@@ -19,6 +19,9 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 <property key="en">entando-widget-data_report_tweets</property>
 <property key="it">entando-widget-data_report_tweets</property>
 </properties>',NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-login_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">Dropdown Sign In</property><property key="it">Dropdown Sign In</property></properties>
+',NULL,NULL,NULL,NULL,1,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-meeting_list-purple','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
     <property key="en">entando-widget-meeting_list-purple</property>
@@ -76,9 +79,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-customer-information','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI Customer information</property><property key="it">FSI Customer information</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-login_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">Dropdown Sign In</property><property key="it">Dropdown Sign In</property></properties>
-',NULL,NULL,NULL,NULL,1,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('bpm-datatable-task-list','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">BPM-Datatable Task List</property>
