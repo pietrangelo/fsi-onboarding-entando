@@ -247,152 +247,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </div>
 </div>
 ',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-
-    <div class="customer-process-step ibox float-e-margins" data-process-name="Additional Client Details" data-step-id="businessDetails">
-        <div class="ibox-title">
-            <h5>Business details</h5>
-            <div class="ibox-tools">
-                <a class="collapse-link">
-                    <i class="fa fa-chevron-up"></i>
-                </a>
-
-            </div>
-        </div>
-        <div class="ibox-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="login-label">Company Name</label>
-                        <input id="name" type="text" name="name" placeholder="Company Name"
-                               class="form-control input-custom"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="login-label">Country</label>
-                        <input id="country" type="text" name="country"
-                               class="form-control input-custom"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="login-label">The state in which the business was formed</label>
-
-                        <select class="form-control input-custom" id="usstate" name="usstate">
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="DC">District Of Columbia</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
-
-
-                    </div>
-
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="login-label">Address of the business</label>
-                        <input type="text" id="street" name="street" placeholder="Address of the business"
-                               class="form-control input-custom"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="login-label">ZIP CODE</label>
-                        <input type="number" id="zipcode" name="zipcode" placeholder="ZIP CODE"
-                               class="form-control input-custom"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="login-label">BIC</label>
-                        <input type="text" id="bic" name="bic" placeholder="BIC" class="form-control input-custom"/>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="pull-right spacers">
-                        <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
-                            customer-process-next"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        $(document).ready(function () {
-            $(''#data_1 .input-group.date'').datepicker({
-                todayBtn: "linked",
-                keyboardNavigation: false,
-                forceParse: false,
-                calendarWeeks: true,
-                autoclose: true
-            })
-
-
-        });
-
-        var valueMap = {
-            name: ''Mtz Inc.'',
-            country: ''USA'',
-            usstate: ''HI'',
-            street: ''Via Street'',
-            zipcode: ''35006'',
-            bic:''123456789''
-
-        }
-
-        for (var key in valueMap) {
-            if (!document.getElementById(key).value) {
-                document.getElementById(key).value = valueMap[key];
-            }
-        }
-
-    </script>
-',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-toplink-dashboard','fsi-toplink-dashboard',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 <a href="<@wp.url page="dashboard_internal" />" >dashboard</a>
 ',NULL,0);
@@ -1062,6 +916,134 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		cssClass="radio" />
 		<@wp.i18n key="userprofile_NO" />
 </label>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-registration-form-advanced','fsi-registration-form-advanced',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+
+    <div class="customer-process-step ibox float-e-margins" data-process-name="Additional Client Details" data-step-id="businessDetails">
+        <div class="ibox-title">
+            <h5>Business details</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="login-label">Company Name</label>
+                        <input id="name" type="text" name="name" placeholder="Company Name"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">Country</label>
+                        <input id="country" type="text" name="country"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">The state in which the business was formed</label>
+
+                        <select class="form-control input-custom" id="usstate" name="usstate">
+                            <option value=""></option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="login-label">Address of the business</label>
+                        <input type="text" id="street" name="street" placeholder="Address of the business"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">ZIP CODE</label>
+                        <input type="number" id="zipcode" name="zipcode" placeholder="ZIP CODE"
+                               class="form-control input-custom"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="login-label">BIC</label>
+                        <input type="text" id="bic" name="bic" placeholder="BIC" class="form-control input-custom"/>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="pull-right spacers">
+                        <input type="submit" value=''<@wp.i18n key="SUBMIT" />'' class="btn btn-warning login-button
+                            customer-process-next"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(''#data_1 .input-group.date'').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            })
+        });
+    </script>
+',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
 <br>
 <p class="title-paragraph"> What you''ll need to complete the application</p>
@@ -1178,6 +1160,32 @@ jQuery(function($){
 <@wp.headInfo type="JS_EXT" info="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" />
 <@wp.headInfo type="CSS_EXT" info="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.min.css" />
 <@wp.headInfo type="JS_RAW" info="${js_for_datepicker}" />',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_ThreeSt',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
+<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
+<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
+<fieldset>
+<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
+<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
+<div class="control-group">
+	<div class="controls">
+		<label for="true_${formFieldNameVar}" class="radio">
+		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="radio" />
+		<@wp.i18n key="YES"/></label>
+		<label for="false_${formFieldNameVar}" class="radio">
+		<input name="${formFieldNameVar}" id="false_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "false")>checked="checked"</#if> value="false" type="radio" />
+		<@wp.i18n key="NO"/></label>
+		<label for="both_${formFieldNameVar}" class="radio">
+		<input name="${formFieldNameVar}" id="both_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "both")>checked="checked"</#if> value="both" type="radio" />
+		<@wp.i18n key="BOTH"/></label>
+	</div>
+</div>
+</fieldset>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
+<p>Improving businesses&apos; life through meaningful services.
+</p>
+<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_front_attributeInfo-help-block',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -1611,6 +1619,49 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		</@s.if>
 	</@s.if>
 </@s.else>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_row_content_viewer_list','row_content_viewer_list','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
+<#assign wp=JspTaglibs["/aps-core"]>
+<@jacms.rowContentList listName="contentInfoList" titleVar="titleVar"
+	pageLinkVar="pageLinkVar" pageLinkDescriptionVar="pageLinkDescriptionVar" />
+<#if (titleVar??)>
+	<h1>${titleVar}</h1>
+</#if>
+<#if (contentInfoList??) && (contentInfoList?has_content) && (contentInfoList?size > 0)>
+	<@wp.pager listName="contentInfoList" objectName="groupContent" pagerIdFromFrame=true advanced=true offset=5>
+	<@wp.freemarkerTemplateParameter var="group" valueName="groupContent" removeOnEndTag=true >
+	<@wp.fragment code="default_pagerBlock" escapeXml=false />
+	<#list contentInfoList as contentInfoVar>
+	<#if (contentInfoVar_index >= groupContent.begin) && (contentInfoVar_index <= groupContent.end)>
+		<#if (contentInfoVar[''modelId'']??)>
+		<@jacms.content contentId="${contentInfoVar[''contentId'']}" modelId="${contentInfoVar[''modelId'']}" />
+		<#else>
+		<@jacms.content contentId="${contentInfoVar[''contentId'']}" />
+		</#if>
+	</#if>
+	</#list>
+	<@wp.fragment code="default_pagerBlock" escapeXml=false />
+	</@wp.freemarkerTemplateParameter>
+	</@wp.pager>
+</#if>
+<#if (pageLinkVar??) && (pageLinkDescriptionVar??)>
+	<p class="text-right"><a class="btn btn-primary" href="<@wp.url page="${pageLinkVar}"/>">${pageLinkDescriptionVar}</a></p>
+</#if>
+<#assign contentInfoList="">',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Customer Rate</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div>
+            <div id="torta"></div>
+        </div>
+    </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('userprofile_is_entryCurrentProfile',NULL,NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 <#assign wpsa=JspTaglibs["/apsadmin-core"]>
@@ -1746,6 +1797,40 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 		</div>
 	</form>
 </#if>',1);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-language_choose_inspinia','entando-widget-language_choose_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.info key="langs" var="langsVar" />
+<@wp.info key="currentLang" var="currentLangVar" />
+<a data-toggle="dropdown" class="dropdown-toggle" href="#"  title="<@wp.i18n key="ESLC_LANGUAGE" />">     
+   <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if>
+   <#if (Session.currentUser != "guest")>
+   <span class="block m-t-xs"> 
+        <strong class="font-bold">
+            ${Session.currentUser}
+        </strong>
+    </span>
+    <#else>
+    <span class="block m-t-xs"> 
+        <strong class="font-bold">
+            <@wp.i18n key="ESLF_SIGNIN" />
+        </strong>
+    </span>
+    </#if>
+    <span class="text-muted text-xs block">
+        <@wp.i18n key="ESLC_LANGUAGE" />
+        <b class="caret"></b>
+    </span>
+</a>
+<ul class="dropdown-menu animated fadeInRight m-t-xs">
+    <@wp.freemarkerTemplateParameter var="langsListVar" valueName="langsVar" removeOnEndTag=true >
+    <#list langsListVar as curLangVar>
+    <li <#if (curLangVar.code == currentLangVar)>class="active" </#if>>
+        <a href="<@wp.url lang="${curLangVar.code}" paramRepeat=true />">
+        <@wp.i18n key="ESLC_LANG_${curLangVar.code}" />
+        </a>
+    </li>
+    </#list>
+    </@wp.freemarkerTemplateParameter>
+</ul>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entandoapi_is_resource_list','entando_apis',NULL,NULL,'<#assign s=JspTaglibs["/struts-tags"]>
 <#assign wp=JspTaglibs["/aps-core"]>
 
@@ -2607,109 +2692,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
 	</div>
 </div>
 </fieldset>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_content_viewer_list_userfilter_ent_ThreeSt',NULL,'jacms',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<#assign formFieldNameVar = userFilterOptionVar.formFieldNames[0] >
-<#assign formFieldValue = userFilterOptionVar.getFormFieldValue(formFieldNameVar) >
-<#assign i18n_Attribute_Key = userFilterOptionVar.attribute.name >
-<fieldset>
-<legend><@wp.i18n key="${i18n_Attribute_Key}" /></legend>
-<@wp.fragment code="jacms_content_viewer_list_userfilter_ent_Bool_io" escapeXml=false />
-<div class="control-group">
-	<div class="controls">
-		<label for="true_${formFieldNameVar}" class="radio">
-		<input name="${formFieldNameVar}" id="true_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "true")>checked="checked"</#if> value="true" type="radio" />
-		<@wp.i18n key="YES"/></label>
-		<label for="false_${formFieldNameVar}" class="radio">
-		<input name="${formFieldNameVar}" id="false_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "false")>checked="checked"</#if> value="false" type="radio" />
-		<@wp.i18n key="NO"/></label>
-		<label for="both_${formFieldNameVar}" class="radio">
-		<input name="${formFieldNameVar}" id="both_${formFieldNameVar}" <#if (formFieldValue??) && (formFieldValue == "both")>checked="checked"</#if> value="both" type="radio" />
-		<@wp.i18n key="BOTH"/></label>
-	</div>
-</div>
-</fieldset>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('banner-main-left ','banner-main-left ',NULL,'<div class=" left-banner middle-box">
-<p>Improving businesses&apos; life through meaningful services.
-</p>
-<input type="submit" value="CONTACT US" class="btn btn-primary login-button">
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('jacms_row_content_viewer_list','row_content_viewer_list','jacms',NULL,'<#assign jacms=JspTaglibs["/jacms-aps-core"]>
-<#assign wp=JspTaglibs["/aps-core"]>
-<@jacms.rowContentList listName="contentInfoList" titleVar="titleVar"
-	pageLinkVar="pageLinkVar" pageLinkDescriptionVar="pageLinkDescriptionVar" />
-<#if (titleVar??)>
-	<h1>${titleVar}</h1>
-</#if>
-<#if (contentInfoList??) && (contentInfoList?has_content) && (contentInfoList?size > 0)>
-	<@wp.pager listName="contentInfoList" objectName="groupContent" pagerIdFromFrame=true advanced=true offset=5>
-	<@wp.freemarkerTemplateParameter var="group" valueName="groupContent" removeOnEndTag=true >
-	<@wp.fragment code="default_pagerBlock" escapeXml=false />
-	<#list contentInfoList as contentInfoVar>
-	<#if (contentInfoVar_index >= groupContent.begin) && (contentInfoVar_index <= groupContent.end)>
-		<#if (contentInfoVar[''modelId'']??)>
-		<@jacms.content contentId="${contentInfoVar[''contentId'']}" modelId="${contentInfoVar[''modelId'']}" />
-		<#else>
-		<@jacms.content contentId="${contentInfoVar[''contentId'']}" />
-		</#if>
-	</#if>
-	</#list>
-	<@wp.fragment code="default_pagerBlock" escapeXml=false />
-	</@wp.freemarkerTemplateParameter>
-	</@wp.pager>
-</#if>
-<#if (pageLinkVar??) && (pageLinkDescriptionVar??)>
-	<p class="text-right"><a class="btn btn-primary" href="<@wp.url page="${pageLinkVar}"/>">${pageLinkDescriptionVar}</a></p>
-</#if>
-<#assign contentInfoList="">',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-customer-rate','fsi-customer-rate',NULL,'<div class="ibox float-e-margins">
-    <div class="ibox-title">
-        <h5>Customer Rate</h5>
-        <div class="ibox-tools">
-            <a class="collapse-link">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-    </div>
-    <div class="ibox-content">
-        <div>
-            <div id="torta"></div>
-        </div>
-    </div>
-</div>',NULL,0);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('entando-widget-language_choose_inspinia','entando-widget-language_choose_inspinia',NULL,NULL,'<#assign wp=JspTaglibs["/aps-core"]>
-<@wp.info key="langs" var="langsVar" />
-<@wp.info key="currentLang" var="currentLangVar" />
-<a data-toggle="dropdown" class="dropdown-toggle" href="#"  title="<@wp.i18n key="ESLC_LANGUAGE" />">     
-   <#if (accountExpired?? && accountExpired == true) || (wrongAccountCredential?? && wrongAccountCredential == true)>open</#if>
-   <#if (Session.currentUser != "guest")>
-   <span class="block m-t-xs"> 
-        <strong class="font-bold">
-            ${Session.currentUser}
-        </strong>
-    </span>
-    <#else>
-    <span class="block m-t-xs"> 
-        <strong class="font-bold">
-            <@wp.i18n key="ESLF_SIGNIN" />
-        </strong>
-    </span>
-    </#if>
-    <span class="text-muted text-xs block">
-        <@wp.i18n key="ESLC_LANGUAGE" />
-        <b class="caret"></b>
-    </span>
-</a>
-<ul class="dropdown-menu animated fadeInRight m-t-xs">
-    <@wp.freemarkerTemplateParameter var="langsListVar" valueName="langsVar" removeOnEndTag=true >
-    <#list langsListVar as curLangVar>
-    <li <#if (curLangVar.code == currentLangVar)>class="active" </#if>>
-        <a href="<@wp.url lang="${curLangVar.code}" paramRepeat=true />">
-        <@wp.i18n key="ESLC_LANG_${curLangVar.code}" />
-        </a>
-    </li>
-    </#list>
-    </@wp.freemarkerTemplateParameter>
-</ul>',1);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('Loans-3-images ','Loans-3-images ',NULL,'<#assign wp=JspTaglibs["/aps-core"]>  
 <div class="col-md-12 box-title-loan">YOU MIGHT BE INTERESTED IN OUR TOP 3 LOANS</div>
 <div class="col-md-4 box-loan">
