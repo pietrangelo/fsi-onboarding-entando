@@ -55,6 +55,7 @@ INSERT INTO dataobjectmodels (modelid,datatype,descr,model,stylesheet) VALUES (1
                     <hr>
                     <legend class="control-label editLabel ui-dform-legend" id="JPKIE_FORM_financial-services">$i18n.getLabel("JPKIE_FORM_financial-services")</legend>
 
+                    <br/>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="ui-dform-div form-group">
