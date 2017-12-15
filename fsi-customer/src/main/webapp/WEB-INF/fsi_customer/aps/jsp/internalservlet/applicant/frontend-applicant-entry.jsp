@@ -6,8 +6,8 @@
 
 <div class="bpm-wrapper-background">
     <p class="title-welcome"> Complete registration </p>
-    <p class="subtitle">Sign in </p>
-    <p class="presentation">Hi . Type your and a password to complete the registration. </p>
+    <p class="subtitle">Register for a new account</p>
+    <p class="presentation">Please create a username & password for login</p>
 
     <form action="<wp:action path="/ExtStr2/do/FrontEnd/jpapplicant/Applicant/save.action" />" method="post"fr
           class="m-t">
