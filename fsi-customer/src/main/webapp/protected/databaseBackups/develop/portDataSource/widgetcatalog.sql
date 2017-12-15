@@ -223,6 +223,9 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-registration-form-advanced','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI registration advanced</property><property key="it">FSI registrazione avanzata</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');
+INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-application-progress','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">FSI-application-progress</property><property key="it">FSI- progresso applicazione</property></properties>
+',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-language_choose_inspinia','<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Choose a Language</property>
@@ -239,9 +242,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('entando-widget-login_form_inspinia','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">Dropdown Sign In</property><property key="it">Dropdown Sign In</property></properties>
 ',NULL,NULL,NULL,NULL,1,'free');
-INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-application-progress','<?xml version="1.0" encoding="UTF-8"?>
-<properties><property key="en">FSI-application-progress</property><property key="it">FSI- progresso applicazione</property></properties>
-',NULL,NULL,NULL,NULL,0,'free');
 INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defaultconfig,locked,maingroup) VALUES ('fsi-legal-check','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">FSI-legal-check</property><property key="it">FSI-legal-check</property></properties>
 ',NULL,NULL,NULL,NULL,0,'free');

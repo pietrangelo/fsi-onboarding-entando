@@ -35,6 +35,5 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('ap
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('applicant',6,'banner-main-internal',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',6,'fsi-apllication-breadcrumb',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',7,'fsi-application-progress',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-form-banking-services',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',13,'fsi-Declaration',NULL);
-INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',14,'fsi_confirmation',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-Declaration',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',13,'fsi_confirmation',NULL);

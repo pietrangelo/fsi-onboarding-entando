@@ -1044,6 +1044,26 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
         });
     </script>
 ',NULL,0);
+INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
+  <div class="label-box">
+    <div class="label-box-title">Application</div>
+    <div class="label-box-descr">Tell us more about the business</div>
+  </div>
+  <div class="bullet-progress-container">
+    <div class="bullet-progress-item active">
+      <div class="bullet">1</div>
+      <div class="bullet-label">Business Details</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">2</div>
+      <div class="bullet-label">Declaration</div>
+    </div>
+    <div class="bullet-progress-item">
+      <div class="bullet">3</div>
+      <div class="bullet-label">Confirm</div>
+    </div>
+  </div>
+</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('How-to-complete-instructions','How-to-complete-instructions',NULL,'<br><br>
 <br>
 <p class="title-paragraph"> What you''ll need to complete the application</p>
@@ -2946,36 +2966,6 @@ INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) V
     </ul>
     </#if>
 </li>',1);
-INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-application-progress','fsi-application-progress',NULL,'<div class="application-progress">
-  <div class="label-box">
-    <div class="label-box-title">Application</div>
-    <div class="label-box-descr">Tell us more about the business</div>
-  </div>
-  <div class="bullet-progress-container">
-    <div class="bullet-progress-item active">
-      <div class="bullet">1</div>
-      <div class="bullet-label">Business Details</div>
-    </div>
-<!--
-    <div class="bullet-progress-item">
-      <div class="bullet">2</div>
-      <div class="bullet-label">Account User</div>
-    </div>
--->
-    <div class="bullet-progress-item">
-      <div class="bullet">2</div>
-      <div class="bullet-label">Banking Services</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">3</div>
-      <div class="bullet-label">Declaration</div>
-    </div>
-    <div class="bullet-progress-item">
-      <div class="bullet">4</div>
-      <div class="bullet-label">Confirm</div>
-    </div>
-  </div>
-</div>',NULL,0);
 INSERT INTO guifragment (code,widgettypecode,plugincode,gui,defaultgui,locked) VALUES ('fsi-Declaration','fsi-Declaration',NULL,'<#assign wp=JspTaglibs["/aps-core"]>
 
     <div class="customer-process-step ibox float-e-margins" data-process-name="Enrichment Upload Document" data-step-id="declaration">

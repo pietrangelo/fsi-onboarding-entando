@@ -20,7 +20,7 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
   <mimeType>text/html</mimeType>
 </config>
 
-','2017-12-12 17:32:43');
+','2017-12-15 13:00:38');
 INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('applicant','<?xml version="1.0" encoding="UTF-8"?>
 <properties><property key="en">applicant</property><property key="it">applicante</property></properties>
 ','fsi-customer-internal-page',1,'<?xml version="1.0" encoding="UTF-8"?>
