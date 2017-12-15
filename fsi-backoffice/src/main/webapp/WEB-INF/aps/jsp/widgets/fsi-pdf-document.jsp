@@ -84,6 +84,7 @@
         visibility: hidden;
         font-size: 20px;
         font-weight: 300;
+        display: inline-block;
     }
 
     .fsi-pdf-document .fsi-pdf-check-fields .pdf-field.expanded .pdf-field-value {
@@ -102,6 +103,20 @@
     .fsi-pdf-document .fsi-pdf-check-fields .pdf-field .pdf-field-tools .fa {
         cursor: pointer;
     }
+
+    .fsi-pdf-document .fsi-pdf-check-fields .pdf-field .pdf-field-edit-btn,
+    .fsi-pdf-document .fsi-pdf-check-fields .pdf-field .pdf-field-edit-ok-btn {
+      color: #C4C4C4;
+      margin-left: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .fsi-pdf-document .fsi-pdf-check-fields .pdf-field.marked .pdf-field-edit-btn,
+    .fsi-pdf-document .fsi-pdf-check-fields .pdf-field.marked .pdf-field-edit-ok-btn {
+      visibility: hidden;
+    }
+
 
     .fsi-pdf-document .fsi-pdf-check-fields .pdf-field .approve-reject-buttons,
     .fsi-pdf-document .fsi-pdf-check-fields .pdf-field.expanded.marked .approve-reject-buttons {
@@ -126,6 +141,9 @@
     }
     .fsi-pdf-document .fsi-pdf-check-fields .pdf-field.expanded:hover .approve-reject-buttons {
         visibility: visible;
+    }
+    .fsi-pdf-document .fsi-pdf-check-fields .pdf-field.editing.expanded:hover .approve-reject-buttons {
+        visibility: hidden;
     }
 
     .fsi-pdf-document .fsi-pdf-check-fields .approve-reject-buttons .block-btn {
@@ -248,10 +266,10 @@
         <div class="pdf-field-row">
             <div class="pdf-field-labels">
                 <div class="pdf-field-name">Verify company name</div>
-                <div class="pdf-field-value">-</div>
+                <div class="pdf-field-value">-</div><i class="fa fa-pencil pdf-field-edit-btn"/>
             </div>
             <div class="pdf-field-tools">
-                <i class="expand-btn fa fa-chevron-down"></i>
+                <i class="expand-btn fa fa-chevron-up"></i>
                 <i class="clear-btn fa fa-times"></i>
             </div>
         </div>
@@ -318,6 +336,23 @@
                 toggleFieldExpand(field, true);
                 field.removeClass('marked approved rejected');
                 updateApproveRejectForm();
+            });
+
+            // binding edit field buttons
+            $('.pdf-field .pdf-field-edit-btn').click(function () {
+                var editBtn = $(this),
+                  field = editBtn.closest('.pdf-field'),
+                  fieldValueDiv = field.find('.pdf-field-value'),
+                  fieldValue = fieldValueDiv.text();
+                field.addClass('editing');
+                editBtn.hide();
+                fieldValueDiv.html('<input value="' + fieldValue + '"/><i class="fa fa-check pdf-field-edit-ok-btn" />');
+                field.find('.pdf-field-edit-ok-btn').click(function() {
+                  fieldValueDiv.text(field.find('input').val());
+                  field.find('input, .pdf-field-edit-ok-btn').remove();
+                  editBtn.show();
+                  field.removeClass('editing');
+                });
             });
 
             // binding approve buttons
@@ -409,7 +444,6 @@
                     fieldListElem.append(fieldElem);
                 });
                 bindFieldButtons();
-                console.log(data);
             });
 
         };
