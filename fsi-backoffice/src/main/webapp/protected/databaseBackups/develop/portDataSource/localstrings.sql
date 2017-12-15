@@ -289,6 +289,27 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_sur
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_surname','it','surname (consultant)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-business-information','en','Business information');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-business-information','it','Business information');
+
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_financial-services','en','Financial services');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_financial-services','it','Servizi finanziari');
+
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_business-checking','en','Business checking');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_business-checking','it','Controllo business');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_business-leading-and-financing','en','Business leading and financing');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_business-leading-and-financing','it','Guida e finanziamenti business');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_merchant-services','en','Merchant services');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_merchant-services','it','Servizi per commercianti');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_cash-management-services','en','Cash management services');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_cash-management-services','it','Servizi gestione contanti');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_business-credit-cards','en','Business credit cards');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_business-credit-cards','it','Carte di credito business');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_international-banking','en','International banking');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_international-banking','it','Circuito internazionale');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_treasury-services','en','Treasury services');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_treasury-services','it','Servizi di tesoreria');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_employee-benefit-services','en','Employee benefit services');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_FIN_employee-benefit-services','it','Benefici per impiegati');
+
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_name','en','Consultant Name');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_party_name','it','name (consultant)');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('JPKIE_FORM_commercial-client-onboarding','en','Contact Information');

@@ -2171,3 +2171,16 @@ h3.control-label{
         font-weight: 400;
     }
 }
+
+
+.editable-container.editable-inline {
+  display: inline-block;
+}
+
+.ui-dform-div .ckb-label {
+  display: inline-block;
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+}

@@ -51,6 +51,80 @@ INSERT INTO dataobjectmodels (modelid,datatype,descr,model,stylesheet) VALUES (1
                         <label id="JPKIE_client_country" for="jpkieformparam_client_country" class="editLabel">$i18n.getLabel("JPKIE_client_country")</label>
                         <input type="text" id="jpkieformparam_client_country" name="$data.client_country.type:client_country" labelkey="JPKIE_client_country" class="form-control ui-widget ui-dform-number" aria-required="true" value="$data.client_country.text" >
                     </div>
+
+                    <hr>
+                    <legend class="control-label editLabel ui-dform-legend" id="JPKIE_FORM_financial-services">$i18n.getLabel("JPKIE_FORM_financial-services")</legend>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="ui-dform-div form-group">
+                                <input class="i-checks" type="checkbox" name="ckb-business-checking">
+                                <label id="JPKIE_FORM_FIN_business-checking"
+                                        class="editLabel ckb-label"
+                                        for="ckb-business-checking">
+                                    $i18n.getLabel("JPKIE_FORM_FIN_business-checking")
+                                </label>
+                            </div>
+                            <div class="ui-dform-div form-group">
+                                <input class="i-checks" type="checkbox" name="ckb-business-leading-and-financing">
+                                <label id="JPKIE_FORM_FIN_business-leading-and-financing"
+                                        class="editLabel ckb-label"
+                                        for="ckb-business-leading-and-financing">
+                                    $i18n.getLabel("JPKIE_FORM_FIN_business-leading-and-financing")
+                                </label>
+                            </div>
+                            <div class="ui-dform-div form-group">
+                                <input class="i-checks" type="checkbox" name="ckb-merchant-services">
+                                <label id="JPKIE_FORM_FIN_merchant-services"
+                                        class="editLabel ckb-label"
+                                        for="ckb-merchant-services">
+                                    $i18n.getLabel("JPKIE_FORM_FIN_merchant-services")
+                                </label>
+                            </div>
+                            <div class="ui-dform-div form-group">
+                                <input class="i-checks" type="checkbox" name="ckb-cash-management-services">
+                                <label id="JPKIE_FORM_FIN_cash-management-services"
+                                        class="editLabel ckb-label"
+                                        for="ckb-cash-management-services">
+                                    $i18n.getLabel("JPKIE_FORM_FIN_cash-management-services")
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ui-dform-div form-group">
+                                <input class="i-checks" type="checkbox" name="ckb-business-credit-cards">
+                                <label id="JPKIE_FORM_FIN_business-credit-cards"
+                                        class="editLabel ckb-label"
+                                        for="ckb-business-credit-cards">
+                                    $i18n.getLabel("JPKIE_FORM_FIN_business-credit-cards")
+                                </label>
+                            </div>
+                            <div class="ui-dform-div form-group">
+                                <input class="i-checks" type="checkbox" name="ckb-international-banking">
+                                <label id="JPKIE_FORM_FIN_international-banking"
+                                        class="editLabel ckb-label"
+                                        for="ckb-international-banking">
+                                    $i18n.getLabel("JPKIE_FORM_FIN_international-banking")
+                                </label>
+                            </div>
+                            <div class="ui-dform-div form-group">
+                                <input class="i-checks" type="checkbox" name="ckb-treasury-services">
+                                <label id="JPKIE_FORM_FIN_treasury-services"
+                                        class="editLabel ckb-label"
+                                        for="ckb-treasury-services">
+                                    $i18n.getLabel("JPKIE_FORM_FIN_treasury-services")
+                                </label>
+                            </div>
+                            <div class="ui-dform-div form-group">
+                                <input class="i-checks" type="checkbox" name="ckb-employee-benefit-services">
+                                <label id="JPKIE_FORM_FIN_employee-benefit-services"
+                                        class="editLabel ckb-label"
+                                        for="ckb-employee-benefit-services">
+                                    $i18n.getLabel("JPKIE_FORM_FIN_employee-benefit-services")
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
            <hr>
