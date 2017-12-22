@@ -18,3 +18,4 @@ INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci4','c
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci6','customers',NULL);
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('flocci9','customers',NULL);
 INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('ginetto','customers',NULL);
+INSERT INTO authusergrouprole (username,groupname,rolename) VALUES ('npuddu70','customers',NULL);

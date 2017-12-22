@@ -149,3 +149,5 @@ INSERT INTO actionlogrelations (recordid,refgroup) VALUES (85,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (85,'administrators');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (88,'customers');
 INSERT INTO actionlogrelations (recordid,refgroup) VALUES (88,'administrators');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (103,'administrators');
+INSERT INTO actionlogrelations (recordid,refgroup) VALUES (105,'administrators');
