@@ -9,6 +9,7 @@
 <script src="<wp:resourceURL />static/js/pdf.js"></script>
 <script src="<wp:resourceURL />static/js/pdf.worker.js"></script>
 <script src="<wp:resourceURL />static/js/jquery.dataTables.min.js"></script>
+<script src="<wp:resourceURL />static/js/fe-validation.js"></script>
 
 <!-----------inclusione x-editable inline------------------------>
 <wp:ifauthorized permission="superuser">
