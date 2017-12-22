@@ -64,3 +64,13 @@ INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,u
 </config>
 
 ','2017-11-23 16:13:17');
+INSERT INTO pages_metadata_draft (code,titles,modelcode,showinmenu,extraconfig,updatedat) VALUES ('hidden_widget','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="en">hidden widget</property><property key="it">hidden widget</property></properties>
+','fsi-account-manager',1,'<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+  <charset>utf-8</charset>
+  <mimeType>text/html</mimeType>
+</config>
+
+','2017-12-22 15:56:38');

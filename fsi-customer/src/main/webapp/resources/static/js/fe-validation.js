@@ -55,8 +55,8 @@ var feValidation = (function($){
         $field.next("span.help-block").remove();
     };
 
-    var displayErrorToast = function() {
-        toastr["error"]("The request could not be sent, please check the fields with errors.")
+    var displayErrorToast = function(message) {
+        toastr["error"](message || "The request could not be sent, please check the fields with errors.")
     };
 
     var validators = {

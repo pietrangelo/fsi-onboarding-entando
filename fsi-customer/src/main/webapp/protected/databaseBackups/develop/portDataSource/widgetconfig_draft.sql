@@ -37,3 +37,6 @@ INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('cu
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',7,'fsi-application-progress',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',12,'fsi-Declaration',NULL);
 INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('customer_internal',13,'fsi_confirmation',NULL);
+INSERT INTO widgetconfig_draft (pagecode,framepos,widgetcode,config) VALUES ('hidden_widget',7,'bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="dataTypeCode">AAA</property><property key="widgetInfoId">104</property><property key="dataUxId">1</property></properties>
+');

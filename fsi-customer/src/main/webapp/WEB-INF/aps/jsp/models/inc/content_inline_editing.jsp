@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<wp:resourceURL />administration/css/jqueryui-editable.css" media="screen"/>
 <script src="<wp:resourceURL />static/js/pdf.js"></script>
 <script src="<wp:resourceURL />static/js/pdf.worker.js"></script>
+<script src="<wp:resourceURL />static/js/fe-validation.js"></script>
 
 <!-----------inclusione x-editable inline------------------------>
 <wp:ifauthorized permission="superuser">
@@ -259,7 +260,10 @@
                 getFirstTaskId().done(function (taskList) {
 
                     if (currentStepIndex === -1) {
-                        if (getStepIndex(taskList) === 2) {
+                        if (getStepIndex(taskList) === 0) {
+                            preloadData(getDeep(taskList, '0.processInstanceId'));
+                        }
+                        else if (getStepIndex(taskList) === 2) {
                             nextStep.removeClass('active');
                             nextStep = $('.customer-process-step[data-step-id="declaration"]');
                             nextStep.addClass('active');
@@ -301,6 +305,17 @@
 
         }
 
+        function preloadData(processId) {
+            var url = '<wp:info key="systemParam" paramName="applicationBaseURL" />api/rs/<wp:info key="currentLang"/>/jpkiebpm/processInstanceListPlus.json?processInstanceId=' + processId;
+            $.get(url).then(function (response) {
+                var userData = getDeep(response, "response.result.processInstanceList.list");
+                $("input#name").val(userData.company);
+                $("input#country").val(userData.country || "USA");
+                $("input#street").val(userData.street || "");
+                $("input#bic").val(userData.bic);
+            });
+        }
+
 
         /**
          * Functions to handle the form submit
@@ -310,15 +325,12 @@
             // validate
             var valid = true;
             $('.customer-process-step.active').find('input').each(function (index, element) {
-                if (!element.value) {
-                    $(element).closest('.form-group').addClass('has-error');
-                    $(element).on('input', function () {
-                        $(this).closest('.form-group').removeClass('has-error');
-                    });
+                if (!feValidation.validateField($(element))) {
                     valid = false;
                 }
             });
             if (!valid) {
+                feValidation.displayErrorToast();
                 var def = $.Deferred();
                 def.reject();
                 return def.promise();
@@ -362,7 +374,7 @@
             // validate
             var valid = true;
             $('.customer-process-step.active').find('input[type="file"]').each(function (index, element) {
-                if (!element.files[0]) {
+                if (!element.files[0] || element.files[0].size > 900000) {
                     $(element).closest('.fileinput').addClass('has-error');
                     $(element).on('change', function () {
                         $(this).closest('.fileinput').removeClass('has-error');
@@ -371,6 +383,7 @@
                 }
             });
             if (!valid) {
+                feValidation.displayErrorToast("Both files are mandatory and the max size is 900kb.");
                 var def = $.Deferred();
                 def.reject();
                 return def.promise();

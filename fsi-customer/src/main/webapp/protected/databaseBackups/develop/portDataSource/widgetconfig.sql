@@ -30,3 +30,6 @@ INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',9,'fsi-club-credit-card',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',10,' Credit-card-banner-right',NULL);
 INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('homepage',8,'Welcome-content',NULL);
+INSERT INTO widgetconfig (pagecode,framepos,widgetcode,config) VALUES ('hidden_widget',7,'bpm-datatype-form','<?xml version="1.0" encoding="UTF-8"?>
+<properties><property key="dataTypeCode">AAA</property><property key="widgetInfoId">104</property><property key="dataUxId">1</property></properties>
+');

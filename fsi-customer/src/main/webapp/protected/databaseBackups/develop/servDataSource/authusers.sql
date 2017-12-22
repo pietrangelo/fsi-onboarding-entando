@@ -1,5 +1,4 @@
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('ginetto','M6a/uY1I0JDGWU/XU+dWTA==','2017-12-15 00:00:00','2017-12-15 00:00:00',NULL,1);
-INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('admin','adminadmin','2008-10-10 00:00:00','2017-12-15 00:00:00',NULL,1);
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('customer','M6a/uY1I0JDGWU/XU+dWTA==','2017-10-25 00:00:00','2017-12-13 00:00:00',NULL,1);
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('flocci2','M6a/uY1I0JDGWU/XU+dWTA==','2017-11-23 00:00:00','2017-11-23 00:00:00',NULL,1);
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('flocci3','M6a/uY1I0JDGWU/XU+dWTA==','2017-11-23 00:00:00','2017-11-23 00:00:00',NULL,1);
@@ -22,3 +21,5 @@ INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordc
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello6','WZBjxhQANu4SwQ4aGePXFg==','2017-12-11 00:00:00',NULL,NULL,1);
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello7','WZBjxhQANu5BdKl7L06D5A==','2017-12-11 00:00:00',NULL,NULL,1);
 INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('nennolello8','WZBjxhQANu45eJMLFI5uAQ==','2017-12-11 00:00:00','2017-12-11 00:00:00',NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('admin','adminadmin','2008-10-10 00:00:00','2017-12-22 00:00:00',NULL,1);
+INSERT INTO authusers (username,passwd,registrationdate,lastaccess,lastpasswordchange,active) VALUES ('npuddu70','M6a/uY1I0JDGWU/XU+dWTA==','2017-12-22 00:00:00','2017-12-22 00:00:00',NULL,1);
